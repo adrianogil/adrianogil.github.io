@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Instalando Blocks, Fuel e Theano</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Gil Labs </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/blog.html">blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/install-block-fuel-theano-pt.html" rel="bookmark"
+           title="Permalink to Instalando Blocks, Fuel e Theano">Instalando Blocks, Fuel e Theano</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-01-10T14:00:00-04:00">
+                Published: Sun 10 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/adriano-gil.html">Adriano Gil</a>
+        </address>
+<p>In <a href="/category/blog.html">blog</a>.</p>
+<p>tags: <a href="/tag/deep-learning.html">deep-learning</a> </p>Translations:
+        <a href="/install-block-fuel-theano.html">en</a>
+
+</footer><!-- /.post-info -->      <!-- Intro -->
+<p>Uma das mais conhecidas bibliotecas python para Deep Learning é o <a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a>. Este post irá mostrar como realizar instalação do Theano e de algumas bibliotecas auxiliares (Blocks e Fuel) usando <a class="reference external" href="http://docs.continuum.io/anaconda/index">Anaconda</a>, uma distribuição python bastante conhecida no meio acadêmico.</p>
+<!-- Installation tips for Windows -->
+<div class="section" id="instalacao-no-windows">
+<h2>Instalação no Windows</h2>
+<p>Algumas dicas de instalação podem ser encontradas <a class="reference external" href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">neste post do reddit</a>, e foram testadas no Windows 8.1 e Windows 10.</p>
+<p>O primeiro passo é baixar e instalar a versão <a class="reference external" href="https://www.continuum.io/downloads">Windows do Anaconda</a>. Basta apenas seguir o <cite>wizard</cite> de instalação. Concluída a instalação, temos que instalar as bibliotecas necessários para o Theano. Para isso, usamos a ferramenta de linha de comando <cite>conda</cite> que pode ser encontrada no Anaconda Prompt, uma janela de comandos ao estilo <cite>cmd</cite> customizada para o Anaconda.</p>
+<div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
+</pre></div>
+<p>Algumas bibliotecas python adicionais são pré-requisito para algumas funções específicas do Theano, como desenhar gráficos de debug dos nodos de operações, ou são utilizadas no Blocks e no Fuels.</p>
+<div class="highlight"><pre>pip install pydot2 progressbar2 picklable-itertools
+</pre></div>
+<p>E então finalmente instalar o Theano usando o <cite>pip</cite>:</p>
+<div class="highlight"><pre>pip install theano
+</pre></div>
+<p>A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser baixada direto do github <a class="reference external" href="https://github.com/mila-udem/fuel">https://github.com/mila-udem/fuel</a>. A instalação é feita pelo script <cite>setup.py</cite>:</p>
+<div class="highlight"><pre><span class="nb">cd </span>fuel
+python setup.py install
+</pre></div>
+<p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é encontrada no github <a class="reference external" href="https://github.com/mila-udem/blocks">https://github.com/mila-udem/blocks</a>. A instalação também é pela execução do script <cite>setup.py</cite>:</p>
+<div class="highlight"><pre><span class="nb">cd </span>blocks
+python setup.py install
+</pre></div>
+<!-- Installation tips for OSX -->
+<!-- ================= -->
+<!-- Instalação no OSX -->
+<!-- ================= -->
+<!-- Installation tips for Linux -->
+<!-- Instalar Anaconda -->
+<!-- instalar o LiClipse -->
+</div>
+<div class="section" id="instalacao-no-ubuntu">
+<h2>Instalação no Ubuntu</h2>
+<p>O próprio <a class="reference external" href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">site do Theano</a> explica como fazer a instalação do Theano no Ubuntu, reproduzo aqui o que testei no Ubuntu 14.10.</p>
+<p>Baixar e instalar as requisitos das bibliotecas se torna bem simples usando o comando <cite>apt-get</cite>:</p>
+<div class="highlight"><pre>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz
+</pre></div>
+<p>Então o Theano pode ser baixado e instalado usando o <cite>pip</cite>:</p>
+<div class="highlight"><pre>pip install Theano
+</pre></div>
+<p>A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser instalada usando o comando</p>
+<div class="highlight"><pre>pip install git+git://github.com/mila-udem/fuel.git
+</pre></div>
+<p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é também instalada facilmente usando o comando:</p>
+<div class="highlight"><pre>pip install git+git://github.com/mila-udem/blocks.git
+</pre></div>
+</div>
+<div class="section" id="ide-para-desenvolver-em-python">
+<h2>IDE para desenvolver em python</h2>
+<p>Como IDE, pela minha boa experiência com o plugin para o eclipse PyDev, recomendo instalar a sua versão mais leve, o LiClipse, disponível em <a class="reference external" href="http://www.liclipse.com/download.html">http://www.liclipse.com/download.html</a>.</p>
+<!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. -->
+<!-- [a link relative to content root]({filename}/article1.md) -->
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/sandmangil">@sandmangil</a></li>
+                            <li><a href="https://br.linkedin.com/pub/adriano-gil/16/106/6b9">LinkedIn</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
