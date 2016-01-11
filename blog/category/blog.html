@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>Gil Labs - blog</title>
-        <link rel="stylesheet" href="http://adrianogil.github.io/blog/theme/css/main.css" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,29 +12,30 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://adrianogil.github.io/blog/">Gil Labs </a></h1>
+                <h1><a href="/">Gil Labs </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="http://adrianogil.github.io/blog/category/blog.html">blog</a></li>
+                    <li class="active"><a href="/category/blog.html">blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://adrianogil.github.io/blog/install-block-fuel-theano.html">Installing Theano, Blocks and Fuel</a></h1>
+                    <h1 class="entry-title"><a href="/install-block-fuel-theano.html">Installing Theano, Blocks and Fuel</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2016-01-10T14:00:00-04:00">
                 Published: Sun 10 January 2016
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://adrianogil.github.io/blog/author/adriano-gil.html">Adriano Gil</a>
+                By                         <a class="url fn" href="/author/adriano-gil.html">Adriano Gil</a>
         </address>
-<p>In <a href="http://adrianogil.github.io/blog/category/blog.html">blog</a>.</p>
-<p>tags: <a href="http://adrianogil.github.io/blog/tag/deep-learning.html">deep-learning</a> </p>Translations:
-        <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-pt.html">pt</a>
+<p>In <a href="/category/blog.html">blog</a>.</p>
+<p>tags: <a href="/tag/deep-learning.html">deep-learning</a> </p>Translations:
+        <a href="/install-block-fuel-theano-fr.html">fr</a>
+        <a href="/install-block-fuel-theano-pt.html">pt</a>
 
 </footer><!-- /.post-info --><!-- Intro ============================================================================================================== -->
-<p>The very first step to develop some <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment - if you don't want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.</p>
+<p>The very first step to develop a <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment - if you don't want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.</p>
 <p>In python, there are a lot of frameworks and libraries to work with <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a>. After I had participated in a course taught by <a class="reference external" href="https://github.com/laurent-dinh">Laurent Dihn</a> from University of Montreal, I was introduced to the combined toolkit of Theano, Blocks and Fuel.</p>
 <!-- Explain Theano ===================================================================================================== -->
 <p><a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a> is a very known mathematical python library used for deep learning. This library contains a lot of useful methods to simplify model generation like using derivative of symbolic functions. Due to its bindings with PyCuda, Theano allows to use the same code to evaluate on CPU or GPU only by changing a flag.</p>
