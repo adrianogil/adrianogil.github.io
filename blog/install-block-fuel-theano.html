@@ -73,9 +73,26 @@ python setup.py install
 <p class="caption">Testing Theano on Anaconda Prompt</p>
 </div>
 <!-- Installation tips for OSX -->
-<!-- ================= -->
-<!-- Installing on OSX -->
-<!-- ================= -->
+</div>
+<div class="section" id="installing-on-osx">
+<h2>Installing on OSX</h2>
+<p>According <a class="reference external" href="http://deeplearning.net/software/theano/install.html#mac-os">Theano page about mac installation</a> we can <a class="reference external" href="https://www.continuum.io/downloads">download Anaconda</a>  and then Theano can be installed by <cite>pip</cite>:</p>
+<div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
+pip install pydot2
+pip install Theano
+</pre></div>
+<p>After downloading Fuel <a class="reference external" href="https://github.com/mila-udem/fuel">on github page</a>, inside its folder there is a script <cite>setup.py</cite> that handles the installation by means of setuptools:</p>
+<div class="highlight"><pre><span class="nb">cd </span>fuel
+python setup.py install
+</pre></div>
+<p>Once downloaded Blocks <a class="reference external" href="https://github.com/mila-udem/blocks">from github page</a>, you can install it by executing the setuptools script <cite>setup.py</cite>:</p>
+<div class="highlight"><pre><span class="nb">cd </span>blocks
+python setup.py install
+</pre></div>
+<div class="figure align-center">
+<img alt="Theano on Mac Terminal" src="images/2016-01-10-installing/mac-terminal.png" style="width: 444px; height: 210px;" />
+<p class="caption">Theano on Mac Terminal</p>
+</div>
 <!-- Installation tips for Linux -->
 </div>
 <div class="section" id="installing-on-ubuntu">
