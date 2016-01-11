@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Introduction to python-based Deep Learning tools</title>
+        <title>Installing Theano, Blocks and Fuel</title>
         <link rel="stylesheet" href="http://adrianogil.github.io/blog/theme/css/main.css" />
 
         <!--[if IE]>
@@ -22,7 +22,7 @@
     <header>
       <h1 class="entry-title">
         <a href="http://adrianogil.github.io/blog/install-block-fuel-theano.html" rel="bookmark"
-           title="Permalink to Introduction to python-based Deep Learning tools">Introduction to python-based Deep Learning tools</a></h1>
+           title="Permalink to Installing Theano, Blocks and Fuel">Installing Theano, Blocks and Fuel</a></h1>
     </header>
 
     <div class="entry-content">
@@ -38,23 +38,23 @@
 <p>tags: <a href="http://adrianogil.github.io/blog/tag/deep-learning.html">deep-learning</a> </p>Translations:
         <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-pt.html">pt</a>
 
-</footer><!-- /.post-info -->      <!-- Intro -->
-<p>The very first steps to develop some <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment is to search a proper 3rd party component to handle the internals of such methods, or I mean, if you don't want to code everything from scratch.</p>
+</footer><!-- /.post-info -->      <!-- Intro ============================================================================================================== -->
+<p>The very first step to develop some <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment - if you don't want to code everything from scratch - is to search a proper 3rd party component to handle the internals of such methods.</p>
 <p>In python, there are a lot of frameworks and libraries to work with <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a>. After I had participated in a course taught by <a class="reference external" href="https://github.com/laurent-dinh">Laurent Dihn</a> from University of Montreal, I was introduced to the combined toolkit of Theano, Blocks and Fuel.</p>
-<!-- Explain Theano -->
-<p><a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a> is a very known mathematical python library used for deep learning. It allows to easily write experiments and evaluate them on GPU without difficulties.</p>
-<!-- Explain Blocks -->
-<p>Blocks is a set of utilitary scripts that automate some tasks when using Theano.</p>
-<!-- Explain Fuel -->
-<p>Fuel is data processing library that handles some neat things like download and parse datasets.</p>
-<!-- Installation tips for Windows -->
+<!-- Explain Theano ===================================================================================================== -->
+<p><a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a> is a very known mathematical python library used for deep learning. This library contains a lot of useful methods to simplify model generation like using derivative of symbolic functions. Due to its bindings with PyCuda, Theano allows to use the same code to evaluate on CPU or GPU only by changing a flag.</p>
+<!-- Explain Blocks ====================================================================================================== -->
+<p>Blocks is a set of utilitary scripts that easen some tasks on Theano.</p>
+<!-- Explain Fuel ======================================================================================================== -->
+<p>Fuel is data processing library that handles some neat things like download and parse image datasets into numpy arrays.</p>
+<!-- Installation tips for Windows ======================================================================================= -->
 <div class="section" id="installing-on-windows">
 <h2>Installing on Windows</h2>
 <p>I found some useful tips on <a class="reference external" href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">this reddit post</a> and I have tested it on Windows 8.1 and Windows 10.</p>
-<p>The first step is download and install the <a class="reference external" href="https://www.continuum.io/downloads">Windows version of Anaconda</a>. After a simple installation wizard, we need to install the required libraries for Theano. Thanksfully to Anaconda, we can use a very simple command line tool <cite>conda</cite> in the cmd-like <cite>Anaconda Prompt</cite>:</p>
+<p>The first step is download and install the <a class="reference external" href="https://www.continuum.io/downloads">Windows version of Anaconda</a>. After a simple installation wizard, we need to install the required libraries for Theano. Thanks to Anaconda, we can use a very simple command-line tool <cite>conda</cite> in the <cite>Anaconda Prompt</cite>:</p>
 <div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
 </pre></div>
-<p>Some needed python libraries are pre-requisite to specific Theano functions, like drawing debug graphs of operation nodes, and can also be used in Blocks or Fuel.</p>
+<p>Some necessary python libraries are pre-requisite to specific Theano functions, like drawing debug graphs of operation nodes, and can also be used in Blocks or Fuel.</p>
 <div class="highlight"><pre>pip install pydot2 progressbar2 picklable-itertools
 </pre></div>
 <p>Theano can be installed using <cite>pip</cite>:</p>
@@ -76,8 +76,8 @@ python setup.py install
 </div>
 <div class="section" id="installing-on-ubuntu">
 <h2>Installing on Ubuntu</h2>
-<p>Some installation steps are published on <a class="reference external" href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">Theano site</a>, so I easily managed to install it on Ubuntu 14.10.</p>
-<p>Download and e install all requisites of the libraries using the straightfoward command <cite>apt-get</cite>:</p>
+<p>Some installation steps are published on <a class="reference external" href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">Theano site</a>, so by following it I easily managed to install it on Ubuntu 14.10.</p>
+<p>Download and e install all requisites of the libraries using <cite>apt-get</cite>:</p>
 <div class="highlight"><pre>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz
 </pre></div>
 <p>Then Theano can be installed by <cite>pip</cite>:</p>
@@ -86,14 +86,14 @@ python setup.py install
 <p>Fuel library can be also installed using <cite>pip</cite> directly from github repository:</p>
 <div class="highlight"><pre>pip install git+git://github.com/mila-udem/fuel.git
 </pre></div>
-<p>Blocks library follows the same command:</p>
+<p>Blocks library also is installed by <cite>pip</cite>:</p>
 <div class="highlight"><pre>pip install git+git://github.com/mila-udem/blocks.git
 </pre></div>
 <!-- IDE -->
 </div>
 <div class="section" id="installing-a-python-ide">
 <h2>Installing a Python IDE</h2>
-<p>After some good experience using PyDev and Eclipse, I recomend this light version <cite>Liclipse</cite>: <a class="reference external" href="http://www.liclipse.com/download.html">http://www.liclipse.com/download.html</a>. Some other good options can be found in: <a class="reference external" href="http://pedrokroger.net/choosing-best-python-ide/">http://pedrokroger.net/choosing-best-python-ide/</a>.</p>
+<p>After some good experiences using PyDev and Eclipse, I recomend this light version <cite>Liclipse</cite>: <a class="reference external" href="http://www.liclipse.com/download.html">http://www.liclipse.com/download.html</a>. Some other good options can be found in: <a class="reference external" href="http://pedrokroger.net/choosing-best-python-ide/">http://pedrokroger.net/choosing-best-python-ide/</a>.</p>
 <!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. -->
 <!-- [a link relative to content root]({filename}/article1.md) -->
 </div>
