@@ -34,14 +34,14 @@
         <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-pt.html">pt</a>
 
 </footer><!-- /.post-info --><!-- Intro ============================================================================================================== -->
-<p>The very first step to develop some <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment - if you don't want to code everything from scratch - is to search a proper 3rd party component to handle the internals of such methods.</p>
+<p>The very first step to develop some <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment - if you don't want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.</p>
 <p>In python, there are a lot of frameworks and libraries to work with <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a>. After I had participated in a course taught by <a class="reference external" href="https://github.com/laurent-dinh">Laurent Dihn</a> from University of Montreal, I was introduced to the combined toolkit of Theano, Blocks and Fuel.</p>
 <!-- Explain Theano ===================================================================================================== -->
 <p><a class="reference external" href="http://deeplearning.net/software/theano/">Theano</a> is a very known mathematical python library used for deep learning. This library contains a lot of useful methods to simplify model generation like using derivative of symbolic functions. Due to its bindings with PyCuda, Theano allows to use the same code to evaluate on CPU or GPU only by changing a flag.</p>
 <!-- Explain Blocks ====================================================================================================== -->
-<p>Blocks is a set of utilitary scripts that easen some tasks on Theano.</p>
+<p>Blocks is a set of utilitary scripts that easen some tasks on Theano, like model generation, load and training data, and visualizing results.</p>
 <!-- Explain Fuel ======================================================================================================== -->
-<p>Fuel is data processing library that handles some neat things like download and parse image datasets into numpy arrays.</p>
+<p>Fuel is data processing library that handles some neat things like download and parse image datasets into numpy arrays. One of its advantage is a same interface that can handle a lot different types of data.</p>
 <!-- Installation tips for Windows ======================================================================================= -->
 <div class="section" id="installing-on-windows">
 <h2>Installing on Windows</h2>
@@ -63,6 +63,10 @@ python setup.py install
 <div class="highlight"><pre><span class="nb">cd </span>blocks
 python setup.py install
 </pre></div>
+<div class="figure align-center">
+<img alt="Testing Theano on Anaconda Prompt" src="images/2016-01-10-installing/mac-terminal.png" style="width: 444px; height: 210px;" />
+<p class="caption">Testing Theano on Anaconda Prompt</p>
+</div>
 <!-- Installation tips for OSX -->
 <!-- ================= -->
 <!-- Installing on OSX -->
