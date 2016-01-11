@@ -61,13 +61,31 @@ python setup.py install
 <div class="highlight"><pre><span class="nb">cd </span>blocks
 python setup.py install
 </pre></div>
+<div class="figure align-center">
+<img alt="Testando Theano no Terminal do Mac" src="images/2016-01-10-installing/windows-anaconda-prompt.png" style="width: 523px; height: 263px;" />
+<p class="caption">Testando Theano no Terminal</p>
+</div>
 <!-- Installation tips for OSX -->
-<!-- ================= -->
-<!-- Instalação no OSX -->
-<!-- ================= -->
-<!-- Installation tips for Linux -->
-<!-- Instalar Anaconda -->
-<!-- instalar o LiClipse -->
+</div>
+<div class="section" id="instalacao-no-osx">
+<h2>Instalação no OSX</h2>
+<p>Segundo <a class="reference external" href="http://deeplearning.net/software/theano/install.html#mac-os">este link</a> a instalação do Theano é bem similar com a do Windows. Primeiramente instalamos a <a class="reference external" href="https://www.continuum.io/downloads">versão OSX do Anaconda</a> e então o Theano pode ser instalado pelo <cite>pip</cite>:</p>
+<div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
+pip install pydot2
+pip install Theano
+</pre></div>
+<p>Fuel, baixado em <a class="reference external" href="https://github.com/mila-udem/fuel">https://github.com/mila-udem/fuel</a>, pode ser instalado pelo script <cite>setup.py</cite>:</p>
+<div class="highlight"><pre><span class="nb">cd </span>fuel
+python setup.py install
+</pre></div>
+<p>Blocks, uma vez baixado, segue a mesma instalação pela execução do script <cite>setup.py</cite>:</p>
+<div class="highlight"><pre><span class="nb">cd </span>blocks
+python setup.py install
+</pre></div>
+<div class="figure align-center">
+<img alt="Testando Theano no Terminal do Mac" src="images/2016-01-10-installing/mac-terminal.png" style="width: 444px; height: 210px;" />
+<p class="caption">Testando Theano no Terminal</p>
+</div>
 </div>
 <div class="section" id="instalacao-no-ubuntu">
 <h2>Instalação no Ubuntu</h2>
@@ -84,10 +102,18 @@ python setup.py install
 <p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é também instalada facilmente usando o comando:</p>
 <div class="highlight"><pre>pip install git+git://github.com/mila-udem/blocks.git
 </pre></div>
+<div class="figure align-center">
+<img alt="Screenshot da LiClipse IDE no Ubuntu" src="images/2016-01-10-installing/ubuntu-terminal.png" style="width: 409px; height: 166px;" />
+<p class="caption">Testando Theano no Terminal</p>
+</div>
 </div>
 <div class="section" id="ide-para-desenvolver-em-python">
 <h2>IDE para desenvolver em python</h2>
 <p>Como IDE, pela minha boa experiência com o plugin para o eclipse PyDev, recomendo instalar a sua versão mais leve, o LiClipse, disponível em <a class="reference external" href="http://www.liclipse.com/download.html">http://www.liclipse.com/download.html</a>.</p>
+<div class="figure align-center">
+<img alt="Screenshot da LiClipse IDE no Ubuntu" src="images/2016-01-10-installing/ubuntu-liclipse.png" style="width: 455px; height: 441px;" />
+<p class="caption">LiClipse IDE no Ubuntu</p>
+</div>
 <!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. -->
 <!-- [a link relative to content root]({filename}/article1.md) -->
 </div>
