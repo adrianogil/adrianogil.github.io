@@ -55,6 +55,7 @@ données, et en train de visualizer les resultats.</p>
 <p>J'ai trouvé quelques trucs dans <a class="reference external" href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">cet post reddit</a> et je les ai testé dans Windows 8,1 et Windows 10.</p>
 <p>Le premier pas est télécharger et installer la version Windows d'<a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a>. Puis une simple assistant d'installation, il faut installer les bibliothèques necessaires à Theano en usant d'<cite>Anaconda Prompt</cite>.</p>
 <div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
+conda install mingw libpython
 </pre></div>
 <p>Quelque bibliothèques pythons sont necessaires pour functions spécifiques Theano, comme dessiner les chartes de les noeud d'operations, et pour les frameworks Blocks et Fuel aussi.</p>
 <div class="highlight"><pre>pip install pydot2 progressbar2 picklable-itertools
