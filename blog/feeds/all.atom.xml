@@ -271,4 +271,25 @@ python setup.py install
 &lt;!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. --&gt;
 &lt;!-- [a link relative to content root]({filename}/article1.md) --&gt;
 &lt;/div&gt;
-</summary><category term="deep-learning"></category></entry></feed>
+</summary><category term="deep-learning"></category></entry><entry><title>Hello World</title><link href="http://adrianogil.github.io/blog/hello-world.html" rel="alternate"></link><updated>2016-01-01T14:00:00-04:00</updated><author><name>Adriano Gil</name></author><id>tag:adrianogil.github.io,2016-01-01:blog/hello-world.html</id><summary type="html">&lt;p&gt;Hi, everyone!&lt;/p&gt;
+&lt;p&gt;That's my personal blog about my researches and some development notes. I guess every tech guy should have a blog. Well, after some years, I decided finally got mine.&lt;/p&gt;
+&lt;p&gt;So, who am I? Well, I'm a &lt;a class="reference external" href="https://dl.dropboxusercontent.com/u/21219242/CV/adrianogil_cv_en.pdf"&gt;mobile developer&lt;/a&gt; and a &lt;a class="reference external" href="https://scholar.google.com.br/citations?user=n6RoXpAAAAAJ"&gt;Game AI researcher&lt;/a&gt;.  I have a master in Electric Engineer and a BSc. in Computer Engineering at Federal University of Amazonas.&lt;/p&gt;
+&lt;p&gt;My interests lies in playing and developing games (Mobile and Desktop). In the last 5 years I’ve worked in some interesting dev projects. In the next posts I’ll describe some projects related to game development, image processing research and machine learning algorithms.&lt;/p&gt;
+&lt;p&gt;See you soon!&lt;/p&gt;
+&lt;!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. --&gt;
+&lt;!-- [a link relative to content root]({filename}/article1.md) --&gt;
+</summary><category term="welcome"></category></entry><entry><title>Salut Monde</title><link href="http://adrianogil.github.io/blog/hello-world-fr.html" rel="alternate"></link><updated>2016-01-01T14:00:00-04:00</updated><author><name>Adriano Gil</name></author><id>tag:adrianogil.github.io,2016-01-01:blog/hello-world-fr.html</id><summary type="html">&lt;p&gt;Salut mes amis,&lt;/p&gt;
+&lt;p&gt;Voilà mon blog personnel sur mes recherches et quelques notes de dévelopment. Je pense que tous ceux qui travaille avec technologie doit avoir un blog. Alors, quelques années plus tard je decide d'avoir le mien.&lt;/p&gt;
+&lt;p&gt;Bien, qui je suis? Moi, je suis un &lt;a class="reference external" href="https://dl.dropboxusercontent.com/u/21219242/CV/adrianogil_cv_fr.pdf"&gt;développeur mobile&lt;/a&gt; et &lt;a class="reference external" href="https://scholar.google.com.br/citations?user=n6RoXpAAAAAJ"&gt;chercheur&lt;/a&gt; de l'Intelligence Artificiel des Jeux vidéos. Je suis diplômé d'un master en Génie Électrique et baccalauréaut en Génie informatique à l'Université Fédérale d'Amazonas.&lt;/p&gt;
+&lt;p&gt;Mes intérêts sont jouer et développer des jeux vidéo (mobile et desktop). Il y a cinq ans je travaille avec dévellopment de logiciels, et dans les prochains posts je vais décrire quelquer projets de dévelopment de jeux vidéo, traîtement d'images et apprentissage automatique.&lt;/p&gt;
+&lt;p&gt;À bientôt!&lt;/p&gt;
+&lt;!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. --&gt;
+&lt;!-- [a link relative to content root]({filename}/article1.md) --&gt;
+</summary><category term="welcome"></category></entry><entry><title>Hello World</title><link href="http://adrianogil.github.io/blog/hello-world-pt.html" rel="alternate"></link><updated>2016-01-01T14:00:00-04:00</updated><author><name>Adriano Gil</name></author><id>tag:adrianogil.github.io,2016-01-01:blog/hello-world-pt.html</id><summary type="html">&lt;p&gt;Olá pessoal,&lt;/p&gt;
+&lt;p&gt;este é meu blog pessoal onde vou abordar algumas das minhas pesquisas e também dicas de desenvolvimento. Dizem por aí que ter um blog é imprescindível para quem trabalha com tecnologia, então eu agora finalmente decidi começar o meu.&lt;/p&gt;
+&lt;p&gt;Bem, então para me apresentar: meu nome é Adriano Gil e sou &lt;a class="reference external" href="https://dl.dropboxusercontent.com/u/21219242/CV/adrianogil_cv_en.pdf"&gt;desenvolvedor&lt;/a&gt; e &lt;a class="reference external" href="https://scholar.google.com.br/citations?user=n6RoXpAAAAAJ"&gt;pesquisador em IA para Jogos&lt;/a&gt;. Tenho um mestrado em Engenharia elétrica e sou formado em Engenharia da Computação pela Universidade Federal do Amazonas.&lt;/p&gt;
+&lt;p&gt;Tenho grande interesso no desenvolvimento de jogos (mobile ou desktop), e nos últimos 5 anos tenho trabalhado com desenvolvimento, então nos próximos posts vou descrever alguns projetos de desenvolvimento de jogos, pesquisa em processamentos de imagens e em aprendizagem de máquina.&lt;/p&gt;
+&lt;p&gt;Até um próximo post.&lt;/p&gt;
+&lt;!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. --&gt;
+&lt;!-- [a link relative to content root]({filename}/article1.md) --&gt;
+</summary><category term="welcome"></category></entry></feed>
