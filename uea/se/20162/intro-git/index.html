@@ -111,6 +111,8 @@
 				        <p>
 				            crie uma c&oacute;pia de trabalho em um reposit&oacute;rio local executando o comando<br />
 				            <code>git clone /caminho/para/o/reposit&oacute;rio</code><br />
+				        </p>
+				        <p class="fragment">
 				            quando usar um servidor remoto, seu comando ser&aacute;<br />
 				            <code>git clone usu&aacute;rio@servidor:/caminho/para/o/reposit&oacute;rio</code>
 				        </p>
@@ -124,13 +126,13 @@
 				        <p>
 				            seus reposit&oacute;rios locais consistem em tr&ecirc;s "&aacute;rvores" mantidas pelo git.
 			            </p>
-			            <p>
+			            <p class="fragment">
 				            a primeira delas &eacute; sua <code>Working Directory</code> que cont&eacute;m os arquivos vigentes.
 			            </p>
-			            <p>
+			            <p class="fragment">
 				            a segunda <code>Index</code> que funciona como uma &aacute;rea tempor&aacute;ria 
 			            </p>
-			            <p>
+			            <p class="fragment">
 				            e
 				            finalmente a <code>HEAD</code> que aponta para o &uacute;ltimo <i>commit</i> (confirma&ccedil;&atilde;o) que voc&ecirc; fez.
 				        </p>
@@ -216,10 +218,16 @@
 				        <p>
 				            crie um novo branch chamado "funcionalidade_x" e selecione-o usando<br />
 				            <code>git checkout -b funcionalidade_x</code><br />
+			            </p>
+			            <p class="fragment">
 				            retorne para o master usando<br />
 				            <code>git checkout master</code><br />
+			            </p>
+			            <p class="fragment">
 				            e remova o branch da seguinte forma<br />
 				            <code>git branch -d funcionalidade_x</code><br />
+			            </p>
+			            <p class="fragment">
 				            um branch <i> n&atilde;o est&aacute; dispon&iacute;vel a outros</i> a menos que voc&ecirc; envie o branch para seu reposit&oacute;rio remoto<br />
 				            <code>git push origin &lt;funcionalidade_x&gt;</code>
 				        </p>
@@ -234,6 +242,8 @@
 				            para atualizar seu reposit&oacute;rio local com a mais nova vers&atilde;o, execute <br />
 				            <code>git pull</code><br />
 				            na sua pasta de trabalho para <i>obter</i> e <i>fazer merge</i> (mesclar) altera&ccedil;&otilde;es remotas.<br />
+			            </p>
+			            <p class="fragment">
 				            para fazer merge de um outro branch ao seu branch ativo (ex. master), use<br />
 				            <code>git merge &lt;branch&gt;</code><br />
 				        </p>
@@ -246,10 +256,17 @@
 				        <h2>atualizar &amp; mesclar</h2>
 				        <p>
 				            em ambos os casos o git tenta fazer o merge das altera&ccedil;&otilde;es automaticamente. Infelizmente, isto nem sempre &eacute; poss&iacute;vel e resulta em <i>conflitos</i>.
+			            </p>
+				        <p class="fragment">    
 				            Voc&ecirc; &eacute; respons&aacute;vel por fazer o merge estes <i>conflitos</i>
-				            manualmente editando os arquivos exibidos pelo git. Depois de alterar, voc&ecirc; precisa marc&aacute;-los como merged com<br />
+				            manualmente editando os arquivos exibidos pelo git. 
+			            </p>
+			            <p class="fragment">
+				            Depois de alterar, voc&ecirc; precisa marc&aacute;-los como merged com<br />
 				            <code>git add &lt;arquivo&gt;</code><br />
-				            antes de fazer o merge das altera&ccedil;&otilde;es, voc&ecirc; pode tamb&eacute;m pr&eacute;-visualiz&aacute;-as usando<br />
+			            </p>
+			            <p class="fragment">
+				            antes de fazer o merge das altera&ccedil;&otilde;es, voc&ecirc; pode tamb&eacute;m pr&eacute;-visualiz&aacute;-las usando<br />
 				            <code>git diff &lt;branch origem&gt; &lt;branch destino&gt;</code>
 				        </p>
 				    </div>
@@ -260,10 +277,20 @@
 				    <div class="scrollblock block-tagging">
 				        <h2>rotulando</h2>
 				        <p>
-				            &eacute; recomendado criar r&oacute;tulos para releases de software. Este &eacute; um conhecido conceito, que tamb&eacute;m existe no SVN. Voc&ecirc; pode criar um novo r&oacute;tulo chamado <i>1.0.0</i> executando o comando<br />
+				            &eacute; recomendado criar r&oacute;tulos para releases de software. Este &eacute; um conhecido conceito, que tamb&eacute;m existe no SVN. 
+			            </p>
+			            <p class="fragment">
+				            Voc&ecirc; pode criar um novo r&oacute;tulo chamado <i>1.0.0</i> executando o comando<br />
 				            <code>git tag 1.0.0 1b2e1d63ff</code><br />
-				            o <i>1b2e1d63ff</i> representa os 10 primeiros caracteres do id de commit que voc&ecirc; quer referenciar com seu r&oacute;tulo. Voc&ecirc; pode obter o id de commit com <br />
+			            </p>
+			            <p class="fragment">
+				            o <i>1b2e1d63ff</i> representa os 10 primeiros caracteres do id de commit que voc&ecirc; quer referenciar com seu r&oacute;tulo. 
+			            </p>
+			            <p class="fragment">
+				            Voc&ecirc; pode obter o id de commit com <br />
 				            <code>git log</code><br />
+			            </p>
+			            <p class="fragment">
 				            voc&ecirc; pode tamb&eacute;m usar menos caracteres do id de commit, ele somente precisa ser &uacute;nico.
 				        </p>
 				    </div>
@@ -276,6 +303,8 @@
 				        <p>
 				            No caso de voc&ecirc; ter feito algo errado (que seguramente nunca acontece ;) voc&ecirc; pode sobrescrever as altera&ccedil;&otilde;es locais usando o commando<br />
 				            <code>git checkout -- &lt;arquivo&gt;</code><br />
+			            </p>
+			            <p class="fragment">
 				            isto substitui as altera&ccedil;&otilde;es na sua &aacute;rvore de trabalho com o conte&uacute;do mais recente no HEAD. Altera&ccedil;&otilde;es j&aacute; adicionadas ao index, bem como novos arquivos ser&atilde;o mantidos.
 				        </p>
 				    </div>
