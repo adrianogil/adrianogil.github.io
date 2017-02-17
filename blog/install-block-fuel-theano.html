@@ -3,8 +3,8 @@
 <head>
         <meta charset="utf-8" />
         <title>How to Install Theano, Blocks and Fuel</title>
-        <link rel="stylesheet" href="http://adrianogil.github.io/blog/theme/css/main.css" />
-        <link href="http://adrianogil.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gil Labs Atom Feed" />
+        <link rel="stylesheet" href="http://localhost:8000/theme/css/main.css" />
+        <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gil Labs Atom Feed" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,16 +13,16 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://adrianogil.github.io/blog/">Gil Labs </a></h1>
+                <h1><a href="http://localhost:8000/">Gil Labs </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="http://adrianogil.github.io/blog/category/blog.html">blog</a></li>
+                    <li class="active"><a href="http://localhost:8000/category/blog.html">blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="http://adrianogil.github.io/blog/install-block-fuel-theano.html" rel="bookmark"
+        <a href="http://localhost:8000/install-block-fuel-theano.html" rel="bookmark"
            title="Permalink to How to Install Theano, Blocks and Fuel">How to Install Theano, Blocks and Fuel</a></h1>
     </header>
 
@@ -33,12 +33,12 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://adrianogil.github.io/blog/author/adriano-gil.html">Adriano Gil</a>
+                By                         <a class="url fn" href="http://localhost:8000/author/adriano-gil.html">Adriano Gil</a>
         </address>
-<p>In <a href="http://adrianogil.github.io/blog/category/blog.html">blog</a>.</p>
-<p>tags: <a href="http://adrianogil.github.io/blog/tag/deep-learning.html">deep-learning</a> </p>Translations:
-        <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-fr.html">fr</a>
-        <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-pt.html">pt</a>
+<p>In <a href="http://localhost:8000/category/blog.html">blog</a>.</p>
+<p>tags: <a href="http://localhost:8000/tag/deep-learning.html">deep-learning</a> </p>Translations:
+        <a href="http://localhost:8000/install-block-fuel-theano-fr.html">fr</a>
+        <a href="http://localhost:8000/install-block-fuel-theano-pt.html">pt</a>
 
 </footer><!-- /.post-info -->      <!-- Intro ============================================================================================================== -->
 <p>The very first step to develop a <a class="reference external" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> experiment - if you don't want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.</p>
@@ -54,21 +54,21 @@
 <h2>Installing on Windows</h2>
 <p>I found some useful tips on <a class="reference external" href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">this reddit post</a> and I have tested it on Windows 8.1 and Windows 10.</p>
 <p>The first step is download and install the <a class="reference external" href="https://www.continuum.io/downloads">Windows version of Anaconda</a>. After a simple installation wizard, we need to install the required libraries for Theano. Thanks to Anaconda, we can use a very simple command-line tool <cite>conda</cite> in the <cite>Anaconda Prompt</cite>:</p>
-<div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
+<div class="highlight"><pre><span></span>conda install pip six nose numpy scipy graphviz
 conda install mingw libpython
 </pre></div>
 <p>Some necessary python libraries are pre-requisite to specific Theano functions, like drawing debug graphs of operation nodes, and can also be used in Blocks or Fuel.</p>
-<div class="highlight"><pre>pip install pydot2 progressbar2 picklable-itertools
+<div class="highlight"><pre><span></span>pip install pydot2 progressbar2 picklable-itertools
 </pre></div>
 <p>Theano can be installed using <cite>pip</cite>:</p>
-<div class="highlight"><pre>pip install theano
+<div class="highlight"><pre><span></span>pip install theano
 </pre></div>
 <p>Fuel can be downloaded directly from github repository: <a class="reference external" href="https://github.com/mila-udem/fuel">https://github.com/mila-udem/fuel</a>. In order to install it, we need to run the script <cite>setup.py</cite>:</p>
-<div class="highlight"><pre><span class="nb">cd </span>fuel
+<div class="highlight"><pre><span></span><span class="nb">cd</span> fuel
 python setup.py install
 </pre></div>
 <p>Fuel can be downloaded directly from github repository: <a class="reference external" href="https://github.com/mila-udem/blocks">https://github.com/mila-udem/blocks</a>. In order to install it, we need to use python to execute the setuptools script <cite>setup.py</cite></p>
-<div class="highlight"><pre><span class="nb">cd </span>blocks
+<div class="highlight"><pre><span></span><span class="nb">cd</span> blocks
 python setup.py install
 </pre></div>
 <div class="figure align-center">
@@ -80,16 +80,16 @@ python setup.py install
 <div class="section" id="installing-on-osx">
 <h2>Installing on OSX</h2>
 <p>According <a class="reference external" href="http://deeplearning.net/software/theano/install.html#mac-os">Theano page about mac installation</a> we can <a class="reference external" href="https://www.continuum.io/downloads">download Anaconda</a>  and then Theano can be installed by <cite>pip</cite>:</p>
-<div class="highlight"><pre>conda install pip six nose numpy scipy graphviz
+<div class="highlight"><pre><span></span>conda install pip six nose numpy scipy graphviz
 pip install pydot2
 pip install Theano
 </pre></div>
 <p>After downloading Fuel <a class="reference external" href="https://github.com/mila-udem/fuel">on github page</a>, inside its folder there is a script <cite>setup.py</cite> that handles the installation by means of setuptools:</p>
-<div class="highlight"><pre><span class="nb">cd </span>fuel
+<div class="highlight"><pre><span></span><span class="nb">cd</span> fuel
 python setup.py install
 </pre></div>
 <p>Once downloaded Blocks <a class="reference external" href="https://github.com/mila-udem/blocks">from github page</a>, you can install it by executing the setuptools script <cite>setup.py</cite>:</p>
-<div class="highlight"><pre><span class="nb">cd </span>blocks
+<div class="highlight"><pre><span></span><span class="nb">cd</span> blocks
 python setup.py install
 </pre></div>
 <div class="figure align-center">
@@ -102,16 +102,16 @@ python setup.py install
 <h2>Installing on Ubuntu</h2>
 <p>Some installation steps are published on <a class="reference external" href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">Theano site</a>, so by following it I easily managed to install it on Ubuntu 14.10.</p>
 <p>Download and e install all requisites of the libraries using <cite>apt-get</cite>:</p>
-<div class="highlight"><pre>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz
+<div class="highlight"><pre><span></span>sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz
 </pre></div>
 <p>Then Theano can be installed by <cite>pip</cite>:</p>
-<div class="highlight"><pre>pip install Theano
+<div class="highlight"><pre><span></span>pip install Theano
 </pre></div>
 <p>Fuel library can be also installed using <cite>pip</cite> directly from github repository:</p>
-<div class="highlight"><pre>pip install git+git://github.com/mila-udem/fuel.git
+<div class="highlight"><pre><span></span>pip install git+git://github.com/mila-udem/fuel.git
 </pre></div>
 <p>Blocks library also is installed by <cite>pip</cite>:</p>
-<div class="highlight"><pre>pip install git+git://github.com/mila-udem/blocks.git
+<div class="highlight"><pre><span></span>pip install git+git://github.com/mila-udem/blocks.git
 </pre></div>
 <div class="figure align-center">
 <img alt="Running Theano on Ubuntu" src="images/2016-01-10-installing/ubuntu-terminal.png" style="width: 409px; height: 166px;" />
@@ -137,7 +137,7 @@ python setup.py install
       <script type="text/javascript">
         var disqus_shortname = 'gillabs';
         var disqus_identifier = 'install-block-fuel-theano.html';
-        var disqus_url = 'http://adrianogil.github.io/blog/install-block-fuel-theano.html';
+        var disqus_url = 'http://localhost:8000/install-block-fuel-theano.html';
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//gillabs.disqus.com/embed.js';
@@ -151,7 +151,7 @@ python setup.py install
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">
-                        <h2>blogroll</h2>
+                        <h2>links</h2>
                         <ul>
                             <li><a href="http://getpelican.com/">Pelican</a></li>
                             <li><a href="http://python.org/">Python.org</a></li>
@@ -162,7 +162,7 @@ python setup.py install
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="http://adrianogil.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://twitter.com/sandmangil">@sandmangil</a></li>
                             <li><a href="https://br.linkedin.com/pub/adriano-gil/16/106/6b9">LinkedIn</a></li>
@@ -179,14 +179,13 @@ python setup.py install
         </footer><!-- /#contentinfo -->
 
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72020934-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72020934-1', 'auto');
+    ga('send', 'pageview');
     </script>
 <script type="text/javascript">
     var disqus_shortname = 'gillabs';

@@ -3,8 +3,8 @@
 <head>
         <meta charset="utf-8" />
         <title>Gil Labs - blog</title>
-        <link rel="stylesheet" href="http://adrianogil.github.io/blog/theme/css/main.css" />
-        <link href="http://adrianogil.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gil Labs Atom Feed" />
+        <link rel="stylesheet" href="http://localhost:8000/theme/css/main.css" />
+        <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gil Labs Atom Feed" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,38 +13,268 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://adrianogil.github.io/blog/">Gil Labs </a></h1>
+                <h1><a href="http://localhost:8000/">Gil Labs </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="http://adrianogil.github.io/blog/category/blog.html">blog</a></li>
+                    <li class="active"><a href="http://localhost:8000/category/blog.html">blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://adrianogil.github.io/blog/global-game-jam-2016.html">Kuarup: a Global Game Jam 2016 game</a></h1>
+                    <h1 class="entry-title"><a href="http://localhost:8000/visual-behaviors-pt.html">Como fazer um Space Invaders simples na Unity sem programação</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2016-02-14T14:00:00-04:00">
-                Published: Sun 14 February 2016
+        <abbr class="published" title="2017-01-31T21:00:00-04:00">
+                Published: Tue 31 January 2017
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://adrianogil.github.io/blog/author/adriano-gil.html">Adriano Gil</a>
+                By                         <a class="url fn" href="http://localhost:8000/author/adriano-gil.html">Adriano Gil</a>
         </address>
-<p>In <a href="http://adrianogil.github.io/blog/category/blog.html">blog</a>.</p>
-<p>tags: <a href="http://adrianogil.github.io/blog/tag/ggj16.html">ggj16</a> <a href="http://adrianogil.github.io/blog/tag/unity3d.html">unity3d</a> <a href="http://adrianogil.github.io/blog/tag/puzzle.html">puzzle</a> <a href="http://adrianogil.github.io/blog/tag/color-based.html">color-based</a> </p>
-</footer><!-- /.post-info --><p>Some weeks ago, I have participated in one of the most famous game jams ever: <a class="reference external" href="http://globalgamejam.org/">Global Game Jam</a>. So I worked with some very talented guys that I’ve meet on Samsung Institute and on Samsung OCEAN: our designer Rafael Lima, and developers Bruno Araujo, Germano Assis and Marcus Brandt.</p>
-<p>At the game jam start, the theme was revealed: Ritual. So, we decided to create a color-based puzzle game about choosing cute monsters to sacrifice. So it's about ritual as repetition of tasks and ritual as magic and sacrifice.</p>
+<p>In <a href="http://localhost:8000/category/blog.html">blog</a>.</p>
+<p>tags: <a href="http://localhost:8000/tag/unity.html">unity</a> </p>
+</footer><!-- /.post-info --><p>Olá Pessoal,</p>
+<p>No post de hoje vou descrever como desenvolver uma versão simplificada do Space Invaders  na Unity. Esse tutorial não vai focar na programação, assim para gerar os comportamentos dos elementos de jogo, foi adotada uma série de scripts de comportamentos visuais (Visual Behaviors, um antigo projeto meu).</p>
+<!-- New project -->
 <div class="figure align-center">
-<img alt="Kuarup" src="images/2016-02-14-ggj16/screenshot.png" style="width: 300px; height: 600px;" />
-<p class="caption">A game level on Kuarup</p>
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/00_first_screen.png" style="width: 542px; height: 124px;" />
 </div>
-<p>My participation was only on main gameplay features, like the logic of block falling and eye-candy animations. It was sort of a PCG of elements where I’ve worked with the generation of those little monstrous blocks. Then, the challenge was about how to guarantee that current level is always achievable. Well, a pseudo-random method helped a lot and we also choose a mechanic where power-ups allow to remove blocks of a specific color.</p>
-<p>I really thank you my team for such interesting project and I hope we get to work again.</p>
-<p>And if are interested in the game, you can find the code on <a class="reference external" href="https://github.com/baraujo/puzzlegame">github</a>.</p>
-<p>Until the next game jam!</p>
+<p>Começamos com a criação de um projeto novo na Unity, após pressionar o new da tela inicial. Agora, colocamos um nome de projeto e qual o diretório onde esse projeto deverá ser criado.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/01_new_project.png" style="width: 500px; height: 286px;" />
+</div>
+<p>E assim o projeto “MyGame” foi criado com sucesso pela Unity. Na próxima figura, percebemos que no sistema de arquivos, a Unity criou três diretórios: Assets. Library e ProjectSettings. Na pasta Assets devemos colocar todos os arquivos que serão utilizados no jogo: scripts, spritesheets, texturas, modelos 3d, sons e etc. A pasta Library ficam os uma versão dos assets já compilados para se adequar as configurações de cada plataforma. Já na pasta ProjectSettings, a Unity armazena as configurações do projeto: seus sistemas de tags, layers, configurações de build e etc. Na pasta Temp o executável é montado no momento do processo de build do projeto.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/02_file_system_project.png" style="width: 408px; height: 124px;" />
+</div>
+<p>A interface da unity é dividida principalmente nas seguintes tabs:</p>
+<ul class="simple">
+<li>Hierarchy: mostra quais os gameobjects estão em cena.</li>
+<li>Inspector: permite inspecionar os componentes dos gamesobjects ou inspecionar as opções de configuração de projeto ou importação de assets.</li>
+<li>Project: espelha a pasta MyGame/Assets/ do sistema de arquivos</li>
+<li>Scene: é a minha cena de jogo, onde posso posicionar gameobjects</li>
+<li>Game: é a tab que mostra a renderização e a execução do jogo</li>
+<li>Console: mostra os erros e warnings do projeto</li>
+<li>AssetStore: uma loja de assets da Unity para venda e compra de qualquer tipo de artefato para o desenvolvimento com a Unity.</li>
+</ul>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/02_unity.png" style="width: 657px; height: 497px;" />
+</div>
+<p>Esse layout de tabs é o default. Pode ser trocado no menu superior direito por algum das opções disponíveis. Ou mesmo pode ser editado, as tabs podem ser arrastadas livremente e ao criar um layout que o agrade, essa opção pode ser salva e carregada posteriormente em qualquer outro projeto dessa mesma máquina. Observem que eu criei a minha própria opção: &quot;CrazyLayout&quot;.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/03_unity_layout.png" style="width: 311px; height: 296px;" />
+</div>
+<p>Bem, vamos tentar entender o que temos no nosso projeto da <strong>Unity</strong> até agora. Olhando para a tab de <strong>Hierarchy</strong> vemos dois GameObjects: <strong>&quot;Main Camera&quot;</strong> e <strong>&quot;Directional Light&quot;</strong>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/04_initial_hierarchy.png" style="width: 206px; height: 399px;" />
+</div>
+<p>No GameObject da câmera vemos vários componentes: Transform, Camera, GUILayer, FlareLayer, AudioListener.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/05_main_camera_gameobject.png" style="width: 276px; height: 201px;" />
+</div>
+<p>O componente <strong>Camera</strong> permite a renderização do jogo. Podemos pensar que ele age como uma câmera filmando nossa cena e apresentando o conteúdo filmando ao usuário através da tab <strong>Game</strong>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/06_camera_component.png" style="width: 275px; height: 325px;" />
+</div>
+<p>O componente <strong>Transform</strong> é um dos mais importantes, através dele podemos alterar o posicionamento dos gameobjects no espaço da cena, além de sua rotação e escala.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/07_transform_component.png" style="width: 277px; height: 79px;" />
+</div>
+<p>Agora vamos criar algumas pastas na unity. Geralmente, recomenda-se seguir um padrão de <a class="reference external" href="https://twitter.com/CiroContns/status/831547413290766338">nomes de pastas</a> para facilitar a busca por assets a medida que o projeto aumenta de tamanho.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/08_create_folder.png" style="width: 549px; height: 542px;" />
+</div>
+<p>Neste projeto vamos usar as pastas: Prefabs, Scenes e Scripts.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/09_folders_created.png" style="width: 361px; height: 226px;" />
+</div>
+<p>Vamos aproveitar para salvar nossa cena em <strong>Scenes/Game.unity</strong>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/10_save_scene.png" style="width: 250px; height: 321px;" />
+</div>
+<p>A <em>Unity</em> traz alguns elementos básicos que podemos usar em nossos jogos. Seguindo a opção vista na imagem abaixo, vamos adicionar um cubo na cena.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/11_create_cube.png" style="width: 321px; height: 531px;" />
+</div>
+<p>Assim, na tab de <strong>Hierarchy</strong> podemos conferir o cubo adicionado.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/12_cube_gameobject.png" style="width: 614px; height: 353px;" />
+</div>
+<p>Já na tab de <strong>Inspector</strong>, verificamos seus componentes:</p>
+<ul class="simple">
+<li><strong>Transform</strong>: para posicionamento, rotação e mudança de escala</li>
+<li><strong>MeshFilter</strong>: que armazena as informações de geometria do objeto (aka. Mesh).</li>
+<li><strong>BoxCollider</strong>: um componente importante para detectar colisões no jogo</li>
+<li><strong>MeshRenderer</strong>: renderiza o nosso cubo a partir das informações de geometria contidas no MeshFilter e também usando as informações providas pelo Material</li>
+</ul>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/13_cube_components.png" style="width: 633px; height: 160px;" />
+</div>
+<p>O posicionamento do cubo pode ser alterado ao inserir novos valores nos campos de <strong>Position</strong> do <strong>Transform</strong>. Também é possível na cena utilizar as setas azul, vermelha e verde que aparecem ao selecionar o cubo. Esse tipo de element visual é conhecido como <strong>Gizmo</strong>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/14_cube_transform.png" style="width: 700px; height: 281px;" />
+</div>
+<p>É possível resetar todas as alterações no <strong>Transform</strong> atráves da opções <strong>Reset</strong> no menu de configurações do componente.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/15_transform_reset.png" style="width: 495px; height: 253px;" />
+</div>
+<p>Para facilitar nossa manipulação do cubo, vamos ativar as opções de <em>snap</em>. No modo snap o cubo pode ser arrastado para qualquer uma das três direções em saltos de uma unidade fixa.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/16_snap_settings_menu.png" style="width: 338px; height: 607px;" />
+</div>
+<p>Na janela de <strong>Snap Settings</strong> podemos configurar a movimentação do nosso cubo em modo <em>snap</em>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/17_snap_settings_window.png" style="width: 286px; height: 213px;" />
+</div>
+<p>Ao pressionar Ctrl+D ou Cmd+D podemos clonar nosso cubo, e ao movimentar o cubo enquanto pressiona o Ctrl/Cmd podemos realizar o seu deslocamento em modo <em>snap</em>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/18_cube_clone.png" style="width: 478px; height: 272px;" />
+</div>
+<p>Clonando vários cubos podemos fazer nossa linha, com exatos 13 cubos.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/19_cubes_selection.png" style="width: 614px; height: 291px;" />
+</div>
+<p>A opção <strong>Empty</strong> permite criar um GameObject vazio, somente com o componente <strong>Transform</strong>.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/20_create_empty.png" style="width: 272px; height: 347px;" />
+</div>
+<p>Vou renomear o GameObject vazio para 'Line' e então resetar o <strong>Transform</strong> para seus valores padrões. Ao selecionar todos os cubos, podemos arrastá-los para dentro da 'Line'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/21_create_lines.png" style="width: 700px; height: 233px;" />
+</div>
+<p>Para melhor visualizar e editar o cubo, vou alterar as opções de <a class="reference external" href="https://docs.unity3d.com/Manual/ViewModes.html">shading</a> da cena.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/22_shading_mode.png" style="width: 217px; height: 134px;" />
+</div>
+<p>Agora ao clonar a 'Line' também estaremos clonando todos os 13 cubos contidos nela. Dessa maneira podemos a 'Line' duas vezes e arrastá-las para cima da linha original. Ao selecionar individualmente um cubo, podemos deletar apertando del/Cmd+del. Em poucos passos, nossos cubos podem ficar no formato da figura abaixo.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/23_copy_lines.png" style="width: 660px; height: 246px;" />
+</div>
+<p>Copiando mais uma linha para cima, temos o corpo do nosso personagem. Para deixar a visualização dos objetos mais fácil, vou criar um GameObject vazio 'Body', resetar seu <strong>Transform</strong> e colocar como filhos todos os outros objetos 'Line' criados.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/24_finished_body.png" style="width: 625px; height: 251px;" />
+</div>
+<p>Copiando um cubo começamos o processo de criação da antena.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/25_started_antenna.png" style="width: 614px; height: 269px;" />
+</div>
+<p>Aproveito para criar um GameObject vazio chamado 'Antenna' resetando seu <strong>Transform</strong> e arrasto o cubo criado anteriormente.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/26_antenna_empty.png" style="width: 700px; height: 227px;" />
+</div>
+<p>Clonando mais alguns cubos, finalizamos a 'Antenna'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/27_finished_antenna.png" style="width: 656px; height: 301px;" />
+</div>
+<p>O próximo passo é criar um GameObject 'Claws' com seu <strong>Transform</strong> resetado.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/28_claws_empty.png" style="width: 291px; height: 178px;" />
+</div>
+<p>Clonando os cubos, tal como dispostos na imagem abaixo, finalizamos as garras do nosso personagem.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/29_claws_cubes.png" style="width: 648px; height: 333px;" />
+</div>
+<p>Agora nós temos o nosso <em>Space Invader</em>. Para sua melhor edição, crio um GameObject 'Cubes' com <strong>Transform</strong> resetado e arrasto o 'Body', 'Antenna' e 'Claws'. Por fim, vamos criar um GameObject 'SpaceInvaders' também resetando seu <strong>Transform</strong> para onde jogamos o 'Cubes'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/30_space_invaders_cubes.png" style="width: 674px; height: 242px;" />
+</div>
+<p>Selecionando o 'Cubes' alteramos sua escala para (0.2, 0.2, 0.2)</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/31_downscale_invader.png" style="width: 700px; height: 199px;" />
+</div>
+<p>Clicando na tab Games, podemos ver como o personagem será visualizado pelo jogador.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/32_invader_game_tab.png" style="width: 412px; height: 254px;" />
+</div>
+<p>Na nossa câmera, alteramos a propriedade <em>'Clear Flags'</em> para 'Solid Color' e o cor de Background para (0,0,0,0).</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/33_camera_clear_flags.png" style="width: 700px; height: 225px;" />
+</div>
+<p>Clonando e criando objetos vazios como nos passos anteriores, temos o nosso 'Player'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/34_player_cubes.png" style="width: 700px; height: 269px;" />
+</div>
+<p>Agora na tab de <strong>Game</strong> podemos visualizar os nossos personagens.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/35_player_game_tab.png" style="width: 430px; height: 345px;" />
+</div>
+<p>Para adicionar mais movimento para nossa cena, vamos usar alguns scripts de programação <a class="reference external" href="https://github.com/adrianogil/VisualBehaviors">Visual</a> para dentro da pasta 'Scripts'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/36_copy_scripts.png" style="width: 234px; height: 274px;" />
+</div>
+<p>Inspecionado o GameObject 'SpaceInvaders' podemos adicionar novos componentes pressionando o botão 'Add Component'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/37_add_component.png" style="width: 279px; height: 509px;" />
+</div>
+<p>Adicionando o script 'Move' do VisualBehaviors.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/38_add_move_invader.png" style="width: 700px; height: 257px;" />
+</div>
+<p>Adicionando e configurando o script 'Move' do VisualBehaviors.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/39_callevent_invader.png" style="width: 276px; height: 497px;" />
+</div>
+<p>O script 'CallEvent' permite alterar o comportamento de outros scripts.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/40_configure_callevent.png" style="width: 276px; height: 183px;" />
+</div>
+<p>Na bloco de 'Action', pressionamos o botão de '+' para adicionar uma ação. Selecionamos um GameObject que irá sofrer a modificação de comportamento.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/41_configure_callevent.png" style="width: 612px; height: 500px;" />
+</div>
+<p>Agora, escolhemos qual método de qual componente será alterado. O método 'ChangeDirectionX' permite inverter a direção de movimento do script 'Move'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/42_configure_callevent.png" style="width: 396px; height: 422px;" />
+</div>
+<p>O movimento do jogador pode ser implementado por dois componentes 'Move'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/43_move_player.png" style="width: 280px; height: 479px;" />
+</div>
+<p>Então criamos o GameObject 'Bullets' tal como mostrado na figura abaixo.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/44_bullets_gameobject.png" style="width: 700px; height: 294px;" />
+</div>
+<p>Adicionando o componente 'Move' para que nossa bala possa se movimentar para cima em direção ao 'SpaceInvader'.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/45_bullets_move.png" style="width: 279px; height: 340px;" />
+</div>
+<p>Arrastando o GameObject 'Bullets' para a tab de <strong>Project</strong> podemos criar um <a class="reference external" href="https://docs.unity3d.com/Manual/Prefabs.html">prefab</a>, um objeto pre-fabricado que pode ser replicado ao longo do nosso jogo.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/46_bullets_prefab.png" style="width: 241px; height: 240px;" />
+</div>
+<p>Vamos alterar a <strong>layer</strong> do objeto 'Bullets'</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/47_edit_settings_layers.png" style="width: 431px; height: 715px;" />
+</div>
+<p>Criamos a <strong>layer</strong> 'Bullets'</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/48_tags_and_layers.png" style="width: 261px; height: 315px;" />
+</div>
+<p>E alteramos o prefab 'Bullets'</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/49_bullets_add_layer.png" style="width: 321px; height: 200px;" />
+</div>
+<p>Ao adicionar o script 'Generate' podemos gerar nossos disparos.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/50_player_gen_bullets.png" style="width: 276px; height: 684px;" />
+</div>
+<p>No 'SpaceInvaders' adicionamos o script 'DestroyMe', configurando o nosso inimigo para ser destruído ao ser tocado por algum objeto da <strong>layer</strong> 'Bullets' Também adicionamos o componente de colisão 'BoxCollider' e um RigidBody sem gravidade e com suas rotações congeladas.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/51_invader_collision.png" style="width: 311px; height: 616px;" />
+</div>
+<p>Não podemos esquecer de ativar o checkbox de 'isTrigger' do 'BoxCollider' do nosso inimigo.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/52_invader_collider.png" style="width: 700px; height: 472px;" />
+</div>
+<p>E na bala, adicionamos um BoxCollider também como trigger.</p>
+<div class="figure align-center">
+<img alt="First Screen" src="images/2017-02-12-visualbehaviors/53_bullets_collider.png" style="width: 700px; height: 295px;" />
+</div>
+<!-- My components -->
+<!-- How to create a space invaders -->
+<p>Até um próximo tutorial!</p>
 <!-- This will be turned into :abbr:`HTML (HyperText Markup Language)`. -->
 <!-- [a link relative to content root]({filename}/article1.md) -->
-<p>There are <a href="http://adrianogil.github.io/blog/global-game-jam-2016.html#disqus_thread">comments</a>.</p>                </article>
+<p>There are <a href="http://localhost:8000/visual-behaviors-pt.html#disqus_thread">comments</a>.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -53,7 +283,30 @@
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://adrianogil.github.io/blog/install-block-fuel-theano.html" rel="bookmark"
+                    <h1><a href="http://localhost:8000/global-game-jam-2016.html" rel="bookmark"
+                           title="Permalink to Kuarup: a Global Game Jam 2016 game">Kuarup: a Global Game Jam 2016 game</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-02-14T14:00:00-04:00">
+                Published: Sun 14 February 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8000/author/adriano-gil.html">Adriano Gil</a>
+        </address>
+<p>In <a href="http://localhost:8000/category/blog.html">blog</a>.</p>
+<p>tags: <a href="http://localhost:8000/tag/ggj16.html">ggj16</a> <a href="http://localhost:8000/tag/unity3d.html">unity3d</a> <a href="http://localhost:8000/tag/puzzle.html">puzzle</a> <a href="http://localhost:8000/tag/color-based.html">color-based</a> </p>
+</footer><!-- /.post-info -->                <p class="first last">Kuarup: a ggj16 game</p>
+
+                <a class="readmore" href="http://localhost:8000/global-game-jam-2016.html">read more</a>
+<p>There are <a href="http://localhost:8000/global-game-jam-2016.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://localhost:8000/install-block-fuel-theano.html" rel="bookmark"
                            title="Permalink to How to Install Theano, Blocks and Fuel">How to Install Theano, Blocks and Fuel</a></h1>
                 </header>
 
@@ -64,22 +317,22 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://adrianogil.github.io/blog/author/adriano-gil.html">Adriano Gil</a>
+                By                         <a class="url fn" href="http://localhost:8000/author/adriano-gil.html">Adriano Gil</a>
         </address>
-<p>In <a href="http://adrianogil.github.io/blog/category/blog.html">blog</a>.</p>
-<p>tags: <a href="http://adrianogil.github.io/blog/tag/deep-learning.html">deep-learning</a> </p>Translations:
-        <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-fr.html">fr</a>
-        <a href="http://adrianogil.github.io/blog/install-block-fuel-theano-pt.html">pt</a>
+<p>In <a href="http://localhost:8000/category/blog.html">blog</a>.</p>
+<p>tags: <a href="http://localhost:8000/tag/deep-learning.html">deep-learning</a> </p>Translations:
+        <a href="http://localhost:8000/install-block-fuel-theano-fr.html">fr</a>
+        <a href="http://localhost:8000/install-block-fuel-theano-pt.html">pt</a>
 
 </footer><!-- /.post-info -->                <p class="first last">Tips to install Block, Fuel and Theano</p>
 
-                <a class="readmore" href="http://adrianogil.github.io/blog/install-block-fuel-theano.html">read more</a>
-<p>There are <a href="http://adrianogil.github.io/blog/install-block-fuel-theano.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+                <a class="readmore" href="http://localhost:8000/install-block-fuel-theano.html">read more</a>
+<p>There are <a href="http://localhost:8000/install-block-fuel-theano.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://adrianogil.github.io/blog/hello-world.html" rel="bookmark"
+                    <h1><a href="http://localhost:8000/hello-world.html" rel="bookmark"
                            title="Permalink to Hello World">Hello World</a></h1>
                 </header>
 
@@ -90,23 +343,23 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="http://adrianogil.github.io/blog/author/adriano-gil.html">Adriano Gil</a>
+                By                         <a class="url fn" href="http://localhost:8000/author/adriano-gil.html">Adriano Gil</a>
         </address>
-<p>In <a href="http://adrianogil.github.io/blog/category/blog.html">blog</a>.</p>
-<p>tags: <a href="http://adrianogil.github.io/blog/tag/welcome.html">welcome</a> </p>Translations:
-        <a href="http://adrianogil.github.io/blog/hello-world-fr.html">fr</a>
-        <a href="http://adrianogil.github.io/blog/hello-world-pt.html">pt</a>
+<p>In <a href="http://localhost:8000/category/blog.html">blog</a>.</p>
+<p>tags: <a href="http://localhost:8000/tag/welcome.html">welcome</a> </p>Translations:
+        <a href="http://localhost:8000/hello-world-fr.html">fr</a>
+        <a href="http://localhost:8000/hello-world-pt.html">pt</a>
 
 </footer><!-- /.post-info -->                <p class="first last">A very small self presentation</p>
 
-                <a class="readmore" href="http://adrianogil.github.io/blog/hello-world.html">read more</a>
-<p>There are <a href="http://adrianogil.github.io/blog/hello-world.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+                <a class="readmore" href="http://localhost:8000/hello-world.html">read more</a>
+<p>There are <a href="http://localhost:8000/hello-world.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
                 </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
-                        <h2>blogroll</h2>
+                        <h2>links</h2>
                         <ul>
                             <li><a href="http://getpelican.com/">Pelican</a></li>
                             <li><a href="http://python.org/">Python.org</a></li>
@@ -117,7 +370,7 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="http://adrianogil.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://twitter.com/sandmangil">@sandmangil</a></li>
                             <li><a href="https://br.linkedin.com/pub/adriano-gil/16/106/6b9">LinkedIn</a></li>
@@ -134,14 +387,13 @@
         </footer><!-- /#contentinfo -->
 
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72020934-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72020934-1', 'auto');
+    ga('send', 'pageview');
     </script>
 <script type="text/javascript">
     var disqus_shortname = 'gillabs';
