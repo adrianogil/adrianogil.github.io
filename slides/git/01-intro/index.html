@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>git - guia pr&aacute;tico</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link href='https://fonts.googleapis.com/css?family=Chelsea Market' rel='stylesheet'>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/0/normalize.min.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section >
+					<div class="scrollblock block-title">
+						<h1>introdu&ccedil;&atilde;o ao git</h1>
+        				<p>
+        					apenas um guia pr&aacute;tico para come&ccedil;ar com git sem complica&ccedil;&atilde;o ;
+    					</p>
+						<p>
+							<small>Adriano Gil </small> <br>
+							<small> adriano.gil@samsung.com</small><br>
+						</p>
+
+						<p class="meta">
+							Baseado em tutorial criado por <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a>) e por <a href="http://www.twitter.com/rogerdudler">Roger Dudler</a>
+				            <br />cr&eacute;ditos para <a href="http://www.twitter.com/tfnico">@tfnico</a>, <a href="http://www.twitter.com/fhd">@fhd</a> and <a href="http://www.namics.com">Namics</a><br />
+				            guia original em
+				            <a href="index.html">english</a>,
+				            <a href="index.de.html">deutsch</a>,
+				            <a href="index.es.html">español</a>,
+				            <a href="index.fr.html">français</a>,
+				            <a href="index.id.html">indonesian</a>,
+				            <a href="index.it.html">italiano</a>,
+				            <a href="index.nl.html">nederlands</a>,
+				            <a href="index.pl.html">polski</a>,
+				            <a href="index.ru.html">русский</a>,
+				            <a href="index.tr.html">türkçe</a>,
+				            <br/>
+				            <a href="index.my.html">မြန်မာ</a>,
+				            <a href="index.ja.html">日本語</a>,
+				            <a href="index.zh.html">中文</a>,
+				            <a href="index.ko.html">한국어</a>
+				            <br />
+				            por favor informe problemas em <a href="https://github.com/rogerdudler/git-guide/issues">github</a>
+				        </p>
+					</div>
+				</section>
+
+				<section name="setup">
+					<img src="img/git_xkcd.png" alt="" style="width: 40%" />
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Arquivos e suas vers&otilde;es</h2>
+				        <img src="img/final-final-comics.jpg" alt="" style="width: 40%" />
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Arquivos e suas vers&otilde;es</h2>
+				        <img src="img/final-final-final-psd.jpg" alt="" />
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Versionamento e seus benefícios</h2>
+				        <p>
+				        	<ul>
+				                <li class="fragment">Backups</li>
+				                <li class="fragment">Reprodutibilidade</li>
+				                <li class="fragment">Ramificação de projeto</li>
+				                <li class="fragment">Comparar diferentes versões do mesmo arquivo </li>
+				                <li class="fragment">Marcação e resgate de versões estáveis</li>
+				            </ul>
+				        </p>
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Sistemas de Controle de Vers&atilde;o</h2>
+				        <p> Sistema que registra as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo permitindo que você possa recuperar <b>versões específicas.</b> </p>
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Modelos Centralizados</h2>
+				        <img src="img/centralized_vcs.png" alt="" />
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Modelos Distribuídos</h2>
+				        <img src="img/distributed_vcs.png" alt="" />
+			        </div>
+				</section>
+
+
+				<section name="intro-git" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Git</h2>
+				        <p>
+				            Inspirado no BitKeeper, git foi criado em 2005 pelo Linus Torvalds
+				        </p>
+			        </div>
+				</section>
+
+				<section name="intro-git" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>Objetivos do Git</h2>
+				        <p>
+				        	<ul>
+				                <li class="fragment">Velocidade</li>
+				                <li class="fragment">Completamente distribuido</li>
+				                <li class="fragment">Suporte para desenvolvimento não-linear (em milhares de branches paralelos)</li>
+				                <li class="fragment">Capacidade de lidar eficientemente com grandes projetos como o Linux</li>
+				            </ul>
+				        </p>
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
+				        <h2>instala&ccedil;&atilde;o</h2>
+				        <p>
+				            <a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3">Baixe o git para OSX</a>
+				        </p>
+				        <p>
+				            <a href="http://msysgit.github.io/">Baixe o git para Windows (Versão 2.5)</a>
+				        </p>
+				        <p>
+				            <a href="http://book.git-scm.com/2_installing_git.html">Baixe o git para Linux</a>
+				        </p>
+			        </div>
+				</section>
+
+				<section data-background-color="#06406c">
+					<a name="create"></a>
+				    <div class="scrollblock block-create">
+				        <h2>criando um novo reposit&oacute;rio</h2>
+				        <p>
+				            crie uma nova pasta, abra-a e execute o comando <br />
+				            <code>git init</code><br />
+				            para criar um novo reposit&oacute;rio.
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#FFF">
+					<a name="checkout"></a>
+				    <div class="scrollblock block-checkout">
+				        <h2>obtenha um reposit&oacute;rio</h2>
+				        <p>
+				            crie uma c&oacute;pia de trabalho em um reposit&oacute;rio local executando o comando<br />
+				            <code>git clone /caminho/para/o/reposit&oacute;rio</code><br />
+				        </p>
+				        <p class="fragment">
+				            quando usar um servidor remoto, seu comando ser&aacute;<br />
+				            <code>git clone usu&aacute;rio@servidor:/caminho/para/o/reposit&oacute;rio</code>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#4c0d09">
+					<a name="trees"></a>
+				    <div class="scrollblock block-trees">
+				        <h2>fluxo de trabalho</h2>
+				        <p>
+				            seus reposit&oacute;rios locais consistem em tr&ecirc;s "&aacute;rvores" mantidas pelo git.
+			            </p>
+			            <p class="fragment">
+				            a primeira delas &eacute; sua <code>Working Directory</code> que cont&eacute;m os arquivos vigentes.
+			            </p>
+			            <p class="fragment">
+				            a segunda <code>Index</code> que funciona como uma &aacute;rea tempor&aacute;ria
+			            </p>
+			            <p class="fragment">
+				            e
+				            finalmente a <code>HEAD</code> que aponta para o &uacute;ltimo <i>commit</i> (confirma&ccedil;&atilde;o) que voc&ecirc; fez.
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#4c0d09">
+					<a name="trees"></a>
+				    <div class="scrollblock block-trees">
+				        <h2>fluxo de trabalho</h2>
+				        <p>
+				            seus reposit&oacute;rios locais consistem em tr&ecirc;s "&aacute;rvores" mantidas pelo git.
+			            </p>
+				        <img class="plain" src="img/trees.png" alt="" />
+				    </div>
+				</section>
+
+				<section data-background-color="#cc4037">
+					<a name="add"></a>
+			    	<div class="scrollblock block-add">
+				        <h2>adicionar &amp; confirmar</h2>
+				        <p>
+				            Voc&ecirc; pode propor mudan&ccedil;as (adicion&aacute;-las ao <b>Index</b>) usando<br />
+				            <code>git add &lt;arquivo&gt;</code><br />
+				            <code>git add *</code><br />
+				            Este &eacute; o primeiro passo no fluxo de trabalho b&aacute;sico do git.
+				        </p>
+			    	</div>
+				</section>
+
+				<section data-background-color="#cc4037">
+					<a name="add"></a>
+			    	<div class="scrollblock block-add">
+				        <h2>adicionar &amp; confirmar</h2>
+				        <p>
+				            Para realmente confirmar estas mudan&ccedil;as (isto é, fazer um <i>commit</i>), use<br />
+				            <code>git commit -m "coment&aacute;rios das altera&ccedil;&otilde;es"</code><br />
+				            Agora o arquivo &eacute; enviado para o <b>HEAD</b>, mas ainda n&atilde;o para o reposit&oacute;rio remoto.
+				        </p>
+			    	</div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="push"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>enviando altera&ccedil;&otilde;es</h2>
+				        <p>
+				            Suas altera&ccedil;&otilde;es agora est&atilde;o no <b>HEAD</b> da sua c&oacute;pia de trabalho local. Para enviar estas altera&ccedil;&otilde;es ao seu reposit&oacute;rio remoto, execute <br />
+				            <code>git push origin master</code><br />
+				            Altere <i>master</i> para qualquer ramo (<i>branch</i>) desejado, enviando suas altera&ccedil;&otilde;es para ele.
+				            <br /><br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="push"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>enviando altera&ccedil;&otilde;es</h2>
+				        <p>
+				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
+				            <code>git remote add origin &lt;servidor&gt;</code><br />
+				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>verificando suas altera&ccedil;&otilde;es antes do commit</h2>
+				        <p>
+				        	Para listar quais arquivos estão marcados para commit, use <br/>
+				        	<code>git status</code><br/>
+				            Os arquivos/diretórios que nunca foram adicionados em um commit são exibidos como <b>Untracked files</b>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>Arquivos ignorados</h2>
+				        <p>
+				        	Em determinados projetos, a lista de arquivos que nunca serão commitados pode ser longa. Nesses casos é melhor adicionar o <i>path</i> destes arquivos em um
+				        	<code>.gitignore</code><br/>
+			        	</p>
+				        <p class="fragment">
+				            Todos os arquivos identificados são removidos da listagem do <code>git status</code> e para ser adicionados no projeto deve ser usado o <code>git add -f <ignored-file></code><br/>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>verificando os commits</h2>
+				        <p>
+				        	<code>git whatchanged</code><br/>
+				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
+				            <code>git remote add origin &lt;servidor&gt;</code><br />
+				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>verificando suas altera&ccedil;&otilde;es antes do commit</h2>
+				        <p>
+				        	<code>git log</code><br/>
+				        	<code>git log --pretty=oneline</code><br/>
+				        	<code>git log --since=2.weeks</code><br/>
+				        	Existem outros filtros como <code>–since</code>, <code>--after</code>, <code>--until</code>, <code>--before</code>, <code>--author </code>
+				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
+				            <code>git remote add origin &lt;servidor&gt;</code><br />
+				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#348fd4">
+					<a name="tagging"></a>
+				    <div class="scrollblock block-tagging">
+				        <h2>rotulando</h2>
+				        <p>
+				            &eacute; recomendado criar r&oacute;tulos para releases de software. Este &eacute; um conhecido conceito, que tamb&eacute;m existe no SVN.
+			            </p>
+			            <p class="fragment">
+				            Voc&ecirc; pode criar um novo r&oacute;tulo chamado <i>1.0.0</i> executando o comando<br />
+				            <code>git tag 1.0.0 1b2e1d63ff</code><br />
+			            </p>
+			            <p class="fragment">
+				            o <i>1b2e1d63ff</i> representa os 10 primeiros caracteres do id de commit que voc&ecirc; quer referenciar com seu r&oacute;tulo.
+			            </p>
+			            <p class="fragment">
+				            Voc&ecirc; pode obter o id de commit com <br />
+				            <code>git log</code><br />
+			            </p>
+			            <p class="fragment">
+				            voc&ecirc; pode tamb&eacute;m usar menos caracteres do id de commit, ele somente precisa ser &uacute;nico.
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#F2F2F2">
+					<a name="update"></a>
+				    <div class="scrollblock block-merging">
+				        <h2>atualizar &amp; mesclar</h2>
+				        <p>
+				            para atualizar seu reposit&oacute;rio local com a mais nova vers&atilde;o, execute <br />
+				            <code>git pull</code><br />
+				            na sua pasta de trabalho para <i>obter</i> e <i>fazer merge</i> (mesclar) altera&ccedil;&otilde;es remotas.<br />
+			            </p>
+			            <p class="fragment">
+				            para fazer merge de um outro branch ao seu branch ativo (ex. master), use<br />
+				            <code>git merge &lt;branch&gt;</code><br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#F2F2F2">
+					<a name="update"></a>
+				    <div class="scrollblock block-merging">
+				        <h2>atualizar &amp; mesclar</h2>
+				        <p>
+				            em ambos os casos o git tenta fazer o merge das altera&ccedil;&otilde;es automaticamente. Infelizmente, isto nem sempre &eacute; poss&iacute;vel e resulta em <i>conflitos</i>.
+			            </p>
+				        <p class="fragment">
+				            Voc&ecirc; &eacute; respons&aacute;vel por fazer o merge estes <i>conflitos</i>
+				            manualmente editando os arquivos exibidos pelo git.
+			            </p>
+			            <p class="fragment">
+				            Depois de alterar, voc&ecirc; precisa marc&aacute;-los como merged com<br />
+				            <code>git add &lt;arquivo&gt;</code><br />
+			            </p>
+			            <p class="fragment">
+				            antes de fazer o merge das altera&ccedil;&otilde;es, voc&ecirc; pode tamb&eacute;m pr&eacute;-visualiz&aacute;-las usando<br />
+				            <code>git diff &lt;branch origem&gt; &lt;branch destino&gt;</code>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#fff8c9">
+					<a name="checkout-replace"></a>
+				    <div class="scrollblock block-checkout-replace">
+				        <h2>sobrescrever altera&ccedil;&otilde;es locais</h2>
+				        <p>
+				            No caso de voc&ecirc; ter feito algo errado (que seguramente nunca acontece ;) voc&ecirc; pode sobrescrever as altera&ccedil;&otilde;es locais usando o commando<br />
+				            <code>git checkout -- &lt;arquivo&gt;</code><br />
+			            </p>
+			            <p class="fragment">
+				            isto substitui as altera&ccedil;&otilde;es na sua &aacute;rvore de trabalho com o conte&uacute;do mais recente no HEAD. Altera&ccedil;&otilde;es j&aacute; adicionadas ao index, bem como novos arquivos ser&atilde;o mantidos.
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#fff8c9">
+					<a name="checkout-replace"></a>
+				    <div class="scrollblock block-checkout-replace">
+				        <h2>sobrescrever altera&ccedil;&otilde;es locais</h2>
+				        <p>
+				            Se ao inv&eacute;s disso voc&ecirc; deseja remover todas as altera&ccedil;&otilde;es e commits locais, recupere o hist&oacute;rico mais recente do servidor e aponte para seu branch master local desta forma<br />
+				            <code>git fetch origin</code><br />
+				            <code>git reset --hard origin/master</code>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#000">
+					<a name="branching"></a>
+				    <div class="scrollblock block-branching">
+				        <h2>ramificando</h2>
+				        <p>
+				            <i>Branches</i> ("ramos") s&atilde;o utilizados para desenvolver funcionalidades isoladas umas das outras. O branch <i>master</i> &eacute; o branch "padr&atilde;o" quando voc&ecirc; cria um reposit&oacute;rio. Use outros branches para desenvolver e mescle-os (<i>merge</i>) ao branch master ap&oacute;s a conclus&atilde;o.
+				        </p>
+				        <img class="plain" src="img/branches.png" alt="" />
+				    </div>
+				</section>
+
+				<section data-background-color="#000">
+					<a name="branching"></a>
+				    <div class="scrollblock block-branching">
+				        <h2>ramificando</h2>
+				        <p>
+				            crie um novo branch chamado "funcionalidade_x" e selecione-o usando<br />
+				            <code>git checkout -b funcionalidade_x</code><br />
+			            </p>
+			            <p class="fragment">
+				            retorne para o master usando<br />
+				            <code>git checkout master</code><br />
+			            </p>
+			            <p class="fragment">
+				            e remova o branch da seguinte forma<br />
+				            <code>git branch -d funcionalidade_x</code><br />
+			            </p>
+			            <p class="fragment">
+				            um branch <i> n&atilde;o est&aacute; dispon&iacute;vel a outros</i> a menos que voc&ecirc; envie o branch para seu reposit&oacute;rio remoto<br />
+				            <code>git push origin &lt;funcionalidade_x&gt;</code>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#06406c">
+					<a name="hints"></a>
+				    <div class="scrollblock block-hints">
+				        <h2>dicas &uacute;teis</h2>
+				        <p>
+				            Inteface gr&aacute;fica padr&atilde;o<br />
+				            <code>gitk</code><br />
+				            usar sa&iacute;das do git coloridas<br />
+				            <code>git config color.ui true</code><br />
+				            exibir log em apenas uma linha por commit<br />
+				            <code>git config format.pretty oneline</code><br />
+				            fazer inclus&otilde;es interativas<br />
+				            <code>git add -i</code>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="resources"></a>
+					<div class="scrollblock block-resources">
+				        <h2>recursos & links</h2>
+				        <h3>clientes gr&aacute;ficos</h3>
+				        <p>
+				            <ul>
+				                <li><a href="http://gitx.laullon.com/">GitX (L) (OSX, c&oacute;digo aberto)</a></li>
+				                <li><a href="http://www.git-tower.com/">Tower (OSX)</a></li>
+				                <li><a href="http://www.sourcetreeapp.com/">Source Tree (OSX, gratuito)</a></li>
+				                <li><a href="http://mac.github.com/">GitHub for Mac (OSX, gratuito)</a></li>
+				                <li><a href="https://itunes.apple.com/gb/app/gitbox/id403388357?mt=12">GitBox (OSX)</a></li>
+				            </ul>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="resources"></a>
+					<div class="scrollblock block-resources">
+				        <h2>recursos & links</h2>
+				        <h3>guias</h3>
+				        <p>
+				            <ul>
+				                <li><a href="http://git-scm.com/book/pt-br/">Livro da comunidade Git</a></li>
+				                <li><a href="http://progit.org/book/">Pro Git</a></li>
+				                <li><a href="http://think-like-a-git.net/">Pense como um git</a></li>
+				                <li><a href="http://help.github.com/">Ajuda do GitHub</a></li>
+				                <li><a href="http://marklodato.github.com/visual-git-guide/index-en.html">Um guia visual do Git</a></li>
+				            </ul>
+				        </p>
+				    </div>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
