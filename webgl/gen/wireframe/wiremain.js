@@ -4,6 +4,7 @@ function main()
     GLManager.getGLFromSelector("#glcanvas");
 
     var scene = new GLScene("Teste");
+    scene.transparentMode = true;
     scene.backgroundColor = new GLColor(0.3, 0.4, 0.5, 1.0);
 
     var quad = new GLWireMeshObject("quad");

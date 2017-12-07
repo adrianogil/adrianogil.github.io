@@ -5,6 +5,7 @@ class GLScene
         this.name = sceneName;
         this.objects = []
         this.backgroundColor = GLColor.Black(); // Clear to black, fully opaque
+        this.transparentMode = false;
     }
 
     addObject(obj)
@@ -42,8 +43,15 @@ class GLScene
                       this.backgroundColor.a);
 
         gl.clearDepth(1.0);                   // Clear everything
-        gl.enable(gl.DEPTH_TEST);             // Enable depth testing
-        gl.depthFunc(gl.LEQUAL);              // Near things obscure far things
+
+        if (this.transparentMode) {
+            gl.enable(gl.SAMPLE_ALPHA_TO_COVERAGE);
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+        } else {
+            gl.enable(gl.DEPTH_TEST);             // Enable depth testing
+            gl.depthFunc(gl.LEQUAL);              // Near things obscure far things
+        }
 
         // Clear the canvas before we start drawing on it
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
