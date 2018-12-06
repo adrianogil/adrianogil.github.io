@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="https://adrianogil.github.io/blog//fr/feed/" rel="self"/>
- <link href="https://adrianogil.github.io/blog//fr/"/>
- <updated>2018-12-06T09:45:35-04:00</updated>
+ <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//fr/feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//fr/"/>
+ <updated>2018-12-06T11:29:39-04:00</updated>
  <id>https://adrianogil.github.io/blog//</id>
  <author>
    <name>Adriano Gil</name>
@@ -16,7 +16,7 @@
    <title>Kuarup: ma submission de la Global Game Jam 2016</title>
    <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//fr/2016/01/global-game-jam-2016</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//fr/2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Il y a quelques semaines, j’avais participé dans la plus connu game jam: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. C’étais un travaille ensemble avec Rafael Lima (designer), Bruno Araujo, Germano Assis et Marcus Brandt (devs).&lt;/p&gt;
 
 &lt;!-- O tema dessa jam foi: Ritual. Decidimos então criar um jogo de puzzles baseado em cores, no qual o jogador escolheria monstros para sacrificar. Assim usamos &quot;ritual&quot; no sentido de repetição, de magia e de sacrificio. --&gt;
@@ -38,7 +38,7 @@ Agradecimento especial a minha equipe pelo convite e pela horas agradáveis e co
    <title>Installation de Theano, Fuel et Blocks</title>
    <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//fr/2016/01/install-block-fuel-theano</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//fr/2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;Le prémière pas pour la codification avec Apprentissage Profunde (plus connu avec les mots anglaises, &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt;) est chercher une bonne interface que permis de implémenter le plus différents modèles neuronaux avec bonne performance.&lt;/p&gt;
 
@@ -130,7 +130,7 @@ données, et en train de visualizer les resultats.&lt;/p&gt;
    <title>Salut Monde!</title>
    <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
    <updated>2016-01-01T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//fr/2016/01/hello-world</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//fr/2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Salut mes amis,&lt;/p&gt;
 
 &lt;p&gt;Voilà mon blog personnel sur mes recherches et quelques notes de dévelopment. Je pense que tous ceux qui travaille avec technologie doit avoir un blog. Alors, quelques années plus tard je decide d’avoir le mien.&lt;/p&gt;

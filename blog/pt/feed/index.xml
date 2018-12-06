@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="https://adrianogil.github.io/blog//pt/feed/" rel="self"/>
- <link href="https://adrianogil.github.io/blog//pt/"/>
- <updated>2018-12-06T09:45:33-04:00</updated>
+ <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/"/>
+ <updated>2018-12-06T11:29:39-04:00</updated>
  <id>https://adrianogil.github.io/blog//</id>
  <author>
    <name>Adriano Gil</name>
@@ -16,7 +16,7 @@
    <title>Como fazer um Space Invaders simples na Unity sem programação</title>
    <link href="https://adrianogil.github.io/blog//2017/01/space-invaders/"/>
    <updated>2017-01-31T21:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//pt/2017/01/space-invaders</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2017/01/space-invaders</id>
    <content type="html">&lt;p&gt;Olá Pessoal,&lt;/p&gt;
 
 &lt;p&gt;No post de hoje vou descrever como desenvolver uma versão simplificada do Space Invaders  na Unity. Esse tutorial não vai focar na programação, assim para gerar os comportamentos dos elementos de jogo, foi adotada uma série de scripts de comportamentos visuais (Visual Behaviors, um antigo projeto meu).&lt;/p&gt;
@@ -269,7 +269,7 @@
    <title>Kuarup: um jogo de puzzle de cores na Global Game Jam 2016</title>
    <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//pt/2016/01/global-game-jam-2016</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Algumas semanas atrás participei em uma das mais conhecidas game jams: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. Foi um trabalho conjunto com um pessoal muito talentoso que conheci no SIDIA (Instituto da Samsung) e no Samsung OCEAN: Rafael Lima (designer), Bruno Araujo, Germano Assis and Marcus Brandt (devs).&lt;/p&gt;
 
 &lt;p&gt;O tema dessa jam foi: Ritual. Decidimos então criar um jogo de puzzles baseado em cores, no qual o jogador escolheria monstros para sacrificar. Assim usamos “ritual” no sentido de repetição, de magia e de sacrificio.&lt;/p&gt;
@@ -291,7 +291,7 @@
    <title>Instalando Blocks, Fuel e Theano</title>
    <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//pt/2016/01/install-block-fuel-theano</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;Uma das mais conhecidas bibliotecas python para Deep Learning é o &lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt;Theano&lt;/a&gt;. Este post irá mostrar como realizar instalação do Theano e de algumas bibliotecas auxiliares (Blocks e Fuel) usando &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Anaconda&lt;/a&gt;, uma distribuição python bastante conhecida no meio acadêmico.&lt;/p&gt;
 
@@ -385,7 +385,7 @@
    <title>Olá Mundo!</title>
    <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
    <updated>2016-01-01T09:02:47-04:00</updated>
-   <id>https://adrianogil.github.io/blog//pt/2016/01/hello-world</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Olá pessoal,&lt;/p&gt;
 
 &lt;p&gt;este é meu blog pessoal onde vou abordar algumas das minhas pesquisas e também dicas de desenvolvimento. Dizem por aí que ter um blog é imprescindível para quem trabalha com tecnologia, então eu agora finalmente decidi começar o meu.&lt;/p&gt;

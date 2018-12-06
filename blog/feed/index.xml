@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="https://adrianogil.github.io/blog//feed/" rel="self"/>
- <link href="https://adrianogil.github.io/blog//"/>
- <updated>2018-12-06T09:45:30-04:00</updated>
+ <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//"/>
+ <updated>2018-12-06T11:29:38-04:00</updated>
  <id>https://adrianogil.github.io/blog//</id>
  <author>
    <name>Adriano Gil</name>
@@ -16,7 +16,7 @@
    <title>Kuarup: a Global Game Jam 2016 game</title>
    <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//2016/01/global-game-jam-2016</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Some weeks ago, I have participated in one of the most popular game jams ever: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. So I worked with some very talented guys that I’ve meet on Samsung Institute and on Samsung OCEAN: our designer Rafael Lima, and developers Bruno Araujo, Germano Assis and Marcus Brandt.&lt;/p&gt;
 
 &lt;p&gt;At the game jam start, the theme was revealed: Ritual. So, we decided to create a color-based puzzle game about choosing cute monsters to sacrifice. So we used ritual as meaning the repetition of tasks, magic and sacrifice.&lt;/p&gt;
@@ -38,7 +38,7 @@
    <title>How to Install Theano, Blocks and Fuel</title>
    <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;The very first step to develop a &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt; experiment - if you don’t want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.&lt;/p&gt;
 
@@ -134,7 +134,7 @@
    <title>Hello World!</title>
    <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
    <updated>2016-01-01T09:02:47-04:00</updated>
-   <id>https://adrianogil.github.io/blog//2016/01/hello-world</id>
+   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Hi, everyone!&lt;/p&gt;
 
 &lt;p&gt;That’s my personal blog about my researches and some development notes. I guess every tech guy should have a blog. Well, after some years, I decided finally to start mine.&lt;/p&gt;
