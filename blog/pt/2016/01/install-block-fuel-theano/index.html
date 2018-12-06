@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Instalando Blocks, Fuel e Theano &middot; GilLabs
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/pt/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/pt/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/articles/">Articles</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contrib/">Contributions</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/cv/">CV</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">À propos</a>
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; Adriano Gil | <a href="http://creativecommons.org/licenses/by-sa/3.0/fr">cc-by-sa</a>
+    </p>
+    <p>
+      <a href="https://github.com/rom1v/blog.rom1v.com/"><code>git clone</code></a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/pt/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">Instalando Blocks, Fuel e Theano</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/2016/01/install-block-fuel-theano/" >EN</a>
+        <span class="separator"> &bull; </span>
+        <a href="/fr/2016/01/install-block-fuel-theano/" >FR</a>
+      
+    </div>
+
+    
+<p>Uma das mais conhecidas bibliotecas python para Deep Learning é o <a href="http://deeplearning.net/software/theano/">Theano</a>. Este post irá mostrar como realizar instalação do Theano e de algumas bibliotecas auxiliares (Blocks e Fuel) usando <a href="https://www.continuum.io/downloads">Anaconda</a>, uma distribuição python bastante conhecida no meio acadêmico.</p>
+
+<!-- [Theano][theano] is a very known mathematical python library used for deep learning. This library contains a lot of useful methods to simplify model generation like using derivative of symbolic functions. Due to its bindings with PyCuda, Theano allows to use the same code to evaluate on CPU or GPU only by changing a flag. -->
+
+<!-- Blocks is a set of utilitary scripts that easen some tasks on Theano, like model generation, load and training data, and visualizing results. -->
+
+<!-- Fuel is data processing library that handles some neat things like download and parse image datasets into numpy arrays. One of its advantage is a same interface that can handle a lot different types of data. -->
+
+<h1 id="instalação-no-windows">Instalação no Windows</h1>
+
+<p>Algumas dicas de instalação podem ser encontradas <a href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">neste post do reddit</a>, e foram testadas no Windows 8.1 e Windows 10.</p>
+
+<p>O primeiro passo é baixar e instalar a versão <a href="https://www.continuum.io/downloads">Windows do Anaconda</a>. Basta apenas seguir o wizard de instalação. Concluída a instalação, temos que instalar as bibliotecas necessárias para o Theano. Para isso, usamos a ferramenta de linha de comando <code class="highlighter-rouge">conda</code> que pode ser encontrada no <code class="highlighter-rouge">Anaconda Prompt</code>, uma janela de comandos ao estilo <code class="highlighter-rouge">cmd</code> customizada para o Anaconda.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    conda <span class="nb">install </span>pip six nose numpy scipy graphviz
+    conda <span class="nb">install </span>mingw libpython</code></pre></figure>
+
+<p>Algumas bibliotecas python adicionais são pré-requisito para algumas funções específicas do Theano, como desenhar gráficos de debug dos nodos de operações, ou são utilizadas no Blocks e no Fuels.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>pydot2 progressbar2 picklable-itertools</code></pre></figure>
+
+<p>E então finalmente instalar o Theano usando o <code class="highlighter-rouge">pip</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>theano</code></pre></figure>
+
+<p>A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser baixada direto do github https://github.com/mila-udem/fuel. A instalação é feita pelo script <code class="highlighter-rouge">setup.py</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>fuel
+    python setup.py <span class="nb">install</span></code></pre></figure>
+
+<p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é encontrada no github https://github.com/mila-udem/blocks. A instalação também é pela execução do script <code class="highlighter-rouge">setup.py</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>blocks
+    python setup.py <span class="nb">install</span></code></pre></figure>
+
+<p><img src="/assets/images/2016-01-10-installing/mac-terminal.png" alt="Testando Theano no Terminal" /></p>
+
+<h1 id="instalação-no-osx">Instalação no OSX</h1>
+
+<p>Segundo <a href="http://deeplearning.net/software/theano/install.html#mac-os">este link</a> a instalação do Theano é bem similar com a do Windows. Primeiramente instalamos a <a href="https://www.continuum.io/downloads">versão OSX do Anaconda</a> e então o Theano pode ser instalado pelo <code class="highlighter-rouge">pip</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    conda <span class="nb">install </span>pip six nose numpy scipy graphviz
+    pip <span class="nb">install </span>pydot2
+    pip <span class="nb">install </span>Theano</code></pre></figure>
+
+<p>Fuel, baixado em https://github.com/mila-udem/fuel, pode ser instalado pelo script <code class="highlighter-rouge">setup.py</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>fuel
+    python setup.py <span class="nb">install</span></code></pre></figure>
+
+<p><a href="https://github.com/mila-udem/blocks">Blocks</a>, uma vez baixado, segue a mesma instalação pela execução do script <code class="highlighter-rouge">setup.py</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>blocks
+    python setup.py <span class="nb">install</span></code></pre></figure>
+
+<p><img src="/assets/images/2016-01-10-installing/mac-terminal.png" alt="Testando Theano no Terminal" /></p>
+
+<h1 id="instalação-no-ubuntu">Instalação no Ubuntu</h1>
+
+<p>O próprio <a href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">site do Theano</a> explica como fazer a instalação do Theano no Ubuntu, reproduzo aqui o que testei no Ubuntu 14.10.</p>
+
+<p>Baixar e instalar as requisitos das bibliotecas se torna bem simples usando o comando <code class="highlighter-rouge">apt-get</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">sudo </span>apt-get <span class="nb">install </span>python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz</code></pre></figure>
+
+<p>Então o Theano pode ser baixado e instalado usando o <code class="highlighter-rouge">pip</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>Theano</code></pre></figure>
+
+<p>A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser instalada usando o comando</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>git+git://github.com/mila-udem/fuel.git </code></pre></figure>
+
+<p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é também instalada facilmente usando o comando:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>git+git://github.com/mila-udem/blocks.git</code></pre></figure>
+
+<p><img src="/assets/images/2016-01-10-installing/ubuntu-terminal.png" alt="Testando Theano no Terminal" /></p>
+
+<h1 id="ide-para-desenvolver-em-python">IDE para desenvolver em python</h1>
+
+<p>Como IDE, pela minha boa experiência com o plugin para o eclipse PyDev, recomendo instalar a sua versão mais leve, o LiClipse, disponível em http://www.liclipse.com/download.html.</p>
+
+<p><img src="/assets/images/2016-01-10-installing/ubuntu-liclipse.png" alt="LiClipse IDE no Ubuntu" /></p>
+
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

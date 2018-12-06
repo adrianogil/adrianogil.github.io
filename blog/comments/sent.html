@@ -1,0 +1,23 @@
+<?php require_once 'l10n.php'; ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<?php if (isset($_POST['return_url']))
+		{
+			$return_url = $_POST['return_url'];
+			$return_delay = 5; //Number of seconds to linger on this page before redirecting back to the static site
+			echo "<meta http-equiv=\"refresh\" content=\"$return_delay;url='$return_url'\" />";
+		} ?>
+		<title><?= $l10n[$lang]['comment-sent'] ?></title>
+	</head>
+<body>
+	<h1><?= $l10n[$lang]['comment-sent'] ?></h1>
+	<p><?= $l10n[$lang]['comment-result'] ?></p>
+	<?php if (isset($return_url))
+	{
+		echo '<p>' . $l10n[$lang]['comment-redir'] . '</p>';
+		echo '<p>' . str_replace('%url', $return_url, $l10n[$lang]['comment-redir-manual']) . '</p>';
+	} ?>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>GilLabs</title>
+ <link href="https://adrianogil.github.io/blog//fr/feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog//fr/"/>
+ <updated>2018-12-06T09:45:35-04:00</updated>
+ <id>https://adrianogil.github.io/blog//</id>
+ <author>
+   <name>Adriano Gil</name>
+   <email>adrianogil.san@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Kuarup: ma submission de la Global Game Jam 2016</title>
+   <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
+   <updated>2016-01-10T14:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog//fr/2016/01/global-game-jam-2016</id>
+   <content type="html">&lt;p&gt;Il y a quelques semaines, j’avais participé dans la plus connu game jam: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. C’étais un travaille ensemble avec Rafael Lima (designer), Bruno Araujo, Germano Assis et Marcus Brandt (devs).&lt;/p&gt;
+
+&lt;!-- O tema dessa jam foi: Ritual. Decidimos então criar um jogo de puzzles baseado em cores, no qual o jogador escolheria monstros para sacrificar. Assim usamos &quot;ritual&quot; no sentido de repetição, de magia e de sacrificio. --&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-02-14-ggj16/screenshot.png&quot; alt=&quot;Kuarup&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- Minha participação foi no gameplay, mais especificamente na geração procedural e na queda animada dos blocos. A parte difícil era garantir que nenhuma fase gerada fosse impossível de ser completada. Para isso, usamos alguns métodos de pseudo-aleatoriedade e também optamos por uma mecânica de power-ups para remover todos os blocos de mesma cor.
+
+Agradecimento especial a minha equipe pelo convite e pela horas agradáveis e corridas nesse desafio.  --&gt;
+
+&lt;!-- And if are interested in the game, you can find the code on github --&gt;
+
+&lt;!-- Até uma próxima game jam. --&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Installation de Theano, Fuel et Blocks</title>
+   <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
+   <updated>2016-01-10T14:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog//fr/2016/01/install-block-fuel-theano</id>
+   <content type="html">
+&lt;p&gt;Le prémière pas pour la codification avec Apprentissage Profunde (plus connu avec les mots anglaises, &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt;) est chercher une bonne interface que permis de implémenter le plus différents modèles neuronaux avec bonne performance.&lt;/p&gt;
+
+&lt;p&gt;Dans python, il y a beaucoup de frameworks et bibliothèques pour travailler avec Apprentissage Profunde. Depuis que j’avait participé dans le course enseigné pour &lt;a href=&quot;https://github.com/laurent-dinh&quot;&gt;Laurent Dihn&lt;/a&gt; de l’Université de Montréal, j’ai decouvert les outils python Theano, Blocks et Fuel.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt;Theano&lt;/a&gt; est très connu como une bibliothèque mathématique en python en usant avec Apprentissage Profunde. Cette bibliothèque contient quelques méthodes pour simplifier la generation de modèles en usant de choses comme functions simboliques dérivé. Les bindings de PyCuda permettent de utiliser le même code dans la CPU et la GPU.&lt;/p&gt;
+
+&lt;p&gt;Blocks est un ensemble de scripts utilitaires pour faciliter les tâches de Theano, comme génération de modèles, charger les
+données, et en train de visualizer les resultats.&lt;/p&gt;
+
+&lt;p&gt;Fuel est une bibliothèque pour le traitement des données comme télécharger et convertir les bases d’images en arrays numpy. L’avantage de sa utilisation de la même interface que manipule de différent types de données.&lt;/p&gt;
+
+&lt;h1 id=&quot;installation-dans-le-windows&quot;&gt;Installation dans le Windows&lt;/h1&gt;
+
+&lt;p&gt;J’ai trouvé quelques trucs dans &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/&quot;&gt;cet post reddit&lt;/a&gt; et je les ai testé dans Windows 8,1 et Windows 10.&lt;/p&gt;
+
+&lt;p&gt;Le premier pas est télécharger et installer la version Windows d’&lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Anaconda&lt;/a&gt;. Puis une simple assistant d’installation, il faut installer les bibliothèques necessaires à Theano en usant d’&lt;code class=&quot;highlighter-rouge&quot;&gt;Anaconda Prompt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
+    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mingw libpython&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Quelque bibliothèques pythons sont necessaires pour functions spécifiques Theano, comme dessiner les chartes de les noeud d’operations, et pour les frameworks Blocks et Fuel aussi.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2 progressbar2 picklable-itertools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Theano peut être installé au moyen du &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;C’est possible de télecharger Fuel directament de le repo github: https://github.com/mila-udem/blocks. Afin de l’installer, nous pouvons utiliser du python pour exécuter le script setuptools appelé &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/mac-terminal.png&quot; alt=&quot;En testant Theano dans l'Anaconda&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installation-dans-losx&quot;&gt;Installation dans l’OSX&lt;/h1&gt;
+
+&lt;p&gt;Selon &lt;a href=&quot;http://deeplearning.net/software/theano/install.html#mac-os&quot;&gt;la page Theano de la installation mac&lt;/a&gt; nous pouvons &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;télécharger Anaconda&lt;/a&gt; et puis installer Theano par moyen du &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
+    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2
+    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Puis télécharger Fuel dans &lt;a href=&quot;https://github.com/mila-udem/fuel&quot;&gt;la page Github&lt;/a&gt;, il y a un script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt; que permis de faire la installation:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lorsque Blocks est téléchargé &lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt;de la page github&lt;/a&gt;, c’est possible d’installer en usant du script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/mac-terminal.png&quot; alt=&quot;Theano dans le terminal Mac&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installation-dans-lubuntu&quot;&gt;Installation dans l’Ubuntu&lt;/h1&gt;
+
+&lt;p&gt;Quelques pas d’installation sont publié dans le &lt;a href=&quot;http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu&quot;&gt;site du Theano&lt;/a&gt;, alors je montre qu’il avais fonctioner dans le Ubuntu 14.10.&lt;/p&gt;
+
+&lt;p&gt;Télécharger et installer toutes les requis des bibliothèques en utilisant du &lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Alors Theano est installé en usant du &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La bibliothèque Fuel est installé par moyen du pip directement du repo github:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git+git://github.com/mila-udem/fuel.git &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La bibliothèque Blocks est installé en usant du &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git+git://github.com/mila-udem/blocks.git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/ubuntu-terminal.png&quot; alt=&quot;Theano dans l'Ubuntu&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installation-dune-ide-python&quot;&gt;Installation d’une IDE Python&lt;/h1&gt;
+
+&lt;p&gt;J’ai de excellentes experiences avec PyDev et Eclipse, alors je recommend la version plus lève: &lt;code class=&quot;highlighter-rouge&quot;&gt;LiClipse&lt;/code&gt;. Autres optiones sont explorées dans le link: http://pedrokroger.net/choosing-best-python-ide/.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/ubuntu-liclipse.png&quot; alt=&quot;LiClipse IDE&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Salut Monde!</title>
+   <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
+   <updated>2016-01-01T14:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog//fr/2016/01/hello-world</id>
+   <content type="html">&lt;p&gt;Salut mes amis,&lt;/p&gt;
+
+&lt;p&gt;Voilà mon blog personnel sur mes recherches et quelques notes de dévelopment. Je pense que tous ceux qui travaille avec technologie doit avoir un blog. Alors, quelques années plus tard je decide d’avoir le mien.&lt;/p&gt;
+
+&lt;p&gt;Bien, qui je suis? Moi, je suis un &lt;a href=&quot;https://dl.dropboxusercontent.com/u/21219242/CV/adrianogil_cv_en.pdf&quot;&gt;développeur mobile&lt;/a&gt; et &lt;a href=&quot;https://scholar.google.com.br/citations?user=n6RoXpAAAAAJ&quot;&gt;chercheur&lt;/a&gt; de l’Intelligence Artificiel des jeux vidéos. Je suis diplômé d’un Master en Génie Électrique et baccalauréaut en Génie informatique à l’Université Fédérale d’Amazonas.&lt;/p&gt;
+
+&lt;p&gt;Mes intérêts sont jouer et développer des jeux vidéo (mobile et desktop). Il y a cinq ans je travaille avec dévellopment de logiciels, et dans les prochains posts je vais décrire quelquer projets de dévelopment de jeux vidéo, traîtement d’images et apprentissage automatique.&lt;/p&gt;
+
+&lt;p&gt;À bientôt!&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>

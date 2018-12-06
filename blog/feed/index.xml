@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>GilLabs</title>
+ <link href="https://adrianogil.github.io/blog//feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog//"/>
+ <updated>2018-12-06T09:45:30-04:00</updated>
+ <id>https://adrianogil.github.io/blog//</id>
+ <author>
+   <name>Adriano Gil</name>
+   <email>adrianogil.san@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Kuarup: a Global Game Jam 2016 game</title>
+   <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
+   <updated>2016-01-10T14:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog//2016/01/global-game-jam-2016</id>
+   <content type="html">&lt;p&gt;Some weeks ago, I have participated in one of the most popular game jams ever: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. So I worked with some very talented guys that I’ve meet on Samsung Institute and on Samsung OCEAN: our designer Rafael Lima, and developers Bruno Araujo, Germano Assis and Marcus Brandt.&lt;/p&gt;
+
+&lt;p&gt;At the game jam start, the theme was revealed: Ritual. So, we decided to create a color-based puzzle game about choosing cute monsters to sacrifice. So we used ritual as meaning the repetition of tasks, magic and sacrifice.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-02-14-ggj16/screenshot.png&quot; alt=&quot;A game level on Kuarup&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My participation was on main gameplay features, like the logic of block falling, and eye-candy animations. It was sort of a PCG of elements where I’ve worked with the generation of those little monstrous blocks. Then the challenge was about how to guarantee that current level is always achievable. Well, a pseudo-random method helped a lot and we also chose a mechanic where power-ups allow to remove blocks of a specific color.&lt;/p&gt;
+
+&lt;p&gt;I really thank you my team for such interesting project and I hope we get to work again.&lt;/p&gt;
+
+&lt;!-- And if are interested in the game, you can find the code on github --&gt;
+
+&lt;p&gt;Until the next game jam!&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>How to Install Theano, Blocks and Fuel</title>
+   <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
+   <updated>2016-01-10T14:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano</id>
+   <content type="html">
+&lt;p&gt;The very first step to develop a &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt; experiment - if you don’t want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.&lt;/p&gt;
+
+&lt;p&gt;In python, there are a lot of frameworks and libraries to work with &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt;. After I had participated in a course taught by &lt;a href=&quot;https://github.com/laurent-dinh&quot;&gt;Laurent Dihn&lt;/a&gt; from University of Montreal, I was introduced to the combined toolkit of Theano, Blocks and Fuel.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt;Theano&lt;/a&gt; is a very known mathematical python library used for deep learning. This library contains a lot of useful methods to simplify model generation like using derivative of symbolic functions. Due to its bindings with PyCuda, Theano allows to use the same code to evaluate on CPU or GPU only by changing a flag.&lt;/p&gt;
+
+&lt;p&gt;Blocks is a set of utilitary scripts that easen some tasks on Theano, like model generation, load and training data, and visualizing results.&lt;/p&gt;
+
+&lt;p&gt;Fuel is data processing library that handles some neat things like download and parse image datasets into numpy arrays. One of its advantage is a same interface that can handle a lot different types of data.&lt;/p&gt;
+
+&lt;h1 id=&quot;installing-on-windows&quot;&gt;Installing on Windows&lt;/h1&gt;
+
+&lt;p&gt;I found some useful tips on &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/&quot;&gt;this reddit post&lt;/a&gt; and I have tested it on Windows 8.1 and Windows 10.&lt;/p&gt;
+
+&lt;p&gt;The first step is download and install the &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Windows version of Anaconda&lt;/a&gt;. After a simple installation wizard, we need to install the required libraries for Theano. Thanks to Anaconda, we can use a very simple command-line tool &lt;code class=&quot;highlighter-rouge&quot;&gt;conda&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Anaconda Prompt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
+    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mingw libpython&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Some necessary python libraries are pre-requisite to specific Theano functions, like drawing debug graphs of operation nodes, and can also be used in Blocks or Fuel.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2 progressbar2 picklable-itertools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Theano can be installed using &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Fuel can be downloaded directly from github repository: https://github.com/mila-udem/fuel. In order to install it, we need to run the script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Fuel can be downloaded directly from github repository: https://github.com/mila-udem/blocks. In order to install it, we need to use python to execute the setuptools script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/mac-terminal.png&quot; alt=&quot;Testing Theano on Anaconda Prompt&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installing-on-osx&quot;&gt;Installing on OSX&lt;/h1&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;http://deeplearning.net/software/theano/install.html#mac-os&quot;&gt;Theano page about mac installation&lt;/a&gt; we can &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;download Anaconda&lt;/a&gt;  and then Theano can be installed by &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
+    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2
+    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After downloading Fuel &lt;a href=&quot;https://github.com/mila-udem/fuel&quot;&gt;on github page&lt;/a&gt;, inside its folder there is a script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt; that handles the installation by means of setuptools:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Once downloaded Blocks &lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt;from github page&lt;/a&gt;, you can install it by executing the setuptools script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
+    python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/mac-terminal.png&quot; alt=&quot;Theano on Mac Terminal&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installing-on-ubuntu&quot;&gt;Installing on Ubuntu&lt;/h1&gt;
+
+&lt;p&gt;Some installation steps are published on &lt;a href=&quot;http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu&quot;&gt;Theano site&lt;/a&gt;, so by following it I easily managed to install it on Ubuntu 14.10.&lt;/p&gt;
+
+&lt;p&gt;Download and e install all requisites of the libraries using &lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then Theano can be installed by &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Fuel library can be also installed using &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; directly from github repository:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git+git://github.com/mila-udem/fuel.git &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Blocks library also is installed by &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git+git://github.com/mila-udem/blocks.git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/ubuntu-terminal.png&quot; alt=&quot;Running Theano on Ubuntu&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installing-a-python-ide&quot;&gt;Installing a Python IDE&lt;/h1&gt;
+
+&lt;p&gt;After some good experiences using PyDev and Eclipse, I recomend this light version &lt;code class=&quot;highlighter-rouge&quot;&gt;Liclipse&lt;/code&gt;: http://www.liclipse.com/download.html. Some other good options can be found in: http://pedrokroger.net/choosing-best-python-ide/.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/ubuntu-liclipse.png&quot; alt=&quot;LiClipse IDE&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello World!</title>
+   <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
+   <updated>2016-01-01T09:02:47-04:00</updated>
+   <id>https://adrianogil.github.io/blog//2016/01/hello-world</id>
+   <content type="html">&lt;p&gt;Hi, everyone!&lt;/p&gt;
+
+&lt;p&gt;That’s my personal blog about my researches and some development notes. I guess every tech guy should have a blog. Well, after some years, I decided finally to start mine.&lt;/p&gt;
+
+&lt;p&gt;So, who am I? Well, I’m a &lt;a href=&quot;https://dl.dropboxusercontent.com/u/21219242/CV/adrianogil_cv_en.pdf&quot;&gt;mobile developer&lt;/a&gt; and a &lt;a href=&quot;https://scholar.google.com.br/citations?user=n6RoXpAAAAAJ&quot;&gt;Game AI researcher&lt;/a&gt;.  I have a master in Electric Engineering and a BSc. in Computer Engineering at Federal University of Amazonas.&lt;/p&gt;
+
+&lt;p&gt;My interests lies in playing and developing games (Mobile and Desktop). In the next posts I’ll describe some of my projects related to game development, image processing research and machine learning algorithms.&lt;/p&gt;
+
+&lt;p&gt;See you soon!&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>
