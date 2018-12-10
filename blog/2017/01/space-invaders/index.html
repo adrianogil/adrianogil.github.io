@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Unity 101: A simple Space Invaders without coding &middot; GilLabs
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://adrianogil.github.io/blog//css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="https://adrianogil.github.io/blog//favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/articles/">Articles</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contrib/">Contributions</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/cv/">CV</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">À propos</a>
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; Adriano Gil | <a href="http://creativecommons.org/licenses/by-sa/3.0/fr">cc-by-sa</a>
+    </p>
+    <p>
+      <a href="https://github.com/rom1v/blog.rom1v.com/"><code>git clone</code></a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://adrianogil.github.io/blog//" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">Unity 101: A simple Space Invaders without coding</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="https://adrianogil.github.io/blog//pt/2017/01/space-invaders/" >PT</a>
+        <span class="separator"> &bull; </span>
+        <a href="https://adrianogil.github.io/blog//fr/2017/01/space-invaders/" >FR</a>
+      
+    </div>
+
+    <p>Hi guys,</p>
+
+<p>Today we are going to create a simplified version of Space Invaders using <em>Unity</em>. Programming is not scope of this tutorial. So we are using few scripts for <a href="https://github.com/adrianogil/VisualBehaviors">Visual Programming</a> (actually condition-based scripts) I made for a <em>Unity</em> at my local university.</p>
+
+<!-- New project -->
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/00_first_screen.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s start creating a new project inside <em>Unity</em> editor by pressing <em>new</em> button in the start screen. Now, let’s naming the project ‘MyGame’ and we can also define the project path where <em>Unity</em> is going to create all default initial project files.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/01_new_project.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>“MyGame” project created successfully! In the next figure, we can see the filesystem where <em>Unity</em> created three directories: Assets, Library and ProjectSettings.</p>
+
+<p><strong>Assets</strong> is where we should put files we’d like to use in our game: scripts, spritesheets, textures, 3d models, etc.</p>
+
+<p><strong>Library</strong> is used by <em>Unity</em> for generating assets for each build target. So here we are going to find the real spritesheets files that will be loaded by our game considering the configuration we choose. For example, we can choose a downscaled resolution for Android target and a heavier compression and resolution for Desktop target.</p>
+
+<p><strong>ProjectSettings</strong> stores our project configuration: project name and version, tags and layers systems, build targets, etc.</p>
+
+<p><strong>Temp</strong> is a temporary folder for assembling our necessary files into final build executable (.exe, .app, .apk, etc).</p>
+
+<p>In a nutshell: <strong>Assets</strong>, <strong>ProjectSetttings</strong> are files and configurations that will be changed by ourselves while developing  a game. <strong>Library</strong> e <strong>Temp</strong> are only for <em>Unity</em> internal stuff, we should not change anything and neither add them to version control.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/02_file_system_project.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>A important thing to understand is that <em>Unity</em> projects are made of scenes. Which scene corresponds to a part of the game experience, like for example, a menu scene, level 1 scene, boss level scene, etc. Inside each scene we can find a lot of objects that are meant to player interact with, like menus, characters, power-ups items. These objects are known as <em>GameObjects</em>. And each <em>GameObject</em> have few components that allows to change its main characteristics. We are going to understand better in the next steps of this tutorial.</p>
+
+<p><em>Unity</em> interface is comprised by these main tabs:</p>
+
+<ul>
+  <li>Hierarchy: shows which GameObjects are in scene.</li>
+  <li>Inspector: allows to ‘inspect GameObjects’, to see its components and properties or to change project and assets configurations.</li>
+  <li>Project: mirrors the filesystem in path ‘MyGame/Assets/’</li>
+  <li>Scene: is a visualization into a specific point of game scene, where we can see and place GameObjects.</li>
+  <li>Game: depicts the actual rendered game, the game being executed.</li>
+  <li>Console: an important tab for development, shows scritpts warnings and errors.</li>
+  <li>AssetStore: where we can download, buy and sell game assets of any type.</li>
+</ul>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/02_unity.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>That’s the default tab layout. We can change it in the top right dropdown menu. Each option has a different tab layout. In addition we can also move freely our tabs and create and create our own layout by clicking ‘Save Layout’ option. In the image I’ve create my ‘CrazyLayout’.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/03_unity_layout.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>So far our game is comprised by two GameObjecs: <strong>“Main Camera”</strong> and <strong>“Directional Light”</strong>. The list of GameObjecs can be seen in <strong>Hierarchy</strong> tab:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/04_initial_hierarchy.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In Camera GameObject there are few components: Transform, Camera, GUILayer, FlareLayer and AudioListener.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/05_main_camera_gameobject.png" alt="Tela inicial" class="center-image" /></p>
+
+<p><strong>Camera</strong> component allows to render the game. It’s like a way to see what’s happening in game execution for a given position. Just like a real camera, it films our game scene and presents it to the player as we can see in <strong>Game</strong> tab.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/06_camera_component.png" alt="Tela inicial" class="center-image" /></p>
+
+<p><strong>Transform</strong> component has a very important role: it defines the position, rotation and scale of GameObjects in scene space.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/07_transform_component.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s create few folders in <em>Project</em> tab. Usually it’s recommended to follow a <a href="https://twitter.com/CiroContns/status/831547413290766338">folder naming structure</a> to ease the task of searching for assets while the projects grows up.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/08_create_folder.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In this project we are going to use this main folders: Prefabs, Scenes and Scripts.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/09_folders_created.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s save our scene in <em>Scenes/Game.unity</em>:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/10_save_scene.png" alt="Tela inicial" class="center-image" /></p>
+
+<p><em>Unity</em> has basic 3d elements (cube, sphere, cylinder, …) that we can use in our games. By clicking with right mouse button we see the options of the figure below and add the cube into game scene.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/11_create_cube.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In <strong>Hierarchy</strong> tab we can check our added cube:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/12_cube_gameobject.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>And in <strong>Inspector</strong> tab we see its components:</p>
+
+<ul>
+  <li><strong>Transform</strong>: stores position, rotation and scale changes</li>
+  <li><strong>MeshFilter</strong>: has information about object 3D geometry (aka. Mesh)</li>
+  <li><strong>BoxCollider</strong>: an important component to detect collisions during game execution</li>
+  <li><strong>MeshRenderer</strong>: renders our cube using geometry information (Mesh data) from <em>MeshFilter</em> component and using informations from <a href="https://docs.unity3d.com/Manual/Materials.html">Materials</a>.</li>
+</ul>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/13_cube_components.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>We can change cube position by editing <strong>Position</strong> field of <strong>Transform</strong> component. It’s also possible to just select and move arrows that shows up when selecting the cube. That kind of visual element is called <strong>Gizmo</strong>.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/14_cube_transform.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>When interacting with those red, blue and green <strong>Gizmo</strong> we can see the cube moving in X,Z,Y axises. We also see the changes taking effect on <strong>Position</strong> field of <strong>Transform</strong>.</p>
+
+<p>An useful tip: we can reset all modifications on transform by choosing <strong>Reset</strong> from component options (Top right small engine icon).</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/15_transform_reset.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>To ease our task of manipulating cubes, we are going to change <em>snap</em> configuration. In <em>snap</em> mode our cube can be dragged by a fixed amount.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/16_snap_settings_menu.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In <strong>Snap Settings</strong> window we can configure our GameObjects movement in <em>snap</em> movement. For now let’s leave the default settings as we can see in figure below.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/17_snap_settings_window.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>When pressing <em>Ctrl+D</em> or <em>Cmd+D</em> we can clone the selected GameObject. And when pressing <em>Ctrl/Cmd</em> we move GameObjects in <em>snap</em> increments.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/18_cube_clone.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>By cloning 13 cubes, I mean by pressing <em>Ctrl+D</em> or <em>Cmd+D</em>, we can make a line:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/19_cubes_selection.png" alt="Tela inicial" class="center-image" /></p>
+
+<p><strong>Empty</strong> options allows to create an empty GameObject with only <strong>Transform</strong> component.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/20_create_empty.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s rename the empty GameObject to <em>Line</em> and then reset <strong>Transform</strong> component to its default values. When selecting cubes, we drag them into <em>Line</em> GameObject. So, we parenting GameObjects: <em>Line</em> is now the parent of cubes. When selecting or moving <em>Line</em> we are also moving its children.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/21_create_lines.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Changing <a href="https://docs.unity3d.com/Manual/ViewModes.html">scene shading options</a> we can achieve a better visualization for our cubes.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/22_shading_mode.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Cloning <em>Line</em> means we are also cloning all its 13 children cubes. In this way we can create two more lines and drag them up. And when select a specific cube we can also delete it by <em>del/Cmd+del</em>. So by repeating these basic steps, we can get the following structure:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/23_copy_lines.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Copying one more line, we have the body of our character. To ease manipulating these objects, let’s create an empty GameObject <em>Body</em>, reset its <strong>Transform</strong> and put <em>Line</em> objects inside it as children.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/24_finished_body.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>To create the antenna we need to starting copying one cube:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/25_started_antenna.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s create an empty GameObject <em>Antenna</em> and reset its <strong>Transform</strong> and parenting that last created cube.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/26_antenna_empty.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Cloning few more cubes we finish our <em>Antenna</em></p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/27_finished_antenna.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>The next step is to create <em>Claws</em> GameObject and reset its <strong>Transform</strong>.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/28_claws_empty.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Clonning few more cubes as arranged in the below image, we finished the claws of our character.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/29_claws_cubes.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Now we have a <em>Space Invader</em>. To ease manipulating it, let’s create an empty <em>Cubes</em> GameObject, reset its <strong>Transform</strong> and drag <em>Body</em>, <em>Antenna</em> and <em>Claws</em> into it. Then we can finally create a <em>SpaceInvader</em> GameObject, reset its <strong>Transform</strong> and parenting all <em>Cubes</em>.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/30_space_invaders_cubes.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>By selecting <em>Cubes</em> let’s change its scale to (0.2, 0.2, 0.2)</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/31_downscale_invader.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>By clicking in <strong>Game</strong> tab we can see how our character is going to be seen by the player.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/32_invader_game_tab.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In our <em>Camera</em> let’s change the propriety <em>Clear Flags</em> to <em>Solid Color</em> and <em>background color</em> to (0,0,0,0).</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/33_camera_clear_flags.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Cloning and creating new empty GameObjects as previous steps, we have our <em>Player</em> GameObject.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/34_player_cubes.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In <strong>Game</strong> tab we can see our game characters.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/35_player_game_tab.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>To add movement to our game, let’s use some scripts I’ve made beforehand from my <a href="https://github.com/adrianogil/VisualBehaviors">Visual Behaviors project</a>. Download or clone this project into <em>Scripts</em> folder.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/36_copy_scripts.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>By inspecting <em>SpaceInvader</em> GameObject we can add new components by pressing <em>Add Component</em> button.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/37_add_component.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s add <em>Move</em> script (from <a href="https://github.com/adrianogil/VisualBehaviors">Visual Behaviors</a>).</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/38_add_move_invader.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s configure <em>Move</em> script:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/39_callevent_invader.png" alt="Tela inicial" class="center-image" /></p>
+
+<p><em>CallEvent</em> allows to change another scripts behaviors.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/40_configure_callevent.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Inside <em>Action</em> block, let’s press <em>+</em> button to add an action. So we select a GameObject that should have change its behavior.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/41_configure_callevent.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Now, let’s choose which component method we are going to change. Let’s call <em>ChangeDirectionX</em>, a method that allows to invert current movement direction of <em>Move</em> script.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/42_configure_callevent.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Player movement can done by two <em>Move</em> scripts: one for right direction and another for left direction.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/43_move_player.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Then we create <em>Bullets</em> GameObject as depicted in below image:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/44_bullets_gameobject.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s add <em>Move</em> script to <em>Bullets</em> in order to move up bullets towards space invaders.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/45_bullets_move.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>By dragging <em>Bullets</em> into <strong>Project</strong> tab we can create a <a href="https://docs.unity3d.com/Manual/Prefabs.html">prefab</a>, a pre-fabricated object that can be replicated and instantiated during game execution.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/46_bullets_prefab.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s change <strong>layer</strong> of <em>Bullets</em> GameObject.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/47_edit_settings_layers.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s create the <em>Bullets</em> <strong>layer</strong>.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/48_tags_and_layers.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>And then change the <em>Bullets</em> prefab.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/49_bullets_add_layer.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>When adding <em>Generate</em> script to <em>Player</em> GameObject we can allow our player to shoot.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/50_player_gen_bullets.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>In <em>SpaceInvader</em> GameObject we are going to add <em>DestroyMe</em> script. Let’s configure our enemy to be destroyed every time it touches a bullet, I mean a GameObject with <strong>layer</strong> <em>Bullets</em>.</p>
+
+<p>In order to collision be detected, we need a <strong>BoxCollider</strong> and a <strong>RigidBody</strong> components. Let’s freeze <em>Rigidbody</em> rotation and define gravity as zero.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/51_invader_collision.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>We can’t forget to activate <em>isTrigger</em> checkbox in <em>BoxCollider</em> of our enemy.</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/52_invader_collider.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>Let’s add a trigger-enabled <em>BoxCollider</em> in Bullet GameObject:</p>
+
+<p><img src="/assets/images/2017-02-12-visualbehaviors/53_bullets_collider.png" alt="Tela inicial" class="center-image" /></p>
+
+<p>So we achieved a working Space Invader! Congrats for your first Unity game!</p>
+
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
