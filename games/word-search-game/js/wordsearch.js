@@ -242,7 +242,7 @@
           y = cvEl.height / 2;
 
         var ctx = cvEl.getContext('2d');
-        ctx.font = '400 28px Calibri';
+        ctx.font = '400 36px Calibri';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = '#333'; // Text color
