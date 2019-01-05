@@ -16,13 +16,11 @@ pkg install tmux -y
 source $HOME/.bashrc
 
 cd $GILTOOLS_DIR/src
-alias gil-install="python2 $AGIL_SCRIPTS_DIR/python/gil_install.py"
-
 source $HOME/.bashrc
 
 # Finish DOT FILES SETUP (2/2)
 cd $DOTFILES_DIR
-gil-install -i
+python2 $AGIL_SCRIPTS_DIR/python/gil_install.py -i
 
 function smart_repo_install()
 {
@@ -33,7 +31,7 @@ function smart_repo_install()
     cd $target_folder
 
     cd "$(dirname "$(find . -type f -name install.gil | head -1)")"
-    gil-install -i
+    python2 $AGIL_SCRIPTS_DIR/python/gil_install.py -i
 }
 
 # CONFIG-FILES SETUP
@@ -44,17 +42,14 @@ smart_repo_install git@github.com:adrianogil/mydirs.git $HOME/workspace/scripts/
 
 source ~/.bashrc
 
-alias rw='python2 $GIT_REPO_WATCHER_DIR/src/gitrepowatcher.py'
-alias mydirs=". "$MYDIRS_DIRECTORY"/mydirs.sh"
-
 function save_repo_track()
 {
     repo_folder=$1
 
     cd $repo_folder
 
-    mydirs -s
-    rw -s
+    $MYDIRS_DIRECTORY/mydirs.sh -s
+    python2 $GIT_REPO_WATCHER_DIR/src/gitrepowatcher.py -s
 }
 
 save_repo_track $HOME/workspace/scripts/config-files
