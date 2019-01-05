@@ -14,7 +14,7 @@ pkg install python2 -y
 pkg install tmux -y
 
 cd $GILTOOLS_DIR/src
-python2 python/gil_install.py -i
+alias gil-install="python2 $GILTOOLS_DIR/python/gil_install.py -i"
 
 source $HOME/.bashrc
 
@@ -41,6 +41,9 @@ smart_repo_install git@github.com:adrianogil/GitRepoWatcher.git $HOME/workspace/
 smart_repo_install git@github.com:adrianogil/mydirs.git $HOME/workspace/scripts/mydirs
 
 source ~/.bashrc
+
+alias rw='python2 $GIT_REPO_WATCHER_DIR/src/gitrepowatcher.py'
+alias mydirs=". "$MYDIRS_DIRECTORY"/mydirs.sh"
 
 function save_repo_track()
 {
