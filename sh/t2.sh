@@ -13,8 +13,10 @@ git clone git@github.com:adrianogil/gil-tools.git $GILTOOLS_DIR
 pkg install python2 -y
 pkg install tmux -y
 
+source $HOME/.bashrc
+
 cd $GILTOOLS_DIR/src
-alias gil-install="python2 $GILTOOLS_DIR/python/gil_install.py -i"
+alias gil-install="python2 $AGIL_SCRIPTS_DIR/python/gil_install.py"
 
 source $HOME/.bashrc
 
