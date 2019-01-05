@@ -1,7 +1,7 @@
 installer_folder=$HOME/workspace
 
-pkg install git
-pkg install openssh
+pkg install git -y
+pkg install openssh  -y
 
 mkdir $installer_folder
 cd $installer_folder
