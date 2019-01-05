@@ -29,6 +29,8 @@ function smart_repo_install()
 
     git clone $repo $target_folder
     cd $target_folder
+
+    cd "$(dirname "$(find . -type f -name install.gil | head -1)")"
     gil-install -i
 }
 
