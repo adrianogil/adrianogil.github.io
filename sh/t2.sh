@@ -14,8 +14,8 @@ cd $GILTOOLS_DIR
 pkg install python2 -y
 pkg install tmux -y
 
-cd "$(dirname "$(find . -type f -name install.gil | head -1)")"
-python2 src/python/gil_install.py -i
+cd src/
+python2 python/gil_install.py -i
 
 source ~/.bashrc
 
