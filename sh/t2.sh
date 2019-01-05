@@ -20,7 +20,7 @@ source $HOME/.bashrc
 
 # Finish DOT FILES SETUP (2/2)
 cd $DOTFILES_DIR
-python2 $AGIL_SCRIPTS_DIR/python/gil_install.py -i
+python2 $GILTOOLS_DIR/src/python/gil_install.py -i
 
 function smart_repo_install()
 {
@@ -31,7 +31,7 @@ function smart_repo_install()
     cd $target_folder
 
     cd "$(dirname "$(find . -type f -name install.gil | head -1)")"
-    python2 $AGIL_SCRIPTS_DIR/python/gil_install.py -i
+    python2 $GILTOOLS_DIR/src/python/gil_install.py -i
 }
 
 # CONFIG-FILES SETUP
@@ -48,8 +48,8 @@ function save_repo_track()
 
     cd $repo_folder
 
-    $MYDIRS_DIRECTORY/mydirs.sh -s
-    python2 $GIT_REPO_WATCHER_DIR/src/gitrepowatcher.py -s
+    $HOME/workspace/scripts/mydirs/src/mydirs.sh -s
+    python2 $HOME/workspace/scripts/git-repowatcher/src/gitrepowatcher.py -s
 }
 
 save_repo_track $HOME/workspace/scripts/config-files
