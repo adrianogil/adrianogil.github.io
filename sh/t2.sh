@@ -9,15 +9,14 @@ cd $DOTFILES_DIR
 GILTOOLS_DIR=$HOME/workspace/scripts/gil-tools
 mkdir -p $HOME/workspace/scripts
 git clone git@github.com:adrianogil/gil-tools.git $GILTOOLS_DIR
-cd $GILTOOLS_DIR
 
 pkg install python2 -y
 pkg install tmux -y
 
-cd src/
+cd $GILTOOLS_DIR/src
 python2 python/gil_install.py -i
 
-source ~/.bashrc
+source $HOME/.bashrc
 
 # Finish DOT FILES SETUP (2/2)
 cd $DOTFILES_DIR
