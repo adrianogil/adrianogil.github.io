@@ -7,7 +7,7 @@ let config = {
   "going_to"],
 
   "lang_study_question": [
-  "#place#에서 #langvar1#를 궁부합니까?"],
+  "#place#에서 #langvar1#를 공부합니까?"],
 
   "lang_study_negation": [
   "아니오, #langvar1#를 공부하지 않습니다."],
@@ -19,7 +19,7 @@ let config = {
   "#placevar1#에 갑니까?"],
 
   "going_to_negation": [
-  "아니오, #placevar1#를 가지 않습니다."],
+  "아니오, #placevar1#에 가지 않습니다."],
 
   "going_to_answer": [
   "저는 #place#에 깁니다"],
