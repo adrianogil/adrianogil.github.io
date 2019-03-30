@@ -13,7 +13,7 @@ let config = {
   "아니오, #langvar1#를 공부하지 않습니다."],
 
   "lang_study_answer": [
-  "저는 #place#에서 일본어를 궁부합니다"],
+  "저는 #place#에서 일본어를 공부합니다"],
 
   "going_to_question": [
   "#placevar1#에 갑니까?"],
