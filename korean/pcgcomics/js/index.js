@@ -9,14 +9,20 @@ let config = {
   "lang_study_question": [
   "#place#에서 #langvar1#를 궁부합니까?"],
 
+  "lang_study_negation": [
+  "아니오, #langvar1#를 공부하지 않습니다."],
+
   "lang_study_answer": [
-  "아니오, #langvar1#를 공부하지 않습니다. 저는 #place#에서 일본어를 궁부합니다"],
+  "저는 #place#에서 일본어를 궁부합니다"],
 
   "going_to_question": [
   "#placevar1#에 갑니까?"],
 
+  "going_to_negation": [
+  "아니오, #placevar1#를 가지 않습니다."],
+
   "going_to_answer": [
-  "아니오, #placevar1#를 가지 않습니다. 저는 #place#에 깁니다"],
+  "저는 #place#에 깁니다"],
 
   "lang1": [
   "한국어",
@@ -64,17 +70,18 @@ then(() => {
     // }
     let dialog_theme = grammar.flatten("#dialog_theme#");
     let question_text = grammar.flatten("#" + dialog_theme + "_question#");
+    let question_negation = grammar.flatten("#" + dialog_theme + "_negation#");
     let question_answer = grammar.flatten("#" + dialog_theme + "_answer#");
 
-    generateComics(question_text, question_answer);
+    generateComics(question_text, question_negation, question_answer);
   }
 
   generateComicsDialog();
 
-  $("#comics-button").on('click', generateComicsDialog);
+  // $("#comics-button").on('click', generateComicsDialog);
 });
 
-function generateComics(dialog_text1, dialog_text2)
+function generateComics(dialog_text1, dialog_text2, dialog_text3)
 {
   let Comic = (props) =>
   React.createElement(Strip, { title: "\uD55C\uAD6D\uC5B4", column: "2", fontFamily: "Patrick Hand", fontSize: "16", upperCase: false },
@@ -102,6 +109,19 @@ function generateComics(dialog_text1, dialog_text2)
     bottom: "-110",
     image: imgUrl + 'chat_right.svg',
     text: dialog_text2 }))),
+
+
+    React.createElement(Panel, null,
+  React.createElement(Character, {
+    image: imgUrl + 'char2.png',
+    left: "30",
+    scale: "0.65" },
+  React.createElement(Balloon, {
+    height: "160",
+    left: "60",
+    bottom: "-110",
+    image: imgUrl + 'chat_right.svg',
+    text: dialog_text3 }))),
 
 
 
