@@ -17,6 +17,7 @@ source $HOME/.bashrc
 
 cd $GILTOOLS_DIR/src
 source $HOME/.bashrc
+shopt -s expand_aliases
 
 # Finish DOT FILES SETUP (2/2)
 cd $DOTFILES_DIR
@@ -41,6 +42,7 @@ smart_repo_install git@github.com:adrianogil/GitRepoWatcher.git $HOME/workspace/
 smart_repo_install git@github.com:adrianogil/mydirs.git $HOME/workspace/scripts/mydirs
 
 source ~/.bashrc
+shopt -s expand_aliases
 
 function save_repo_track()
 {
