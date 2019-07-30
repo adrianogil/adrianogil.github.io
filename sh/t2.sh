@@ -41,6 +41,9 @@ smart_repo_install git@github.com:adrianogil/git-tools.git $HOME/workspace/scrip
 smart_repo_install git@github.com:adrianogil/GitRepoWatcher.git $HOME/workspace/scripts/git-repowatcher
 smart_repo_install git@github.com:adrianogil/mydirs.git $HOME/workspace/scripts/mydirs
 
+mkdir -p $HOME/workspace/scripts/git-repowatcher/db
+mkdir -p $HOME/workspace/scripts/mydirs/db
+
 source ~/.bashrc
 shopt -s expand_aliases
 
