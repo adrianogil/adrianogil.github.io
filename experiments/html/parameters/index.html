@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Listing all parameters</h1>
+
+<ol id="paramList">
+</ol> 
+
+<script>
+var sPageURL = window.location.search.substring(1);
+var sURLVariables = sPageURL.split('&');
+
+var paramListHTML = "";
+for (var i = 0; i < sURLVariables.length; i++) 
+{
+    var sParameterName = sURLVariables[i].split('=');
+
+    paramListHTML += "<li> Param '" + sParameterName[0] + "' with value '" + sParameterName[1] + "'</li>";
+}
+document.getElementById("paramList").innerHTML = paramListHTML;
+</script> 
+
+</body>
+</html>
+
