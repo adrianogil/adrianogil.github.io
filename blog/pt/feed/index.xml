@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/feed/" rel="self"/>
- <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/"/>
- <updated>2018-12-10T13:42:35-04:00</updated>
- <id>https://adrianogil.github.io/blog//</id>
+ <link href="http://localhost:4000/pt/feed/" rel="self"/>
+ <link href="http://localhost:4000/pt/"/>
+ <updated>2022-08-25T20:34:23-04:00</updated>
+ <id>http://localhost:4000/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
@@ -14,37 +14,35 @@
  
  <entry>
    <title>Como fazer um Space Invaders simples na Unity sem programação</title>
-   <link href="https://adrianogil.github.io/blog//2017/01/space-invaders/"/>
+   <link href="http://localhost:4000/2017/01/space-invaders/"/>
    <updated>2017-01-31T21:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2017/01/space-invaders</id>
+   <id>http://localhost:4000/pt/2017/01/space-invaders</id>
    <content type="html">&lt;p&gt;Olá Pessoal,&lt;/p&gt;
 
-&lt;p&gt;No post de hoje vamos ver como desenvolver uma versão simplificada do Space Invaders na &lt;em&gt;Unity&lt;/em&gt;. Esse tutorial não vai focar na programação, assim para gerar os comportamentos dos elementos de jogo, foi adotada uma série de scripts de comportamentos visuais (&lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Behaviors&lt;/a&gt;, um antigo projeto meu).&lt;/p&gt;
+&lt;p&gt;No post de hoje vou descrever como desenvolver uma versão simplificada do Space Invaders  na Unity. Esse tutorial não vai focar na programação, assim para gerar os comportamentos dos elementos de jogo, foi adotada uma série de scripts de comportamentos visuais (Visual Behaviors, um antigo projeto meu).&lt;/p&gt;
 
 &lt;!-- New project --&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/00_first_screen.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Começamos com a criação de um projeto novo na &lt;em&gt;Unity&lt;/em&gt;, após pressionar o new da tela inicial. Agora, colocamos um nome de projeto e qual o diretório onde esse projeto deverá ser criado.&lt;/p&gt;
+&lt;p&gt;Começamos com a criação de um projeto novo na Unity, após pressionar o new da tela inicial. Agora, colocamos um nome de projeto e qual o diretório onde esse projeto deverá ser criado.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/01_new_project.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;E assim o projeto “MyGame” foi criado com sucesso pela &lt;em&gt;Unity&lt;/em&gt;. Na próxima figura, percebemos que no sistema de arquivos, a &lt;em&gt;Unity&lt;/em&gt; criou três diretórios: Assets. Library e ProjectSettings. Na pasta &lt;strong&gt;Assets&lt;/strong&gt; devemos colocar todos os arquivos que serão utilizados no jogo: scripts, spritesheets, texturas, modelos 3d, sons e etc. A pasta &lt;strong&gt;Library&lt;/strong&gt; ficam uma versão dos assets já compilados para se adequar as configurações de cada plataforma, é utilizada apenas pela &lt;em&gt;Unity&lt;/em&gt;. Já na pasta &lt;strong&gt;ProjectSettings&lt;/strong&gt;, a &lt;em&gt;Unity&lt;/em&gt; armazena as configurações do projeto: seus sistemas de tags, layers, configurações de build e etc. Na pasta &lt;strong&gt;Temp&lt;/strong&gt; o executável é montado no momento do processo de build do projeto.&lt;/p&gt;
-
-&lt;p&gt;Resumindo: &lt;strong&gt;Assets&lt;/strong&gt;, &lt;strong&gt;ProjectSetttings&lt;/strong&gt; são as pastas onde estarão os arquivos e as configurações que adicionaremos ao projeto, ou seja, são as pastas que iremos continuadamente alterar durante o desenvolvimento. Enquanto as pastas &lt;strong&gt;Library&lt;/strong&gt; e &lt;strong&gt;Temp&lt;/strong&gt; não precisamos mexer nem sequer adicionar no sistema de controle de versão.&lt;/p&gt;
+&lt;p&gt;E assim o projeto “MyGame” foi criado com sucesso pela Unity. Na próxima figura, percebemos que no sistema de arquivos, a Unity criou três diretórios: Assets. Library e ProjectSettings. Na pasta Assets devemos colocar todos os arquivos que serão utilizados no jogo: scripts, spritesheets, texturas, modelos 3d, sons e etc. A pasta Library ficam os uma versão dos assets já compilados para se adequar as configurações de cada plataforma. Já na pasta ProjectSettings, a Unity armazena as configurações do projeto: seus sistemas de tags, layers, configurações de build e etc. Na pasta Temp o executável é montado no momento do processo de build do projeto.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/02_file_system_project.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A interface da &lt;em&gt;Unity&lt;/em&gt; é dividida principalmente nas seguintes tabs:&lt;/p&gt;
+&lt;p&gt;A interface da unity é dividida principalmente nas seguintes tabs:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Hierarchy: mostra quais os GameObjects estão em cena.&lt;/li&gt;
+  &lt;li&gt;Hierarchy: mostra quais os gameobjects estão em cena.&lt;/li&gt;
   &lt;li&gt;Inspector: permite inspecionar os componentes dos gamesobjects ou inspecionar as opções de configuração de projeto ou importação de assets.&lt;/li&gt;
   &lt;li&gt;Project: espelha a pasta MyGame/Assets/ do sistema de arquivos&lt;/li&gt;
-  &lt;li&gt;Scene: é a minha cena de jogo, onde posso posicionar GameObjects&lt;/li&gt;
+  &lt;li&gt;Scene: é a minha cena de jogo, onde posso posicionar gameobjects&lt;/li&gt;
   &lt;li&gt;Game: é a tab que mostra a renderização e a execução do jogo&lt;/li&gt;
   &lt;li&gt;Console: mostra os erros e warnings do projeto&lt;/li&gt;
-  &lt;li&gt;AssetStore: uma loja de assets da &lt;em&gt;Unity&lt;/em&gt; para venda e compra de qualquer tipo de artefato para o desenvolvimento com a &lt;em&gt;Unity&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;AssetStore: uma loja de assets da Unity para venda e compra de qualquer tipo de artefato para o desenvolvimento com a Unity.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/02_unity.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
@@ -65,11 +63,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/06_camera_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O componente &lt;strong&gt;Transform&lt;/strong&gt; é um dos mais importantes, através dele podemos alterar o posicionamento dos GameObjects no espaço da cena, além de sua rotação e escala.&lt;/p&gt;
+&lt;p&gt;O componente &lt;strong&gt;Transform&lt;/strong&gt; é um dos mais importantes, através dele podemos alterar o posicionamento dos gameobjects no espaço da cena, além de sua rotação e escala.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/07_transform_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora vamos criar algumas pastas na &lt;em&gt;Unity&lt;/em&gt;. Geralmente, recomenda-se seguir um padrão de &lt;a href=&quot;https://twitter.com/CiroContns/status/831547413290766338&quot;&gt;nomes de pastas&lt;/a&gt; para facilitar a busca por assets a medida que o projeto aumenta de tamanho.&lt;/p&gt;
+&lt;p&gt;Agora vamos criar algumas pastas na unity. Geralmente, recomenda-se seguir um padrão de &lt;a href=&quot;https://twitter.com/CiroContns/status/831547413290766338&quot;&gt;nomes de pastas&lt;/a&gt; para facilitar a busca por assets a medida que o projeto aumenta de tamanho.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/08_create_folder.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -81,7 +79,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/10_save_scene.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A &lt;em&gt;Unity&lt;/em&gt; traz alguns elementos básicos (como Cubo, esfera, cilindro, etc) que podemos usar em nossos jogos. Clicando com o botão direito do mouse vemos as opções da imagem abaixo e assim vamos adicionar um cubo na cena.&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;Unity&lt;/em&gt; traz alguns elementos básicos que podemos usar em nossos jogos. Seguindo a opção vista na imagem abaixo, vamos adicionar um cubo na cena.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/11_create_cube.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -100,11 +98,9 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/13_cube_components.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O posicionamento do cubo pode ser alterado ao inserir novos valores nos campos de &lt;strong&gt;Position&lt;/strong&gt; do &lt;strong&gt;Transform&lt;/strong&gt;. Também é possível na cena utilizar as setas azul, vermelha e verde que aparecem ao selecionar o cubo. Esse tipo de elemento visual é conhecido como &lt;strong&gt;Gizmo&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O posicionamento do cubo pode ser alterado ao inserir novos valores nos campos de &lt;strong&gt;Position&lt;/strong&gt; do &lt;strong&gt;Transform&lt;/strong&gt;. Também é possível na cena utilizar as setas azul, vermelha e verde que aparecem ao selecionar o cubo. Esse tipo de element visual é conhecido como &lt;strong&gt;Gizmo&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/14_cube_transform.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Se manipularmos o &lt;strong&gt;Gizmo&lt;/strong&gt; das setas vermelha, azul e verde de posicionamento, percebemos que o cubo é movimentado nas eixos x, z, y respectivamente. Também é possiver verificar que o campo &lt;strong&gt;Position&lt;/strong&gt; do &lt;strong&gt;Transform&lt;/strong&gt; se altera.&lt;/p&gt;
 
 &lt;p&gt;É possível resetar todas as alterações no &lt;strong&gt;Transform&lt;/strong&gt; atráves da opções &lt;strong&gt;Reset&lt;/strong&gt; no menu de configurações do componente.&lt;/p&gt;
 
@@ -114,11 +110,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/16_snap_settings_menu.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Na janela de &lt;strong&gt;Snap Settings&lt;/strong&gt; podemos configurar a movimentação do nosso cubo em modo &lt;em&gt;snap&lt;/em&gt;. Por enquanto vamos deixar as configurações padrões tal como visto na figura abaixo.&lt;/p&gt;
+&lt;p&gt;Na janela de &lt;strong&gt;Snap Settings&lt;/strong&gt; podemos configurar a movimentação do nosso cubo em modo &lt;em&gt;snap&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/17_snap_settings_window.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ao pressionar &lt;em&gt;Ctrl+D&lt;/em&gt; ou &lt;em&gt;Cmd+D&lt;/em&gt; podemos clonar nosso cubo, e ao movimentar o cubo enquanto pressiona o &lt;em&gt;Ctrl/Cmd&lt;/em&gt; podemos realizar o seu deslocamento em modo &lt;em&gt;snap&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Ao pressionar Ctrl+D ou Cmd+D podemos clonar nosso cubo, e ao movimentar o cubo enquanto pressiona o Ctrl/Cmd podemos realizar o seu deslocamento em modo &lt;em&gt;snap&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/18_cube_clone.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -130,19 +126,19 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/20_create_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Vamos renomear o GameObject vazio para &lt;em&gt;Line&lt;/em&gt; e então resetar o &lt;strong&gt;Transform&lt;/strong&gt; para seus valores padrões. Ao selecionar todos os cubos, podemos arrastá-los para dentro da &lt;em&gt;Line&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Vou renomear o GameObject vazio para ‘Line’ e então resetar o &lt;strong&gt;Transform&lt;/strong&gt; para seus valores padrões. Ao selecionar todos os cubos, podemos arrastá-los para dentro da ‘Line’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/21_create_lines.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Para melhor visualizar e editar o cubo, vamos alterar as opções de &lt;a href=&quot;https://docs.unity3d.com/Manual/ViewModes.html&quot;&gt;shading&lt;/a&gt; da cena.&lt;/p&gt;
+&lt;p&gt;Para melhor visualizar e editar o cubo, vou alterar as opções de &lt;a href=&quot;https://docs.unity3d.com/Manual/ViewModes.html&quot;&gt;shading&lt;/a&gt; da cena.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/22_shading_mode.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora ao clonar a &lt;em&gt;Line&lt;/em&gt; também estaremos clonando todos os 13 cubos contidos nela. Dessa maneira podemos a &lt;em&gt;Line&lt;/em&gt; duas vezes e arrastá-las para cima da linha original. Ao selecionar individualmente um cubo, podemos deletar apertando del/Cmd+del. Em poucos passos, nossos cubos podem ficar no formato da figura abaixo.&lt;/p&gt;
+&lt;p&gt;Agora ao clonar a ‘Line’ também estaremos clonando todos os 13 cubos contidos nela. Dessa maneira podemos a ‘Line’ duas vezes e arrastá-las para cima da linha original. Ao selecionar individualmente um cubo, podemos deletar apertando del/Cmd+del. Em poucos passos, nossos cubos podem ficar no formato da figura abaixo.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/23_copy_lines.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Copiando mais uma linha para cima, temos o corpo do nosso personagem. Para deixar a visualização dos objetos mais fácil, vamos criar um GameObject vazio &lt;em&gt;Body&lt;/em&gt;, resetar seu &lt;strong&gt;Transform&lt;/strong&gt; e colocar como filhos todos os outros objetos &lt;em&gt;Line&lt;/em&gt; criados.&lt;/p&gt;
+&lt;p&gt;Copiando mais uma linha para cima, temos o corpo do nosso personagem. Para deixar a visualização dos objetos mais fácil, vou criar um GameObject vazio ‘Body’, resetar seu &lt;strong&gt;Transform&lt;/strong&gt; e colocar como filhos todos os outros objetos ‘Line’ criados.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/24_finished_body.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -150,15 +146,15 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/25_started_antenna.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Aproveito para criar um GameObject vazio chamado &lt;em&gt;Antenna&lt;/em&gt; resetando seu &lt;strong&gt;Transform&lt;/strong&gt; e arrasto o cubo criado anteriormente.&lt;/p&gt;
+&lt;p&gt;Aproveito para criar um GameObject vazio chamado ‘Antenna’ resetando seu &lt;strong&gt;Transform&lt;/strong&gt; e arrasto o cubo criado anteriormente.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/26_antenna_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Clonando mais alguns cubos, finalizamos a &lt;em&gt;Antenna&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Clonando mais alguns cubos, finalizamos a ‘Antenna’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/27_finished_antenna.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O próximo passo é criar um GameObject &lt;em&gt;Claws&lt;/em&gt; com seu &lt;strong&gt;Transform&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O próximo passo é criar um GameObject ‘Claws’ com seu &lt;strong&gt;Transform&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/28_claws_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -166,11 +162,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/29_claws_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora nós temos o nosso &lt;em&gt;Space Invader&lt;/em&gt;. Para sua melhor edição, crio um GameObject &lt;em&gt;Cubes&lt;/em&gt; com &lt;strong&gt;Transform&lt;/strong&gt; resetado e arrasto o &lt;em&gt;Body&lt;/em&gt;, &lt;em&gt;Antenna&lt;/em&gt; e &lt;em&gt;Claws&lt;/em&gt;. Por fim, vamos criar um GameObject &lt;em&gt;SpaceInvaders&lt;/em&gt; também resetando seu &lt;strong&gt;Transform&lt;/strong&gt; para onde jogamos o &lt;em&gt;Cubes&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Agora nós temos o nosso &lt;em&gt;Space Invader&lt;/em&gt;. Para sua melhor edição, crio um GameObject ‘Cubes’ com &lt;strong&gt;Transform&lt;/strong&gt; resetado e arrasto o ‘Body’, ‘Antenna’ e ‘Claws’. Por fim, vamos criar um GameObject ‘SpaceInvaders’ também resetando seu &lt;strong&gt;Transform&lt;/strong&gt; para onde jogamos o ‘Cubes’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/30_space_invaders_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Selecionando o &lt;em&gt;Cubes&lt;/em&gt; alteramos sua escala para (0.2, 0.2, 0.2)&lt;/p&gt;
+&lt;p&gt;Selecionando o ‘Cubes’ alteramos sua escala para (0.2, 0.2, 0.2)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/31_downscale_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -178,11 +174,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/32_invader_game_tab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Na nossa câmera, alteramos a propriedade &lt;em&gt;Clear Flags&lt;/em&gt; para &lt;em&gt;Solid Color&lt;/em&gt; e o cor de Background para (0,0,0,0).&lt;/p&gt;
+&lt;p&gt;Na nossa câmera, alteramos a propriedade &lt;em&gt;‘Clear Flags’&lt;/em&gt; para ‘Solid Color’ e o cor de Background para (0,0,0,0).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/33_camera_clear_flags.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Clonando e criando objetos vazios como nos passos anteriores, temos o nosso &lt;em&gt;Player&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Clonando e criando objetos vazios como nos passos anteriores, temos o nosso ‘Player’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/34_player_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -190,71 +186,71 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/35_player_game_tab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Para adicionar mais movimento para nossa cena, vamos usar alguns scripts de programação &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual&lt;/a&gt; para dentro da pasta &lt;em&gt;Scripts&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para adicionar mais movimento para nossa cena, vamos usar alguns scripts de programação &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual&lt;/a&gt; para dentro da pasta ‘Scripts’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/36_copy_scripts.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Inspecionado o GameObject &lt;em&gt;SpaceInvaders&lt;/em&gt; podemos adicionar novos componentes pressionando o botão &lt;em&gt;Add Component&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Inspecionado o GameObject ‘SpaceInvaders’ podemos adicionar novos componentes pressionando o botão ‘Add Component’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/37_add_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Adicionando o script &lt;em&gt;Move&lt;/em&gt; do VisualBehaviors.&lt;/p&gt;
+&lt;p&gt;Adicionando o script ‘Move’ do VisualBehaviors.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/38_add_move_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Adicionando e configurando o script &lt;em&gt;Move&lt;/em&gt; do VisualBehaviors.&lt;/p&gt;
+&lt;p&gt;Adicionando e configurando o script ‘Move’ do VisualBehaviors.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/39_callevent_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O script &lt;em&gt;CallEvent&lt;/em&gt; permite alterar o comportamento de outros scripts.&lt;/p&gt;
+&lt;p&gt;O script ‘CallEvent’ permite alterar o comportamento de outros scripts.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/40_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Na bloco de &lt;em&gt;Action&lt;/em&gt;, pressionamos o botão de &lt;em&gt;+&lt;/em&gt; para adicionar uma ação. Selecionamos um GameObject que irá sofrer a modificação de comportamento.&lt;/p&gt;
+&lt;p&gt;Na bloco de ‘Action’, pressionamos o botão de ‘+’ para adicionar uma ação. Selecionamos um GameObject que irá sofrer a modificação de comportamento.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/41_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora, escolhemos qual método de qual componente será alterado. O método &lt;em&gt;ChangeDirectionX&lt;/em&gt; permite inverter a direção de movimento do script &lt;em&gt;Move&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Agora, escolhemos qual método de qual componente será alterado. O método ‘ChangeDirectionX’ permite inverter a direção de movimento do script ‘Move’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/42_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O movimento do jogador pode ser implementado por dois componentes &lt;em&gt;Move&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;O movimento do jogador pode ser implementado por dois componentes ‘Move’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/43_move_player.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Então criamos o GameObject &lt;em&gt;Bullets&lt;/em&gt; tal como mostrado na figura abaixo.&lt;/p&gt;
+&lt;p&gt;Então criamos o GameObject ‘Bullets’ tal como mostrado na figura abaixo.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/44_bullets_gameobject.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Adicionando o componente &lt;em&gt;Move&lt;/em&gt; para que nossa bala possa se movimentar para cima em direção ao &lt;em&gt;SpaceInvader&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Adicionando o componente ‘Move’ para que nossa bala possa se movimentar para cima em direção ao ‘SpaceInvader’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/45_bullets_move.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Arrastando o GameObject &lt;em&gt;Bullets&lt;/em&gt; para a tab de &lt;strong&gt;Project&lt;/strong&gt; podemos criar um &lt;a href=&quot;https://docs.unity3d.com/Manual/Prefabs.html&quot;&gt;prefab&lt;/a&gt;, um objeto pre-fabricado que pode ser replicado ao longo do nosso jogo.&lt;/p&gt;
+&lt;p&gt;Arrastando o GameObject ‘Bullets’ para a tab de &lt;strong&gt;Project&lt;/strong&gt; podemos criar um &lt;a href=&quot;https://docs.unity3d.com/Manual/Prefabs.html&quot;&gt;prefab&lt;/a&gt;, um objeto pre-fabricado que pode ser replicado ao longo do nosso jogo.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/46_bullets_prefab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Vamos alterar a &lt;strong&gt;layer&lt;/strong&gt; do objeto &lt;em&gt;Bullets&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Vamos alterar a &lt;strong&gt;layer&lt;/strong&gt; do objeto ‘Bullets’&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/47_edit_settings_layers.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Criamos a &lt;strong&gt;layer&lt;/strong&gt; &lt;em&gt;Bullets&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Criamos a &lt;strong&gt;layer&lt;/strong&gt; ‘Bullets’&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/48_tags_and_layers.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;E alteramos o prefab &lt;em&gt;Bullets&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;E alteramos o prefab ‘Bullets’&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/49_bullets_add_layer.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ao adicionar o script &lt;em&gt;Generate&lt;/em&gt; no objeto &lt;em&gt;Player&lt;/em&gt; podemos gerar nossos disparos.&lt;/p&gt;
+&lt;p&gt;Ao adicionar o script ‘Generate’ podemos gerar nossos disparos.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/50_player_gen_bullets.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;No &lt;em&gt;SpaceInvaders&lt;/em&gt; adicionamos o script &lt;em&gt;DestroyMe&lt;/em&gt;, configurando o nosso inimigo para ser destruído ao ser tocado por algum objeto da &lt;strong&gt;layer&lt;/strong&gt; &lt;em&gt;Bullets&lt;/em&gt;. Também adicionamos o componente de colisão &lt;em&gt;BoxCollider&lt;/em&gt; e um RigidBody sem gravidade e com suas rotações congeladas.&lt;/p&gt;
+&lt;p&gt;No ‘SpaceInvaders’ adicionamos o script ‘DestroyMe’, configurando o nosso inimigo para ser destruído ao ser tocado por algum objeto da &lt;strong&gt;layer&lt;/strong&gt; ‘Bullets’ Também adicionamos o componente de colisão ‘BoxCollider’ e um RigidBody sem gravidade e com suas rotações congeladas.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/51_invader_collision.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Não podemos esquecer de ativar o checkbox de &lt;em&gt;isTrigger&lt;/em&gt; do &lt;em&gt;BoxCollider&lt;/em&gt; do nosso inimigo.&lt;/p&gt;
+&lt;p&gt;Não podemos esquecer de ativar o checkbox de ‘isTrigger’ do ‘BoxCollider’ do nosso inimigo.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/52_invader_collider.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -271,9 +267,9 @@
  
  <entry>
    <title>Kuarup: um jogo de puzzle de cores na Global Game Jam 2016</title>
-   <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
+   <link href="http://localhost:4000/2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2016/01/global-game-jam-2016</id>
+   <id>http://localhost:4000/pt/2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Algumas semanas atrás participei em uma das mais conhecidas game jams: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. Foi um trabalho conjunto com um pessoal muito talentoso que conheci no SIDIA (Instituto da Samsung) e no Samsung OCEAN: Rafael Lima (designer), Bruno Araujo, Germano Assis and Marcus Brandt (devs).&lt;/p&gt;
 
 &lt;p&gt;O tema dessa jam foi: Ritual. Decidimos então criar um jogo de puzzles baseado em cores, no qual o jogador escolheria monstros para sacrificar. Assim usamos “ritual” no sentido de repetição, de magia e de sacrificio.&lt;/p&gt;
@@ -293,9 +289,9 @@
  
  <entry>
    <title>Instalando Blocks, Fuel e Theano</title>
-   <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
+   <link href="http://localhost:4000/2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2016/01/install-block-fuel-theano</id>
+   <id>http://localhost:4000/pt/2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;Uma das mais conhecidas bibliotecas python para Deep Learning é o &lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt;Theano&lt;/a&gt;. Este post irá mostrar como realizar instalação do Theano e de algumas bibliotecas auxiliares (Blocks e Fuel) usando &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Anaconda&lt;/a&gt;, uma distribuição python bastante conhecida no meio acadêmico.&lt;/p&gt;
 
@@ -309,7 +305,7 @@
 
 &lt;p&gt;Algumas dicas de instalação podem ser encontradas &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/&quot;&gt;neste post do reddit&lt;/a&gt;, e foram testadas no Windows 8.1 e Windows 10.&lt;/p&gt;
 
-&lt;p&gt;O primeiro passo é baixar e instalar a versão &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Windows do Anaconda&lt;/a&gt;. Basta apenas seguir o wizard de instalação. Concluída a instalação, temos que instalar as bibliotecas necessárias para o Theano. Para isso, usamos a ferramenta de linha de comando &lt;code class=&quot;highlighter-rouge&quot;&gt;conda&lt;/code&gt; que pode ser encontrada no &lt;code class=&quot;highlighter-rouge&quot;&gt;Anaconda Prompt&lt;/code&gt;, uma janela de comandos ao estilo &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd&lt;/code&gt; customizada para o Anaconda.&lt;/p&gt;
+&lt;p&gt;O primeiro passo é baixar e instalar a versão &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Windows do Anaconda&lt;/a&gt;. Basta apenas seguir o wizard de instalação. Concluída a instalação, temos que instalar as bibliotecas necessárias para o Theano. Para isso, usamos a ferramenta de linha de comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conda&lt;/code&gt; que pode ser encontrada no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Anaconda Prompt&lt;/code&gt;, uma janela de comandos ao estilo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cmd&lt;/code&gt; customizada para o Anaconda.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
     conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mingw libpython&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -318,16 +314,16 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2 progressbar2 picklable-itertools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;E então finalmente instalar o Theano usando o &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;E então finalmente instalar o Theano usando o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser baixada direto do github https://github.com/mila-udem/fuel. A instalação é feita pelo script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser baixada direto do github https://github.com/mila-udem/fuel. A instalação é feita pelo script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é encontrada no github https://github.com/mila-udem/blocks. A instalação também é pela execução do script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é encontrada no github https://github.com/mila-udem/blocks. A instalação também é pela execução do script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -336,18 +332,18 @@
 
 &lt;h1 id=&quot;instalação-no-osx&quot;&gt;Instalação no OSX&lt;/h1&gt;
 
-&lt;p&gt;Segundo &lt;a href=&quot;http://deeplearning.net/software/theano/install.html#mac-os&quot;&gt;este link&lt;/a&gt; a instalação do Theano é bem similar com a do Windows. Primeiramente instalamos a &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;versão OSX do Anaconda&lt;/a&gt; e então o Theano pode ser instalado pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Segundo &lt;a href=&quot;http://deeplearning.net/software/theano/install.html#mac-os&quot;&gt;este link&lt;/a&gt; a instalação do Theano é bem similar com a do Windows. Primeiramente instalamos a &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;versão OSX do Anaconda&lt;/a&gt; e então o Theano pode ser instalado pelo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
     pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2
     pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Fuel, baixado em https://github.com/mila-udem/fuel, pode ser instalado pelo script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Fuel, baixado em https://github.com/mila-udem/fuel, pode ser instalado pelo script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt;Blocks&lt;/a&gt;, uma vez baixado, segue a mesma instalação pela execução do script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt;Blocks&lt;/a&gt;, uma vez baixado, segue a mesma instalação pela execução do script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -358,11 +354,11 @@
 
 &lt;p&gt;O próprio &lt;a href=&quot;http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu&quot;&gt;site do Theano&lt;/a&gt; explica como fazer a instalação do Theano no Ubuntu, reproduzo aqui o que testei no Ubuntu 14.10.&lt;/p&gt;
 
-&lt;p&gt;Baixar e instalar as requisitos das bibliotecas se torna bem simples usando o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Baixar e instalar as requisitos das bibliotecas se torna bem simples usando o comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt-get&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Então o Theano pode ser baixado e instalado usando o &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Então o Theano pode ser baixado e instalado usando o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -387,9 +383,9 @@
  
  <entry>
    <title>Olá Mundo!</title>
-   <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
+   <link href="http://localhost:4000/2016/01/hello-world/"/>
    <updated>2016-01-01T09:02:47-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/2016/01/hello-world</id>
+   <id>http://localhost:4000/pt/2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Olá pessoal,&lt;/p&gt;
 
 &lt;p&gt;este é meu blog pessoal onde vou abordar algumas das minhas pesquisas e também dicas de desenvolvimento. Dizem por aí que ter um blog é imprescindível para quem trabalha com tecnologia, então eu agora finalmente decidi começar o meu.&lt;/p&gt;

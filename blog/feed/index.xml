@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//feed/" rel="self"/>
- <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//"/>
- <updated>2018-12-10T13:42:35-04:00</updated>
- <id>https://adrianogil.github.io/blog//</id>
+ <link href="http://localhost:4000/feed/" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2022-08-25T20:34:22-04:00</updated>
+ <id>http://localhost:4000/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
@@ -14,47 +14,47 @@
  
  <entry>
    <title>Unity 101: A simple Space Invaders without coding</title>
-   <link href="https://adrianogil.github.io/blog//2017/01/space-invaders/"/>
+   <link href="http://localhost:4000/2017/01/space-invaders/"/>
    <updated>2017-01-31T21:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2017/01/space-invaders</id>
+   <id>http://localhost:4000/2017/01/space-invaders</id>
    <content type="html">&lt;p&gt;Hi guys,&lt;/p&gt;
 
-&lt;p&gt;Today we are going to create a simplified version of Space Invaders using &lt;em&gt;Unity&lt;/em&gt;. Programming is not scope of this tutorial. So we are using few scripts for &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Programming&lt;/a&gt; (actually condition-based scripts) I made for a &lt;em&gt;Unity&lt;/em&gt; at my local university.&lt;/p&gt;
+&lt;p&gt;Today we are going to create a simplified version of Space Invaders using &lt;i&gt;Unity&lt;/i&gt;. Programming is not scope of this tutorial. So we are using few scripts for &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Programming&lt;/a&gt; (actually condition-based scripts) I made for teaching Unity at my local university.&lt;/p&gt;
 
 &lt;!-- New project --&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/00_first_screen.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s start creating a new project inside &lt;em&gt;Unity&lt;/em&gt; editor by pressing &lt;em&gt;new&lt;/em&gt; button in the start screen. Now, let’s naming the project ‘MyGame’ and we can also define the project path where &lt;em&gt;Unity&lt;/em&gt; is going to create all default initial project files.&lt;/p&gt;
+&lt;p&gt;Let’s start creating a new project inside &lt;i&gt;Unity&lt;/i&gt; editor by pressing &lt;i&gt;new&lt;/i&gt; button in the start screen. Now, let’s naming the project ‘MyGame’ and we can also define the project path where Unity is going to create all default initial project files.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/01_new_project.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;“MyGame” project created successfully! In the next figure, we can see the filesystem where &lt;em&gt;Unity&lt;/em&gt; created three directories: Assets, Library and ProjectSettings.&lt;/p&gt;
+&lt;p&gt;“MyGame” project created successfully! In the next figure, we can see the filesystem where &lt;i&gt;Unity&lt;/i&gt; created three directories: Assets, Library and ProjectSettings.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Assets&lt;/strong&gt; is where we should put files we’d like to use in our game: scripts, spritesheets, textures, 3d models, etc.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Assets&lt;/b&gt; is where we should put files we’d like to use in our game: scripts, spritesheets, textures, 3d models, etc.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Library&lt;/strong&gt; is used by &lt;em&gt;Unity&lt;/em&gt; for generating assets for each build target. So here we are going to find the real spritesheets files that will be loaded by our game considering the configuration we choose. For example, we can choose a downscaled resolution for Android target and a heavier compression and resolution for Desktop target.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Library&lt;/b&gt; is used by &lt;i&gt;Unity&lt;/i&gt; for generating assets for each build target. So here we are going to find the real spritesheets files that will be loaded by our game considering the configuration we choose. For example, we can choose a downscaled resolution for Android target and a heavier compression and resolution for Desktop target.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;ProjectSettings&lt;/strong&gt; stores our project configuration: project name and version, tags and layers systems, build targets, etc.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;ProjectSettings&lt;/b&gt; stores our project configuration: project name and version, tags and layers systems, build targets, etc.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Temp&lt;/strong&gt; is a temporary folder for assembling our necessary files into final build executable (.exe, .app, .apk, etc).&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Temp&lt;/b&gt; is a temporary folder for assembling our necessary files into final build executable (.exe, .app, .apk, etc).&lt;/p&gt;
 
-&lt;p&gt;In a nutshell: &lt;strong&gt;Assets&lt;/strong&gt;, &lt;strong&gt;ProjectSetttings&lt;/strong&gt; are files and configurations that will be changed by ourselves while developing  a game. &lt;strong&gt;Library&lt;/strong&gt; e &lt;strong&gt;Temp&lt;/strong&gt; are only for &lt;em&gt;Unity&lt;/em&gt; internal stuff, we should not change anything and neither add them to version control.&lt;/p&gt;
+&lt;p&gt;In a nutshell: &lt;b&gt;Assets&lt;/b&gt;, &lt;b&gt;ProjectSetttings&lt;/b&gt; are meant for files and configurations that will be changed by ourselves while developing a game. &lt;b&gt;Library&lt;/b&gt; e &lt;b&gt;Temp&lt;/b&gt; are only for &lt;i&gt;Unity&lt;/i&gt; internal stuff, we should not change anything and neither add them to version control.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/02_file_system_project.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A important thing to understand is that &lt;em&gt;Unity&lt;/em&gt; projects are made of scenes. Which scene corresponds to a part of the game experience, like for example, a menu scene, level 1 scene, boss level scene, etc. Inside each scene we can find a lot of objects that are meant to player interact with, like menus, characters, power-ups items. These objects are known as &lt;em&gt;GameObjects&lt;/em&gt;. And each &lt;em&gt;GameObject&lt;/em&gt; have few components that allows to change its main characteristics. We are going to understand better in the next steps of this tutorial.&lt;/p&gt;
+&lt;p&gt;A important thing to understand is that &lt;i&gt;Unity&lt;/i&gt; projects are made of scenes. Which scene corresponds to a part of the game experience, like for example, a menu scene, level 1 scene, boss level scene, etc. Inside each scene we can find a lot of objects that are meant to player interact with, like menus, characters, power-ups items. These objects are known as &lt;i&gt;GameObjects&lt;/i&gt;. And each &lt;i&gt;GameObject&lt;/i&gt; have few components that allows to change its main characteristics. We are going to understand better in the next steps of this tutorial.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Unity&lt;/em&gt; interface is comprised by these main tabs:&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Unity&lt;/i&gt; interface is comprised by these main tabs:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Hierarchy: shows which GameObjects are in scene.&lt;/li&gt;
-  &lt;li&gt;Inspector: allows to ‘inspect GameObjects’, to see its components and properties or to change project and assets configurations.&lt;/li&gt;
-  &lt;li&gt;Project: mirrors the filesystem in path ‘MyGame/Assets/’&lt;/li&gt;
-  &lt;li&gt;Scene: is a visualization into a specific point of game scene, where we can see and place GameObjects.&lt;/li&gt;
-  &lt;li&gt;Game: depicts the actual rendered game, the game being executed.&lt;/li&gt;
-  &lt;li&gt;Console: an important tab for development, shows scritpts warnings and errors.&lt;/li&gt;
-  &lt;li&gt;AssetStore: where we can download, buy and sell game assets of any type.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hierarchy&lt;/strong&gt;: shows which GameObjects are in scene.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Inspector&lt;/strong&gt;: allows to ‘inspect GameObjects’, to see its components and properties or to change project and assets configurations.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Project&lt;/strong&gt;: mirrors the filesystem in path ‘MyGame/Assets/’&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scene&lt;/strong&gt;: is a visualization into a specific point of game scene, where we can see and place GameObjects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Game&lt;/strong&gt;: depicts the actual rendered game, the game being executed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Console&lt;/strong&gt;: an important tab for development, shows scritpts warnings and errors.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;AssetStore&lt;/strong&gt;: where we can download, buy and sell game assets of any type.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/02_unity.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
@@ -63,31 +63,31 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/03_unity_layout.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;So far our game is comprised by two GameObjecs: &lt;strong&gt;“Main Camera”&lt;/strong&gt; and &lt;strong&gt;“Directional Light”&lt;/strong&gt;. The list of GameObjecs can be seen in &lt;strong&gt;Hierarchy&lt;/strong&gt; tab:&lt;/p&gt;
+&lt;p&gt;So far our game is comprised by two &lt;i&gt;GameObjecs&lt;/i&gt;: &lt;strong&gt;“Main Camera”&lt;/strong&gt; and &lt;strong&gt;“Directional Light”&lt;/strong&gt;. The list of &lt;i&gt;GameObjecs&lt;/i&gt; can be seen in Hierarchy tab:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/04_initial_hierarchy.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In Camera GameObject there are few components: Transform, Camera, GUILayer, FlareLayer and AudioListener.&lt;/p&gt;
+&lt;p&gt;In &lt;strong&gt;Camera&lt;/strong&gt; &lt;i&gt;GameObject&lt;/i&gt; there are few components: Transform, Camera, GUILayer, FlareLayer and AudioListener.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/05_main_camera_gameobject.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Camera&lt;/strong&gt; component allows to render the game. It’s like a way to see what’s happening in game execution for a given position. Just like a real camera, it films our game scene and presents it to the player as we can see in &lt;strong&gt;Game&lt;/strong&gt; tab.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Camera&lt;/strong&gt; component allows to render the game. It’s like a way to see what’s happening in game execution for a given position. Just like a real camera, it films our game scene and presents it to the player to be seen in &lt;strong&gt;Game&lt;/strong&gt; tab.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/06_camera_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Transform&lt;/strong&gt; component has a very important role: it defines the position, rotation and scale of GameObjects in scene space.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Transform&lt;/strong&gt; component has a very important role: it defines the position, rotation and scale of GameObjects in scene space.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/07_transform_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s create few folders in &lt;em&gt;Project&lt;/em&gt; tab. Usually it’s recommended to follow a &lt;a href=&quot;https://twitter.com/CiroContns/status/831547413290766338&quot;&gt;folder naming structure&lt;/a&gt; to ease the task of searching for assets while the projects grows up.&lt;/p&gt;
+&lt;p&gt;Let’s create few folders in &lt;i&gt;Project&lt;/i&gt; tab. Usually it’s recommended to follow a &lt;a href=&quot;https://twitter.com/CiroContns/status/831547413290766338&quot;&gt;folder naming structure&lt;/a&gt; to ease the task of searching for assets while the projects grows up.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/08_create_folder.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In this project we are going to use this main folders: Prefabs, Scenes and Scripts.&lt;/p&gt;
+&lt;p&gt;In this project we are going to use the following folders: Prefabs, Scenes and Scripts.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/09_folders_created.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s save our scene in &lt;em&gt;Scenes/Game.unity&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;Let’s save our scene in &lt;em&gt;Scenes/Game.unity&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/10_save_scene.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -95,17 +95,17 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/11_create_cube.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In &lt;strong&gt;Hierarchy&lt;/strong&gt; tab we can check our added cube:&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Hierarchy&lt;/em&gt; tab we can check our added cube.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/12_cube_gameobject.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;And in &lt;strong&gt;Inspector&lt;/strong&gt; tab we see its components:&lt;/p&gt;
+&lt;p&gt;And in &lt;strong&gt;Inspector&lt;/strong&gt; tab we can see its components:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Transform&lt;/strong&gt;: stores position, rotation and scale changes&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;MeshFilter&lt;/strong&gt;: has information about object 3D geometry (aka. Mesh)&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;BoxCollider&lt;/strong&gt;: an important component to detect collisions during game execution&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;MeshRenderer&lt;/strong&gt;: renders our cube using geometry information (Mesh data) from &lt;em&gt;MeshFilter&lt;/em&gt; component and using informations from &lt;a href=&quot;https://docs.unity3d.com/Manual/Materials.html&quot;&gt;Materials&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MeshRenderer&lt;/strong&gt;: renders our cube using geometry information (Mesh data) from MeshFilter component and using informations from &lt;a href=&quot;https://docs.unity3d.com/Manual/Materials.html&quot;&gt;Materials&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/13_cube_components.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
@@ -132,15 +132,15 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/18_cube_clone.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;By cloning 13 cubes, I mean by pressing &lt;em&gt;Ctrl+D&lt;/em&gt; or &lt;em&gt;Cmd+D&lt;/em&gt;, we can make a line:&lt;/p&gt;
+&lt;p&gt;By cloning 13 cubes, i.e, pressing &lt;em&gt;Ctrl+D&lt;/em&gt; or &lt;em&gt;Cmd+D&lt;/em&gt;, we can make a line&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/19_cubes_selection.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Empty&lt;/strong&gt; options allows to create an empty GameObject with only &lt;strong&gt;Transform&lt;/strong&gt; component.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Empty&lt;/strong&gt; option allows to create an empty GameObject with only Transform component.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/20_create_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s rename the empty GameObject to &lt;em&gt;Line&lt;/em&gt; and then reset &lt;strong&gt;Transform&lt;/strong&gt; component to its default values. When selecting cubes, we drag them into &lt;em&gt;Line&lt;/em&gt; GameObject. So, we parenting GameObjects: &lt;em&gt;Line&lt;/em&gt; is now the parent of cubes. When selecting or moving &lt;em&gt;Line&lt;/em&gt; we are also moving its children.&lt;/p&gt;
+&lt;p&gt;Let’s rename the empty &lt;em&gt;GameObject&lt;/em&gt; to &lt;em&gt;Line&lt;/em&gt; and then reset &lt;strong&gt;Transform&lt;/strong&gt; component to its default values. After selecting all cubes, we can drag them into &lt;em&gt;Line GameObject&lt;/em&gt; on &lt;strong&gt;Hierarchy&lt;/strong&gt; tab. &lt;em&gt;Line&lt;/em&gt; is now the parent of all cubes. When selecting or moving &lt;em&gt;Line&lt;/em&gt; we are also moving its children.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/21_create_lines.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -148,27 +148,27 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/22_shading_mode.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cloning &lt;em&gt;Line&lt;/em&gt; means we are also cloning all its 13 children cubes. In this way we can create two more lines and drag them up. And when select a specific cube we can also delete it by &lt;em&gt;del/Cmd+del&lt;/em&gt;. So by repeating these basic steps, we can get the following structure:&lt;/p&gt;
+&lt;p&gt;Now we clone the &lt;em&gt;Line GameObject&lt;/em&gt;, what means we are also cloning all its 13 children cubes. In this way we can create two more lines and drag them up. And when select a specific cube we can also delete it by &lt;em&gt;del/Cmd+del&lt;/em&gt;. So by repeating these basic steps, we can get the following structure.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/23_copy_lines.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Copying one more line, we have the body of our character. To ease manipulating these objects, let’s create an empty GameObject &lt;em&gt;Body&lt;/em&gt;, reset its &lt;strong&gt;Transform&lt;/strong&gt; and put &lt;em&gt;Line&lt;/em&gt; objects inside it as children.&lt;/p&gt;
+&lt;p&gt;Then we copy one more line to get the body of our character. To ease manipulating these objects, let’s create an empty &lt;em&gt;Body GameObject&lt;/em&gt;, reset its Transform and put &lt;em&gt;Line&lt;/em&gt; objects inside it as children.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/24_finished_body.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;To create the antenna we need to starting copying one cube:&lt;/p&gt;
+&lt;p&gt;To create the antenna we need to copy only one cube.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/25_started_antenna.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s create an empty GameObject &lt;em&gt;Antenna&lt;/em&gt; and reset its &lt;strong&gt;Transform&lt;/strong&gt; and parenting that last created cube.&lt;/p&gt;
+&lt;p&gt;Let’s create an empty &lt;em&gt;GameObject Antenna&lt;/em&gt; and reset its &lt;strong&gt;Transform&lt;/strong&gt; and parenting that last created cube.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/26_antenna_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cloning few more cubes we finish our &lt;em&gt;Antenna&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Cloning few more cubes we finish our &lt;em&gt;Antenna&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/27_finished_antenna.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The next step is to create &lt;em&gt;Claws&lt;/em&gt; GameObject and reset its &lt;strong&gt;Transform&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The next step is to create &lt;em&gt;Claws GameObject&lt;/em&gt; and reset its &lt;strong&gt;Transform&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/28_claws_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -176,11 +176,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/29_claws_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Now we have a &lt;em&gt;Space Invader&lt;/em&gt;. To ease manipulating it, let’s create an empty &lt;em&gt;Cubes&lt;/em&gt; GameObject, reset its &lt;strong&gt;Transform&lt;/strong&gt; and drag &lt;em&gt;Body&lt;/em&gt;, &lt;em&gt;Antenna&lt;/em&gt; and &lt;em&gt;Claws&lt;/em&gt; into it. Then we can finally create a &lt;em&gt;SpaceInvader&lt;/em&gt; GameObject, reset its &lt;strong&gt;Transform&lt;/strong&gt; and parenting all &lt;em&gt;Cubes&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Now we have a &lt;em&gt;Space Invader&lt;/em&gt;. To ease manipulating it, let’s create an empty &lt;em&gt;Cubes GameObject&lt;/em&gt;, reset its &lt;strong&gt;Transform&lt;/strong&gt; and drag &lt;em&gt;Body, Antenna and Claws&lt;/em&gt; into it. Then we can finally create a &lt;em&gt;SpaceInvader GameObject&lt;/em&gt;, reset its &lt;strong&gt;Transform&lt;/strong&gt; and parenting all cubes.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/30_space_invaders_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;By selecting &lt;em&gt;Cubes&lt;/em&gt; let’s change its scale to (0.2, 0.2, 0.2)&lt;/p&gt;
+&lt;p&gt;By selecting Cubes let’s change its scale to (0.2, 0.2, 0.2).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/31_downscale_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -188,11 +188,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/32_invader_game_tab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In our &lt;em&gt;Camera&lt;/em&gt; let’s change the propriety &lt;em&gt;Clear Flags&lt;/em&gt; to &lt;em&gt;Solid Color&lt;/em&gt; and &lt;em&gt;background color&lt;/em&gt; to (0,0,0,0).&lt;/p&gt;
+&lt;p&gt;In our &lt;strong&gt;Camera&lt;/strong&gt; let’s change the propriety &lt;em&gt;Clear Flags&lt;/em&gt; to &lt;em&gt;Solid&lt;/em&gt; Color and &lt;em&gt;background color&lt;/em&gt; to (0,0,0,0).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/33_camera_clear_flags.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Cloning and creating new empty GameObjects as previous steps, we have our &lt;em&gt;Player&lt;/em&gt; GameObject.&lt;/p&gt;
+&lt;p&gt;Cloning and creating new empty &lt;em&gt;GameObjects&lt;/em&gt; as we did in previous steps, we have our &lt;em&gt;Player GameObject&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/34_player_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -200,27 +200,27 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/35_player_game_tab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;To add movement to our game, let’s use some scripts I’ve made beforehand from my &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Behaviors project&lt;/a&gt;. Download or clone this project into &lt;em&gt;Scripts&lt;/em&gt; folder.&lt;/p&gt;
+&lt;p&gt;To add movement to our game, let’s use some scripts I’ve made beforehand from my &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Behaviors project&lt;/a&gt;. Download or clone this project into Scripts folder.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/36_copy_scripts.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;By inspecting &lt;em&gt;SpaceInvader&lt;/em&gt; GameObject we can add new components by pressing &lt;em&gt;Add Component&lt;/em&gt; button.&lt;/p&gt;
+&lt;p&gt;By inspecting &lt;em&gt;SpaceInvader GameObject&lt;/em&gt; we can add new components by pressing &lt;em&gt;Add Component&lt;/em&gt; button.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/37_add_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s add &lt;em&gt;Move&lt;/em&gt; script (from &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Behaviors&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Let’s add Move script (from &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors/blob/master/Move.cs&quot;&gt;Visual Behaviors&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/38_add_move_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s configure &lt;em&gt;Move&lt;/em&gt; script:&lt;/p&gt;
+&lt;p&gt;Let’s configure Move script.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/39_callevent_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;CallEvent&lt;/em&gt; allows to change another scripts behaviors.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CallEvent&lt;/em&gt; script allows to change another scripts behaviors.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/40_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Inside &lt;em&gt;Action&lt;/em&gt; block, let’s press &lt;em&gt;+&lt;/em&gt; button to add an action. So we select a GameObject that should have change its behavior.&lt;/p&gt;
+&lt;p&gt;Inside &lt;em&gt;Action&lt;/em&gt; block, let’s press + button to add an action. So we select a &lt;em&gt;GameObject&lt;/em&gt; that should have its behavior changed.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/41_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -228,15 +228,15 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/42_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Player movement can done by two &lt;em&gt;Move&lt;/em&gt; scripts: one for right direction and another for left direction.&lt;/p&gt;
+&lt;p&gt;Player movement can done by two Move scripts: one for right direction and another for left direction.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/43_move_player.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Then we create &lt;em&gt;Bullets&lt;/em&gt; GameObject as depicted in below image:&lt;/p&gt;
+&lt;p&gt;Then we create &lt;em&gt;Bullets GameObject&lt;/em&gt; as depicted in below image:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/44_bullets_gameobject.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s add &lt;em&gt;Move&lt;/em&gt; script to &lt;em&gt;Bullets&lt;/em&gt; in order to move up bullets towards space invaders.&lt;/p&gt;
+&lt;p&gt;Let’s add the &lt;em&gt;Move&lt;/em&gt; script to Bullets in order to move up the bullets towards space invaders.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/45_bullets_move.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -244,7 +244,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/46_bullets_prefab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s change &lt;strong&gt;layer&lt;/strong&gt; of &lt;em&gt;Bullets&lt;/em&gt; GameObject.&lt;/p&gt;
+&lt;p&gt;Let’s change the &lt;strong&gt;layer&lt;/strong&gt; of &lt;em&gt;Bullets GameObject&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/47_edit_settings_layers.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
@@ -252,38 +252,38 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/48_tags_and_layers.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;And then change the &lt;em&gt;Bullets&lt;/em&gt; prefab.&lt;/p&gt;
+&lt;p&gt;And then change the &lt;strong&gt;Bullets&lt;/strong&gt; prefab.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/49_bullets_add_layer.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;When adding &lt;em&gt;Generate&lt;/em&gt; script to &lt;em&gt;Player&lt;/em&gt; GameObject we can allow our player to shoot.&lt;/p&gt;
+&lt;p&gt;When adding &lt;em&gt;Generate&lt;/em&gt; script to &lt;em&gt;Player GameObject&lt;/em&gt; we can allow our player to shoot.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/50_player_gen_bullets.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In &lt;em&gt;SpaceInvader&lt;/em&gt; GameObject we are going to add &lt;em&gt;DestroyMe&lt;/em&gt; script. Let’s configure our enemy to be destroyed every time it touches a bullet, I mean a GameObject with &lt;strong&gt;layer&lt;/strong&gt; &lt;em&gt;Bullets&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;SpaceInvader GameObject&lt;/em&gt; we are going to add &lt;em&gt;DestroyMe&lt;/em&gt; script. Let’s configure our enemy to be destroyed every time it touches a bullet, I mean a &lt;em&gt;GameObject&lt;/em&gt; with &lt;em&gt;Bullets&lt;/em&gt; &lt;strong&gt;layer&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;In order to collision be detected, we need a &lt;strong&gt;BoxCollider&lt;/strong&gt; and a &lt;strong&gt;RigidBody&lt;/strong&gt; components. Let’s freeze &lt;em&gt;Rigidbody&lt;/em&gt; rotation and define gravity as zero.&lt;/p&gt;
+&lt;p&gt;To collision be detected, we need a &lt;strong&gt;BoxCollider&lt;/strong&gt; and a &lt;strong&gt;RigidBody&lt;/strong&gt; components. Let’s freeze &lt;strong&gt;Rigidbody&lt;/strong&gt; rotation and define gravity as zero.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/51_invader_collision.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We can’t forget to activate &lt;em&gt;isTrigger&lt;/em&gt; checkbox in &lt;em&gt;BoxCollider&lt;/em&gt; of our enemy.&lt;/p&gt;
+&lt;p&gt;We can’t forget to activate &lt;em&gt;isTrigger&lt;/em&gt; checkbox in &lt;strong&gt;BoxCollider&lt;/strong&gt; of our enemy.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/52_invader_collider.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Let’s add a trigger-enabled &lt;em&gt;BoxCollider&lt;/em&gt; in Bullet GameObject:&lt;/p&gt;
+&lt;p&gt;Let’s add a trigger-enabled &lt;strong&gt;BoxCollider&lt;/strong&gt; in &lt;em&gt;Bullet GameObject&lt;/em&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/53_bullets_collider.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;So we achieved a working Space Invader! Congrats for your first Unity game!&lt;/p&gt;
+&lt;p&gt;So we achieved a working Space Invader! Congrats for your first &lt;em&gt;Unity&lt;/em&gt; game!&lt;/p&gt;
 
 </content>
  </entry>
  
  <entry>
    <title>Kuarup: a Global Game Jam 2016 game</title>
-   <link href="https://adrianogil.github.io/blog//2016/01/global-game-jam-2016/"/>
+   <link href="http://localhost:4000/2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2016/01/global-game-jam-2016</id>
+   <id>http://localhost:4000/2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Some weeks ago, I have participated in one of the most popular game jams ever: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. So I worked with some very talented guys that I’ve meet on Samsung Institute and on Samsung OCEAN: our designer Rafael Lima, and developers Bruno Araujo, Germano Assis and Marcus Brandt.&lt;/p&gt;
 
 &lt;p&gt;At the game jam start, the theme was revealed: Ritual. So, we decided to create a color-based puzzle game about choosing cute monsters to sacrifice. So we used ritual as meaning the repetition of tasks, magic and sacrifice.&lt;/p&gt;
@@ -303,9 +303,9 @@
  
  <entry>
    <title>How to Install Theano, Blocks and Fuel</title>
-   <link href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/"/>
+   <link href="http://localhost:4000/2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano</id>
+   <id>http://localhost:4000/2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;The very first step to develop a &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt; experiment - if you don’t want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.&lt;/p&gt;
 
@@ -321,7 +321,7 @@
 
 &lt;p&gt;I found some useful tips on &lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/&quot;&gt;this reddit post&lt;/a&gt; and I have tested it on Windows 8.1 and Windows 10.&lt;/p&gt;
 
-&lt;p&gt;The first step is download and install the &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Windows version of Anaconda&lt;/a&gt;. After a simple installation wizard, we need to install the required libraries for Theano. Thanks to Anaconda, we can use a very simple command-line tool &lt;code class=&quot;highlighter-rouge&quot;&gt;conda&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Anaconda Prompt&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;The first step is download and install the &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Windows version of Anaconda&lt;/a&gt;. After a simple installation wizard, we need to install the required libraries for Theano. Thanks to Anaconda, we can use a very simple command-line tool &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conda&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Anaconda Prompt&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
     conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mingw libpython&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -330,16 +330,16 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2 progressbar2 picklable-itertools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Theano can be installed using &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Theano can be installed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Fuel can be downloaded directly from github repository: https://github.com/mila-udem/fuel. In order to install it, we need to run the script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Fuel can be downloaded directly from github repository: https://github.com/mila-udem/fuel. In order to install it, we need to run the script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Fuel can be downloaded directly from github repository: https://github.com/mila-udem/blocks. In order to install it, we need to use python to execute the setuptools script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Fuel can be downloaded directly from github repository: https://github.com/mila-udem/blocks. In order to install it, we need to use python to execute the setuptools script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -348,18 +348,18 @@
 
 &lt;h1 id=&quot;installing-on-osx&quot;&gt;Installing on OSX&lt;/h1&gt;
 
-&lt;p&gt;According to &lt;a href=&quot;http://deeplearning.net/software/theano/install.html#mac-os&quot;&gt;Theano page about mac installation&lt;/a&gt; we can &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;download Anaconda&lt;/a&gt;  and then Theano can be installed by &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&quot;http://deeplearning.net/software/theano/install.html#mac-os&quot;&gt;Theano page about mac installation&lt;/a&gt; we can &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;download Anaconda&lt;/a&gt;  and then Theano can be installed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip six nose numpy scipy graphviz
     pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pydot2
     pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;After downloading Fuel &lt;a href=&quot;https://github.com/mila-udem/fuel&quot;&gt;on github page&lt;/a&gt;, inside its folder there is a script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt; that handles the installation by means of setuptools:&lt;/p&gt;
+&lt;p&gt;After downloading Fuel &lt;a href=&quot;https://github.com/mila-udem/fuel&quot;&gt;on github page&lt;/a&gt;, inside its folder there is a script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt; that handles the installation by means of setuptools:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;fuel
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Once downloaded Blocks &lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt;from github page&lt;/a&gt;, you can install it by executing the setuptools script &lt;code class=&quot;highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Once downloaded Blocks &lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt;from github page&lt;/a&gt;, you can install it by executing the setuptools script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setup.py&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;blocks
     python setup.py &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -370,19 +370,19 @@
 
 &lt;p&gt;Some installation steps are published on &lt;a href=&quot;http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu&quot;&gt;Theano site&lt;/a&gt;, so by following it I easily managed to install it on Ubuntu 14.10.&lt;/p&gt;
 
-&lt;p&gt;Download and e install all requisites of the libraries using &lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Download and e install all requisites of the libraries using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt-get&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Then Theano can be installed by &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Then Theano can be installed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Theano&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Fuel library can be also installed using &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; directly from github repository:&lt;/p&gt;
+&lt;p&gt;Fuel library can be also installed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; directly from github repository:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git+git://github.com/mila-udem/fuel.git &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Blocks library also is installed by &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Blocks library also is installed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git+git://github.com/mila-udem/blocks.git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -390,7 +390,7 @@
 
 &lt;h1 id=&quot;installing-a-python-ide&quot;&gt;Installing a Python IDE&lt;/h1&gt;
 
-&lt;p&gt;After some good experiences using PyDev and Eclipse, I recomend this light version &lt;code class=&quot;highlighter-rouge&quot;&gt;Liclipse&lt;/code&gt;: http://www.liclipse.com/download.html. Some other good options can be found in: http://pedrokroger.net/choosing-best-python-ide/.&lt;/p&gt;
+&lt;p&gt;After some good experiences using PyDev and Eclipse, I recomend this light version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Liclipse&lt;/code&gt;: http://www.liclipse.com/download.html. Some other good options can be found in: http://pedrokroger.net/choosing-best-python-ide/.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2016-01-10-installing/ubuntu-liclipse.png&quot; alt=&quot;LiClipse IDE&quot; /&gt;&lt;/p&gt;
 
@@ -399,9 +399,9 @@
  
  <entry>
    <title>Hello World!</title>
-   <link href="https://adrianogil.github.io/blog//2016/01/hello-world/"/>
+   <link href="http://localhost:4000/2016/01/hello-world/"/>
    <updated>2016-01-01T09:02:47-04:00</updated>
-   <id>https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//2016/01/hello-world</id>
+   <id>http://localhost:4000/2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Hi, everyone!&lt;/p&gt;
 
 &lt;p&gt;That’s my personal blog about my researches and some development notes. I guess every tech guy should have a blog. Well, after some years, I decided finally to start mine.&lt;/p&gt;

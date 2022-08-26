@@ -14,10 +14,10 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="https://adrianogil.github.io/blog//pt/css/rom.css">
+  <link rel="stylesheet" href="/pt/css/rom.css">
 
   <!-- Icons -->
-  <link rel="icon" type="image/png" href="https://adrianogil.github.io/blog//pt/favicon.png">
+  <link rel="icon" type="image/png" href="/pt/favicon.png">
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
@@ -99,7 +99,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="https://adrianogil.github.io/blog//pt/" title="Home">GilLabs</a>
+            <a href="/pt/" title="Home">GilLabs</a>
             <small>{ GilLabs }</small>
           </h3>
         </div>
@@ -115,12 +115,14 @@
 
   <div class="post">
     <div align="right">
+      10 Jan 2016
+      <br/>
       <!-- Adds links to other languages on the post -->
       
-        <a href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/" >EN</a>
+        <a href="/2016/01/install-block-fuel-theano/" >EN</a>
         <span class="separator"> &bull; </span>
-        <a href="https://adrianogil.github.io/blog//fr/2016/01/install-block-fuel-theano/" >FR</a>
-      
+        <a href="/fr/2016/01/install-block-fuel-theano/" >FR</a>
+            
     </div>
 
     
@@ -136,7 +138,7 @@
 
 <p>Algumas dicas de instalação podem ser encontradas <a href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">neste post do reddit</a>, e foram testadas no Windows 8.1 e Windows 10.</p>
 
-<p>O primeiro passo é baixar e instalar a versão <a href="https://www.continuum.io/downloads">Windows do Anaconda</a>. Basta apenas seguir o wizard de instalação. Concluída a instalação, temos que instalar as bibliotecas necessárias para o Theano. Para isso, usamos a ferramenta de linha de comando <code class="highlighter-rouge">conda</code> que pode ser encontrada no <code class="highlighter-rouge">Anaconda Prompt</code>, uma janela de comandos ao estilo <code class="highlighter-rouge">cmd</code> customizada para o Anaconda.</p>
+<p>O primeiro passo é baixar e instalar a versão <a href="https://www.continuum.io/downloads">Windows do Anaconda</a>. Basta apenas seguir o wizard de instalação. Concluída a instalação, temos que instalar as bibliotecas necessárias para o Theano. Para isso, usamos a ferramenta de linha de comando <code class="language-plaintext highlighter-rouge">conda</code> que pode ser encontrada no <code class="language-plaintext highlighter-rouge">Anaconda Prompt</code>, uma janela de comandos ao estilo <code class="language-plaintext highlighter-rouge">cmd</code> customizada para o Anaconda.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    conda <span class="nb">install </span>pip six nose numpy scipy graphviz
     conda <span class="nb">install </span>mingw libpython</code></pre></figure>
@@ -145,16 +147,16 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>pydot2 progressbar2 picklable-itertools</code></pre></figure>
 
-<p>E então finalmente instalar o Theano usando o <code class="highlighter-rouge">pip</code>:</p>
+<p>E então finalmente instalar o Theano usando o <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>theano</code></pre></figure>
 
-<p>A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser baixada direto do github https://github.com/mila-udem/fuel. A instalação é feita pelo script <code class="highlighter-rouge">setup.py</code>:</p>
+<p>A biblioteca auxiliar Fuel, utilizada para baixar datasets de imagens e processamento de dados em geral, pode ser baixada direto do github https://github.com/mila-udem/fuel. A instalação é feita pelo script <code class="language-plaintext highlighter-rouge">setup.py</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>fuel
     python setup.py <span class="nb">install</span></code></pre></figure>
 
-<p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é encontrada no github https://github.com/mila-udem/blocks. A instalação também é pela execução do script <code class="highlighter-rouge">setup.py</code>:</p>
+<p>Blocks, uma série de métodos utilitários para uso em conjunto com o Theano, é encontrada no github https://github.com/mila-udem/blocks. A instalação também é pela execução do script <code class="language-plaintext highlighter-rouge">setup.py</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>blocks
     python setup.py <span class="nb">install</span></code></pre></figure>
@@ -163,18 +165,18 @@
 
 <h1 id="instalação-no-osx">Instalação no OSX</h1>
 
-<p>Segundo <a href="http://deeplearning.net/software/theano/install.html#mac-os">este link</a> a instalação do Theano é bem similar com a do Windows. Primeiramente instalamos a <a href="https://www.continuum.io/downloads">versão OSX do Anaconda</a> e então o Theano pode ser instalado pelo <code class="highlighter-rouge">pip</code>:</p>
+<p>Segundo <a href="http://deeplearning.net/software/theano/install.html#mac-os">este link</a> a instalação do Theano é bem similar com a do Windows. Primeiramente instalamos a <a href="https://www.continuum.io/downloads">versão OSX do Anaconda</a> e então o Theano pode ser instalado pelo <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    conda <span class="nb">install </span>pip six nose numpy scipy graphviz
     pip <span class="nb">install </span>pydot2
     pip <span class="nb">install </span>Theano</code></pre></figure>
 
-<p>Fuel, baixado em https://github.com/mila-udem/fuel, pode ser instalado pelo script <code class="highlighter-rouge">setup.py</code>:</p>
+<p>Fuel, baixado em https://github.com/mila-udem/fuel, pode ser instalado pelo script <code class="language-plaintext highlighter-rouge">setup.py</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>fuel
     python setup.py <span class="nb">install</span></code></pre></figure>
 
-<p><a href="https://github.com/mila-udem/blocks">Blocks</a>, uma vez baixado, segue a mesma instalação pela execução do script <code class="highlighter-rouge">setup.py</code>:</p>
+<p><a href="https://github.com/mila-udem/blocks">Blocks</a>, uma vez baixado, segue a mesma instalação pela execução do script <code class="language-plaintext highlighter-rouge">setup.py</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>blocks
     python setup.py <span class="nb">install</span></code></pre></figure>
@@ -185,11 +187,11 @@
 
 <p>O próprio <a href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">site do Theano</a> explica como fazer a instalação do Theano no Ubuntu, reproduzo aqui o que testei no Ubuntu 14.10.</p>
 
-<p>Baixar e instalar as requisitos das bibliotecas se torna bem simples usando o comando <code class="highlighter-rouge">apt-get</code>:</p>
+<p>Baixar e instalar as requisitos das bibliotecas se torna bem simples usando o comando <code class="language-plaintext highlighter-rouge">apt-get</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">sudo </span>apt-get <span class="nb">install </span>python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz</code></pre></figure>
 
-<p>Então o Theano pode ser baixado e instalado usando o <code class="highlighter-rouge">pip</code>:</p>
+<p>Então o Theano pode ser baixado e instalado usando o <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>Theano</code></pre></figure>
 

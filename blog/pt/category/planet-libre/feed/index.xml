@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/category/planet-libre/feed/" rel="self"/>
- <link href="https://adrianogil.github.io/blog/https://adrianogil.github.io/blog//pt/"/>
- <updated>2018-12-10T13:42:35-04:00</updated>
- <id>https://adrianogil.github.io/blog//</id>
+ <link href="http://localhost:4000/pt/category/planet-libre/feed/" rel="self"/>
+ <link href="http://localhost:4000/pt/"/>
+ <updated>2022-08-25T20:34:23-04:00</updated>
+ <id>http://localhost:4000/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>

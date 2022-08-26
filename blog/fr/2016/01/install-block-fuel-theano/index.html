@@ -14,10 +14,10 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="https://adrianogil.github.io/blog//fr/css/rom.css">
+  <link rel="stylesheet" href="/fr/css/rom.css">
 
   <!-- Icons -->
-  <link rel="icon" type="image/png" href="https://adrianogil.github.io/blog//fr/favicon.png">
+  <link rel="icon" type="image/png" href="/fr/favicon.png">
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
@@ -99,7 +99,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="https://adrianogil.github.io/blog//fr/" title="Home">GilLabs</a>
+            <a href="/fr/" title="Home">GilLabs</a>
             <small>{ GilLabs }</small>
           </h3>
         </div>
@@ -115,12 +115,14 @@
 
   <div class="post">
     <div align="right">
+      10 Jan 2016
+      <br/>
       <!-- Adds links to other languages on the post -->
       
-        <a href="https://adrianogil.github.io/blog//pt/2016/01/install-block-fuel-theano/" >PT</a>
+        <a href="/pt/2016/01/install-block-fuel-theano/" >PT</a>
         <span class="separator"> &bull; </span>
-        <a href="https://adrianogil.github.io/blog//2016/01/install-block-fuel-theano/" >EN</a>
-      
+        <a href="/2016/01/install-block-fuel-theano/" >EN</a>
+            
     </div>
 
     
@@ -139,7 +141,7 @@ données, et en train de visualizer les resultats.</p>
 
 <p>J’ai trouvé quelques trucs dans <a href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">cet post reddit</a> et je les ai testé dans Windows 8,1 et Windows 10.</p>
 
-<p>Le premier pas est télécharger et installer la version Windows d’<a href="https://www.continuum.io/downloads">Anaconda</a>. Puis une simple assistant d’installation, il faut installer les bibliothèques necessaires à Theano en usant d’<code class="highlighter-rouge">Anaconda Prompt</code>.</p>
+<p>Le premier pas est télécharger et installer la version Windows d’<a href="https://www.continuum.io/downloads">Anaconda</a>. Puis une simple assistant d’installation, il faut installer les bibliothèques necessaires à Theano en usant d’<code class="language-plaintext highlighter-rouge">Anaconda Prompt</code>.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    conda <span class="nb">install </span>pip six nose numpy scipy graphviz
     conda <span class="nb">install </span>mingw libpython</code></pre></figure>
@@ -148,11 +150,11 @@ données, et en train de visualizer les resultats.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>pydot2 progressbar2 picklable-itertools</code></pre></figure>
 
-<p>Theano peut être installé au moyen du <code class="highlighter-rouge">pip</code>:</p>
+<p>Theano peut être installé au moyen du <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>theano</code></pre></figure>
 
-<p>C’est possible de télecharger Fuel directament de le repo github: https://github.com/mila-udem/blocks. Afin de l’installer, nous pouvons utiliser du python pour exécuter le script setuptools appelé <code class="highlighter-rouge">setup.py</code></p>
+<p>C’est possible de télecharger Fuel directament de le repo github: https://github.com/mila-udem/blocks. Afin de l’installer, nous pouvons utiliser du python pour exécuter le script setuptools appelé <code class="language-plaintext highlighter-rouge">setup.py</code></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>fuel
     python setup.py <span class="nb">install</span></code></pre></figure>
@@ -161,18 +163,18 @@ données, et en train de visualizer les resultats.</p>
 
 <h1 id="installation-dans-losx">Installation dans l’OSX</h1>
 
-<p>Selon <a href="http://deeplearning.net/software/theano/install.html#mac-os">la page Theano de la installation mac</a> nous pouvons <a href="https://www.continuum.io/downloads">télécharger Anaconda</a> et puis installer Theano par moyen du <code class="highlighter-rouge">pip</code>:</p>
+<p>Selon <a href="http://deeplearning.net/software/theano/install.html#mac-os">la page Theano de la installation mac</a> nous pouvons <a href="https://www.continuum.io/downloads">télécharger Anaconda</a> et puis installer Theano par moyen du <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    conda <span class="nb">install </span>pip six nose numpy scipy graphviz
     pip <span class="nb">install </span>pydot2
     pip <span class="nb">install </span>Theano</code></pre></figure>
 
-<p>Puis télécharger Fuel dans <a href="https://github.com/mila-udem/fuel">la page Github</a>, il y a un script <code class="highlighter-rouge">setup.py</code> que permis de faire la installation:</p>
+<p>Puis télécharger Fuel dans <a href="https://github.com/mila-udem/fuel">la page Github</a>, il y a un script <code class="language-plaintext highlighter-rouge">setup.py</code> que permis de faire la installation:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>fuel
     python setup.py <span class="nb">install</span></code></pre></figure>
 
-<p>Lorsque Blocks est téléchargé <a href="https://github.com/mila-udem/blocks">de la page github</a>, c’est possible d’installer en usant du script <code class="highlighter-rouge">setup.py</code>:</p>
+<p>Lorsque Blocks est téléchargé <a href="https://github.com/mila-udem/blocks">de la page github</a>, c’est possible d’installer en usant du script <code class="language-plaintext highlighter-rouge">setup.py</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">cd </span>blocks
     python setup.py <span class="nb">install</span></code></pre></figure>
@@ -183,11 +185,11 @@ données, et en train de visualizer les resultats.</p>
 
 <p>Quelques pas d’installation sont publié dans le <a href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">site du Theano</a>, alors je montre qu’il avais fonctioner dans le Ubuntu 14.10.</p>
 
-<p>Télécharger et installer toutes les requis des bibliothèques en utilisant du <code class="highlighter-rouge">apt-get</code>:</p>
+<p>Télécharger et installer toutes les requis des bibliothèques en utilisant du <code class="language-plaintext highlighter-rouge">apt-get</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">sudo </span>apt-get <span class="nb">install </span>python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz</code></pre></figure>
 
-<p>Alors Theano est installé en usant du <code class="highlighter-rouge">pip</code>:</p>
+<p>Alors Theano est installé en usant du <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>Theano</code></pre></figure>
 
@@ -195,7 +197,7 @@ données, et en train de visualizer les resultats.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>git+git://github.com/mila-udem/fuel.git </code></pre></figure>
 
-<p>La bibliothèque Blocks est installé en usant du <code class="highlighter-rouge">pip</code>:</p>
+<p>La bibliothèque Blocks est installé en usant du <code class="language-plaintext highlighter-rouge">pip</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">    pip <span class="nb">install </span>git+git://github.com/mila-udem/blocks.git</code></pre></figure>
 
@@ -203,7 +205,7 @@ données, et en train de visualizer les resultats.</p>
 
 <h1 id="installation-dune-ide-python">Installation d’une IDE Python</h1>
 
-<p>J’ai de excellentes experiences avec PyDev et Eclipse, alors je recommend la version plus lève: <code class="highlighter-rouge">LiClipse</code>. Autres optiones sont explorées dans le link: http://pedrokroger.net/choosing-best-python-ide/.</p>
+<p>J’ai de excellentes experiences avec PyDev et Eclipse, alors je recommend la version plus lève: <code class="language-plaintext highlighter-rouge">LiClipse</code>. Autres optiones sont explorées dans le link: http://pedrokroger.net/choosing-best-python-ide/.</p>
 
 <p><img src="/assets/images/2016-01-10-installing/ubuntu-liclipse.png" alt="LiClipse IDE" /></p>
 
