@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Entendendo a Divisibilidade por 3 &middot; GilLabs
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/pt/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/blog/pt/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+    
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/articles/">Articles</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contrib/">Contributions</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/cv/">CV</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">À propos</a>
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; Adriano Gil | <a href="http://creativecommons.org/licenses/by-sa/3.0/fr">cc-by-sa</a>
+    </p>
+    <p>
+      <a href="https://github.com/rom1v/blog.rom1v.com/"><code>git clone</code></a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/pt/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">Entendendo a Divisibilidade por 3</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      26 Aug 2022
+      <br/>
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/blog/2022/08/divisibility-of-3/" >EN</a>
+        <span class="separator"> &bull; </span>
+        <a href="/blog/fr/2022/08/divisibility-of-3/" >FR</a>
+            
+    </div>
+
+    <p>Revisar junto com a filha as matérias da escola é uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas operações básicas existem algumas propriedades bem curiosas:</p>
+
+<ol>
+  <li>adição de qualquer número ao 9 preserva a soma de seus algarismos.</li>
+  <li>qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três</li>
+</ol>
+
+<p>Nesse post vou analisar os motivos para essas propriedades existirem.</p>
+
+<h2 id="1-adição-de-qualquer-número-ao-9-preserva-a-soma-de-seus-algarismos">1) adição de qualquer número ao 9 preserva a soma de seus algarismos.</h2>
+
+<p>Considerando a operação</p>
+
+\[A + 9 = B\]
+
+<p>A soma dos dígitos de A será igual a soma dos dígitos de B.</p>
+
+<p>Veja alguns exemplos:</p>
+
+<p><em>Exemplo 1.1:</em></p>
+
+<p>Na operação</p>
+
+\[15 + 9 = 24\]
+
+<p>a soma dos dígitos de $15$ ($1 + 5 = 6$) será igual a soma dos dígitos do valor resultante $24$ ($2 + 4 = 6$)</p>
+
+<p><em>Exemplo 1.2:</em></p>
+
+<p>Na soma</p>
+
+\[71 + 9 = 80\]
+
+<p>da mesma forma teremos que $7 + 1$ será igual a $8 + 0$, ambos $8$</p>
+
+<h2 id="2-qualquer-número-multiplicado-por-3-tem-por-resultado-um-número-cuja-soma-dos-algarismos-também-é-um-múltiplo-por-três">2) qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três</h2>
+
+<p>Considerando a operação</p>
+
+\[A * 3 = B\]
+
+<p>implica assim que a soma dos dígitos de B será um múltiplo de 3.</p>
+
+<p><em>Exemplo 2.1:</em></p>
+
+\[24*3 = 72\]
+
+<p>Nessa multiplicação temos que a soma dos dígitos do resultado será $7 + 2 = 9$, um múltiplo de $3$</p>
+
+<p><em>Exemplo 2.2:</em></p>
+
+\[19*3 = 57\]
+
+<p>então a soma dos dígitos de $57$ será um multiplo de $3$ ($5 + 7 = 12$)</p>
+
+<h2 id="mas-por-quê">Mas por quê?</h2>
+
+<p>Parando para analisar essas duas propriedades após todos esses anos, só agora entendi que propriedade 2 é decorrência da propriedade 1, ou seja, a operação de multiplicar um número por três esconde uma soma com 9.</p>
+
+<p>Como assim?</p>
+
+<p>Bem, a multiplicação é na verdade uma soma, certo?</p>
+
+<p>Então, $3*4$ é a mesma coisa que $3+3+3+3$, que por sua vez podemos remanejar como  $9 + 3 = 12$. Assim se somarmos seus algarismos ($1 + 2 = 3$) teremos um múltiplo de $3$.</p>
+
+<p>E podemos testar isso com outros exemplos, onde é possível remanejar uma multiplicação por $3$ como uma soma com $9$:</p>
+
+<p><em>Exemplo 3.1</em></p>
+
+\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]
+
+<p>Assim percebemos que a soma do resultado dá um múltiplo de $3 1+5 = 6$</p>
+
+<p><em>Exemplo 3.2</em></p>
+
+\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]
+
+<p>Verificamos a propriedade 2, pois $1 + 8 = 9$.</p>
+
+<h2 id="multiplicação-por-3-então-é-uma-soma-com-9">Multiplicação por 3 então é uma soma com 9</h2>
+
+<p>Ou seja, a multiplicação de 3 vezes um número maior que 3 significa somar 9 + ‘alguma coisa’. Como essa ‘alguma coisa’ sempre é um múltiplo de 3 então o resultado de tudo isso vai manter a somatória dos dígitos e também será um múltiplo de 3.</p>
+
+<p>Louco né?</p>
+
+<p>Segue uma pseudo-prova:</p>
+
+<p>Assim considerando qualquer número $x &gt; 3$ e um $k = x - 3$, temos:</p>
+
+\[3*x = 3*(k+3) = 3*k+9\]
+
+<p>Como $3*k$ é um múltiplo de $3$ e dada a propriedade 1 então os algarismos de $3 * k + 9$ também serão múltiplos de $3$.</p>
+
+<h2 id="por-que-a-propriedade-1-acontece">Por que a propriedade 1 acontece?</h2>
+
+<p>Outro ponto a observar é que isso só acontece porque somar com $9$ é a mesma coisa que somar $10$ e subtrair $1$ ($10 - 1 = 9$), que soma um ao dígito da dezena $(+1)$ e subtrai um do dígito da unidade $(-1)$, implicando que a somatória dos dígitos não é afetada ($ +1 - 1 = 0$).</p>
+
+<p>E também podemos generalizar dizendo que a propriedade 2 acontece com toda base de número</p>
+
+\[3 * N + 1\]
+
+<p>como por exemplo as bases decimal e hexadecimal.</p>
+
+<p>E o número que possui a propriedade 1 é sempre o número da base menos um: $9$ para a base decimal e $F$ para a base hexadecimal.</p>
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

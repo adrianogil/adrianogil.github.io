@@ -21,6 +21,23 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+    
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 </head>
 
 
@@ -110,6 +127,19 @@
   
   <div>
     <!-- 
+      <span class="post-lang">en</span>
+     -->
+    <span class="post-title index-post-title">
+      <a href="/blog/2022/08/divisibility-of-3/">
+        The divisibility rule of 3
+      </a>
+    </span>
+
+    <span class="post-date">26 Aug 2022</span>
+  </div>
+  
+  <div>
+    <!-- 
       <span class="post-lang">pt</span>
      -->
     <span class="post-title index-post-title">
@@ -162,14 +192,14 @@
   
 </div>
 
-<div class="pagination">
+<!-- <div class="pagination">
   
     <span class="pagination-item older">&lt; Plus anciens</span>
   
   
     <span class="pagination-item newer">Plus récents &gt;</span>
   
-</div>
+</div> -->
 
 
       </div>

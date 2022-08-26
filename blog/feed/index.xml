@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="http://localhost:4000/blog/feed/" rel="self"/>
- <link href="http://localhost:4000/blog/"/>
- <updated>2022-08-25T20:47:25-04:00</updated>
- <id>http://localhost:4000/</id>
+ <link href="https://adrianogil.github.io/blog/feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog/"/>
+ <updated>2022-08-26T17:18:39-04:00</updated>
+ <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
@@ -13,10 +13,128 @@
 
  
  <entry>
+   <title>The divisibility rule of 3</title>
+   <link href="https://adrianogil.github.io/2022/08/divisibility-of-3/"/>
+   <updated>2022-08-26T10:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/2022/08/divisibility-of-3</id>
+   <content type="html">&lt;p&gt;While reviewing my daughter’s homework, I got to think a little bit about the divisibility rule of 3.  Actually, the basic operations have some interesting properties:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;the sum of any number to 9 preserve the sum of its digits&lt;/li&gt;
+  &lt;li&gt;any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In this post, I’m going to analyze a little bit the reasons behind each of these properties.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-the-sum-of-any-number-to-9-preserve-the-sum-of-its-digits&quot;&gt;1) the sum of any number to 9 preserve the sum of its digits&lt;/h2&gt;
+
+&lt;p&gt;Considering the operation below&lt;/p&gt;
+
+\[A + 9 = B\]
+
+&lt;p&gt;The sum of digits of A will be equal to the sum of digits of B&lt;/p&gt;
+
+&lt;p&gt;Take a look at some examples:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 1.1:&lt;/em&gt;&lt;/p&gt;
+
+\[15 + 9 = 24\]
+
+&lt;p&gt;the sum of the digits of $15$ will be equal to the sum of the digits of the resulting value $24$ ($2 + 4 = 6$)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 1.2:&lt;/em&gt;&lt;/p&gt;
+
+\[71 + 9 = 80\]
+
+&lt;p&gt;$7 + 1$ is equal to $8 + 0$, both $8$&lt;/p&gt;
+
+&lt;h2 id=&quot;2-any-number-multiplied-by-3-results-in-a-number-which-the-sum-of-its-digits-will-also-be-a-multiple-of-3&quot;&gt;2) any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3&lt;/h2&gt;
+
+&lt;p&gt;Considering the operation&lt;/p&gt;
+
+\[A * 3 = B\]
+
+&lt;p&gt;this property implies that the sum of the digits of B will necessary be a multiple of $3$. As we can see in the examples below:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 2.1:&lt;/em&gt;&lt;/p&gt;
+
+\[24 * 3 = 72\]
+
+&lt;p&gt;As we can notice the sum of the digits of $72$ is $7 + 2 = 9$, a multiple of 3&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 2.2:&lt;/em&gt;&lt;/p&gt;
+
+\[19*3 = 57\]
+
+&lt;p&gt;the sum of digits of $57$ is $5 + 7 = 12$, also a multiple of 3&lt;/p&gt;
+
+&lt;h2 id=&quot;a-deep-dive-of-the-divisibility-rule-of-3&quot;&gt;A deep dive of the divisibility rule of 3&lt;/h2&gt;
+
+&lt;p&gt;In elementary school we learn the divisibility rule of 3 and accept that it happens without really understanding why.&lt;/p&gt;
+
+&lt;p&gt;TIL that the property 2 is derived of property 1, i.e, when multiplying a number by $3$ it also means a sum with $9$.&lt;/p&gt;
+
+&lt;p&gt;Wait, what?&lt;/p&gt;
+
+&lt;p&gt;Well, the multiplication is actually a sequence of sum operations, right?&lt;/p&gt;
+
+&lt;p&gt;So a simple operation like&lt;/p&gt;
+
+\[3 * 4 = 12\]
+
+&lt;p&gt;can also be expressed as a sequence of sum&lt;/p&gt;
+
+\[3 + 3 + 3 + 3 = 12\]
+
+&lt;p&gt;and can be rearranged to be a sum with $9$&lt;/p&gt;
+
+\[9 + 3 = 12\]
+
+&lt;p&gt;Let me show other examples in which multiplication by 3 reveals to be a sum with $9$&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 3.1&lt;/em&gt;&lt;/p&gt;
+
+\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]
+
+&lt;p&gt;&lt;em&gt;Example 3.2&lt;/em&gt;&lt;/p&gt;
+
+\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]
+
+&lt;h2 id=&quot;multiplying-by-3-means-a-sum-between-a-number-k-plus-9&quot;&gt;Multiplying by 3 means a sum between a number k plus 9&lt;/h2&gt;
+
+&lt;p&gt;Hence, we can conclude that the property 1 is the reason behind property 2.&lt;/p&gt;
+
+&lt;p&gt;As the multiplication by $3$ implies a sum between a number $k$ plus $9$, the property 1 garantees that the sum of the digits of $k$ will be preserved and as $k$ is a multiple of 3, the sum of the digits of the result will also be a multiple of 3.&lt;/p&gt;
+
+&lt;p&gt;Totally Crazy, right?&lt;/p&gt;
+
+&lt;p&gt;Below we can see a proof:&lt;/p&gt;
+
+&lt;p&gt;Considering any real number $x &amp;gt; 3$ and a $k = x - 3$:&lt;/p&gt;
+
+\[3*x = 3*(k+3) = 3*k+9\]
+
+&lt;p&gt;As $3 * k$ is a multiple of 3, by the rules of property 1, it’s implied that the digits of $3 * k + 9$ will also be multiple of $3$.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-the-reason-behind-property-1&quot;&gt;What’s the reason behind property 1?&lt;/h2&gt;
+
+&lt;p&gt;It’s worth to note that it happens because to sum with $9$ is the same thing to add $10$ and to subtract $1$ at same time, i.e., increasing one in second digit and decreasing one in first digit, what does not change the sum of digits ($ +1 - 1 = 0$).&lt;/p&gt;
+
+&lt;p&gt;We can also generalize that the property 2 happens with all numeral system with the following number of digits:&lt;/p&gt;
+
+\[3 * N + 1\]
+
+&lt;p&gt;for instance, decimal and hexadecimal numeral systems.&lt;/p&gt;
+
+&lt;p&gt;And the number that follows the property 1 is always the maximum digit of the numeral system minus $1$: so it is $9$ for decimal numeral system and $F$ for hexadecimal numbers.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Unity 101: A simple Space Invaders without coding</title>
-   <link href="http://localhost:4000/2017/01/space-invaders/"/>
+   <link href="https://adrianogil.github.io/2017/01/space-invaders/"/>
    <updated>2017-01-31T21:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/2017/01/space-invaders</id>
+   <id>https://adrianogil.github.io/blog/2017/01/space-invaders</id>
    <content type="html">&lt;p&gt;Hi guys,&lt;/p&gt;
 
 &lt;p&gt;Today we are going to create a simplified version of Space Invaders using &lt;i&gt;Unity&lt;/i&gt;. Programming is not scope of this tutorial. So we are using few scripts for &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Programming&lt;/a&gt; (actually condition-based scripts) I made for teaching Unity at my local university.&lt;/p&gt;
@@ -281,9 +399,9 @@
  
  <entry>
    <title>Kuarup: a Global Game Jam 2016 game</title>
-   <link href="http://localhost:4000/2016/01/global-game-jam-2016/"/>
+   <link href="https://adrianogil.github.io/2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/2016/01/global-game-jam-2016</id>
+   <id>https://adrianogil.github.io/blog/2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Some weeks ago, I have participated in one of the most popular game jams ever: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. So I worked with some very talented guys that I’ve meet on Samsung Institute and on Samsung OCEAN: our designer Rafael Lima, and developers Bruno Araujo, Germano Assis and Marcus Brandt.&lt;/p&gt;
 
 &lt;p&gt;At the game jam start, the theme was revealed: Ritual. So, we decided to create a color-based puzzle game about choosing cute monsters to sacrifice. So we used ritual as meaning the repetition of tasks, magic and sacrifice.&lt;/p&gt;
@@ -303,9 +421,9 @@
  
  <entry>
    <title>How to Install Theano, Blocks and Fuel</title>
-   <link href="http://localhost:4000/2016/01/install-block-fuel-theano/"/>
+   <link href="https://adrianogil.github.io/2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/2016/01/install-block-fuel-theano</id>
+   <id>https://adrianogil.github.io/blog/2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;The very first step to develop a &lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_learning&quot;&gt;Deep Learning&lt;/a&gt; experiment - if you don’t want to code everything from scratch - is to look for a proper 3rd party component that provides a straightforward interface and a great performance.&lt;/p&gt;
 
@@ -399,9 +517,9 @@
  
  <entry>
    <title>Hello World!</title>
-   <link href="http://localhost:4000/2016/01/hello-world/"/>
+   <link href="https://adrianogil.github.io/2016/01/hello-world/"/>
    <updated>2016-01-01T09:02:47-04:00</updated>
-   <id>http://localhost:4000/blog/2016/01/hello-world</id>
+   <id>https://adrianogil.github.io/blog/2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Hi, everyone!&lt;/p&gt;
 
 &lt;p&gt;That’s my personal blog about my researches and some development notes. I guess every tech guy should have a blog. Well, after some years, I decided finally to start mine.&lt;/p&gt;

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>GilLabs</title>
- <link href="http://localhost:4000/blog/pt/feed/" rel="self"/>
- <link href="http://localhost:4000/blog/pt/"/>
- <updated>2022-08-25T20:47:25-04:00</updated>
- <id>http://localhost:4000/</id>
+ <link href="https://adrianogil.github.io/blog/pt/feed/" rel="self"/>
+ <link href="https://adrianogil.github.io/blog/pt/"/>
+ <updated>2022-08-26T17:18:40-04:00</updated>
+ <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
@@ -13,10 +13,122 @@
 
  
  <entry>
+   <title>Entendendo a Divisibilidade por 3</title>
+   <link href="https://adrianogil.github.io/2022/08/divisibility-of-3/"/>
+   <updated>2022-08-26T10:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/pt/2022/08/divisibility-of-3</id>
+   <content type="html">&lt;p&gt;Revisar junto com a filha as matérias da escola é uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas operações básicas existem algumas propriedades bem curiosas:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;adição de qualquer número ao 9 preserva a soma de seus algarismos.&lt;/li&gt;
+  &lt;li&gt;qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nesse post vou analisar os motivos para essas propriedades existirem.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-adição-de-qualquer-número-ao-9-preserva-a-soma-de-seus-algarismos&quot;&gt;1) adição de qualquer número ao 9 preserva a soma de seus algarismos.&lt;/h2&gt;
+
+&lt;p&gt;Considerando a operação&lt;/p&gt;
+
+\[A + 9 = B\]
+
+&lt;p&gt;A soma dos dígitos de A será igual a soma dos dígitos de B.&lt;/p&gt;
+
+&lt;p&gt;Veja alguns exemplos:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemplo 1.1:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Na operação&lt;/p&gt;
+
+\[15 + 9 = 24\]
+
+&lt;p&gt;a soma dos dígitos de $15$ ($1 + 5 = 6$) será igual a soma dos dígitos do valor resultante $24$ ($2 + 4 = 6$)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemplo 1.2:&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Na soma&lt;/p&gt;
+
+\[71 + 9 = 80\]
+
+&lt;p&gt;da mesma forma teremos que $7 + 1$ será igual a $8 + 0$, ambos $8$&lt;/p&gt;
+
+&lt;h2 id=&quot;2-qualquer-número-multiplicado-por-3-tem-por-resultado-um-número-cuja-soma-dos-algarismos-também-é-um-múltiplo-por-três&quot;&gt;2) qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três&lt;/h2&gt;
+
+&lt;p&gt;Considerando a operação&lt;/p&gt;
+
+\[A * 3 = B\]
+
+&lt;p&gt;implica assim que a soma dos dígitos de B será um múltiplo de 3.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemplo 2.1:&lt;/em&gt;&lt;/p&gt;
+
+\[24*3 = 72\]
+
+&lt;p&gt;Nessa multiplicação temos que a soma dos dígitos do resultado será $7 + 2 = 9$, um múltiplo de $3$&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemplo 2.2:&lt;/em&gt;&lt;/p&gt;
+
+\[19*3 = 57\]
+
+&lt;p&gt;então a soma dos dígitos de $57$ será um multiplo de $3$ ($5 + 7 = 12$)&lt;/p&gt;
+
+&lt;h2 id=&quot;mas-por-quê&quot;&gt;Mas por quê?&lt;/h2&gt;
+
+&lt;p&gt;Parando para analisar essas duas propriedades após todos esses anos, só agora entendi que propriedade 2 é decorrência da propriedade 1, ou seja, a operação de multiplicar um número por três esconde uma soma com 9.&lt;/p&gt;
+
+&lt;p&gt;Como assim?&lt;/p&gt;
+
+&lt;p&gt;Bem, a multiplicação é na verdade uma soma, certo?&lt;/p&gt;
+
+&lt;p&gt;Então, $3*4$ é a mesma coisa que $3+3+3+3$, que por sua vez podemos remanejar como  $9 + 3 = 12$. Assim se somarmos seus algarismos ($1 + 2 = 3$) teremos um múltiplo de $3$.&lt;/p&gt;
+
+&lt;p&gt;E podemos testar isso com outros exemplos, onde é possível remanejar uma multiplicação por $3$ como uma soma com $9$:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemplo 3.1&lt;/em&gt;&lt;/p&gt;
+
+\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]
+
+&lt;p&gt;Assim percebemos que a soma do resultado dá um múltiplo de $3 1+5 = 6$&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemplo 3.2&lt;/em&gt;&lt;/p&gt;
+
+\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]
+
+&lt;p&gt;Verificamos a propriedade 2, pois $1 + 8 = 9$.&lt;/p&gt;
+
+&lt;h2 id=&quot;multiplicação-por-3-então-é-uma-soma-com-9&quot;&gt;Multiplicação por 3 então é uma soma com 9&lt;/h2&gt;
+
+&lt;p&gt;Ou seja, a multiplicação de 3 vezes um número maior que 3 significa somar 9 + ‘alguma coisa’. Como essa ‘alguma coisa’ sempre é um múltiplo de 3 então o resultado de tudo isso vai manter a somatória dos dígitos e também será um múltiplo de 3.&lt;/p&gt;
+
+&lt;p&gt;Louco né?&lt;/p&gt;
+
+&lt;p&gt;Segue uma pseudo-prova:&lt;/p&gt;
+
+&lt;p&gt;Assim considerando qualquer número $x &amp;gt; 3$ e um $k = x - 3$, temos:&lt;/p&gt;
+
+\[3*x = 3*(k+3) = 3*k+9\]
+
+&lt;p&gt;Como $3*k$ é um múltiplo de $3$ e dada a propriedade 1 então os algarismos de $3 * k + 9$ também serão múltiplos de $3$.&lt;/p&gt;
+
+&lt;h2 id=&quot;por-que-a-propriedade-1-acontece&quot;&gt;Por que a propriedade 1 acontece?&lt;/h2&gt;
+
+&lt;p&gt;Outro ponto a observar é que isso só acontece porque somar com $9$ é a mesma coisa que somar $10$ e subtrair $1$ ($10 - 1 = 9$), que soma um ao dígito da dezena $(+1)$ e subtrai um do dígito da unidade $(-1)$, implicando que a somatória dos dígitos não é afetada ($ +1 - 1 = 0$).&lt;/p&gt;
+
+&lt;p&gt;E também podemos generalizar dizendo que a propriedade 2 acontece com toda base de número&lt;/p&gt;
+
+\[3 * N + 1\]
+
+&lt;p&gt;como por exemplo as bases decimal e hexadecimal.&lt;/p&gt;
+
+&lt;p&gt;E o número que possui a propriedade 1 é sempre o número da base menos um: $9$ para a base decimal e $F$ para a base hexadecimal.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Como fazer um Space Invaders simples na Unity sem programação</title>
-   <link href="http://localhost:4000/2017/01/space-invaders/"/>
+   <link href="https://adrianogil.github.io/2017/01/space-invaders/"/>
    <updated>2017-01-31T21:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/pt/2017/01/space-invaders</id>
+   <id>https://adrianogil.github.io/blog/pt/2017/01/space-invaders</id>
    <content type="html">&lt;p&gt;Olá Pessoal,&lt;/p&gt;
 
 &lt;p&gt;No post de hoje vou descrever como desenvolver uma versão simplificada do Space Invaders  na Unity. Esse tutorial não vai focar na programação, assim para gerar os comportamentos dos elementos de jogo, foi adotada uma série de scripts de comportamentos visuais (Visual Behaviors, um antigo projeto meu).&lt;/p&gt;
@@ -267,9 +379,9 @@
  
  <entry>
    <title>Kuarup: um jogo de puzzle de cores na Global Game Jam 2016</title>
-   <link href="http://localhost:4000/2016/01/global-game-jam-2016/"/>
+   <link href="https://adrianogil.github.io/2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/pt/2016/01/global-game-jam-2016</id>
+   <id>https://adrianogil.github.io/blog/pt/2016/01/global-game-jam-2016</id>
    <content type="html">&lt;p&gt;Algumas semanas atrás participei em uma das mais conhecidas game jams: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. Foi um trabalho conjunto com um pessoal muito talentoso que conheci no SIDIA (Instituto da Samsung) e no Samsung OCEAN: Rafael Lima (designer), Bruno Araujo, Germano Assis and Marcus Brandt (devs).&lt;/p&gt;
 
 &lt;p&gt;O tema dessa jam foi: Ritual. Decidimos então criar um jogo de puzzles baseado em cores, no qual o jogador escolheria monstros para sacrificar. Assim usamos “ritual” no sentido de repetição, de magia e de sacrificio.&lt;/p&gt;
@@ -289,9 +401,9 @@
  
  <entry>
    <title>Instalando Blocks, Fuel e Theano</title>
-   <link href="http://localhost:4000/2016/01/install-block-fuel-theano/"/>
+   <link href="https://adrianogil.github.io/2016/01/install-block-fuel-theano/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/pt/2016/01/install-block-fuel-theano</id>
+   <id>https://adrianogil.github.io/blog/pt/2016/01/install-block-fuel-theano</id>
    <content type="html">
 &lt;p&gt;Uma das mais conhecidas bibliotecas python para Deep Learning é o &lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt;Theano&lt;/a&gt;. Este post irá mostrar como realizar instalação do Theano e de algumas bibliotecas auxiliares (Blocks e Fuel) usando &lt;a href=&quot;https://www.continuum.io/downloads&quot;&gt;Anaconda&lt;/a&gt;, uma distribuição python bastante conhecida no meio acadêmico.&lt;/p&gt;
 
@@ -383,9 +495,9 @@
  
  <entry>
    <title>Olá Mundo!</title>
-   <link href="http://localhost:4000/2016/01/hello-world/"/>
+   <link href="https://adrianogil.github.io/2016/01/hello-world/"/>
    <updated>2016-01-01T09:02:47-04:00</updated>
-   <id>http://localhost:4000/blog/pt/2016/01/hello-world</id>
+   <id>https://adrianogil.github.io/blog/pt/2016/01/hello-world</id>
    <content type="html">&lt;p&gt;Olá pessoal,&lt;/p&gt;
 
 &lt;p&gt;este é meu blog pessoal onde vou abordar algumas das minhas pesquisas e também dicas de desenvolvimento. Dizem por aí que ter um blog é imprescindível para quem trabalha com tecnologia, então eu agora finalmente decidi começar o meu.&lt;/p&gt;

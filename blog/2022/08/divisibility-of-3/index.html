@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      The divisibility rule of 3 &middot; GilLabs
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/blog/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+    
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/articles/">Articles</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contrib/">Contributions</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/cv/">CV</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">À propos</a>
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; Adriano Gil | <a href="http://creativecommons.org/licenses/by-sa/3.0/fr">cc-by-sa</a>
+    </p>
+    <p>
+      <a href="https://github.com/rom1v/blog.rom1v.com/"><code>git clone</code></a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">The divisibility rule of 3</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      26 Aug 2022
+      <br/>
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/blog/pt/2022/08/divisibility-of-3/" >PT</a>
+        <span class="separator"> &bull; </span>
+        <a href="/blog/fr/2022/08/divisibility-of-3/" >FR</a>
+            
+    </div>
+
+    <p>While reviewing my daughter’s homework, I got to think a little bit about the divisibility rule of 3.  Actually, the basic operations have some interesting properties:</p>
+
+<ol>
+  <li>the sum of any number to 9 preserve the sum of its digits</li>
+  <li>any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3</li>
+</ol>
+
+<p>In this post, I’m going to analyze a little bit the reasons behind each of these properties.</p>
+
+<h2 id="1-the-sum-of-any-number-to-9-preserve-the-sum-of-its-digits">1) the sum of any number to 9 preserve the sum of its digits</h2>
+
+<p>Considering the operation below</p>
+
+\[A + 9 = B\]
+
+<p>The sum of digits of A will be equal to the sum of digits of B</p>
+
+<p>Take a look at some examples:</p>
+
+<p><em>Example 1.1:</em></p>
+
+\[15 + 9 = 24\]
+
+<p>the sum of the digits of $15$ will be equal to the sum of the digits of the resulting value $24$ ($2 + 4 = 6$)</p>
+
+<p><em>Example 1.2:</em></p>
+
+\[71 + 9 = 80\]
+
+<p>$7 + 1$ is equal to $8 + 0$, both $8$</p>
+
+<h2 id="2-any-number-multiplied-by-3-results-in-a-number-which-the-sum-of-its-digits-will-also-be-a-multiple-of-3">2) any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3</h2>
+
+<p>Considering the operation</p>
+
+\[A * 3 = B\]
+
+<p>this property implies that the sum of the digits of B will necessary be a multiple of $3$. As we can see in the examples below:</p>
+
+<p><em>Example 2.1:</em></p>
+
+\[24 * 3 = 72\]
+
+<p>As we can notice the sum of the digits of $72$ is $7 + 2 = 9$, a multiple of 3</p>
+
+<p><em>Example 2.2:</em></p>
+
+\[19*3 = 57\]
+
+<p>the sum of digits of $57$ is $5 + 7 = 12$, also a multiple of 3</p>
+
+<h2 id="a-deep-dive-of-the-divisibility-rule-of-3">A deep dive of the divisibility rule of 3</h2>
+
+<p>In elementary school we learn the divisibility rule of 3 and accept that it happens without really understanding why.</p>
+
+<p>TIL that the property 2 is derived of property 1, i.e, when multiplying a number by $3$ it also means a sum with $9$.</p>
+
+<p>Wait, what?</p>
+
+<p>Well, the multiplication is actually a sequence of sum operations, right?</p>
+
+<p>So a simple operation like</p>
+
+\[3 * 4 = 12\]
+
+<p>can also be expressed as a sequence of sum</p>
+
+\[3 + 3 + 3 + 3 = 12\]
+
+<p>and can be rearranged to be a sum with $9$</p>
+
+\[9 + 3 = 12\]
+
+<p>Let me show other examples in which multiplication by 3 reveals to be a sum with $9$</p>
+
+<p><em>Example 3.1</em></p>
+
+\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]
+
+<p><em>Example 3.2</em></p>
+
+\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]
+
+<h2 id="multiplying-by-3-means-a-sum-between-a-number-k-plus-9">Multiplying by 3 means a sum between a number k plus 9</h2>
+
+<p>Hence, we can conclude that the property 1 is the reason behind property 2.</p>
+
+<p>As the multiplication by $3$ implies a sum between a number $k$ plus $9$, the property 1 garantees that the sum of the digits of $k$ will be preserved and as $k$ is a multiple of 3, the sum of the digits of the result will also be a multiple of 3.</p>
+
+<p>Totally Crazy, right?</p>
+
+<p>Below we can see a proof:</p>
+
+<p>Considering any real number $x &gt; 3$ and a $k = x - 3$:</p>
+
+\[3*x = 3*(k+3) = 3*k+9\]
+
+<p>As $3 * k$ is a multiple of 3, by the rules of property 1, it’s implied that the digits of $3 * k + 9$ will also be multiple of $3$.</p>
+
+<h2 id="whats-the-reason-behind-property-1">What’s the reason behind property 1?</h2>
+
+<p>It’s worth to note that it happens because to sum with $9$ is the same thing to add $10$ and to subtract $1$ at same time, i.e., increasing one in second digit and decreasing one in first digit, what does not change the sum of digits ($ +1 - 1 = 0$).</p>
+
+<p>We can also generalize that the property 2 happens with all numeral system with the following number of digits:</p>
+
+\[3 * N + 1\]
+
+<p>for instance, decimal and hexadecimal numeral systems.</p>
+
+<p>And the number that follows the property 1 is always the maximum digit of the numeral system minus $1$: so it is $9$ for decimal numeral system and $F$ for hexadecimal numbers.</p>
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
