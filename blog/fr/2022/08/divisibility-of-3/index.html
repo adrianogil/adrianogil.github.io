@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      La règle de divisibilité par 3 &middot; GilLabs
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/fr/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/blog/fr/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+    
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/articles/">Articles</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/contrib/">Contributions</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/cv/">CV</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">À propos</a>
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; Adriano Gil | <a href="http://creativecommons.org/licenses/by-sa/3.0/fr">cc-by-sa</a>
+    </p>
+    <p>
+      <a href="https://github.com/rom1v/blog.rom1v.com/"><code>git clone</code></a>
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/fr/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">La règle de divisibilité par 3</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      26 Aug 2022
+      <br/>
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/blog/pt/2022/08/divisibility-of-3/" >PT</a>
+        <span class="separator"> &bull; </span>
+        <a href="/blog/2022/08/divisibility-of-3/" >EN</a>
+            
+    </div>
+
+    <p>En examinant les devoirs de ma fille, j’ai commencé à réfléchir un peu à la règle de divisibilité par 3. En fait, les opérations de base ont des propriétés intéressantes :</p>
+
+<ol>
+  <li>La somme de n’importe quel nombre à 9 préserve la somme de ses chiffres.</li>
+  <li>N’importe quel nombre multiplié par 3 donne un nombre dont la somme de ses chiffres sera également un multiple de 3.</li>
+</ol>
+
+<p>Dans ce post, je vais analyser les raisons derrière chacune de ces propriétés.</p>
+
+<h2 id="1-la-somme-de-nimporte-quel-nombre-à-9-préserve-la-somme-de-ses-chiffres">1) La somme de n’importe quel nombre à 9 préserve la somme de ses chiffres</h2>
+
+<p>En considérant l’opération ci-dessous :</p>
+
+\[A + 9 = B\]
+
+<p>La somme des chiffres de A sera égale à la somme des chiffres de B.</p>
+
+<p>Jetons un coup d’œil à quelques exemples :</p>
+
+<p><em>Exemple 1.1:</em></p>
+
+\[15 + 9 = 24\]
+
+<p>la somme des chiffres de $15$ sera égale à la somme des chiffres de la valeur résultante $24$ ($2 + 4 = 6$)</p>
+
+<p><em>Exemple 1.2:</em></p>
+
+\[71 + 9 = 80\]
+
+<p>$7 + 1$ est égal à $8 + 0$, tous les deux sont $8$.</p>
+
+<h2 id="2-nimporte-quel-nombre-multiplié-par-3-donne-un-nombre-dont-la-somme-de-ses-chiffres-sera-également-un-multiple-de-3">2) N’importe quel nombre multiplié par 3 donne un nombre dont la somme de ses chiffres sera également un multiple de 3</h2>
+
+<p>En considérant l’opération :</p>
+
+\[A * 3 = B\]
+
+<p>Cette propriété implique que la somme des chiffres de B sera nécessairement un multiple de 3. Comme nous pouvons le voir dans les exemples ci-dessous :</p>
+
+<p><em>Exemple 2.1:</em></p>
+
+\[24 * 3 = 72\]
+
+<p>Comme nous pouvons le remarquer, la somme des chiffres de $72$ est $7 + 2 = 9$, un multiple de 3.</p>
+
+<p><em>Exemple 2.2:</em></p>
+
+\[19 * 3 = 57\]
+
+<p>La somme des chiffres de $57$ est $5 + 7 = 12$, également un multiple de 3.</p>
+
+<h2 id="une-plongée-profonde-dans-la-règle-de-divisibilité-par-3">Une plongée profonde dans la règle de divisibilité par 3</h2>
+
+<p>Au collège, nous apprenons la règle de divisibilité par 3 et nous acceptons qu’elle se produise sans vraiment comprendre pourquoi.</p>
+
+<p>Je viens de découvrir que la propriété 2 est dérivée de la propriété 1, c’est-à-dire que multiplier un nombre par 3, c’est aussi faire une somme avec 9.</p>
+
+<p>Comment est-ce possible?</p>
+
+<p>La multiplication est en réalité une séquence d’opérations d’addition, n’est-ce pas?</p>
+
+<p>Ainsi, une opération simple comme</p>
+
+\[3 * 4 = 12\]
+
+<p>peut également être exprimée comme une séquence d’additions:</p>
+
+\[3 + 3 + 3 + 3 = 12\]
+
+<p>Et peut être réarrangée pour devenir une somme avec $9$:</p>
+
+\[9 + 3 = 12\]
+
+<p>Laissez-moi fournir des exemples supplémentaires pour montrer que la multiplication par 3 est équivalente à l’ajout d’un nombre à 9.</p>
+
+<p>Exemple 3.1</p>
+
+\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]
+
+<p>Exemple 3.2</p>
+
+\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]
+
+<h2 id="multiplier-par-3-signifie-ajouter-un-nombre-k-plus-9">Multiplier par 3 signifie ajouter un nombre k plus 9</h2>
+
+<p>Par conséquent, nous pouvons conclure que la propriété 1 est à l’origine de la propriété 2. Lorsque l’on multiplie un nombre par $3$, cela implique l’ajout du nombre à un multiple de $9$. La propriété 1 garantit que la somme des chiffres du multiple de 3 sera préservée. Et étant donné que le multiple de 3 est lui-même un multiple de 3, la somme des chiffres du résultat sera également un multiple de 3.</p>
+
+<p>N’est-ce pas incroyable ?</p>
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
