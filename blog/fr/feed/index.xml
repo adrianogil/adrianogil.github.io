@@ -4,7 +4,7 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/fr/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/fr/"/>
- <updated>2022-08-26T17:18:40-04:00</updated>
+ <updated>2023-02-10T20:46:48-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
@@ -13,23 +13,386 @@
 
  
  <entry>
+   <title>La règle de divisibilité par 3</title>
+   <link href="https://adrianogil.github.io/2022/08/divisibility-of-3/"/>
+   <updated>2022-08-26T10:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/fr/2022/08/divisibility-of-3</id>
+   <content type="html">&lt;p&gt;En examinant les devoirs de ma fille, j’ai commencé à réfléchir un peu à la règle de divisibilité par 3. En fait, les opérations de base ont des propriétés intéressantes :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;La somme de n’importe quel nombre à 9 préserve la somme de ses chiffres.&lt;/li&gt;
+  &lt;li&gt;N’importe quel nombre multiplié par 3 donne un nombre dont la somme de ses chiffres sera également un multiple de 3.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Dans ce post, je vais analyser les raisons derrière chacune de ces propriétés.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-la-somme-de-nimporte-quel-nombre-à-9-préserve-la-somme-de-ses-chiffres&quot;&gt;1) La somme de n’importe quel nombre à 9 préserve la somme de ses chiffres&lt;/h2&gt;
+
+&lt;p&gt;En considérant l’opération ci-dessous :&lt;/p&gt;
+
+\[A + 9 = B\]
+
+&lt;p&gt;La somme des chiffres de A sera égale à la somme des chiffres de B.&lt;/p&gt;
+
+&lt;p&gt;Jetons un coup d’œil à quelques exemples :&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemple 1.1:&lt;/em&gt;&lt;/p&gt;
+
+\[15 + 9 = 24\]
+
+&lt;p&gt;la somme des chiffres de $15$ sera égale à la somme des chiffres de la valeur résultante $24$ ($2 + 4 = 6$)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemple 1.2:&lt;/em&gt;&lt;/p&gt;
+
+\[71 + 9 = 80\]
+
+&lt;p&gt;$7 + 1$ est égal à $8 + 0$, tous les deux sont $8$.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-nimporte-quel-nombre-multiplié-par-3-donne-un-nombre-dont-la-somme-de-ses-chiffres-sera-également-un-multiple-de-3&quot;&gt;2) N’importe quel nombre multiplié par 3 donne un nombre dont la somme de ses chiffres sera également un multiple de 3&lt;/h2&gt;
+
+&lt;p&gt;En considérant l’opération :&lt;/p&gt;
+
+\[A * 3 = B\]
+
+&lt;p&gt;Cette propriété implique que la somme des chiffres de B sera nécessairement un multiple de 3. Comme nous pouvons le voir dans les exemples ci-dessous :&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemple 2.1:&lt;/em&gt;&lt;/p&gt;
+
+\[24 * 3 = 72\]
+
+&lt;p&gt;Comme nous pouvons le remarquer, la somme des chiffres de $72$ est $7 + 2 = 9$, un multiple de 3.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exemple 2.2:&lt;/em&gt;&lt;/p&gt;
+
+\[19 * 3 = 57\]
+
+&lt;p&gt;La somme des chiffres de $57$ est $5 + 7 = 12$, également un multiple de 3.&lt;/p&gt;
+
+&lt;h2 id=&quot;une-plongée-profonde-dans-la-règle-de-divisibilité-par-3&quot;&gt;Une plongée profonde dans la règle de divisibilité par 3&lt;/h2&gt;
+
+&lt;p&gt;Au collège, nous apprenons la règle de divisibilité par 3 et nous acceptons qu’elle se produise sans vraiment comprendre pourquoi.&lt;/p&gt;
+
+&lt;p&gt;Je viens de découvrir que la propriété 2 est dérivée de la propriété 1, c’est-à-dire que multiplier un nombre par 3, c’est aussi faire une somme avec 9.&lt;/p&gt;
+
+&lt;p&gt;Comment est-ce possible?&lt;/p&gt;
+
+&lt;p&gt;La multiplication est en réalité une séquence d’opérations d’addition, n’est-ce pas?&lt;/p&gt;
+
+&lt;p&gt;Ainsi, une opération simple comme&lt;/p&gt;
+
+\[3 * 4 = 12\]
+
+&lt;p&gt;peut également être exprimée comme une séquence d’additions:&lt;/p&gt;
+
+\[3 + 3 + 3 + 3 = 12\]
+
+&lt;p&gt;Et peut être réarrangée pour devenir une somme avec $9$:&lt;/p&gt;
+
+\[9 + 3 = 12\]
+
+&lt;p&gt;Laissez-moi fournir des exemples supplémentaires pour montrer que la multiplication par 3 est équivalente à l’ajout d’un nombre à 9.&lt;/p&gt;
+
+&lt;p&gt;Exemple 3.1&lt;/p&gt;
+
+\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]
+
+&lt;p&gt;Exemple 3.2&lt;/p&gt;
+
+\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]
+
+&lt;h2 id=&quot;multiplier-par-3-signifie-ajouter-un-nombre-k-plus-9&quot;&gt;Multiplier par 3 signifie ajouter un nombre k plus 9&lt;/h2&gt;
+
+&lt;p&gt;Par conséquent, nous pouvons conclure que la propriété 1 est à l’origine de la propriété 2. Lorsque l’on multiplie un nombre par $3$, cela implique l’ajout du nombre à un multiple de $9$. La propriété 1 garantit que la somme des chiffres du multiple de 3 sera préservée. Et étant donné que le multiple de 3 est lui-même un multiple de 3, la somme des chiffres du résultat sera également un multiple de 3.&lt;/p&gt;
+
+&lt;p&gt;N’est-ce pas incroyable ?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Unity 101 : Un simple Space Invaders sans codage</title>
+   <link href="https://adrianogil.github.io/2017/01/space-invaders/"/>
+   <updated>2017-01-31T21:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/fr/2017/01/space-invaders</id>
+   <content type="html">&lt;p&gt;Aujourd’hui, nous allons créer une version simplifiée de Space Invaders en utilisant &lt;i&gt;Unity&lt;/i&gt;. Le programme n’est pas l’objet de ce tutoriel. Nous utiliserons donc quelques scripts pour la &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;programmation visuelle&lt;/a&gt; (en réalité, des scripts basés sur des conditions) que j’ai créés pour enseigner Unity à mon université.&lt;/p&gt;
+
+&lt;!-- New project --&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/00_first_screen.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Commençons par créer un nouveau projet à l’intérieur de l’éditeur &lt;i&gt;Unity&lt;/i&gt; en appuyant sur le bouton &lt;i&gt;nouveau&lt;/i&gt; dans l’écran de démarrage. Maintenant, nommons le projet ‘MyGame’ et définissons également le chemin du projet où Unity va créer tous les fichiers de projet initiaux par défaut.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/01_new_project.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“Projet MyGame” créé avec succès! Dans la figure suivante, nous pouvons voir le système de fichiers où &lt;i&gt;Unity&lt;/i&gt; a créé trois répertoires: Assets, Library et ProjectSettings.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Assets&lt;/b&gt; est l’endroit où nous devrions mettre les fichiers que nous souhaitons utiliser dans notre jeu : scripts, feuilles de sprites, textures, modèles 3D, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Library&lt;/b&gt; est utilisé par &lt;i&gt;Unity&lt;/i&gt; pour générer des ressources pour chaque cible de construction. Nous allons donc trouver ici les fichiers réels de feuilles de sprites qui seront chargés par notre jeu en fonction de la configuration que nous choisissons. Par exemple, nous pouvons choisir une résolution réduite pour la cible Android et une compression et une résolution plus lourdes pour la cible de bureau.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;ProjectSettings&lt;/b&gt; stocke la configuration de notre projet : nom et version du projet, systèmes de tags et de couches, cibles de construction, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Temp&lt;/b&gt; est un dossier temporaire pour assembler nos fichiers nécessaires dans l’exécutable final de construction (.exe, .app, .apk, etc.).&lt;/p&gt;
+
+&lt;p&gt;En résumé : &lt;b&gt;Assets&lt;/b&gt;, &lt;b&gt;ProjectSettings&lt;/b&gt; sont destinés aux fichiers et aux configurations que nous allons changer nous-mêmes pendant le développement d’un jeu. &lt;b&gt;Library&lt;/b&gt; e &lt;b&gt;Temp&lt;/b&gt; ne sont destinés qu’à des objets internes à &lt;i&gt;Unity&lt;/i&gt;, nous ne devrions rien changer et ni les ajouter au contrôle de version.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/02_file_system_project.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Il est important de comprendre que les projets Unity sont constitués de scènes. Chaque scène correspond à une partie de l’expérience de jeu, comme par exemple, une scène de menu, une scène de niveau 1, une scène de boss, etc. À l’intérieur de chaque scène, nous pouvons trouver de nombreux objets destinés à être interagis par le joueur, tels que les menus, les personnages, les objets améliorant les compétences. Ces objets sont connus sous le nom de &lt;i&gt;GameObjects&lt;/i&gt;. Et chaque &lt;i&gt;GameObject&lt;/i&gt; a quelques composants qui permettent de changer ses caractéristiques principales. Nous allons mieux comprendre cela dans les prochaines étapes de ce tutoriel.&lt;/p&gt;
+
+&lt;p&gt;L’interface Unity est composée de ces onglets principaux :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Hierarchie&lt;/strong&gt;: montre quels GameObjects se trouvent dans la scène.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Inspecteur&lt;/strong&gt;: permet d’ « inspecter les GameObjects », de voir ses composants et propriétés ou de changer les configurations de projet et d’actifs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Projet&lt;/strong&gt;: reflète le système de fichiers dans le chemin « MyGame/Assets/ »&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scène&lt;/strong&gt;: est une visualisation à un point spécifique de la scène de jeu, où nous pouvons voir et placer des GameObjects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Jeu&lt;/strong&gt;: représente le jeu rendu réel, le jeu en cours d’exécution.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Console&lt;/strong&gt;: un onglet important pour le développement, montre les avertissements et les erreurs de scripts.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;AssetStore&lt;/strong&gt;: où nous pouvons télécharger, acheter et vendre des actifs de jeu de tout type.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/02_unity.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Voici la disposition par défaut des onglets. Nous pouvons la changer dans le menu déroulant en haut à droite. Chaque option a une disposition différente d’onglets. De plus, nous pouvons également déplacer librement nos onglets et créer notre propre disposition en cliquant sur l’option “Enregistrer la disposition”. Dans l’image, j’ai créé mon “CrazyLayout”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/03_unity_layout.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jusqu’à présent, notre jeu est composé de deux &lt;strong&gt;GameObjets&lt;/strong&gt;: &lt;strong&gt;“Main Camera”&lt;/strong&gt; et &lt;strong&gt;“Directional Light”&lt;/strong&gt;. La liste des &lt;strong&gt;GameObjets&lt;/strong&gt; peut être vue dans l’onglet &lt;strong&gt;Hiérarchie&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/04_initial_hierarchy.png&quot; alt=&quot;Écran initial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans l’&lt;strong&gt;Objet de jeu Camera&lt;/strong&gt;, il y a quelques composants: Transform, Camera, GUILayer, FlareLayer et AudioListener.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/05_main_camera_gameobject.png&quot; alt=&quot;Écran initial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Le composant &lt;strong&gt;Camera&lt;/strong&gt; permet de rendre le jeu. C’est comme une manière de voir ce qui se passe dans l’exécution du jeu à partir d’une position donnée. Tout comme une vraie caméra, il filme notre scène de jeu et la présente au joueur dans l’onglet &lt;strong&gt;Jeu&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/06_camera_component.png&quot; alt=&quot;Écran initial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Le composant &lt;strong&gt;Transform&lt;/strong&gt; joue un rôle très important: il définit la position, la rotation et l’échelle des objets de jeu dans l’espace de la scène.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/07_transform_component.png&quot; alt=&quot;Écran initial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Créons quelques dossiers dans l’onglet &lt;strong&gt;Projet&lt;/strong&gt;. Il est généralement recommandé de suivre une &lt;a href=&quot;https://twitter.com/CiroContns/status/831547413290766338&quot;&gt;structure de nommage des dossiers&lt;/a&gt; pour faciliter la recherche des ressources au fur et à mesure que le projet grandit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/08_create_folder.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans ce projet, nous allons utiliser les dossiers suivants : Prefabs, Scenes et Scripts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/09_folders_created.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enregistrons notre scène dans &lt;em&gt;Scenes/Game.unity&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/10_save_scene.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Unity&lt;/em&gt; possède des éléments 3D de base (cube, sphère, cylindre, …) que nous pouvons utiliser dans nos jeux. En cliquant avec le bouton droit de la souris, nous voyons les options de la figure ci-dessous et ajoutons le cube à la scène du jeu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/11_create_cube.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans l’onglet &lt;em&gt;Hiérarchie&lt;/em&gt;, nous pouvons vérifier notre cube ajouté.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/12_cube_gameobject.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Et dans l’onglet &lt;strong&gt;Inspecteur&lt;/strong&gt;, nous pouvons voir ses composants :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Transform&lt;/strong&gt; : stocke les modifications de position, rotation et échelle&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MeshFilter&lt;/strong&gt; : contient des informations sur la géométrie 3D de l’objet (aka. Mesh)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BoxCollider&lt;/strong&gt; : un composant important pour détecter les collisions pendant l’exécution du jeu&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MeshRenderer&lt;/strong&gt; : rend notre cube en utilisant les informations de géométrie (données Mesh) du composant MeshFilter et en utilisant les informations des &lt;a href=&quot;https://docs.unity3d.com/Manual/Materials.html&quot;&gt;Materials&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/13_cube_components.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous pouvons changer la position du cube en éditant le champ &lt;strong&gt;Position&lt;/strong&gt; du composant &lt;strong&gt;Transform&lt;/strong&gt;. Il est également possible de simplement sélectionner et de déplacer les flèches qui apparaissent lors de la sélection du cube. Ce genre d’élément visuel est appelé &lt;strong&gt;Gizmo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/14_cube_transform.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lors de l’interaction avec ces &lt;strong&gt;Gizmo&lt;/strong&gt; rouges, bleus et verts, nous pouvons voir le cube se déplacer sur les axes X, Z, Y. Nous voyons également les modifications prendre effet sur le champ &lt;strong&gt;Position&lt;/strong&gt; du composant &lt;strong&gt;Transform&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un astuce utile : nous pouvons réinitialiser toutes les modifications de transform en choisissant &lt;strong&gt;Reset&lt;/strong&gt; dans les options du composant (icône de petit moteur en haut à droite).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/15_transform_reset.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pour faciliter notre tâche de manipulation des cubes, nous allons changer la configuration de &lt;em&gt;snap&lt;/em&gt;. En mode &lt;em&gt;snap&lt;/em&gt;, notre cube peut être déplacé par une quantité fixe.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/16_snap_settings_menu.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans la fenêtre &lt;strong&gt;Paramètres de Snap&lt;/strong&gt;, nous pouvons configurer le mouvement de nos objets de jeu en mouvement &lt;em&gt;snap&lt;/em&gt;. Pour le moment, laissons les paramètres par défaut tels que nous pouvons le voir sur la figure ci-dessous.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/17_snap_settings_window.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En appuyant sur &lt;em&gt;Ctrl+D&lt;/em&gt; ou &lt;em&gt;Cmd+D&lt;/em&gt;, nous pouvons cloner l’objet de jeu sélectionné. Et en appuyant sur &lt;em&gt;Ctrl/Cmd&lt;/em&gt;, nous déplaçons les objets de jeu par incréments &lt;em&gt;snap&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/18_cube_clone.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En clonant 13 cubes, c’est-à-dire en appuyant sur &lt;em&gt;Ctrl+D&lt;/em&gt; ou &lt;em&gt;Cmd+D&lt;/em&gt;, nous pouvons faire une ligne.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/19_cubes_selection.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;L’option &lt;strong&gt;Vide&lt;/strong&gt; nous permet de créer un objet de jeu vide avec seulement le composant Transform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/20_create_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Renommons l’objet de jeu vide en &lt;em&gt;Ligne&lt;/em&gt; et réinitialisons le composant &lt;strong&gt;Transform&lt;/strong&gt; à ses valeurs par défaut. Après avoir sélectionné tous les cubes, nous pouvons les faire glisser dans l’objet de jeu &lt;em&gt;Ligne&lt;/em&gt; dans l’onglet &lt;strong&gt;Hiérarchie&lt;/strong&gt;. &lt;em&gt;Ligne&lt;/em&gt; est maintenant le parent de tous les cubes. Lorsque nous sélectionnons ou déplaçons &lt;em&gt;Ligne&lt;/em&gt;, nous déplaçons également ses enfants.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/21_create_lines.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En changeant les options d’ombrage de la scène &lt;a href=&quot;https://docs.unity3d.com/Manual/ViewModes.html&quot;&gt;shading-options&lt;/a&gt;, nous pouvons obtenir une meilleure visualisation pour nos cubes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/22_shading_mode.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maintenant, nous clonons l’objet de jeu &lt;em&gt;Ligne&lt;/em&gt;, ce qui signifie que nous clonons également ses 13 enfants cubes. De cette façon, nous pouvons créer deux autres lignes et les faire glisser vers le haut. Et lorsque nous sélectionnons un cube spécifique, nous pouvons également le supprimer en utilisant &lt;em&gt;del/Cmd+del&lt;/em&gt;. En répétant ces étapes de base, nous pouvons obtenir la structure suivante.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/23_copy_lines.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ensuite, nous copions une autre ligne pour obtenir le corps de notre personnage. Pour faciliter la manipulation de ces objets, créons un objet de jeu vide &lt;em&gt;Body&lt;/em&gt; et réinitialisons son Transform et en faisant en sorte que les objets &lt;em&gt;Ligne&lt;/em&gt; soient à l’intérieur en tant qu’enfants.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/24_finished_body.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pour créer l’antenne, nous devons copier un seul cube.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/25_started_antenna.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Créons un objet de jeu vide &lt;em&gt;Antenne&lt;/em&gt; et réinitialisons son &lt;strong&gt;Transform&lt;/strong&gt; et en faisant en sorte que le dernier cube créé soit son parent.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/26_antenna_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cloner quelques cubes de plus, nous finissons notre &lt;em&gt;Antenne&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/27_finished_antenna.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La prochaine étape consiste à créer le &lt;em&gt;GameObject Griffes&lt;/em&gt; et à réinitialiser son &lt;strong&gt;Transform&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/28_claws_empty.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En clonnant quelques cubes de plus tels que disposés dans l’image ci-dessous, nous avons fini les griffes de notre personnage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/29_claws_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maintenant, nous avons un &lt;em&gt;Space Invader&lt;/em&gt;. Pour faciliter sa manipulation, créons un &lt;em&gt;GameObject Cubes&lt;/em&gt; vide, réinitialisons son &lt;strong&gt;Transform&lt;/strong&gt; et faisons glisser &lt;em&gt;Corps, Antenne et Griffes&lt;/em&gt; dedans. Ensuite, nous pouvons enfin créer un &lt;em&gt;GameObject SpaceInvader&lt;/em&gt;, réinitialiser son &lt;strong&gt;Transform&lt;/strong&gt; et faire en sorte que tous les cubes en soient les enfants.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/30_space_invaders_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En sélectionnant Cubes, changeons sa taille en (0,2, 0,2, 0,2).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/31_downscale_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En cliquant sur l’onglet &lt;strong&gt;Game&lt;/strong&gt;, nous pouvons voir comment notre personnage sera vu par le joueur.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/32_invader_game_tab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans notre &lt;strong&gt;Caméra&lt;/strong&gt;, changeons la propriété &lt;em&gt;Clear Flags&lt;/em&gt; en &lt;em&gt;Couleur solide&lt;/em&gt; et &lt;em&gt;couleur de fond&lt;/em&gt; en (0,0,0,0).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/33_camera_clear_flags.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En clonnant et en créant de nouveaux &lt;em&gt;GameObjects&lt;/em&gt; vides comme nous l’avons fait dans les étapes précédentes, nous avons notre &lt;em&gt;GameObject Joueur&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/34_player_cubes.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans l’onglet &lt;strong&gt;Game&lt;/strong&gt;, nous pouvons voir nos personnages de jeu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/35_player_game_tab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pour ajouter du mouvement à notre jeu, utilisons des scripts que j’ai précédemment créés dans mon projet &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors&quot;&gt;Visual Behaviors&lt;/a&gt;. Téléchargez ou clonez ce projet dans le dossier Scripts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/36_copy_scripts.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En inspectant le &lt;em&gt;GameObject SpaceInvader&lt;/em&gt;, nous pouvons ajouter de nouveaux composants en appuyant sur le bouton &lt;em&gt;Ajouter composant&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/37_add_component.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ajoutons le script Move (du &lt;a href=&quot;https://github.com/adrianogil/VisualBehaviors/blob/master/Move.cs&quot;&gt;Visual Behaviors&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/38_add_move_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Configurons le script Move.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/39_callevent_invader.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Le script &lt;em&gt;CallEvent&lt;/em&gt; permet de changer le comportement d’autres scripts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/40_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans le bloc &lt;em&gt;Action&lt;/em&gt;, appuyons sur le bouton + pour ajouter une action. Nous sélectionnons alors un &lt;em&gt;GameObject&lt;/em&gt; dont le comportement doit être modifié.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/41_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maintenant, choisissons la méthode de composant que nous allons changer. Appelons &lt;em&gt;ChangeDirectionX&lt;/em&gt;, une méthode qui permet d’inverser la direction actuelle de déplacement du script &lt;em&gt;Move&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/42_configure_callevent.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Le mouvement du joueur peut être effectué à l’aide de deux scripts &lt;em&gt;Move&lt;/em&gt; : un pour la direction de droite et un autre pour la direction de gauche.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/43_move_player.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ensuite, nous créons l’objet &lt;em&gt;Bullets&lt;/em&gt; comme indiqué sur l’image ci-dessous :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/44_bullets_gameobject.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ajoutons le script &lt;em&gt;Move&lt;/em&gt; à &lt;em&gt;Bullets&lt;/em&gt; pour faire monter les balles vers les envahisseurs de l’espace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/45_bullets_move.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En faisant glisser &lt;em&gt;Bullets&lt;/em&gt; dans l’onglet &lt;strong&gt;Project&lt;/strong&gt;, nous pouvons créer un &lt;a href=&quot;https://docs.unity3d.com/Manual/Prefabs.html&quot;&gt;préfabriqué&lt;/a&gt;, un objet préfabriqué qui peut être reproduit et instancié pendant l’exécution du jeu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/46_bullets_prefab.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Modifions la &lt;strong&gt;couche&lt;/strong&gt; de l’objet &lt;em&gt;Bullets&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/47_edit_settings_layers.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Créons la &lt;strong&gt;couche&lt;/strong&gt; &lt;em&gt;Bullets&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/48_tags_and_layers.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Et modifions ensuite le préfabriqué &lt;strong&gt;Bullets&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/49_bullets_add_layer.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En ajoutant le script &lt;em&gt;Generate&lt;/em&gt; à l’objet &lt;em&gt;Player&lt;/em&gt;, nous pouvons permettre à notre joueur de tirer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/50_player_gen_bullets.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans l’objet &lt;em&gt;SpaceInvader&lt;/em&gt;, nous allons ajouter le script &lt;em&gt;DestroyMe&lt;/em&gt;. Configurons notre ennemi pour qu’il soit détruit à chaque fois qu’il touche une balle, c’est-à-dire un objet avec la couche &lt;em&gt;Bullets&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pour détecter les collisions, nous avons besoin des composants &lt;strong&gt;BoxCollider&lt;/strong&gt; et &lt;strong&gt;RigidBody&lt;/strong&gt;. Faisons en sorte de geler la rotation de &lt;strong&gt;Rigidbody&lt;/strong&gt; et définissons la gravité à zéro.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/51_invader_collision.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous ne devons pas oublier d’activer la case à cocher &lt;em&gt;isTrigger&lt;/em&gt; dans le &lt;strong&gt;BoxCollider&lt;/strong&gt; de notre ennemi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/52_invader_collider.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ajoutons un &lt;strong&gt;BoxCollider&lt;/strong&gt; activé pour les déclencheurs dans &lt;em&gt;Bullet GameObject&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2017-02-12-visualbehaviors/53_bullets_collider.png&quot; alt=&quot;Tela inicial&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous avons ainsi réussi à créer un Space Invader fonctionnel ! Félicitations pour votre premier jeu &lt;em&gt;Unity&lt;/em&gt; !&lt;/p&gt;
+
+&lt;!-- Links --&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Kuarup: ma submission de la Global Game Jam 2016</title>
    <link href="https://adrianogil.github.io/2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
    <id>https://adrianogil.github.io/blog/fr/2016/01/global-game-jam-2016</id>
-   <content type="html">&lt;p&gt;Il y a quelques semaines, j’avais participé dans la plus connu game jam: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. C’étais un travaille ensemble avec Rafael Lima (designer), Bruno Araujo, Germano Assis et Marcus Brandt (devs).&lt;/p&gt;
+   <content type="html">&lt;p&gt;Il y a quelques semaines, j’ai eu le privilège de participer à l’un des plus grands game jams jamais organisés: le &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. J’ai eu la chance de travailler avec une équipe de personnes incroyablement talentueuses de l’Institut Samsung et de Samsung OCEAN. Notre designer, Rafael Lima, et nos développeurs, Bruno Araujo, Germano Assis et Marcus Brandt, étaient tous exceptionnels.&lt;/p&gt;
 
-&lt;!-- O tema dessa jam foi: Ritual. Decidimos então criar um jogo de puzzles baseado em cores, no qual o jogador escolheria monstros para sacrificar. Assim usamos &quot;ritual&quot; no sentido de repetição, de magia e de sacrificio. --&gt;
+&lt;p&gt;Lorsque le game jam a commencé, le thème “Rituel” a été révélé. En conséquence, nous avons créé un jeu de puzzle coloré centré sur l’idée de sacrifier de mignons monstres. Nous avons interprété “rituel” comme la répétition de tâches, la magie et le sacrifice.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2016-02-14-ggj16/screenshot.png&quot; alt=&quot;Kuarup&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;!-- Minha participação foi no gameplay, mais especificamente na geração procedural e na queda animada dos blocos. A parte difícil era garantir que nenhuma fase gerada fosse impossível de ser completada. Para isso, usamos alguns métodos de pseudo-aleatoriedade e também optamos por uma mecânica de power-ups para remover todos os blocos de mesma cor.
+&lt;p&gt;Mon rôle dans le projet était axé sur les principales fonctionnalités de jeu, notamment la logique derrière la chute des blocs et les animations attrayantes. J’ai également travaillé à la génération procédurale des adorables blocs de monstre. Le défi était de s’assurer que chaque niveau était toujours jouable. Pour y parvenir, nous avons employé une méthode pseudo-aléatoire et avons implémenté une mécanique de power-up qui permettait aux joueurs de supprimer des blocs de couleur spécifique.&lt;/p&gt;
 
-Agradecimento especial a minha equipe pelo convite e pela horas agradáveis e corridas nesse desafio.  --&gt;
+&lt;p&gt;Le jeu que nous avons créé lors du Global Game Jam est désormais disponible en téléchargement sur le &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.pxlsquadgames.kuarup&quot;&gt;Google Play Store&lt;/a&gt;. N’oubliez pas de jouer à ce jeu de puzzle unique rempli de mignons monstres et de défis basés sur les couleurs!&lt;/p&gt;
 
-&lt;!-- And if are interested in the game, you can find the code on github --&gt;
+&lt;p&gt;Je suis reconnaissant envers mon équipe pour ce projet fantastique et j’espère avoir l’occasion de travailler à nouveau ensemble à l’avenir.&lt;/p&gt;
 
-&lt;!-- Até uma próxima game jam. --&gt;
+&lt;p&gt;Jusqu’au prochain game jam!&lt;/p&gt;
 
 </content>
  </entry>

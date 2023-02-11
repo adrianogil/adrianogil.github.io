@@ -4,7 +4,7 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/"/>
- <updated>2022-08-26T17:18:39-04:00</updated>
+ <updated>2023-02-10T20:46:47-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
@@ -402,17 +402,17 @@
    <link href="https://adrianogil.github.io/2016/01/global-game-jam-2016/"/>
    <updated>2016-01-10T14:00:00-04:00</updated>
    <id>https://adrianogil.github.io/blog/2016/01/global-game-jam-2016</id>
-   <content type="html">&lt;p&gt;Some weeks ago, I have participated in one of the most popular game jams ever: &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. So I worked with some very talented guys that I’ve meet on Samsung Institute and on Samsung OCEAN: our designer Rafael Lima, and developers Bruno Araujo, Germano Assis and Marcus Brandt.&lt;/p&gt;
+   <content type="html">&lt;p&gt;A few weeks ago, I had the privilege of participating in one of the most popular game jams ever: the &lt;a href=&quot;http://globalgamejam.org/&quot;&gt;Global Game Jam&lt;/a&gt;. I was lucky enough to work with a team of incredibly talented individuals from the Samsung Institute and Samsung OCEAN. Our designer, Rafael Lima, and developers, Bruno Araujo, Germano Assis, and Marcus Brandt, were all exceptional.&lt;/p&gt;
 
-&lt;p&gt;At the game jam start, the theme was revealed: Ritual. So, we decided to create a color-based puzzle game about choosing cute monsters to sacrifice. So we used ritual as meaning the repetition of tasks, magic and sacrifice.&lt;/p&gt;
+&lt;p&gt;When the game jam began, the theme “Ritual” was revealed. With this in mind, we created a colorful puzzle game centered around the idea of sacrificing cute monsters. We interpreted “ritual” as repeating tasks, magic, and sacrifice.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2016-02-14-ggj16/screenshot.png&quot; alt=&quot;A game level on Kuarup&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;My participation was on main gameplay features, like the logic of block falling, and eye-candy animations. It was sort of a PCG of elements where I’ve worked with the generation of those little monstrous blocks. Then the challenge was about how to guarantee that current level is always achievable. Well, a pseudo-random method helped a lot and we also chose a mechanic where power-ups allow to remove blocks of a specific color.&lt;/p&gt;
+&lt;p&gt;My role in the project was focused on the main gameplay features, including the logic behind block falling and eye-catching animations. I also worked on procedurally generating the adorable monster blocks. The challenge was ensuring that each level was always solvable. To achieve this, we employed a pseudo-random method and implemented a power-up mechanic that allowed players to remove blocks of a specific color.&lt;/p&gt;
 
-&lt;p&gt;I really thank you my team for such interesting project and I hope we get to work again.&lt;/p&gt;
+&lt;p&gt;The game we created during the Global Game Jam is now available for download on the &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.pxlsquadgames.kuarup&quot;&gt;Google Play Store&lt;/a&gt;.  Don’t miss out on the chance to play this unique puzzle game filled with cute monsters and color-based challenges!&lt;/p&gt;
 
-&lt;!-- And if are interested in the game, you can find the code on github --&gt;
+&lt;p&gt;I am grateful to my team for such a fantastic project and hope that we get the opportunity to work together again in the future.&lt;/p&gt;
 
 &lt;p&gt;Until the next game jam!&lt;/p&gt;
 
