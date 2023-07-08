@@ -136,12 +136,32 @@ data = {
             "tags": ["#tools", "#unity3d", "#unityplugins"]
         },
         {
+            "title": "Kuarup",
+            "year": "2017",
+            "img": "kuarup.png",
+            "url": "https://play.google.com/store/apps/details?id=com.pxlsquadgames.kuarup",
+            "description": "An Unity3D mobile match-3-like puzzle Game for GGJ16.",
+            "my_role": "Worked in main gameplay features, UI, PCG algorithms and dotween-based animations. <a href='http://adrianogil.github.io/blog/2016/01/global-game-jam-2016/'> See more </a>",
+            "platforms": ["Android"],
+            "tags": ["#unity3d", "#match-3", "#puzzle"]
+        },
+        {
             "title": "VR Gallery",
             "year": "2017",
             "img": "vrgallery2.png",
             "url": "https://www.oculus.com/experiences/gear-vr/1113617725394318/",
             "description": "A GearVR application to view images and watch video.  It supports 2D and 3D video, 3D spacial sound, subtitles, and photo galleries.",
             "my_role": "I worked in different tasks like UI, shaders, performance analysis and debugging",
+            "platforms": ["Samsung GearVR", "Android"],
+            "tags": ["#unity3d", "#virtualreality", "#gearvr"]
+        },
+        {
+            "title": "Rio360",
+            "year": "2016",
+            "img": "rio_360.png",
+            "url": "https://www.oculus.com/experiences/gear-vr/1105507662843899/",
+            "description": "A GearVR application to watch 360 videos and navigate through a low-poly depiction of Rio de Janeiro's landmarks.",
+            "my_role": "Worked with gaze implementation, algorithms to allow a smooth user locomotion, editor tools and shader programming.",
             "platforms": ["Samsung GearVR", "Android"],
             "tags": ["#unity3d", "#virtualreality", "#gearvr"]
         },
@@ -172,6 +192,15 @@ data = {
             "my_role": "I was the tech lead of this project, so I was responsible for architecture and software components definition, implementation of state machine-based gameplay, networking components and several Android plugins for integration with Samsung APIs (multiplayer, Ads, in-app, ...)",
             "platforms": ["Android"],
             "tags": ["#multiplayer", "#unity3d", "#3dgame"]
+        },
+        {
+            "title": "Eddy",
+            "year": "2011",
+            "youtube_embedded_url": "https://www.youtube.com/embed/PXZ6mPQu8DY",
+            "description": "A turn-based multiplayer Android game implemented in Unity 4.3.",
+            "my_role": "I was the tech lead of this project, so I was responsible for architecture and software components definition, implementation of state machine-based gameplay, networking components and several Android plugins for integration with Samsung APIs (multiplayer, Ads, in-app, ...)",
+            "platforms": ["Symbian"],
+            "tags": ["#Qt"]
         }
     ]
 }
