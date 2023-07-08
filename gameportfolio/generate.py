@@ -187,6 +187,7 @@ data = {
         {
             "title": "Soccer Button",
             "year": "2013",
+            "url": "https://play.google.com/store/apps/details?id=br.org.sidia.futebol",
             "youtube_embedded_url": "https://www.youtube.com/embed/YjHnDKFOgbQ",
             "description": "A turn-based multiplayer Android game implemented in Unity 4.3.",
             "my_role": "I was the tech lead of this project, so I was responsible for architecture and software components definition, implementation of state machine-based gameplay, networking components and several Android plugins for integration with Samsung APIs (multiplayer, Ads, in-app, ...)",
@@ -194,11 +195,42 @@ data = {
             "tags": ["#multiplayer", "#unity3d", "#3dgame"]
         },
         {
+            "title": "QDominoes",
+            "year": "2012",
+            "url": "https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/100-qdominoes",
+            "img": "qdominoes.png",
+            "description": "A Dominoes game for Symbian/Meego platforms using Qt",
+            "my_role": "I worked with main gameplay features, UI, debugging, and implemented some AI bots",
+            "platforms": ["Symbian"],
+            "tags": ["#Qt"]
+        },
+        {
+            "title": "Cyber Eddy",
+            "year": "2012",
+            "url": "https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/98-cybereddy",
+            "img": "cyber_eddy.png",
+            "description": "A cocos2d asteroid-like game",
+            "my_role": "I worked with gameplay features, UI and debugging",
+            "platforms": ["Symbian"],
+            "tags": ["#Qt"]
+        },
+        {
+            "title": "Saci Jump",
+            "year": "2012",
+            "url": "https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/94-sacijump",
+            "img": "sacijump.png",
+            "description": "A Qt DoodleJump-like game that features Saci, a famous character from brazilian folklore",
+            "my_role": "I worked with gameplay features, UI and debugging",
+            "platforms": ["Symbian"],
+            "tags": ["#Qt"]
+        },
+        {
             "title": "Eddy",
             "year": "2011",
             "youtube_embedded_url": "https://www.youtube.com/embed/PXZ6mPQu8DY",
-            "description": "A turn-based multiplayer Android game implemented in Unity 4.3.",
-            "my_role": "I was the tech lead of this project, so I was responsible for architecture and software components definition, implementation of state machine-based gameplay, networking components and several Android plugins for integration with Samsung APIs (multiplayer, Ads, in-app, ...)",
+            "url": "https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/103-eddy",
+            "description": "An educational puzzle Qt game that addressed the importance of selective waste collection.",
+            "my_role": "I worked with box2d implementations for Qt",
             "platforms": ["Symbian"],
             "tags": ["#Qt"]
         }
