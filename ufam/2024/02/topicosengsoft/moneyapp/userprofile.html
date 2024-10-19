@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Perfil - Aplicativo de Controle Financeiro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .profile-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 700px;
+        }
+        .profile-container h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #007BFF;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #007BFF;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .profile-info, .security-settings, .account-settings {
+            margin-bottom: 20px;
+        }
+        .profile-info p, .security-settings p, .account-settings p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+        .profile-info span, .security-settings span, .account-settings span {
+            font-weight: bold;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .action-buttons button {
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .action-buttons button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        .action-buttons .danger-button {
+            background: #dc3545;
+        }
+        .action-buttons .danger-button:hover {
+            background: #c82333;
+        }
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+        }
+        .toggle-switch input {
+            margin-right: 5px;
+        }
+        .help-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .help-link a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .help-link a i {
+            margin-right: 5px;
+        }
+        .help-link a:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            margin-right: 5px;
+            color: #007BFF;
+        }
+        .device-icon {
+            color: #007BFF;
+            margin-right: 8px;
+        }
+        .profile-container .highlight {
+            color: green;
+            font-weight: bold;
+        }
+        .profile-avatar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile-avatar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button i {
+            margin-right: 10px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="main.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+    <div class="profile-container">
+        <h1>Ver Perfil</h1>
+
+        <!-- Seção para alterar foto de perfil -->
+        <div class="profile-avatar">
+            <img src="avatar.png" alt="Avatar do Usuário" title="Clique para alterar a foto de perfil">
+        </div>
+
+        <div class="section profile-info">
+            <h2>Informações Básicas do Usuário</h2>
+            <p><span>Nome Completo:</span> João da Silva</p>
+            <p><span>E-mail:</span> joao.silva@email.com</p>
+            <p><span>Data de Criação da Conta:</span> 01/01/2024</p>
+            <p><span>Status da Assinatura:</span> <span class="highlight">Free Trial</span></p>
+        </div>
+
+        <div class="section security-settings">
+            <h2>Histórico de Logins Recentes:</h2>
+            <div>
+                <ul>
+                    <li><i class="fas fa-desktop device-icon"></i> 10/10/2024 - Chrome no Windows</li>
+                    <li><i class="fas fa-mobile-alt device-icon"></i> 08/10/2024 - Safari no iPhone</li>
+                    <li><i class="fas fa-desktop device-icon"></i> 05/10/2024 - Firefox no Linux</li>
+                </ul>
+            </div>
+        </div>
+        <div class="help-link">
+            <a href="faq.html"><i class="fas fa-question-circle"></i> Central de Ajuda / FAQ</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

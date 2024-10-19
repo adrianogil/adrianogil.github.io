@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Controle Financeiro - Registros Financeiros</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div>Aplicativo de Controle Financeiro</div>
+        <div class="user-info">
+            <div class="user-icon">U</div>
+            <span>Usuário Logado</span>
+            <div class="submenu">
+                <a href="userprofile.html"><i class="fas fa-user"></i> Ver Perfil</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Configurações</a>
+                <a href="#" onclick="toggleTheme()"><i class="fas fa-adjust"></i> Modo Claro/Escuro</a>
+                <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <aside class="sidebar">
+            <h2>Contas</h2>
+            <ul>
+                <li>Conta Corrente<button class="delete">Excluir</button></li>
+                <li>Conta de Crédito <button class="delete">Excluir</button></li>
+            </ul>
+            <button id="adicionar-conta">Adicionar Conta</button>
+            <h2>Categorias</h2>
+            <ul>
+                <li>Salário<button class="delete">Excluir</button></li>
+                <li>Alimentação<button class="delete">Excluir</button></li>
+                <li>Transporte<button class="delete">Excluir</button></li>
+                <li>Moradia<button class="delete">Excluir</button></li>
+                <li>Utilidades<button class="delete">Excluir</button></li>
+                <li>Serviços<button class="delete">Excluir</button></li>
+            </ul>
+            <button id="adicionar-categoria" >Adicionar Categoria</button>
+        </aside>
+        <main class="main-content">
+            <h1>Registros Financeiros</h1>
+            <div class="form-section">
+                <input type="text" id="description" placeholder="Descrição" required />
+
+                <input type="number" id="amount" placeholder="Valor" step="0.01" required />
+
+                <select id="type" required>
+                  <option value="" disabled selected>Tipo</option>
+                  <option value="receita">Receita</option>
+                  <option value="despesa">Despesa</option>
+                </select>
+
+                <select id="account" required>
+                  <option value="" disabled selected>Conta</option>
+                  <option value="conta_corrente">Conta Corrente</option>
+                  <option value="cartao_credito">Cartão de Crédito</option>
+                  <!-- Add more accounts as needed -->
+                </select>
+
+                <select id="category" required>
+                  <option value="" disabled selected>Categoria</option>
+                  <option value="alimentacao">Alimentação</option>
+                  <option value="transporte">Transporte</option>
+                  <option value="moradia">Moradia</option>
+                  <option value="utilidades">Utilidades</option>
+                  <option value="servicos">Serviços</option>
+                  <!-- Add more categories as needed -->
+                </select>
+
+                <input type="date" id="date" placeholder="Data" required />
+
+                <button type="submit">Adicionar Registro</button>
+              </div>
+
+            <div class="timeline">
+                <button id="prevMonthBtn" onclick="changeMonth(-1)">&#9664; September 2024</button>
+                <span id="currentMonth">October 2024</span>
+                <button id="nextMonthBtn" onclick="changeMonth(1)">November 2024 &#9654;</button>
+              </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Conta</th>
+                        <th>Categoria</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>05/10/2024</td>
+                        <td><span style="color: green;">Receita</span></td>
+                        <td>Salário</td>
+                        <td>Conta Corrente</td>
+                        <td>Salário</td>
+                        <td>+R$ 3000,00</td>
+                        <td><button class="delete">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>10/10/2024</td>
+                        <td><span style="color: red;">Despesa</span></td>
+                        <td>Compra de supermercado</td>
+                        <td>Cartão de Crédito</td>
+                        <td>Alimentação</td>
+                        <td>-R$ 150,00</td>
+                        <td><button class="delete">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>12/10/2024</td>
+                        <td><span style="color: red;">Despesa</span></td>
+                        <td>Combustível</td>
+                        <td>Cartão de Crédito</td>
+                        <td>Transporte</td>
+                        <td>-R$ 200,00</td>
+                        <td><button class="delete">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>15/10/2024</td>
+                        <td><span style="color: red;">Despesa</span></td>
+                        <td>Aluguel</td>
+                        <td>Conta Corrente</td>
+                        <td>Moradia</td>
+                        <td>-R$ 1200,00</td>
+                        <td><button class="delete">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>18/10/2024</td>
+                        <td><span style="color: red;">Despesa</span></td>
+                        <td>Conta de luz</td>
+                        <td>Conta Corrente</td>
+                        <td>Utilidades</td>
+                        <td>-R$ 250,00</td>
+                        <td><button class="delete">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <td>20/10/2024</td>
+                        <td><span style="color: red;">Despesa</span></td>
+                        <td>Internet</td>
+                        <td>Conta Corrente</td>
+                        <td>Serviços</td>
+                        <td>-R$ 100,00</td>
+                        <td><button class="delete">Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="text-align: right; font-size: 18px; font-weight: bold; margin-top: 10px;">
+                Saldo Total: <span style="color: green;">R$ 2850,00</span>
+            </div>
+            <hr>
+            <h3>Reports</h3>
+            <div class="report-section">
+                <div class="chart-container">
+                  <canvas id="reportChart" width="300" height="300"></canvas>
+                </div>
+                <div class="chart-container">
+                  <canvas id="balanceChart" width="400" height="300"></canvas>
+                </div>
+              </div>
+
+              <!-- Modal Structure -->
+<div id="addAccountModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Adicionar Conta</h2>
+      <form id="addAccountForm">
+        <input type="text" id="accountName" placeholder="Nome da Conta" required />
+        <input type="text" id="accountType" placeholder="Tipo de Conta" required />
+        <button type="submit">Salvar Conta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal for Adding Category -->
+<div id="addCategoryModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Adicionar Categoria</h2>
+      <form id="addCategoryForm">
+        <input type="text" id="categoryName" placeholder="Nome da Categoria" required />
+        <button type="submit">Salvar Categoria</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    // Get the modal element
+    var modal = document.getElementById("addAccountModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("adicionar-conta");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Handle form submission
+    document.getElementById("addAccountForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const accountName = document.getElementById('accountName').value;
+      const accountType = document.getElementById('accountType').value;
+
+      // Here you can process the new account (e.g., save it or update UI)
+      console.log('New Account:', { accountName, accountType });
+
+      // Close the modal after submission
+      modal.style.display = "none";
+    });
+  </script>
+
+
+<script>
+    // Get the modal element for adding category
+    var categoryModal = document.getElementById("addCategoryModal");
+
+    // Get the button that opens the category modal
+    var categoryBtn = document.getElementById("adicionar-categoria");
+
+    // Get the <span> element that closes the modal
+    var categoryClose = categoryModal.querySelector(".close");
+
+    // When the user clicks the button, open the modal
+    categoryBtn.onclick = function() {
+      categoryModal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    categoryClose.onclick = function() {
+      categoryModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside the modal, close it
+    window.onclick = function(event) {
+      if (event.target == categoryModal) {
+        categoryModal.style.display = "none";
+      }
+    }
+
+    // Handle form submission
+    document.getElementById("addCategoryForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const categoryName = document.getElementById('categoryName').value;
+
+      // Here you can process the new category (e.g., save it or update UI)
+      console.log('New Category:', { categoryName });
+
+      // Close the modal after submission
+      categoryModal.style.display = "none";
+    });
+  </script>
+
+
+
+
+              <script>
+                // Function to fetch table data and update the pie chart
+                function updateCharts() {
+                  const table = document.querySelector("table");
+                  const rows = table.querySelectorAll("tbody tr");
+
+                  const categories = {};
+                  const dates = [];
+                  const balances = [];
+                  let totalBalance = 0;
+
+                  rows.forEach(row => {
+                    const type = row.cells[1].textContent.trim();
+                    const category = row.cells[4].textContent.trim();
+                    const valueStr = row.cells[5].textContent.replace('R$', '').replace(',', '.').replace('+ ', '').replace('- ', '').trim();
+                    console.log(valueStr);
+                    const value = Number.parseFloat(valueStr);
+                    console.log(value);
+                    const date = row.cells[0].textContent.trim();
+
+                    // Only consider expenses (Despesa)
+                    if (type === 'Despesa') {
+                      if (!categories[category]) {
+                        categories[category] = 0;
+                      }
+                      categories[category] += Math.abs(value); // Use absolute value for expenses
+                    }
+
+                    // For balance chart, track overall balance over time
+                    totalBalance += (type === 'Receita') ? value : -value;
+                    dates.push(date);
+                    balances.push(totalBalance);
+                  });
+
+                  // Prepare data for the pie chart
+                  const categoryLabels = Object.keys(categories);
+                  const categoryValues = Object.values(categories);
+
+                  // Update the pie chart data
+                  reportChart.data.labels = categoryLabels;
+                  reportChart.data.datasets[0].data = categoryValues;
+                  reportChart.update();
+
+                  // Update the line chart data (balance over time)
+                  balanceChart.data.labels = dates;
+                  balanceChart.data.datasets[0].data = balances;
+                  balanceChart.update();
+                }
+
+                // Initialize Chart.js pie chart
+                const ctx1 = document.getElementById('reportChart').getContext('2d');
+                const reportChart = new Chart(ctx1, {
+                  type: 'pie',
+                  data: {
+                    labels: [], // Categories will be added dynamically
+                    datasets: [{
+                      label: 'Expenses by Category',
+                      data: [], // Data will be added dynamically
+                      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'], // Custom colors for categories
+                    }]
+                  },
+                  options: {
+                    responsive: true,
+                    plugins: {
+                      legend: {
+                        position: 'top',
+                      },
+                      tooltip: {
+                        callbacks: {
+                          label: function(tooltipItem) {
+                            return tooltipItem.label + ': R$ ' + tooltipItem.raw.toFixed(2);
+                          }
+                        }
+                      }
+                    }
+                  }
+                });
+
+                // Initialize Chart.js line chart (balance over time)
+                const ctx2 = document.getElementById('balanceChart').getContext('2d');
+                const balanceChart = new Chart(ctx2, {
+                  type: 'line',
+                  data: {
+                    labels: [], // Dates will be added dynamically
+                    datasets: [{
+                      label: 'Overall Balance Over Time',
+                      data: [], // Balances will be added dynamically
+                      borderColor: '#4BC0C0',
+                      fill: false,
+                      tension: 0.1
+                    }]
+                  },
+                  options: {
+                    responsive: true,
+                    scales: {
+                      y: {
+                        beginAtZero: false
+                      }
+                    }
+                  }
+                });
+
+                // Call the updateCharts function to initialize both charts with data
+                updateCharts();
+              </script>
+        </main>
+    </div>
+</body>
+</html>
