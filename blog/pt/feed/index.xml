@@ -4,13 +4,65 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/pt/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/pt/"/>
- <updated>2023-02-11T11:44:04-04:00</updated>
+ <updated>2025-01-01T19:39:49-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Meu Roadmap para 2025</title>
+   <link href="https://adrianogil.github.io/2025/01/2025-goals/"/>
+   <updated>2025-01-01T00:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/pt/2025/01/2025-goals</id>
+   <content type="html">&lt;p&gt;Há vários anos, dei inicio a &lt;a href=&quot;https://adrianogil.github.io/blog/pt/&quot;&gt;este blog&lt;/a&gt; como uma desculpa para documentar meu processo de aprendizado em algumas áreas e também como material adicional para cursos ou palestras que ministrei. Agora, em 2025, planejo fazer um uso melhor deste espaço—acompanhando o que tenho trabalhado e refletindo sobre meu progresso. Então, como primeiro post do ano, aqui estão meus objetivos profissionais para 2025.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;melhorando-habilidades-técnicas&quot;&gt;&lt;strong&gt;Melhorando Habilidades Técnicas&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Com mais de 10 anos de experiência em &lt;a href=&quot;https://adrianogil.github.io/gameportfolio/&quot;&gt;projetos de Unity para jogos, VR e AR&lt;/a&gt;—além de uma bagagem em algoritmos de visão computacional—tive a oportunidade de trabalhar em desafios bem interessantes. No entanto, no último ano, acabei focando mais em desenvolvimento backend e mobile, e em 2025, pretendo me aprofundar ainda mais nessas áreas.&lt;/p&gt;
+
+&lt;p&gt;Meu principal objetivo é obter duas certificações: &lt;strong&gt;AWS Certified Developer&lt;/strong&gt; e &lt;strong&gt;Android Enterprise Professional&lt;/strong&gt;. Essas certificações irão aprofundar meu entendimento sobre serviços de nuvem e soluções móveis para empresas, permitindo-me contribuir de forma mais eficaz nos projetos full-stack da minha equipe.&lt;/p&gt;
+
+&lt;p&gt;Além disso, comecei a estudar &lt;strong&gt;Godot&lt;/strong&gt; e &lt;strong&gt;Unreal Engine&lt;/strong&gt;, explorando técnicas de geração procedural de conteúdo (PCG), como geração de malhas. Tem sido empolgante mergulhar nessas &lt;em&gt;engines&lt;/em&gt; e pretendo continuar trabalhando nisso ao longo do ano.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;pesquisa-de-doutorado-jogos-educacionais-llms-e-ia-para-jogos&quot;&gt;&lt;strong&gt;Pesquisa de Doutorado: Jogos Educacionais, LLMs e IA para Jogos&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Nas aulas do doutorado, estou pesquisando como modelos de linguagem de larga escala (LLMs) podem ser usados em jogos educacionais. Meu objetivo é explorar métodos que reduzam o tempo de desenvolvimento e criem jogos mais alinhados aos objetivos pedagógicos em sala de aula. Nos últimos anos, publiquei alguns artigos relacionados a jogos educacionais, incluindo um sobre análise de aprendizado (&lt;strong&gt;learning analytics&lt;/strong&gt;) apresentado na &lt;a href=&quot;https://sol.sbc.org.br/index.php/sbgames_estendido/article/view/32061&quot;&gt;SBGames do ano passado&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Paralelamente, também estou explorando técnicas de IA para jogos, como geração procedural de conteúdo (PCG) e aprendizado de comportamento de NPCs, que têm o potencial de agilizar o desenvolvimento de experiências de jogo mais dinâmicas e direcionadas. Esses tópicos têm sido meu foco há algum tempo, e estou animado para continuar trabalhando neles.&lt;/p&gt;
+
+&lt;p&gt;Neste ano, planejo avançar em minhas pesquisas e compartilhar atualizações conforme elas estiverem disponíveis. É uma jornada desafiadora, mas recompensadora, e espero contribuir ainda mais para os campos de IA e jogos educacionais.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;metas-de-aprendizado-de-línguas&quot;&gt;&lt;strong&gt;Metas de Aprendizado de Línguas&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Aprender línguas tem sido uma paixão de longa data, e 2025 não será diferente. Meu plano para o ano inclui melhorar meus indicadores em todas as línguas que estou estudando. Aqui está como pretendo fazer isso:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sistemas de Repetição Espaçada (SRS):&lt;/strong&gt; Vou ampliar o uso de ferramentas como Anki e, possivelmente, desenvolver novas para melhorar ainda mais os meus estudos.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Leitura e Escrita:&lt;/strong&gt; Continuarei investindo tempo nessas áreas para construir uma base mais sólida. O &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt; será uma ferramenta-chave aqui, servindo como espaço para rascunhar novos textos e documentar insights das minhas leituras.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Escuta:&lt;/strong&gt; Podcasts continuarão sendo meu recurso principal para melhorar a compreensão, e farei anotações no Obsidian para capturar frases ou expressões importantes que eu queira revisar.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fala:&lt;/strong&gt; Planejo praticar habilidades de conversação com mais regularidade, incluindo o uso do Modo Avançado de Voz no ChatGPT para práticas de diálogo simuladas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;escrever-mais&quot;&gt;&lt;strong&gt;Escrever Mais&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Finalmente, um dos meus objetivos principais para 2025 é escrever mais neste blog. Documentar minha jornada não só me ajuda a refletir, mas também permite que eu compartilhe ideias com outros. Seja sobre tecnologia, pesquisa ou crescimento pessoal, estou animado para postar com mais regularidade este ano.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Esse é meu roadmap para 2025! Se você tem objetivos semelhantes ou está trabalhando em algo interessante, sinta-se à vontade para compartilhar!&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Entendendo a Divisibilidade por 3</title>
