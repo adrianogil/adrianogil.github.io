@@ -1224,3 +1224,92 @@ table.comment-table tbody tr th {
     margin: 0 auto;
     display: block;
 }
+
+body.dark-mode {
+    color: #e0e0e0;
+    background-color: #121212;
+}
+
+body.dark-mode a {
+    color: #4dabf7;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #9bb0ff;
+}
+
+body.dark-mode pre,
+body.dark-mode code {
+    background-color: #2e2e2e;
+    color: #dcdcdc;
+}
+
+body.dark-mode .comment {
+    background: #1e1e1e;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode h2, /* Specific styling for section titles */
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #a0a0a0; /* A lighter gray to improve readability */
+}
+
+body.dark-mode .highlighted-title {
+    color: #f0f0f0; /* Bright color for emphasis */
+    font-weight: bold; /* Add boldness to increase clarity */
+}
+
+body.dark-mode .low-contrast-text {
+    color: #c0c0c0; /* Slightly brighter to improve visibility */
+}
+
+body.dark-mode strong {
+    color: #e0e0e0; /* Brighten the strong text for better readability */
+}
+
+body.dark-mode .sidebar-toggle {
+    background-color: #1e1e1e; /* Match dark mode background */
+    color: #e0e0e0; /* Lighter color for better contrast */
+    border: 1px solid #333; /* Subtle border for visibility */
+}
+
+body.dark-mode .sidebar-toggle:before {
+    background-color: #e0e0e0; /* Light color for the hamburger lines */
+    box-shadow: 0 6px 0 0 #e0e0e0, 0 -6px 0 0 #e0e0e0;
+}
+
+body.dark-mode .sidebar-toggle:active,
+body.dark-mode #sidebar-checkbox:checked ~ .sidebar-toggle {
+    background-color: #333; /* Slightly lighter for active state */
+}
+
+body.dark-mode .sidebar-toggle:hover {
+    background-color: #2a2a2a; /* Slightly brighter for hover state */
+}
+
+#night-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#night-mode-toggle:hover {
+    color: #80bfff; /* Slightly brighter on hover */
+    transform: scale(1.1); /* Add hover effect */
+}
