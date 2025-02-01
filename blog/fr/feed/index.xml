@@ -4,13 +4,135 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/fr/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/fr/"/>
- <updated>2025-01-10T22:18:22-04:00</updated>
+ <updated>2025-02-01T16:41:09-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Premiers pas avec Git</title>
+   <link href="https://adrianogil.github.io/2025/02/intro-git/"/>
+   <updated>2025-02-01T00:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/fr/2025/02/intro-git</id>
+   <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Salut ! Je me retrouve souvent à expliquer Git depuis le début, alors j’ai décidé d’écrire ce petit guide introductif comme référence pratique. Ce guide vous aidera à comprendre les bases. À la fin de cet article, vous saurez comment configurer votre premier dépôt, effectuer votre premier commit et bien plus encore. C’est parti !&lt;/p&gt;
+
+&lt;p&gt;Je vous recommande vivement d’avoir un dépôt local de test pour essayer chaque commande. Vous pourrez ainsi explorer librement votre dépôt et observer comment chaque commande modifie l’état actuel de vos fichiers et l’historique des commits.&lt;/p&gt;
+
+&lt;h2 id=&quot;créer-votre-premier-dépôt-git&quot;&gt;Créer votre premier dépôt Git&lt;/h2&gt;
+
+&lt;p&gt;Avant tout, configurons votre dépôt Git. C’est ici que l’historique de votre projet sera stocké.&lt;/p&gt;
+
+&lt;p&gt;Pour créer un nouveau dépôt Git, ouvrez votre terminal, accédez au dossier de votre projet, puis exécutez :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cette commande initialise un tout nouveau dépôt Git dans votre dossier de projet. Simple, non ?&lt;/p&gt;
+
+&lt;p&gt;Après l’exécution de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;, un dossier caché &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git&lt;/code&gt; est créé. Ce dossier contient toutes les métadonnées et objets nécessaires à Git pour suivre et gérer l’historique de votre projet.&lt;/p&gt;
+
+&lt;h2 id=&quot;ajouter-des-fichiers-à-votre-dépôt&quot;&gt;Ajouter des fichiers à votre dépôt&lt;/h2&gt;
+
+&lt;p&gt;Ajoutons maintenant des fichiers à votre dépôt.&lt;/p&gt;
+
+&lt;p&gt;Pensez à la zone de staging comme à un panier d’achat : vous y ajoutez des modifications avant de les valider (commit). Pour ajouter un fichier, utilisez :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &amp;lt;nom_du_fichier&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remplacez &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;nom_du_fichier&amp;gt;&lt;/code&gt; par le nom de votre fichier. Celui-ci est maintenant en zone de staging, où vous pouvez vérifier et préparer les modifications avant de les valider.&lt;/p&gt;
+
+&lt;p&gt;Si vous voulez ajouter toutes les modifications dans le dossier courant (y compris les suppressions et modifications), utilisez :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Pour voir les fichiers en attente de validation et ceux qui ont été modifiés, utilisez :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cette commande vous donne un résumé de l’état actuel de votre projet.&lt;/p&gt;
+
+&lt;h2 id=&quot;valider-vos-modifications&quot;&gt;Valider vos modifications&lt;/h2&gt;
+
+&lt;p&gt;Passons maintenant à la validation (commit) des modifications. Un commit est une capture instantanée de votre projet à un moment donné.&lt;/p&gt;
+
+&lt;p&gt;Pour valider vos modifications avec un message, utilisez :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m &quot;Votre message de commit&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Assurez-vous que votre message est clair et descriptif pour vous y retrouver plus tard.&lt;/p&gt;
+
+&lt;h2 id=&quot;visualiser-lhistorique-des-commits&quot;&gt;Visualiser l’historique des commits&lt;/h2&gt;
+
+&lt;p&gt;Voir l’historique des commits peut être très utile. Pour afficher votre historique des commits sous forme graphique, utilisez :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log --graph --all --oneline
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cette commande permet de voir une représentation graphique de l’historique des commits, très utile pour comprendre l’évolution de votre projet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2025-02-01-intro-git/git_log_example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;envoyer-des-modifications-vers-un-dépôt-distant&quot;&gt;Envoyer des modifications vers un dépôt distant&lt;/h2&gt;
+
+&lt;p&gt;Après avoir effectué des commits, vous voudrez peut-être partager votre travail ou le sauvegarder sur un dépôt distant comme GitHub.&lt;/p&gt;
+
+&lt;p&gt;D’abord, ajoutez un dépôt distant. Par exemple, pour GitHub :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin https://github.com/votreutilisateur/votre-repo.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Puis, poussez vos modifications :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cette commande envoie vos modifications vers la branche principale (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt;) du dépôt distant.&lt;/p&gt;
+
+&lt;h2 id=&quot;comprendre-la-logique-git&quot;&gt;Comprendre la logique Git&lt;/h2&gt;
+
+&lt;p&gt;Pour bien utiliser Git, il est important de comprendre ses concepts fondamentaux : le système de fichiers, la zone de staging et les commits.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Répertoire de travail (Système de fichiers)&lt;/strong&gt; : Lorsque vous modifiez des fichiers, vous travaillez directement dans le système de fichiers. Ces modifications ne sont pas encore suivies par Git.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Zone de staging&lt;/strong&gt; : Une fois les modifications faites, vous les ajoutez à la &lt;em&gt;zone de staging&lt;/em&gt; avec &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add&lt;/code&gt;. La zone de staging agit comme un presse-papiers pour les changements que vous prévoyez d’inclure dans le prochain commit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Le commit comme un nœud dans l’arbre&lt;/strong&gt; : Une fois prêt, utilisez &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt; pour enregistrer une capture instantanée des modifications. Chaque commit forme un &lt;em&gt;nœud&lt;/em&gt; dans l’historique Git, connecté aux commits précédents. Une branche n’est qu’un pointeur vers une séquence de commits, et non un dossier séparé.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Une erreur courante est de considérer les branches comme des dossiers distincts, mais cette vision est trompeuse. Il est plus juste de voir Git comme un arbre de modifications où chaque commit est un nœud et les branches ne sont que des pointeurs.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Et voilà ! Vous avez fait vos premiers pas avec Git. Vous savez maintenant comment configurer un dépôt, ajouter des fichiers, valider des modifications, pousser vers un dépôt distant et comprendre la logique de Git.&lt;/p&gt;
+
+&lt;p&gt;Là où Git est utilisé, il y a toujours de l’espoir. Avec Git, vous pouvez annuler des modifications, retrouver d’anciennes versions de votre code et collaborer facilement avec d’autres développeurs.&lt;/p&gt;
+
+&lt;h2 id=&quot;ressources-supplémentaires&quot;&gt;Ressources supplémentaires&lt;/h2&gt;
+
+&lt;p&gt;Si vous souhaitez approfondir Git, consultez ces ressources :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/doc&quot;&gt;Documentation officielle Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://guides.github.com/&quot;&gt;Guides GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jvns.ca/#git&quot;&gt;Le blog de Julia Evans&lt;/a&gt; – Des explications intuitives sur Git.&lt;/li&gt;
+  &lt;li&gt;Outils pour visualiser l’historique des commits : &lt;a href=&quot;https://www.sourcetreeapp.com/&quot;&gt;Sourcetree&lt;/a&gt; ou &lt;a href=&quot;https://www.gitkraken.com/&quot;&gt;GitKraken&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Mon Plan pour 2025</title>

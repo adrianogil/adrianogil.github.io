@@ -4,13 +4,132 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/"/>
- <updated>2025-01-10T22:18:21-04:00</updated>
+ <updated>2025-02-01T16:41:07-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>First Steps with Git</title>
+   <link href="https://adrianogil.github.io/2025/02/intro-git/"/>
+   <updated>2025-02-01T00:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/2025/02/intro-git</id>
+   <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Hey there! I often find myself explaining Git from the ground up, so I decided to write this short introductory guide as a handy reference. This guide will walk you through the very basics. By the end of this post, you’ll know how to set up your first repository, make your first commit, and more. Let’s get started!&lt;/p&gt;
+
+&lt;p&gt;I can’t recommend enough having a playground local repository so you can test each command. You should be able to freely move around your repository noticing how each command changes the current state of your files and the commit history.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-your-first-git-repository&quot;&gt;Setting Up Your First Git Repository&lt;/h2&gt;
+
+&lt;p&gt;First things first, let’s set up your Git repository. This is where your project’s history will live.&lt;/p&gt;
+
+&lt;p&gt;To create a new Git repository, open your terminal and navigate to your project’s directory. Then, run:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command sets up a brand new Git repository in your project folder. Easy, right?&lt;/p&gt;
+
+&lt;p&gt;After running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;, a hidden &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git&lt;/code&gt; directory is created. This directory contains all the necessary metadata and objects that Git uses to track and manage your project’s history.&lt;/p&gt;
+&lt;h2 id=&quot;adding-files-to-your-repository&quot;&gt;Adding Files to Your Repository&lt;/h2&gt;
+
+&lt;p&gt;Next, let’s add some files to your repository.&lt;/p&gt;
+
+&lt;p&gt;Think of the staging area like a shopping cart—you gather changes here before you check out (commit) To add a file, use:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &amp;lt;file_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;file_name&amp;gt;&lt;/code&gt; with the name of your file. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;file_name&amp;gt;&lt;/code&gt; is now on staging area. The staging area lets you review and prepare changes before committing them.&lt;/p&gt;
+
+&lt;p&gt;If you want to add all changes in the current folder (including deletions and modifications), you can use:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To see what’s in your staging area and what’s changed in your working directory, use:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command gives you a summary of the current state of your project.&lt;/p&gt;
+
+&lt;h2 id=&quot;committing-your-changes&quot;&gt;Committing Your Changes&lt;/h2&gt;
+
+&lt;p&gt;Now, let’s commit your changes. A commit is like a snapshot of your project at a specific point in time.&lt;/p&gt;
+
+&lt;p&gt;To commit your changes with a message, use:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Your commit message&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Make sure your message is clear and descriptive so you know what this commit is about later.&lt;/p&gt;
+
+&lt;h2 id=&quot;visualizing-your-commit-history&quot;&gt;Visualizing Your Commit History&lt;/h2&gt;
+
+&lt;p&gt;Seeing your commit history can be very helpful.&lt;/p&gt;
+
+&lt;p&gt;To visualize your commit history, use:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log &lt;span class=&quot;nt&quot;&gt;--graph&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--all&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command shows a graphical representation of your commit history, which can be really useful for understanding how your project has evolved.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2025-02-01-intro-git/git_log_example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pushing-changes-to-a-remote-repository&quot;&gt;Pushing Changes to a Remote Repository&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve made some commits, you might want to share your work with others or back it up to a remote repository like GitHub.&lt;/p&gt;
+
+&lt;p&gt;First, you need to add a remote repository. If you’re using GitHub, it might look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add origin https://github.com/yourusername/your-repo.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, push your changes:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git push origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command uploads your changes to the main branch of your remote repository.&lt;/p&gt;
+
+&lt;h2 id=&quot;understanding-the-git-mindset&quot;&gt;Understanding the Git Mindset&lt;/h2&gt;
+
+&lt;p&gt;To really make the most of Git, it helps to get familiar with how it works and the key parts of your project from Git’s perspective: the filesystem, the staging area, and commits. This workflow is all about how changes move through Git until they’re safely recorded in your project’s history.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Working Directory (Filesystem)&lt;/strong&gt;: When you modify files in your project, you’re working directly in the filesystem. This is where you create, edit, and delete files. At this stage, these changes are not yet tracked by Git.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Staging Area&lt;/strong&gt;: After making changes, you add the modified files to the &lt;em&gt;staging area&lt;/em&gt; using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add&lt;/code&gt; command. Think of the staging area as a clipboard for changes—it’s where you prepare what will be included in your next snapshot. This step allows you to control exactly which changes are part of the next commit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Commit as a Node in the Tree&lt;/strong&gt;: When you’re ready, you use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt; to take a snapshot of the staged changes. This snapshot acts like a &lt;em&gt;node&lt;/em&gt; in Git’s version history, forming a connected structure. Each commit points back to its parent, creating a sequence of changes rather than separate folders. A branch is simply a pointer to one of these sequences, not a container of its own. By focusing on how changes flow through the tree, you can navigate Git more effectively and understand its true power.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A common mistake when thinking about Git is to see branches as if they were folders, but this mindset can be misleading. Instead of focusing on individual branches as separate containers, it’s better to see Git as a tree of changes—where each commit is a node and branches are just pointers to different sequences of snapshots.&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;And that’s it! You’ve just taken your first steps with Git. You now know how to set up a repository, add files, commit changes, push to a remote repository, and understand the basics of how Git works. Keep practicing these commands, and soon you’ll be a Git pro!&lt;/p&gt;
+
+&lt;p&gt;Remember, where Git is used, there is always hope. With Git, you can rewind changes, recover past versions of your code, and even undo mistakes with ease. It allows multiple developers to work on the same project and it’s the best way to share code with others.&lt;/p&gt;
+&lt;h2 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h2&gt;
+
+&lt;p&gt;If you want to dive deeper into Git, check out these resources:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/doc&quot;&gt;Official Git Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://guides.github.com/&quot;&gt;GitHub Guides&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jvns.ca/#git&quot;&gt;Julia Evans’ blog&lt;/a&gt; – I can’t recommend it enough! Intuitive explanations of Git commands and internals.&lt;/li&gt;
+  &lt;li&gt;Tools for visualizing your Git commit history, like &lt;a href=&quot;https://www.sourcetreeapp.com/&quot;&gt;Sourcetree&lt;/a&gt; or &lt;a href=&quot;https://www.gitkraken.com/&quot;&gt;GitKraken&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>My Roadmap for 2025</title>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      
+      
+        First Steps with Git &middot; GilLabs
+      
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/blog/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('night-mode-toggle');
+      const body = document.body;
+      const darkMode = localStorage.getItem('dark-mode');
+
+      toggle.innerHTML = darkMode === 'enabled' ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
+
+      if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+      }
+
+      toggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          toggle.innerHTML = '<i class="fa fa-moon"></i>';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          toggle.innerHTML = '<i class="fa fa-sun"></i>';
+        }
+      });
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item" id="night-mode-toggle">
+        <i class="fa fa-moon"></i> <!-- Icon for night mode -->
+    </a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          
+            <a class="sidebar-nav-item" href="/blog//about/">About</a>
+          
+          
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          
+            <a class="sidebar-nav-item" href="/blog//talks/">Talks</a>
+          
+          
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Languages:
+    </p>
+  </div>
+  <nav class="sidebar-nav">
+    
+      <a class="sidebar-nav-item active" href="/blog//2025/02/intro-git/">EN</a>
+      <a class="sidebar-nav-item" href="/blog/fr/2025/02/intro-git/">FR</a>
+      <a class="sidebar-nav-item" href="/blog/pt/2025/02/intro-git/">PT</a>
+    
+
+    
+
+    
+
+  </nav>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">First Steps with Git</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      01 Feb 2025
+      <br/>
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/blog/pt/2025/02/intro-git/" >PT</a>
+        <span class="separator"> &bull; </span>
+        <a href="/blog/fr/2025/02/intro-git/" >FR</a>
+            
+    </div>
+
+    <h2 id="introduction">Introduction</h2>
+
+<p>Hey there! I often find myself explaining Git from the ground up, so I decided to write this short introductory guide as a handy reference. This guide will walk you through the very basics. By the end of this post, you’ll know how to set up your first repository, make your first commit, and more. Let’s get started!</p>
+
+<p>I can’t recommend enough having a playground local repository so you can test each command. You should be able to freely move around your repository noticing how each command changes the current state of your files and the commit history.</p>
+
+<h2 id="setting-up-your-first-git-repository">Setting Up Your First Git Repository</h2>
+
+<p>First things first, let’s set up your Git repository. This is where your project’s history will live.</p>
+
+<p>To create a new Git repository, open your terminal and navigate to your project’s directory. Then, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
+
+<p>This command sets up a brand new Git repository in your project folder. Easy, right?</p>
+
+<p>After running <code class="language-plaintext highlighter-rouge">git init</code>, a hidden <code class="language-plaintext highlighter-rouge">.git</code> directory is created. This directory contains all the necessary metadata and objects that Git uses to track and manage your project’s history.</p>
+<h2 id="adding-files-to-your-repository">Adding Files to Your Repository</h2>
+
+<p>Next, let’s add some files to your repository.</p>
+
+<p>Think of the staging area like a shopping cart—you gather changes here before you check out (commit) To add a file, use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add &lt;file_name&gt;
+</code></pre></div></div>
+<p>Replace <code class="language-plaintext highlighter-rouge">&lt;file_name&gt;</code> with the name of your file. The <code class="language-plaintext highlighter-rouge">&lt;file_name&gt;</code> is now on staging area. The staging area lets you review and prepare changes before committing them.</p>
+
+<p>If you want to add all changes in the current folder (including deletions and modifications), you can use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>To see what’s in your staging area and what’s changed in your working directory, use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<p>This command gives you a summary of the current state of your project.</p>
+
+<h2 id="committing-your-changes">Committing Your Changes</h2>
+
+<p>Now, let’s commit your changes. A commit is like a snapshot of your project at a specific point in time.</p>
+
+<p>To commit your changes with a message, use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"Your commit message"</span>
+</code></pre></div></div>
+<p>Make sure your message is clear and descriptive so you know what this commit is about later.</p>
+
+<h2 id="visualizing-your-commit-history">Visualizing Your Commit History</h2>
+
+<p>Seeing your commit history can be very helpful.</p>
+
+<p>To visualize your commit history, use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--graph</span> <span class="nt">--all</span> <span class="nt">--oneline</span>
+</code></pre></div></div>
+
+<p>This command shows a graphical representation of your commit history, which can be really useful for understanding how your project has evolved.</p>
+
+<p><img src="/assets/images/2025-02-01-intro-git/git_log_example.png" alt="" /></p>
+<h2 id="pushing-changes-to-a-remote-repository">Pushing Changes to a Remote Repository</h2>
+
+<p>Once you’ve made some commits, you might want to share your work with others or back it up to a remote repository like GitHub.</p>
+
+<p>First, you need to add a remote repository. If you’re using GitHub, it might look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://github.com/yourusername/your-repo.git
+</code></pre></div></div>
+
+<p>Then, push your changes:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin main
+</code></pre></div></div>
+
+<p>This command uploads your changes to the main branch of your remote repository.</p>
+
+<h2 id="understanding-the-git-mindset">Understanding the Git Mindset</h2>
+
+<p>To really make the most of Git, it helps to get familiar with how it works and the key parts of your project from Git’s perspective: the filesystem, the staging area, and commits. This workflow is all about how changes move through Git until they’re safely recorded in your project’s history.</p>
+
+<ol>
+  <li>
+    <p><strong>Working Directory (Filesystem)</strong>: When you modify files in your project, you’re working directly in the filesystem. This is where you create, edit, and delete files. At this stage, these changes are not yet tracked by Git.</p>
+  </li>
+  <li>
+    <p><strong>Staging Area</strong>: After making changes, you add the modified files to the <em>staging area</em> using the <code class="language-plaintext highlighter-rouge">git add</code> command. Think of the staging area as a clipboard for changes—it’s where you prepare what will be included in your next snapshot. This step allows you to control exactly which changes are part of the next commit.</p>
+  </li>
+  <li>
+    <p><strong>Commit as a Node in the Tree</strong>: When you’re ready, you use <code class="language-plaintext highlighter-rouge">git commit</code> to take a snapshot of the staged changes. This snapshot acts like a <em>node</em> in Git’s version history, forming a connected structure. Each commit points back to its parent, creating a sequence of changes rather than separate folders. A branch is simply a pointer to one of these sequences, not a container of its own. By focusing on how changes flow through the tree, you can navigate Git more effectively and understand its true power.</p>
+  </li>
+</ol>
+
+<p>A common mistake when thinking about Git is to see branches as if they were folders, but this mindset can be misleading. Instead of focusing on individual branches as separate containers, it’s better to see Git as a tree of changes—where each commit is a node and branches are just pointers to different sequences of snapshots.</p>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>And that’s it! You’ve just taken your first steps with Git. You now know how to set up a repository, add files, commit changes, push to a remote repository, and understand the basics of how Git works. Keep practicing these commands, and soon you’ll be a Git pro!</p>
+
+<p>Remember, where Git is used, there is always hope. With Git, you can rewind changes, recover past versions of your code, and even undo mistakes with ease. It allows multiple developers to work on the same project and it’s the best way to share code with others.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+
+<p>If you want to dive deeper into Git, check out these resources:</p>
+
+<ul>
+  <li><a href="https://git-scm.com/doc">Official Git Documentation</a></li>
+  <li><a href="https://guides.github.com/">GitHub Guides</a></li>
+  <li><a href="https://jvns.ca/#git">Julia Evans’ blog</a> – I can’t recommend it enough! Intuitive explanations of Git commands and internals.</li>
+  <li>Tools for visualizing your Git commit history, like <a href="https://www.sourcetreeapp.com/">Sourcetree</a> or <a href="https://www.gitkraken.com/">GitKraken</a>.</li>
+</ul>
+
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

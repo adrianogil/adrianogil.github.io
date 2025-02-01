@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      
+      
+        Premiers pas avec Git &middot; GilLabs
+      
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/fr/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/blog/fr/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('night-mode-toggle');
+      const body = document.body;
+      const darkMode = localStorage.getItem('dark-mode');
+
+      toggle.innerHTML = darkMode === 'enabled' ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
+
+      if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+      }
+
+      toggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          toggle.innerHTML = '<i class="fa fa-moon"></i>';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          toggle.innerHTML = '<i class="fa fa-sun"></i>';
+        }
+      });
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item" id="night-mode-toggle">
+        <i class="fa fa-moon"></i> <!-- Icon for night mode -->
+    </a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          
+          
+            <a class="sidebar-nav-item" href="/blog/fr/about/">À propos</a>
+          
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          
+          
+            <a class="sidebar-nav-item" href="/blog/fr/talks/">Talks</a>
+          
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Languages:
+    </p>
+  </div>
+  <nav class="sidebar-nav">
+    
+
+    
+      <a class="sidebar-nav-item" href="/blog//2025/02/intro-git/">EN</a>
+      <a class="sidebar-nav-item active" href="/blog/fr/2025/02/intro-git/">FR</a>
+      <a class="sidebar-nav-item" href="/blog/pt/2025/02/intro-git/">PT</a>
+    
+
+    
+
+  </nav>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/fr/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">Premiers pas avec Git</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      01 Feb 2025
+      <br/>
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/blog/pt/2025/02/intro-git/" >PT</a>
+        <span class="separator"> &bull; </span>
+        <a href="/blog/2025/02/intro-git/" >EN</a>
+            
+    </div>
+
+    <h2 id="introduction">Introduction</h2>
+
+<p>Salut ! Je me retrouve souvent à expliquer Git depuis le début, alors j’ai décidé d’écrire ce petit guide introductif comme référence pratique. Ce guide vous aidera à comprendre les bases. À la fin de cet article, vous saurez comment configurer votre premier dépôt, effectuer votre premier commit et bien plus encore. C’est parti !</p>
+
+<p>Je vous recommande vivement d’avoir un dépôt local de test pour essayer chaque commande. Vous pourrez ainsi explorer librement votre dépôt et observer comment chaque commande modifie l’état actuel de vos fichiers et l’historique des commits.</p>
+
+<h2 id="créer-votre-premier-dépôt-git">Créer votre premier dépôt Git</h2>
+
+<p>Avant tout, configurons votre dépôt Git. C’est ici que l’historique de votre projet sera stocké.</p>
+
+<p>Pour créer un nouveau dépôt Git, ouvrez votre terminal, accédez au dossier de votre projet, puis exécutez :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div>
+
+<p>Cette commande initialise un tout nouveau dépôt Git dans votre dossier de projet. Simple, non ?</p>
+
+<p>Après l’exécution de <code class="language-plaintext highlighter-rouge">git init</code>, un dossier caché <code class="language-plaintext highlighter-rouge">.git</code> est créé. Ce dossier contient toutes les métadonnées et objets nécessaires à Git pour suivre et gérer l’historique de votre projet.</p>
+
+<h2 id="ajouter-des-fichiers-à-votre-dépôt">Ajouter des fichiers à votre dépôt</h2>
+
+<p>Ajoutons maintenant des fichiers à votre dépôt.</p>
+
+<p>Pensez à la zone de staging comme à un panier d’achat : vous y ajoutez des modifications avant de les valider (commit). Pour ajouter un fichier, utilisez :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add &lt;nom_du_fichier&gt;
+</code></pre></div></div>
+
+<p>Remplacez <code class="language-plaintext highlighter-rouge">&lt;nom_du_fichier&gt;</code> par le nom de votre fichier. Celui-ci est maintenant en zone de staging, où vous pouvez vérifier et préparer les modifications avant de les valider.</p>
+
+<p>Si vous voulez ajouter toutes les modifications dans le dossier courant (y compris les suppressions et modifications), utilisez :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+</code></pre></div></div>
+
+<p>Pour voir les fichiers en attente de validation et ceux qui ont été modifiés, utilisez :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+
+<p>Cette commande vous donne un résumé de l’état actuel de votre projet.</p>
+
+<h2 id="valider-vos-modifications">Valider vos modifications</h2>
+
+<p>Passons maintenant à la validation (commit) des modifications. Un commit est une capture instantanée de votre projet à un moment donné.</p>
+
+<p>Pour valider vos modifications avec un message, utilisez :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "Votre message de commit"
+</code></pre></div></div>
+
+<p>Assurez-vous que votre message est clair et descriptif pour vous y retrouver plus tard.</p>
+
+<h2 id="visualiser-lhistorique-des-commits">Visualiser l’historique des commits</h2>
+
+<p>Voir l’historique des commits peut être très utile. Pour afficher votre historique des commits sous forme graphique, utilisez :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log --graph --all --oneline
+</code></pre></div></div>
+
+<p>Cette commande permet de voir une représentation graphique de l’historique des commits, très utile pour comprendre l’évolution de votre projet.</p>
+
+<p><img src="/assets/images/2025-02-01-intro-git/git_log_example.png" alt="" /></p>
+
+<h2 id="envoyer-des-modifications-vers-un-dépôt-distant">Envoyer des modifications vers un dépôt distant</h2>
+
+<p>Après avoir effectué des commits, vous voudrez peut-être partager votre travail ou le sauvegarder sur un dépôt distant comme GitHub.</p>
+
+<p>D’abord, ajoutez un dépôt distant. Par exemple, pour GitHub :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://github.com/votreutilisateur/votre-repo.git
+</code></pre></div></div>
+
+<p>Puis, poussez vos modifications :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin main
+</code></pre></div></div>
+
+<p>Cette commande envoie vos modifications vers la branche principale (<code class="language-plaintext highlighter-rouge">main</code>) du dépôt distant.</p>
+
+<h2 id="comprendre-la-logique-git">Comprendre la logique Git</h2>
+
+<p>Pour bien utiliser Git, il est important de comprendre ses concepts fondamentaux : le système de fichiers, la zone de staging et les commits.</p>
+
+<ol>
+  <li>
+    <p><strong>Répertoire de travail (Système de fichiers)</strong> : Lorsque vous modifiez des fichiers, vous travaillez directement dans le système de fichiers. Ces modifications ne sont pas encore suivies par Git.</p>
+  </li>
+  <li>
+    <p><strong>Zone de staging</strong> : Une fois les modifications faites, vous les ajoutez à la <em>zone de staging</em> avec <code class="language-plaintext highlighter-rouge">git add</code>. La zone de staging agit comme un presse-papiers pour les changements que vous prévoyez d’inclure dans le prochain commit.</p>
+  </li>
+  <li>
+    <p><strong>Le commit comme un nœud dans l’arbre</strong> : Une fois prêt, utilisez <code class="language-plaintext highlighter-rouge">git commit</code> pour enregistrer une capture instantanée des modifications. Chaque commit forme un <em>nœud</em> dans l’historique Git, connecté aux commits précédents. Une branche n’est qu’un pointeur vers une séquence de commits, et non un dossier séparé.</p>
+  </li>
+</ol>
+
+<p>Une erreur courante est de considérer les branches comme des dossiers distincts, mais cette vision est trompeuse. Il est plus juste de voir Git comme un arbre de modifications où chaque commit est un nœud et les branches ne sont que des pointeurs.</p>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Et voilà ! Vous avez fait vos premiers pas avec Git. Vous savez maintenant comment configurer un dépôt, ajouter des fichiers, valider des modifications, pousser vers un dépôt distant et comprendre la logique de Git.</p>
+
+<p>Là où Git est utilisé, il y a toujours de l’espoir. Avec Git, vous pouvez annuler des modifications, retrouver d’anciennes versions de votre code et collaborer facilement avec d’autres développeurs.</p>
+
+<h2 id="ressources-supplémentaires">Ressources supplémentaires</h2>
+
+<p>Si vous souhaitez approfondir Git, consultez ces ressources :</p>
+
+<ul>
+  <li><a href="https://git-scm.com/doc">Documentation officielle Git</a></li>
+  <li><a href="https://guides.github.com/">Guides GitHub</a></li>
+  <li><a href="https://jvns.ca/#git">Le blog de Julia Evans</a> – Des explications intuitives sur Git.</li>
+  <li>Outils pour visualiser l’historique des commits : <a href="https://www.sourcetreeapp.com/">Sourcetree</a> ou <a href="https://www.gitkraken.com/">GitKraken</a>.</li>
+</ul>
+
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
