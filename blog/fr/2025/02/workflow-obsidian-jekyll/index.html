@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      
+      
+        Mon Flux de Travail de Blog avec Obsidian et Jekyll &middot; GilLabs
+      
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/fr/css/rom.css">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/blog/fr/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Feeds" href="/feed/">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!--   <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>
+  <script id=”MathJax-script” async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script> -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('night-mode-toggle');
+      const body = document.body;
+      const darkMode = localStorage.getItem('dark-mode');
+
+      toggle.innerHTML = darkMode === 'enabled' ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
+
+      if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+      }
+
+      toggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('dark-mode', 'disabled');
+          toggle.innerHTML = '<i class="fa fa-moon"></i>';
+        } else {
+          body.classList.add('dark-mode');
+          localStorage.setItem('dark-mode', 'enabled');
+          toggle.innerHTML = '<i class="fa fa-sun"></i>';
+        }
+      });
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>GilLabs</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item" id="night-mode-toggle">
+        <i class="fa fa-moon"></i> <!-- Icon for night mode -->
+    </a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          
+          
+            <a class="sidebar-nav-item" href="/blog/fr/about/">À propos</a>
+          
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          
+          
+            <a class="sidebar-nav-item" href="/blog/fr/talks/">Talks</a>
+          
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Languages:
+    </p>
+  </div>
+  <nav class="sidebar-nav">
+    
+
+    
+      <a class="sidebar-nav-item" href="/blog//2025/02/workflow-obsidian-jekyll/">EN</a>
+      <a class="sidebar-nav-item active" href="/blog/fr/2025/02/workflow-obsidian-jekyll/">FR</a>
+      <a class="sidebar-nav-item" href="/blog/pt/2025/02/workflow-obsidian-jekyll/">PT</a>
+    
+
+    
+
+  </nav>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/fr/" title="Home">GilLabs</a>
+            <small>{ GilLabs }</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="content" id="home">
+  <div id="post-info">
+    <div id="info-container">
+      <h1 id="title">Mon Flux de Travail de Blog avec Obsidian et Jekyll</h1>
+    </div>
+  </div>
+
+  <div class="post">
+    <div align="right">
+      05 Feb 2025
+      <br/>
+      <!-- Adds links to other languages on the post -->
+      
+        <a href="/blog/pt/2025/02/workflow-obsidian-jekyll/" >PT</a>
+        <span class="separator"> &bull; </span>
+        <a href="/blog/2025/02/workflow-obsidian-jekyll/" >EN</a>
+            
+    </div>
+
+    <p><a href="https://jekyllrb.com/">Jekyll</a> est un <strong>générateur de site statique</strong> qui transforme des fichiers Markdown en un site web pleinement fonctionnel. Tout est généré en HTML simple, ce qui facilite le déploiement sur des plateformes comme <a href="https://docs.github.com/en/pages/quickstart"><strong>GitHub Pages</strong></a>.</p>
+
+<h2 id="écriture-avec-obsidian"><strong>Écriture avec Obsidian</strong></h2>
+
+<p>J’utilise <a href="https://obsidian.md/">Obsidian</a> pour l’écriture car :</p>
+
+<ul>
+  <li>Il prend en charge <strong>Markdown</strong>, ce qui facilite la mise en forme des articles.</li>
+  <li>Je peux organiser mes posts avec des <strong>balises et des métadonnées</strong>.</li>
+  <li>Il centralise mes écrits avant publication.</li>
+</ul>
+
+<p>Chaque article de blog contient des métadonnées indiquant s’il est prêt à être publié. Les brouillons sont exclus du traitement.</p>
+
+<h3 id="utilisation-des-templates-dans-obsidian">Utilisation des Templates dans Obsidian</h3>
+
+<p>Pour standardiser mes articles de blog, j’utilise des <strong>templates</strong> dans Obsidian. Ceux-ci permettent de maintenir une cohérence entre les posts et d’accélérer le processus d’écriture. Ainsi, à chaque fois que je veux commencer un nouvel article, je crée d’abord une <a href="https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Planning%20-%20Template.md">note de planification</a> avec des idées et des références. Ensuite, je crée une <a href="https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Text%20-%20Template.md?plain=1">note d’article</a> contenant le texte complet et les métadonnées.</p>
+
+<p>En utilisant <a href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview</a>, un plugin Obsidian qui permet d’<strong>interroger et d’afficher dynamiquement du contenu</strong> en fonction des métadonnées, je peux suivre l’avancement de mes posts, identifier les traductions manquantes et voir les notes associées.</p>
+
+<h2 id="jekyll-multiple-languages-plugin"><strong>Jekyll-Multiple-Languages-Plugin</strong></h2>
+
+<p>Le plugin <code class="language-plaintext highlighter-rouge">jekyll-multiple-languages-plugin</code> me permet d’organiser mon contenu en plusieurs langues en créant des versions différentes de chaque article. Voici son fonctionnement :</p>
+
+<ul>
+  <li>
+    <p>Mon blog prend en charge <strong>l’anglais, le portugais et le français</strong>, configurés dans <code class="language-plaintext highlighter-rouge">_config.yml</code> :</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">languages</span><span class="pi">:</span>
+   <span class="pi">-</span> <span class="s">en</span>
+   <span class="pi">-</span> <span class="s">pt</span>
+   <span class="pi">-</span> <span class="s">fr</span>
+  <span class="na">default_lang</span><span class="pi">:</span> <span class="s">en</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Chaque langue dispose de son propre répertoire dans <code class="language-plaintext highlighter-rouge">_i18n/</code>, par exemple :</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  _i18n/en/_posts/2025-02-01-my-post.md
+  _i18n/pt/_posts/2025-02-01-meu-post.md
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Le plugin génère automatiquement des URLs spécifiques à chaque langue :</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  https://adrianogil.github.io/blog/en/2025/02/my-post/
+  https://adrianogil.github.io/blog/pt/2025/02/meu-post/
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Les utilisateurs peuvent changer de langue à l’aide d’un <strong>sélecteur de langue</strong> dans l’interface du blog.</p>
+  </li>
+</ul>
+
+<h2 id="automatisation-du-traitement-des-articles-avec-python"><strong>Automatisation du Traitement des Articles avec Python</strong></h2>
+
+<p>Copier manuellement les fichiers Markdown, gérer les images et manipuler les métadonnées peut être fastidieux. Pour simplifier le processus, j’utilise un script Python qui automatise les tâches suivantes :</p>
+
+<ul>
+  <li>Extraire les articles de mon <strong>coffre Obsidian</strong>.</li>
+  <li>Copier et traiter les images.</li>
+  <li>Formater les métadonnées pour <a href="https://jekyllrb.com/"><strong>Jekyll</strong></a>.</li>
+  <li>Placer le post final dans le répertoire de mon blog sur <a href="https://docs.github.com/en/pages/quickstart"><strong>GitHub Pages</strong></a>.</li>
+</ul>
+
+<h4 id="récupération-des-notes"><strong>Récupération des Notes</strong></h4>
+
+<p>D’abord, il rassemble les notes marquées avec une balise spécifique (<code class="language-plaintext highlighter-rouge">GilLabs/posts/text</code>).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">notes</span> <span class="o">=</span> <span class="n">get_notes_from_index</span><span class="p">(</span><span class="n">target_tags</span><span class="o">=</span><span class="p">[</span><span class="s">"GilLabs/posts/text"</span><span class="p">],</span> <span class="n">as_obsidian_notes</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">note</span> <span class="k">for</span> <span class="n">note</span> <span class="ow">in</span> <span class="n">notes</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">note</span><span class="p">.</span><span class="n">metadata</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"draft"</span><span class="p">,</span> <span class="bp">True</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<p>Cela garantit que seuls les <strong>articles publiés</strong> sont traités.</p>
+
+<h4 id="génération-du-fichier-de-blog-pour-jekyll"><strong>Génération du Fichier de Blog pour Jekyll</strong></h4>
+
+<p>Chaque article est formaté selon la structure <code class="language-plaintext highlighter-rouge">_posts</code> de Jekyll avec la bonne <strong>date, langue et catégories</strong>. Les métadonnées telles que <strong>le titre, la mise en page et les catégories</strong> sont conservées.</p>
+
+<pre><code class="language-Markdown">---
+categories: git
+date: '2025-02-01 16:41:00 '
+lang: en
+lang-ref: intro-git
+layout: post
+title: Premiers pas avec Git
+updated: 2025-02-01T16:41
+---
+## Introduction
+Salut ! Il m'arrive souvent d'expliquer Git à partir de zéro,...
+</code></pre>
+
+<h3 id="4-déploiement-du-blog"><strong>4. Déploiement du Blog</strong></h3>
+
+<p>Une fois que le script a mis à jour les fichiers HTML de mon projet Jekyll, je n’ai plus qu’à :</p>
+
+<ol>
+  <li>
+    <p><strong>Construire le site</strong> avec :</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> jekyll build
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong><a href="https://adrianogil.github.io/blog/2025/02/intro-git/">Pousser les changements</a> sur GitHub Pages</strong> avec :</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git add <span class="nb">.</span>
+ git commit <span class="nt">-m</span> <span class="s2">"Nouveau post de blog"</span>
+ git push origin main
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>En quelques minutes, mon blog est en ligne !</p>
+
+
+    
+    <br>
+    <br>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

@@ -4,13 +4,131 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/"/>
- <updated>2025-02-01T16:41:07-04:00</updated>
+ <updated>2025-02-05T19:27:08-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>My Blog Workflow with Obsidian and Jekyll</title>
+   <link href="https://adrianogil.github.io/2025/02/workflow-obsidian-jekyll/"/>
+   <updated>2025-02-05T00:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/2025/02/workflow-obsidian-jekyll</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a &lt;strong&gt;static site generator&lt;/strong&gt; that transforms Markdown files into a fully functional website. Everything is generated into plain HTML, which makes it simple to deploy on platforms like &lt;a href=&quot;https://docs.github.com/en/pages/quickstart&quot;&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;writing-in-obsidian&quot;&gt;&lt;strong&gt;Writing in Obsidian&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;I use &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt; for writing because:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It supports &lt;strong&gt;Markdown&lt;/strong&gt;, making it easy to format posts.&lt;/li&gt;
+  &lt;li&gt;I can organize posts with &lt;strong&gt;tags and metadata&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;It keeps my writing centralized before publishing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each blog post has metadata that determines if it’s ready for publication. Drafts are excluded from processing.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-templates-in-obsidian&quot;&gt;Using Templates in Obsidian&lt;/h3&gt;
+
+&lt;p&gt;To standardize my blog posts, I use &lt;strong&gt;templates&lt;/strong&gt; in Obsidian. Templates help maintain consistency across different posts and speed up the writing process. So any time I want to start a new post I first create a &lt;a href=&quot;https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Planning%20-%20Template.md&quot;&gt;planning note&lt;/a&gt; with brainstorming ideas and references. Then I create a &lt;a href=&quot;https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Text%20-%20Template.md?plain=1&quot;&gt;post note&lt;/a&gt; which contains the full text and metadata for each post.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&quot;https://blacksmithgu.github.io/obsidian-dataview/&quot;&gt;Dataview&lt;/a&gt;, an Obsidian plugin that allows me to &lt;strong&gt;query and display content dynamically&lt;/strong&gt; based on metadata, I can track posts in different stages of completion, identify missing translations, and view related notes.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-multiple-languages-plugin&quot;&gt;&lt;strong&gt;Jekyll-Multiple-Languages-Plugin&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-multiple-languages-plugin&lt;/code&gt; helps me to structure my content in multiple languages by creating different versions of each post. Here’s how it works:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;My blog supports &lt;strong&gt;English, Portuguese, and French&lt;/strong&gt;, configured in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  languages:
+   - en
+   - pt
+   - fr
+  default_lang: en
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Each language has its own directory inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_i18n/&lt;/code&gt;, for example:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  _i18n/en/_posts/2025-02-01-my-post.md
+  _i18n/pt/_posts/2025-02-01-meu-post.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The plugin automatically generates language-specific URLs:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  https://adrianogil.github.io/blog/en/2025/02/my-post/
+  https://adrianogil.github.io/blog/pt/2025/02/meu-post/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Users can switch languages using a simple &lt;strong&gt;language selector&lt;/strong&gt; in the blog UI.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;automating-the-blog-post-processing-with-python&quot;&gt;&lt;strong&gt;Automating the Blog Post Processing with Python&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Manually copying Markdown files, managing assets, and handling metadata can be time-consuming. To ease my blogging process, I use a Python script that automates the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Extracting blog posts from my &lt;strong&gt;Obsidian&lt;/strong&gt; vault.&lt;/li&gt;
+  &lt;li&gt;Copying and processing images.&lt;/li&gt;
+  &lt;li&gt;Formatting metadata for &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Placing the final post in my blog’s &lt;a href=&quot;https://docs.github.com/en/pages/quickstart&quot;&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;&lt;/a&gt; repository.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fetching-notes&quot;&gt;&lt;strong&gt;Fetching Notes&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;First, it gathers notes marked with a specific tag (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GilLabs/posts/text&lt;/code&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;notes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_notes_from_index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target_tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GilLabs/posts/text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as_obsidian_notes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;notes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;note&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;note&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notes&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;note&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;draft&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This ensures only &lt;strong&gt;published&lt;/strong&gt; posts are processed.&lt;/p&gt;
+
+&lt;h4 id=&quot;generating-the-jekyll-blog-post-file&quot;&gt;&lt;strong&gt;Generating the Jekyll Blog Post File&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Each post is formatted into Jekyll’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; structure with the correct &lt;strong&gt;date, language, and categories&lt;/strong&gt;. Metadata such as &lt;strong&gt;title, layout, and categories&lt;/strong&gt; are preserved.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Markdown&quot;&gt;---
+categories: git
+date: &apos;2025-02-01 16:41:00 &apos;
+lang: en
+lang-ref: intro-git
+layout: post
+title: First Steps with Git
+updated: 2025-02-01T16:41
+---
+## Introduction
+Hey there! I often find myself explaining Git from the ground up,...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;4-deploying-the-blog&quot;&gt;&lt;strong&gt;4. Deploying the Blog&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Once the script updates the html files in my Jekyll project, I simply:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Build the site&lt;/strong&gt; with:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://adrianogil.github.io/blog/2025/02/intro-git/&quot;&gt;Push the changes&lt;/a&gt; to GitHub Pages&lt;/strong&gt; with:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;New blog post&quot;&lt;/span&gt;
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Within minutes, my blog is live!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>First Steps with Git</title>
@@ -39,7 +157,7 @@
 
 &lt;p&gt;Next, let’s add some files to your repository.&lt;/p&gt;
 
-&lt;p&gt;Think of the staging area like a shopping cart—you gather changes here before you check out (commit) To add a file, use:&lt;/p&gt;
+&lt;p&gt;Think of the staging area like a shopping cart—you gather changes here before you check out (commit). To add a file, use:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &amp;lt;file_name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;

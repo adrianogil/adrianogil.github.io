@@ -4,13 +4,129 @@
  <title>GilLabs</title>
  <link href="https://adrianogil.github.io/blog/pt/feed/" rel="self"/>
  <link href="https://adrianogil.github.io/blog/pt/"/>
- <updated>2025-02-01T16:41:08-04:00</updated>
+ <updated>2025-02-05T19:27:09-04:00</updated>
  <id>https://adrianogil.github.io/</id>
  <author>
    <name>Adriano Gil</name>
    <email>adrianogil.san@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Meu workflow com Obsidian and Jekyll</title>
+   <link href="https://adrianogil.github.io/2025/02/workflow-obsidian-jekyll/"/>
+   <updated>2025-02-05T00:00:00-04:00</updated>
+   <id>https://adrianogil.github.io/blog/pt/2025/02/workflow-obsidian-jekyll</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; é um &lt;strong&gt;gerador de site estático&lt;/strong&gt; que transforma arquivos Markdown em um site totalmente funcional. Tudo é convertido para HTML puro, o que facilita a implantação em plataformas como &lt;a href=&quot;https://docs.github.com/en/pages/quickstart&quot;&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;escrevendo-no-obsidian&quot;&gt;&lt;strong&gt;Escrevendo no Obsidian&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Eu uso &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt; para escrever meu blog porque:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ele suporta &lt;strong&gt;Markdown&lt;/strong&gt;, facilitando a formatação dos posts.&lt;/li&gt;
+  &lt;li&gt;Posso organizar os posts com &lt;strong&gt;tags e metadados&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Mantém meus textos centralizados antes da publicação.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cada post do blog contém metadados que determinam se está pronto para publicação. E dessa forma rascunhos são excluídos do processamento.&lt;/p&gt;
+
+&lt;h3 id=&quot;usando-templates-no-obsidian&quot;&gt;Usando Templates no Obsidian&lt;/h3&gt;
+
+&lt;p&gt;Para padronizar meus posts no blog, uso &lt;strong&gt;templates&lt;/strong&gt; no Obsidian. Eles ajudam a manter a consistência entre os posts e aceleram o processo de escrita. Sempre que quero começar um novo post, primeiro crio uma &lt;a href=&quot;https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Planning%20-%20Template.md&quot;&gt;nota de planejamento&lt;/a&gt; com ideias e referências. Depois, crio uma &lt;a href=&quot;https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Text%20-%20Template.md?plain=1&quot;&gt;nota do post&lt;/a&gt;, que contém o texto completo e os metadados do post.&lt;/p&gt;
+
+&lt;p&gt;Usando o plugin &lt;a href=&quot;https://blacksmithgu.github.io/obsidian-dataview/&quot;&gt;Dataview&lt;/a&gt;, consigo &lt;strong&gt;consultar e exibir conteúdo dinamicamente&lt;/strong&gt; com base nos metadados, rastrear posts em diferentes estágios de conclusão, identificar traduções ausentes e visualizar notas relacionadas.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-multiple-languages-plugin&quot;&gt;&lt;strong&gt;Jekyll-Multiple-Languages-Plugin&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;O plugin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-multiple-languages-plugin&lt;/code&gt; me ajuda a estruturar o conteúdo em vários idiomas, criando versões diferentes para cada post. Aqui está como funciona:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Meu blog suporta &lt;strong&gt;inglês, português e francês&lt;/strong&gt;, configurados no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;na&quot;&gt;languages&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
+   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pt&lt;/span&gt;
+   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;fr&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;default_lang&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cada idioma tem seu próprio diretório dentro de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_i18n/&lt;/code&gt;, por exemplo:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  _i18n/en/_posts/2025-02-01-my-post.md
+  _i18n/pt/_posts/2025-02-01-meu-post.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;O plugin gera automaticamente URLs específicas para cada idioma:&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  https://adrianogil.github.io/blog/en/2025/02/my-post/
+  https://adrianogil.github.io/blog/pt/2025/02/meu-post/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Os usuários podem alternar entre idiomas usando um &lt;strong&gt;seletor de idioma&lt;/strong&gt; na interface do blog.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;automatizando-o-processamento-dos-posts-com-python&quot;&gt;&lt;strong&gt;Automatizando o Processamento dos Posts com Python&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Copiar arquivos Markdown, gerenciar imagens e lidar com metadados manualmente pode ser trabalhoso. Para facilitar meu fluxo de trabalho, uso um script Python que automatiza as seguintes tarefas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Extrai os posts do meu &lt;strong&gt;vault do Obsidian&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Copia e processa imagens.&lt;/li&gt;
+  &lt;li&gt;Formata metadados para o &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Move o post final para o repositório do meu blog no &lt;a href=&quot;https://docs.github.com/en/pages/quickstart&quot;&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;extraindo-notas&quot;&gt;&lt;strong&gt;Extraindo Notas&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;O script primeiro busca notas marcadas com uma tag específica (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GilLabs/posts/text&lt;/code&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;notes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_notes_from_index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target_tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GilLabs/posts/text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as_obsidian_notes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;notes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;note&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;note&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notes&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;note&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;draft&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Isso garante que apenas os posts prontos para serem publicados sejam processados.&lt;/p&gt;
+
+&lt;h4 id=&quot;gerando-o-arquivo-do-blog-no-jekyll&quot;&gt;&lt;strong&gt;Gerando o Arquivo do Blog no Jekyll&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Cada post é formatado na estrutura &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; do Jekyll com a &lt;strong&gt;data, idioma e categorias&lt;/strong&gt; corretas. Metadados como &lt;strong&gt;título, layout e categorias&lt;/strong&gt; são preservados.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Markdown&quot;&gt;---
+categories: git
+date: &apos;2025-02-01 16:41:00 &apos;
+lang: en
+lang-ref: intro-git
+layout: post
+title: Primeiros Passos com Git
+updated: 2025-02-01T16:41
+---
+## Introdução
+Olá! Muitas vezes me vejo explicando Git do zero,...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;4-publicando-o-blog&quot;&gt;&lt;strong&gt;4. Publicando o Blog&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Depois que o script atualiza os arquivos HTML no meu projeto Jekyll, eu simplesmente:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Compilo o site&lt;/strong&gt; com:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://adrianogil.github.io/blog/2025/02/intro-git/&quot;&gt;Envio as mudanças&lt;/a&gt; para o GitHub Pages&lt;/strong&gt; com:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;New blog post&quot;&lt;/span&gt;
+git push origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Em poucos minutos, meu blog está no ar!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Primeiros Passos com Git</title>
