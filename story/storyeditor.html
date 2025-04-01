@@ -34,12 +34,17 @@
             <div id="story-title"></div>
             <div id="story-content"></div>
             <div id="choices-container"></div>
-            <div id="share-container">
-                <button id="share-button">Share Story</button>
-                <div id="share-url-container" style="display: none;">
-                    <input type="text" id="share-url" readonly>
-                    <button id="copy-url-button">Copy</button>
-                </div>
+
+            <!-- Put both buttons in one row -->
+            <div id="bottom-buttons">
+                <button id="share-button" class="story-action-button">Share Story</button>
+                <button id="reset-button" class="story-action-button">Reset Story</button>
+            </div>
+
+            <!-- The share URL container can remain below -->
+            <div id="share-url-container" style="display: none;">
+                <input type="text" id="share-url" readonly>
+                <button id="copy-url-button">Copy</button>
             </div>
         </div>
     </div>

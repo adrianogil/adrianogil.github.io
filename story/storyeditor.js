@@ -436,4 +436,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check for story in URL when page loads
     checkUrlForStory();
+
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', function() {
+    if (!storyData) {
+        errorMessage.textContent = 'No story loaded to reset.';
+        errorMessage.style.display = 'block';
+        return;
+    }
+    let startPassage = storyData.passages.find(p => p.name === "Start");
+    if (!startPassage && storyData.passages.length > 0) {
+        startPassage = storyData.passages[0];
+    }
+    if (startPassage) {
+        displayPassage(startPassage);
+        document.getElementById('story-section').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        errorMessage.textContent = 'No start passage found in the story.';
+        errorMessage.style.display = 'block';
+    }
+    });
 });
+

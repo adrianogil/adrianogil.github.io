@@ -204,6 +204,7 @@ h1 {
     display: flex;
     width: 100%;
     gap: 10px;
+    margin-top: 10px;
 }
 
 #share-url {
@@ -246,4 +247,49 @@ h1 {
     #share-url-container {
         flex-direction: column;
     }
+}
+
+/* A shared class for "Share" and "Reset" buttons */
+.action-button {
+    background-color: var(--secondary-color);
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/* Hover effect */
+.action-button:hover {
+    background-color: #00ffed;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Container for both Share and Reset buttons */
+#bottom-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; /* optional spacing above */
+}
+
+/* Match your existing button styling (like the "Load Story" button) */
+.story-action-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/* Hover effect to match your theme */
+.story-action-button:hover {
+    background-color: #7c4dff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
