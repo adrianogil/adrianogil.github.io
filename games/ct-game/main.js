@@ -36,6 +36,8 @@ import {
 const toolboxStrip = document.querySelector("#toolbox-strip");
 const toolboxPanel = document.querySelector("#toolbox");
 const programArea = document.querySelector("#program-area");
+const programPanel = document.querySelector(".program-panel");
+const programToggle = document.querySelector("#program-toggle");
 const playButton = document.querySelector(".play-button");
 const startScreen = document.querySelector("#start-screen");
 const levelButtons = document.querySelectorAll("[data-level]");
@@ -222,6 +224,15 @@ function resetProgram() {
   if (programArea) {
     programArea.replaceChildren();
   }
+}
+
+function setProgramCollapsed(isCollapsed) {
+  if (!programPanel || !programToggle) {
+    return;
+  }
+  programPanel.classList.toggle("is-collapsed", isCollapsed);
+  programToggle.setAttribute("aria-expanded", String(!isCollapsed));
+  programToggle.textContent = isCollapsed ? "Show" : "Hide";
 }
 
 let isRunning = false;
@@ -448,6 +459,13 @@ if (playButton) {
     } else {
       runProgram();
     }
+  });
+}
+
+if (programToggle) {
+  programToggle.addEventListener("click", () => {
+    const isCollapsed = programPanel?.classList.contains("is-collapsed");
+    setProgramCollapsed(!isCollapsed);
   });
 }
 
