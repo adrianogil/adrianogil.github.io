@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightbot ThreeJS Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="start-screen" id="start-screen" role="dialog" aria-modal="true">
+      <div class="start-card">
+        <p class="start-eyebrow">Lightbot WebGL</p>
+        <h1>Start the Mission</h1>
+        <p class="start-description">
+          Guide the bot across the grid, build a program, and light up each beacon.
+        </p>
+        <div class="level-buttons" role="group" aria-label="Choose a level">
+          <button class="level-button" type="button" data-level="1">Level 1</button>
+          <button class="level-button" type="button" data-level="2">Level 2</button>
+          <button class="level-button" type="button" data-level="3">Level 3</button>
+          <button class="level-button" type="button" data-level="4">Level 4</button>
+          <button class="level-button" type="button" data-level="5">Level 5</button>
+          <button class="level-button" type="button" data-level="6">Level 6</button>
+        </div>
+        <div class="start-actions">
+          <div class="player-status">
+            <p class="player-label">Player identity</p>
+            <div class="player-row">
+              <span id="current-player-name">No player selected</span>
+              <button class="control-button" id="identify-player" type="button">Identify player</button>
+            </div>
+          </div>
+          <button class="level-button analytics-button" id="analytics-button" type="button">
+            Learning Analytics
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="player-overlay" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <p class="start-eyebrow">Player Identity</p>
+        <h2>Identify player</h2>
+        <p class="modal-text" id="player-overlay-message">
+          Select an existing player or create a new profile.
+        </p>
+        <div class="player-list" id="player-list"></div>
+        <form class="player-form" id="player-form">
+          <label>
+            Player name
+            <input type="text" id="player-name" required placeholder="e.g. Alex" />
+          </label>
+          <label>
+            Nickname / ID (optional)
+            <input type="text" id="player-nickname" placeholder="e.g. A1" />
+          </label>
+          <button class="level-button" type="submit">Continue</button>
+        </form>
+        <button class="control-button secondary" type="button" id="close-player-overlay">Close</button>
+      </div>
+    </div>
+
+    <div class="analytics-screen" id="analytics-screen" role="dialog" aria-modal="true">
+      <div class="analytics-card">
+        <header class="analytics-header">
+          <div>
+            <p class="start-eyebrow">Learning Analytics</p>
+            <h2>Learning Analytics</h2>
+            <p class="analytics-subtitle">Track progress per player and level.</p>
+          </div>
+          <button class="control-button secondary" id="analytics-back" type="button">Back</button>
+        </header>
+        <div class="analytics-controls">
+          <label class="analytics-field">
+            Player
+            <select id="analytics-player-select"></select>
+          </label>
+          <div class="analytics-actions">
+            <button class="control-button" id="analytics-export" type="button">Export JSON</button>
+            <button class="control-button secondary" id="analytics-clear" type="button">Clear data for player</button>
+          </div>
+        </div>
+        <div class="analytics-summary" id="analytics-summary"></div>
+        <div class="analytics-charts" id="analytics-charts"></div>
+        <div class="analytics-body">
+          <section class="analytics-levels">
+            <h3>Levels</h3>
+            <div class="analytics-level-list" id="analytics-level-list"></div>
+          </section>
+          <section class="analytics-details" id="analytics-detail"></section>
+        </div>
+      </div>
+    </div>
+
+    <div id="app" class="lightbot-ui">
+      <div class="scene-pane">
+        <canvas id="scene"></canvas>
+        <div class="completion-overlay" id="completion-overlay" role="dialog" aria-modal="true">
+          <div class="completion-card">
+            <p class="completion-title">All beacons lit!</p>
+            <p class="completion-text">
+              You finished this level. Want to keep practicing here or pick another level?
+            </p>
+            <div class="completion-actions">
+              <button class="control-button" type="button" id="continue-level">Keep practicing</button>
+              <button class="control-button secondary" type="button" id="choose-level">
+                Choose another level
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="ui-overlay">
+          <button class="play-button" type="button" aria-label="Run program">
+            <img src="assets/play_button.png" alt="Play" />
+          </button>
+          <div class="control-buttons" aria-label="Game controls">
+            <button class="control-button" id="reset-button" type="button">Reset</button>
+            <button class="control-button secondary" id="back-button" type="button">Main Menu</button>
+          </div>
+          <section class="program-panel">
+            <h2>Program</h2>
+            <ol id="program-area" class="program-area" data-drop="program"></ol>
+          </section>
+        </div>
+      </div>
+      <section class="toolbox-panel" id="toolbox" data-drop="toolbox">
+        <div class="toolbox-strip" id="toolbox-strip"></div>
+        <p class="toolbox-hint">Click or drag commands to build a program.</p>
+      </section>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
