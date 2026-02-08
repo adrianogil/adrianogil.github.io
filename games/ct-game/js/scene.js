@@ -49,6 +49,7 @@ const lightTilesByPosition = new Map();
 let player = null;
 let currentMap = null;
 let playerState = null;
+let ghostColor = "#ff5b7f";
 const tileHeight = 1;
 let maxMapHeight = 0;
 let completionTimer = null;
@@ -213,6 +214,7 @@ function buildPacmanGhost(params) {
   bodyMesh.castShadow = true;
   bodyMesh.receiveShadow = true;
   group.add(bodyMesh);
+  group.userData.bodyMesh = bodyMesh;
 
   const eyeRadius = params.radius * 0.2;
   const pupilRadius = eyeRadius * 0.4;
@@ -258,6 +260,17 @@ function buildPacmanGhost(params) {
   };
 
   return group;
+}
+
+export function setGhostColor(color) {
+  if (!color) {
+    return;
+  }
+  ghostColor = color;
+  if (player?.userData?.bodyMesh) {
+    player.userData.bodyMesh.material.color.set(color);
+    player.userData.bodyMesh.material.emissive.set(color);
+  }
 }
 
 function rotationForDirection(direction) {
@@ -430,7 +443,7 @@ function generateHeightMap(heightMapMatrix) {
           height: 1.15,
           waveAmplitude: 0.08,
           waveCount: 4,
-          bodyColor: "#ff5b7f",
+          bodyColor: ghostColor,
         };
         player = buildPacmanGhost(ghostParams);
         player.scale.setScalar(0.65);
@@ -504,6 +517,7 @@ export async function loadMap(mapPath) {
   const response = await fetch(mapPath);
   const mapData = await response.json();
   generateHeightMap(mapData.map);
+  return mapData;
 }
 
 export function startCameraIntro() {
@@ -573,7 +587,7 @@ export function animate() {
 }
 
 const executionDelay = 400;
-const movementDuration = 900;
+const movementDuration = 800;
 let runToken = 0;
 
 export function getRunToken() {

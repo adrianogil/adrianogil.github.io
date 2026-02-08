@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lightbot ThreeJS Prototype</title>
+    <title>GhostBot ThreeJS Prototype</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="importmap">
       {
@@ -17,29 +17,47 @@
   <body>
     <div class="start-screen" id="start-screen" role="dialog" aria-modal="true">
       <div class="start-card">
-        <p class="start-eyebrow">Lightbot WebGL</p>
-        <h1>Start the Mission</h1>
-        <p class="start-description">
+        <img class="start-title-image" src="assets/ghost_bot_title.webp" alt="GhostBot title logo" />
+        <p class="start-eyebrow" data-i18n="start.eyebrow"></p>
+        <h1 data-i18n="start.title">Start the Mission</h1>
+        <p class="start-description" data-i18n="start.description">
           Guide the bot across the grid, build a program, and light up each beacon.
         </p>
-        <div class="level-buttons" role="group" aria-label="Choose a level">
-          <button class="level-button" type="button" data-level="1">Level 1</button>
-          <button class="level-button" type="button" data-level="2">Level 2</button>
-          <button class="level-button" type="button" data-level="3">Level 3</button>
-          <button class="level-button" type="button" data-level="4">Level 4</button>
-          <button class="level-button" type="button" data-level="5">Level 5</button>
-          <button class="level-button" type="button" data-level="6">Level 6</button>
+        <div class="player-status">
+          <p class="player-label" data-i18n="start.player.label">Player identity</p>
+          <div class="player-row">
+            <span id="current-player-name" data-i18n="start.player.none">No player selected</span>
+            <button class="control-button" id="identify-player" type="button" data-i18n="start.player.identify">
+              Identify player
+            </button>
+          </div>
+        </div>
+        <div class="start-mode-actions" role="group" aria-label="Choose how to play">
+          <button class="level-button" id="play-mode" type="button" data-i18n="start.play">Play</button>
+          <button class="control-button secondary" id="select-mode" type="button" data-i18n="start.select">
+            Select level
+          </button>
+        </div>
+        <div class="level-selection is-hidden" id="level-selection">
+          <p class="mode-hint" id="mode-hint">Choose how you want to play to see the levels.</p>
+          <div class="level-buttons" role="group" aria-label="Choose a level">
+            <button class="level-button" type="button" data-level="1">Level 1</button>
+            <button class="level-button" type="button" data-level="2">Level 2</button>
+            <button class="level-button" type="button" data-level="3">Level 3</button>
+            <button class="level-button" type="button" data-level="4">Level 4</button>
+            <button class="level-button" type="button" data-level="5">Level 5</button>
+            <button class="level-button" type="button" data-level="6">Level 6</button>
+          </div>
         </div>
         <div class="start-actions">
-          <div class="player-status">
-            <p class="player-label">Player identity</p>
-            <div class="player-row">
-              <span id="current-player-name">No player selected</span>
-              <button class="control-button" id="identify-player" type="button">Identify player</button>
-            </div>
-          </div>
           <button class="level-button analytics-button" id="analytics-button" type="button">
-            Learning Analytics
+            <span data-i18n="start.actions.analytics">Learning Analytics</span>
+          </button>
+          <button class="control-button secondary" id="settings-button" type="button" data-open-settings>
+            <span data-i18n="start.actions.settings">Settings</span>
+          </button>
+          <button class="control-button secondary" id="about-button" type="button">
+            <span data-i18n="start.actions.about">About</span>
           </button>
         </div>
       </div>
@@ -47,24 +65,33 @@
 
     <div class="modal-overlay" id="player-overlay" role="dialog" aria-modal="true">
       <div class="modal-card">
-        <p class="start-eyebrow">Player Identity</p>
-        <h2>Identify player</h2>
-        <p class="modal-text" id="player-overlay-message">
+        <p class="start-eyebrow" data-i18n="playerOverlay.eyebrow">Player Identity</p>
+        <h2 data-i18n="playerOverlay.title">Identify player</h2>
+        <p class="modal-text" id="player-overlay-message" data-i18n="playerOverlay.message">
           Select an existing player or create a new profile.
         </p>
         <div class="player-list" id="player-list"></div>
         <form class="player-form" id="player-form">
           <label>
-            Player name
-            <input type="text" id="player-name" required placeholder="e.g. Alex" />
+            <span data-i18n="playerOverlay.nameLabel">Player name</span>
+            <input
+              type="text"
+              id="player-name"
+              required
+              placeholder="e.g. Alex"
+              data-i18n-placeholder="playerOverlay.namePlaceholder"
+            />
           </label>
-          <label>
-            Nickname / ID (optional)
-            <input type="text" id="player-nickname" placeholder="e.g. A1" />
-          </label>
-          <button class="level-button" type="submit">Continue</button>
+          <button class="level-button" type="submit" data-i18n="playerOverlay.continue">Continue</button>
         </form>
-        <button class="control-button secondary" type="button" id="close-player-overlay">Close</button>
+        <button
+          class="control-button secondary"
+          type="button"
+          id="close-player-overlay"
+          data-i18n="playerOverlay.close"
+        >
+          Close
+        </button>
       </div>
     </div>
 
@@ -72,31 +99,104 @@
       <div class="analytics-card">
         <header class="analytics-header">
           <div>
-            <p class="start-eyebrow">Learning Analytics</p>
-            <h2>Learning Analytics</h2>
-            <p class="analytics-subtitle">Track progress per player and level.</p>
+            <p class="start-eyebrow" data-i18n="analytics.title">Learning Analytics</p>
+            <h2 data-i18n="analytics.title">Learning Analytics</h2>
+            <p class="analytics-subtitle" data-i18n="analytics.subtitle">Track progress per player and level.</p>
           </div>
-          <button class="control-button secondary" id="analytics-back" type="button">Back</button>
+          <button class="control-button secondary" id="analytics-back" type="button" data-i18n="analytics.back">
+            Back
+          </button>
         </header>
         <div class="analytics-controls">
           <label class="analytics-field">
-            Player
+            <span data-i18n="analytics.playerLabel">Player</span>
             <select id="analytics-player-select"></select>
           </label>
           <div class="analytics-actions">
-            <button class="control-button" id="analytics-export" type="button">Export JSON</button>
-            <button class="control-button secondary" id="analytics-clear" type="button">Clear data for player</button>
+            <button class="control-button" id="analytics-export" type="button" data-i18n="analytics.export">
+              Export JSON
+            </button>
+            <button class="control-button secondary" id="analytics-clear" type="button" data-i18n="analytics.clear">
+              Clear data for player
+            </button>
           </div>
         </div>
         <div class="analytics-summary" id="analytics-summary"></div>
         <div class="analytics-charts" id="analytics-charts"></div>
         <div class="analytics-body">
           <section class="analytics-levels">
-            <h3>Levels</h3>
+            <h3 data-i18n="analytics.levelsTitle">Levels</h3>
             <div class="analytics-level-list" id="analytics-level-list"></div>
           </section>
           <section class="analytics-details" id="analytics-detail"></section>
         </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="settings-overlay" role="dialog" aria-modal="true">
+      <div class="modal-card settings-card">
+        <p class="start-eyebrow" data-i18n="settings.eyebrow">Settings</p>
+        <h2 data-i18n="settings.title">Customize your experience</h2>
+        <form class="settings-form" id="settings-form">
+          <label class="settings-field">
+            <span data-i18n="settings.ghostColor">Ghost color</span>
+            <input type="color" id="ghost-color" name="ghostColor" value="#ff5b7f" />
+          </label>
+          <label class="settings-field">
+            <span data-i18n="settings.language">Language</span>
+            <select id="language-select" name="language"></select>
+          </label>
+          <label class="settings-field settings-toggle">
+            <span data-i18n="settings.compactCommands">Compact command view</span>
+            <input type="checkbox" id="compact-commands" name="compactCommands" />
+          </label>
+        </form>
+        <button class="control-button secondary" type="button" id="close-settings" data-i18n="settings.close">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="about-overlay" role="dialog" aria-modal="true">
+      <div class="modal-card about-card">
+        <p class="start-eyebrow" data-i18n="about.eyebrow">About</p>
+        <h2 data-i18n="about.title">GhostBot</h2>
+        <p class="modal-text" data-i18n="about.descriptionPrimary">
+          A puzzle game inspired by Lightbot where you program a ghost to light beacons.
+        </p>
+        <p class="modal-text" data-i18n="about.descriptionSecondary">
+          Built to explore learning analytics in computational thinking games.
+        </p>
+        <div class="about-details">
+          <h3 class="about-details-title" data-i18n="about.detailsTitle">Details</h3>
+          <dl class="about-details-list">
+            <dt data-i18n="about.versionLabel">Version</dt>
+            <dd>v0.1.0</dd>
+            <dt data-i18n="about.buildLabel">Build</dt>
+            <dd>2026-02-08</dd>
+          </dl>
+        </div>
+        <p class="modal-text about-line">
+          <span data-i18n="about.createdBy">Created by</span>
+          <a href="https://adrianogil.github.io/" target="_blank" rel="noopener">Adriano Gil</a>.
+        </p>
+        <p class="modal-text about-line">
+          <span data-i18n="about.moreInfo">More information, please take a look at our previous paper at</span>
+          <a
+            href="https://sol.sbc.org.br/index.php/sbgames/article/view/32385"
+            target="_blank"
+            rel="noopener"
+          >
+            SBGames 2024 paper
+          </a>
+          .
+        </p>
+        <p class="about-disclaimer" data-i18n="about.disclaimer">
+          This is a research prototype. Analytics are stored locally in your browser.
+        </p>
+        <button class="control-button secondary" type="button" id="close-about" data-i18n="about.close">
+          Back
+        </button>
       </div>
     </div>
 
@@ -105,31 +205,41 @@
         <canvas id="scene"></canvas>
         <div class="completion-overlay" id="completion-overlay" role="dialog" aria-modal="true">
           <div class="completion-card">
-            <p class="completion-title">All beacons lit!</p>
+            <p class="completion-title" data-i18n="completion.title">All beacons lit!</p>
             <p class="completion-text">
-              You finished this level. Want to keep practicing here or pick another level?
+              <span data-i18n="completion.text">
+                You finished this level. Want to keep practicing here or pick another level?
+              </span>
             </p>
             <div class="completion-actions">
-              <button class="control-button" type="button" id="continue-level">Keep practicing</button>
+              <button class="control-button" type="button" id="next-level">Next level</button>
+              <button class="control-button" type="button" id="continue-level" data-i18n="completion.keepPracticing">
+                Keep practicing
+              </button>
               <button class="control-button secondary" type="button" id="choose-level">
-                Choose another level
+                <span data-i18n="completion.chooseLevel">Choose another level</span>
               </button>
             </div>
           </div>
         </div>
         <div class="ui-overlay">
-          <button class="play-button" type="button" aria-label="Run program">
-            <img src="assets/play_button.png" alt="Play" />
+          <button class="play-button" type="button" aria-label="Run program" data-i18n-aria-label="controls.runProgram">
+            <img src="assets/play_button.png" alt="Play" data-i18n-alt="controls.runProgram" />
           </button>
           <div class="control-buttons" aria-label="Game controls">
-            <button class="control-button" id="reset-button" type="button">Reset</button>
-            <button class="control-button secondary" id="back-button" type="button">Main Menu</button>
+            <button class="control-button" id="reset-button" type="button" data-i18n="controls.reset">Reset</button>
+            <button class="control-button secondary" id="back-button" type="button" data-i18n="controls.mainMenu">
+              Main Menu
+            </button>
+            <button class="control-button secondary" id="settings-open-game" type="button" data-open-settings>
+              <span data-i18n="controls.settings">Settings</span>
+            </button>
           </div>
           <section class="program-panel">
             <div class="program-header">
-              <h2>Program</h2>
+              <h2 data-i18n="program.title">Program</h2>
               <button class="program-toggle" id="program-toggle" type="button" aria-expanded="true">
-                Hide
+                <span data-i18n="program.hide">Hide</span>
               </button>
             </div>
             <ol id="program-area" class="program-area" data-drop="program"></ol>
@@ -137,8 +247,9 @@
         </div>
       </div>
       <section class="toolbox-panel" id="toolbox" data-drop="toolbox">
+        <div class="level-indicator" id="level-indicator" aria-live="polite"></div>
         <div class="toolbox-strip" id="toolbox-strip"></div>
-        <p class="toolbox-hint">Click or drag commands to build a program.</p>
+        <p class="toolbox-hint" data-i18n="toolbox.hint">Click or drag commands to build a program.</p>
       </section>
     </div>
     <script type="module" src="main.js"></script>

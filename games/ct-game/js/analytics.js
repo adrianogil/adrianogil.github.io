@@ -77,7 +77,7 @@ export function getPlayerDisplayName(player) {
   if (!player) {
     return "Unknown";
   }
-  return player.nickname ? `${player.name} (${player.nickname})` : player.name;
+  return player.name;
 }
 
 function createMetricsSnapshot() {

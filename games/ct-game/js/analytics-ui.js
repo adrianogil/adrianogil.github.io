@@ -8,12 +8,12 @@ import {
   saveAnalyticsState,
   summarizePlayerSessions,
 } from "./analytics.js";
+import { t } from "./i18n.js";
 
 const playerOverlay = document.querySelector("#player-overlay");
 const playerList = document.querySelector("#player-list");
 const playerForm = document.querySelector("#player-form");
 const playerNameInput = document.querySelector("#player-name");
-const playerNicknameInput = document.querySelector("#player-nickname");
 const identifyPlayerButton = document.querySelector("#identify-player");
 const closePlayerOverlayButton = document.querySelector("#close-player-overlay");
 const currentPlayerName = document.querySelector("#current-player-name");
@@ -37,7 +37,7 @@ export function renderPlayerList() {
   const entries = Object.values(analyticsState.players);
   if (!entries.length) {
     const empty = document.createElement("p");
-    empty.textContent = "No players yet. Create your first profile below.";
+    empty.textContent = t("playerOverlay.empty");
     playerList.appendChild(empty);
     return;
   }
@@ -52,7 +52,7 @@ export function renderPlayerList() {
     header.appendChild(name);
 
     const meta = document.createElement("span");
-    meta.textContent = `Created ${formatDateTime(playerEntry.createdAt)}`;
+    meta.textContent = t("playerOverlay.createdAt", { date: formatDateTime(playerEntry.createdAt) });
     meta.style.fontSize = "0.75rem";
     meta.style.color = "rgba(255,255,255,0.7)";
 
@@ -61,7 +61,8 @@ export function renderPlayerList() {
     const selectButton = document.createElement("button");
     selectButton.type = "button";
     selectButton.className = "control-button";
-    selectButton.textContent = analyticsState.currentPlayerId === playerEntry.id ? "Selected" : "Select";
+    selectButton.textContent =
+      analyticsState.currentPlayerId === playerEntry.id ? t("playerOverlay.selected") : t("playerOverlay.select");
     selectButton.disabled = analyticsState.currentPlayerId === playerEntry.id;
     selectButton.addEventListener("click", () => {
       analyticsState.currentPlayerId = playerEntry.id;
@@ -75,9 +76,11 @@ export function renderPlayerList() {
     const deleteButton = document.createElement("button");
     deleteButton.type = "button";
     deleteButton.className = "control-button secondary";
-    deleteButton.textContent = "Delete";
+    deleteButton.textContent = t("playerOverlay.delete");
     deleteButton.addEventListener("click", () => {
-      const confirmed = window.confirm(`Delete ${getPlayerDisplayName(playerEntry)}? This removes their sessions.`);
+      const confirmed = window.confirm(
+        t("playerOverlay.deleteConfirm", { name: getPlayerDisplayName(playerEntry) }),
+      );
       if (!confirmed) {
         return;
       }
@@ -117,11 +120,16 @@ export function closePlayerOverlay() {
 export function updatePlayerStatus() {
   const player = analyticsState.currentPlayerId ? analyticsState.players[analyticsState.currentPlayerId] : null;
   if (currentPlayerName) {
-    currentPlayerName.textContent = player ? getPlayerDisplayName(player) : "No player selected";
+    currentPlayerName.textContent = player ? getPlayerDisplayName(player) : t("start.player.none");
   }
   if (identifyPlayerButton) {
-    identifyPlayerButton.textContent = player ? "Switch player" : "Identify player";
+    identifyPlayerButton.textContent = player ? t("start.player.switch") : t("start.player.identify");
   }
+  document.dispatchEvent(
+    new CustomEvent("lightbot:player-change", {
+      detail: { playerId: analyticsState.currentPlayerId },
+    }),
+  );
 }
 
 function openAnalyticsScreen() {
@@ -145,11 +153,11 @@ export function renderAnalyticsScreen() {
   const players = Object.values(analyticsState.players);
   if (!players.length) {
     const option = document.createElement("option");
-    option.textContent = "No players";
+    option.textContent = t("analytics.noPlayersOption");
     option.value = "";
     analyticsPlayerSelect.appendChild(option);
-    analyticsSummary.innerHTML = "<p>Create a player to see analytics.</p>";
-    analyticsCharts.innerHTML = "<p>Add sessions to see charts.</p>";
+    analyticsSummary.innerHTML = `<p>${t("analytics.noPlayersPrompt")}</p>`;
+    analyticsCharts.innerHTML = `<p>${t("analytics.noSessionsCharts")}</p>`;
     analyticsLevelList.replaceChildren();
     analyticsDetail.replaceChildren();
     return;
@@ -169,25 +177,25 @@ export function renderAnalyticsScreen() {
     : 0;
 
   analyticsSummary.innerHTML = `
-    <div class="summary-card"><span>Total sessions</span><strong>${summary.overall.sessions}</strong></div>
-    <div class="summary-card"><span>Completion rate</span><strong>${formatPercent(completionRate)}</strong></div>
-    <div class="summary-card"><span>Avg time</span><strong>${formatDuration(summary.overall.avgTotalTimeMs)}</strong></div>
-    <div class="summary-card"><span>Avg attempts</span><strong>${summary.overall.avgAttempts.toFixed(1)}</strong></div>
+    <div class="summary-card"><span>${t("analytics.summary.totalSessions")}</span><strong>${summary.overall.sessions}</strong></div>
+    <div class="summary-card"><span>${t("analytics.summary.completionRate")}</span><strong>${formatPercent(completionRate)}</strong></div>
+    <div class="summary-card"><span>${t("analytics.summary.avgTime")}</span><strong>${formatDuration(summary.overall.avgTotalTimeMs)}</strong></div>
+    <div class="summary-card"><span>${t("analytics.summary.avgAttempts")}</span><strong>${summary.overall.avgAttempts.toFixed(1)}</strong></div>
   `;
   renderAnalyticsCharts(summary);
 
   analyticsLevelList.replaceChildren();
   const header = document.createElement("div");
   header.className = "analytics-level-row header";
-  header.innerHTML = "<span>Level</span><span>Games</span><span>%</span><span>Avg time</span><span>Avg attempts</span>";
+  header.innerHTML = `<span>${t("analytics.levelHeader.level")}</span><span>${t("analytics.levelHeader.games")}</span><span>${t("analytics.levelHeader.percent")}</span><span>${t("analytics.levelHeader.avgTime")}</span><span>${t("analytics.levelHeader.avgAttempts")}</span>`;
   analyticsLevelList.appendChild(header);
 
   if (!summary.levelStats.length) {
     const empty = document.createElement("p");
     empty.className = "analytics-empty";
-    empty.textContent = "No sessions yet for this player.";
+    empty.textContent = t("analytics.noSessions");
     analyticsLevelList.appendChild(empty);
-    analyticsDetail.innerHTML = "<p class=\"analytics-empty\">Select a level once sessions are available.</p>";
+    analyticsDetail.innerHTML = `<p class="analytics-empty">${t("analytics.selectLevelPrompt")}</p>`;
     return;
   }
 
@@ -225,14 +233,14 @@ function renderAnalyticsCharts(summary) {
   }
 
   if (!summary.levelStats.length) {
-    analyticsCharts.innerHTML = "<p>No level data yet. Complete a level to populate charts.</p>";
+    analyticsCharts.innerHTML = `<p>${t("analytics.noLevelData")}</p>`;
     return;
   }
 
   const maxSessions = Math.max(...summary.levelStats.map((level) => level.totalSessions), 1);
   analyticsCharts.innerHTML = `
     <div class="chart-card">
-      <h4>Sessions by level</h4>
+      <h4>${t("analytics.chart.sessionsByLevel")}</h4>
       <div class="chart-list">
         ${summary.levelStats
           .map(
@@ -250,7 +258,7 @@ function renderAnalyticsCharts(summary) {
       </div>
     </div>
     <div class="chart-card">
-      <h4>Completion rate</h4>
+      <h4>${t("analytics.chart.completionRate")}</h4>
       <div class="chart-list">
         ${summary.levelStats
           .map(
@@ -289,23 +297,23 @@ function renderLevelDetail(levelStat) {
 
   analyticsDetail.innerHTML = `
     <div class="analytics-detail-section">
-      <h3>${levelStat.label} details</h3>
-      <p>Planning ratio (edits per attempt): ${levelStat.planningRatio.toFixed(2)}</p>
-      <p>Avg execution time: ${formatDuration(levelStat.avgExecutionTimeMs)}</p>
-      <p>Avg editing time: ${formatDuration(levelStat.avgEditingTimeMs)}</p>
+      <h3>${t("analytics.detail.heading", { level: levelStat.label })}</h3>
+      <p>${t("analytics.detail.planningRatio", { ratio: levelStat.planningRatio.toFixed(2) })}</p>
+      <p>${t("analytics.detail.avgExecutionTime", { time: formatDuration(levelStat.avgExecutionTimeMs) })}</p>
+      <p>${t("analytics.detail.avgEditingTime", { time: formatDuration(levelStat.avgEditingTimeMs) })}</p>
     </div>
     <div class="analytics-detail-section">
-      <h4>Top mistakes</h4>
+      <h4>${t("analytics.detail.topMistakes")}</h4>
       <div class="bar-list" id="mistake-bars"></div>
     </div>
     <div class="analytics-detail-section">
-      <h4>Failure reasons</h4>
+      <h4>${t("analytics.detail.failureReasons")}</h4>
       <div class="bar-list" id="reason-bars"></div>
     </div>
     <div class="analytics-detail-section">
-      <h4>Recent sessions</h4>
+      <h4>${t("analytics.detail.recentSessions")}</h4>
       <div class="session-list" id="session-list"></div>
-      <div class="session-detail" id="session-detail">Select a session to see details.</div>
+      <div class="session-detail" id="session-detail">${t("analytics.detail.selectSession")}</div>
     </div>
   `;
 
@@ -323,7 +331,7 @@ function renderLevelDetail(levelStat) {
     `,
           )
           .join("")
-      : "<p>No mistakes logged yet.</p>";
+      : `<p>${t("analytics.detail.noMistakes")}</p>`;
   }
 
   const reasonBars = analyticsDetail.querySelector("#reason-bars");
@@ -340,7 +348,7 @@ function renderLevelDetail(levelStat) {
     `,
           )
           .join("")
-      : "<p>No failures recorded.</p>";
+      : `<p>${t("analytics.detail.noFailures")}</p>`;
   }
 
   const sessionList = analyticsDetail.querySelector("#session-list");
@@ -351,7 +359,7 @@ function renderLevelDetail(levelStat) {
 
   sessionList.replaceChildren();
   if (!recentSessions.length) {
-    sessionList.textContent = "No sessions yet.";
+    sessionList.textContent = t("analytics.detail.noSessions");
     return;
   }
 
@@ -362,9 +370,11 @@ function renderLevelDetail(levelStat) {
     row.innerHTML = `
       <strong>${formatDateTime(session.startedAt)}</strong>
       <div class="session-meta">
-        <span>Attempts: ${session.metrics.runAttempts}</span>
-        <span>Total time: ${formatDuration(session.metrics.totalTimeMs)}</span>
-        <span>Completed: ${session.endReason === "completed" ? "Yes" : "No"}</span>
+        <span>${t("analytics.detail.sessionMeta.attempts", { count: session.metrics.runAttempts })}</span>
+        <span>${t("analytics.detail.sessionMeta.totalTime", { time: formatDuration(session.metrics.totalTimeMs) })}</span>
+        <span>${t("analytics.detail.sessionMeta.completed", {
+          status: session.endReason === "completed" ? t("analytics.detail.sessionMeta.yes") : t("analytics.detail.sessionMeta.no"),
+        })}</span>
       </div>
     `;
     row.addEventListener("click", () => {
@@ -390,23 +400,26 @@ function renderSessionDetail(session) {
   const events = session.events || [];
 
   sessionDetail.innerHTML = `
-    <strong>Session ${session.id}</strong>
+    <strong>${t("analytics.detail.sessionTitle", { id: session.id })}</strong>
     <div class="session-meta">
-      <span>Editing time: ${formatDuration(session.metrics.editingTimeMs)}</span>
-      <span>Execution time: ${formatDuration(session.metrics.executionTimeMs)}</span>
-      <span>Successful attempt: ${session.metrics.successfulAttempt ?? "-"}</span>
+      <span>${t("analytics.detail.editingTime", { time: formatDuration(session.metrics.editingTimeMs) })}</span>
+      <span>${t("analytics.detail.executionTime", { time: formatDuration(session.metrics.executionTimeMs) })}</span>
+      <span>${t("analytics.detail.successfulAttempt", { attempt: session.metrics.successfulAttempt ?? "-" })}</span>
     </div>
     <div>
       <div class="program-chip-list">
         ${programBlocks.length ? programBlocks.map((block) => `<span class="program-chip">${block}</span>`).join("") :
-          "<span>No blocks saved.</span>"}
+          `<span>${t("analytics.detail.noBlocks")}</span>`}
       </div>
     </div>
     <div>
-      <p>Coverage: ${coverage.numUniqueTilesVisited || 0} unique tiles, ${coverage.numRevisits || 0} revisits.</p>
+      <p>${t("analytics.detail.coverage", {
+        unique: coverage.numUniqueTilesVisited || 0,
+        revisits: coverage.numRevisits || 0,
+      })}</p>
     </div>
     <details>
-      <summary>Event log (${events.length} events)</summary>
+      <summary>${t("analytics.detail.eventLog", { count: events.length })}</summary>
       <pre>${JSON.stringify(events, null, 2)}</pre>
     </details>
   `;
@@ -440,7 +453,9 @@ function clearPlayerData() {
     return;
   }
   const player = analyticsState.players[playerId];
-  const confirmed = window.confirm(`Clear analytics for ${getPlayerDisplayName(player)}? This cannot be undone.`);
+  const confirmed = window.confirm(
+    t("analytics.clearConfirm", { name: getPlayerDisplayName(player) }),
+  );
   if (!confirmed) {
     return;
   }
@@ -477,12 +492,10 @@ export function initAnalyticsUI() {
       if (!name) {
         return;
       }
-      const nickname = playerNicknameInput?.value.trim();
       const id = createId("p");
       analyticsState.players[id] = {
         id,
         name,
-        nickname: nickname || null,
         createdAt: Date.now(),
       };
       analyticsState.currentPlayerId = id;
