@@ -1,0 +1,10 @@
+{
+  "name": "solvable-jump-up",
+  "levelData": {
+    "map": [["1SR", "2L"]]
+  },
+  "expected": {
+    "solvable": true,
+    "minCommands": 2
+  }
+}

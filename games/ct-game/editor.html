@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightbot Level Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+  <body class="editor-page">
+    <main class="editor-shell">
+      <header class="editor-toolbar" role="toolbar" aria-label="Editor toolbar">
+        <button type="button" id="toggle-sidebar" class="control-button secondary" aria-expanded="true" aria-controls="editor-sidebar">☰</button>
+        <button type="button" id="new-level" class="control-button">New</button>
+        <button type="button" id="open-level" class="control-button secondary">Open</button>
+        <button type="button" id="save-level" class="control-button secondary">Save</button>
+        <button type="button" id="import-level" class="control-button secondary">Import</button>
+        <button type="button" id="export-level" class="control-button secondary">Export</button>
+        <button type="button" id="share-url" class="control-button secondary">Share URL</button>
+        <button type="button" id="play-level" class="control-button">Playtest</button>
+        <button type="button" id="evaluate-level" class="control-button secondary">Evaluate</button>
+        <button type="button" id="ac-generate" class="control-button secondary">Autocomplete</button>
+        <button type="button" id="undo-action" class="control-button secondary">Undo</button>
+        <button type="button" id="redo-action" class="control-button secondary">Redo</button>
+        <p id="current-level-meta" class="level-meta">Untitled level</p>
+        <p id="editor-status" class="editor-status info">Ready.</p>
+      </header>
+
+      <section class="editor-body">
+        <aside id="editor-sidebar" class="editor-sidebar">
+          <section class="editor-card">
+            <h1>GhostBot Editor</h1>
+            <p class="editor-hint">Scene-first workflow: choose a tool, paint in 2D/3D, inspect selected cell.</p>
+          </section>
+
+          <section class="editor-card">
+            <h2>Tools</h2>
+            <div id="tool-palette" class="tool-palette" role="radiogroup" aria-label="Editing tools">
+              <button type="button" class="tool-button" data-tool="select">Select</button>
+              <button type="button" class="tool-button" data-tool="paint">Paint</button>
+              <button type="button" class="tool-button" data-tool="erase">Erase</button>
+              <button type="button" class="tool-button" data-tool="light">Toggle Light</button>
+            </div>
+          </section>
+
+          <section class="editor-card cell-controls">
+            <h2>Inspector: <span id="selected-cell">-</span></h2>
+            <label><input type="checkbox" id="cell-enabled" /> Enabled</label>
+            <label>Height <input id="cell-height" type="number" min="1" max="9" value="1" /></label>
+            <label><input type="checkbox" id="cell-light" /> Light</label>
+            <label><input type="checkbox" id="cell-spawn" /> Spawn</label>
+            <label id="spawn-direction-row">Spawn direction
+              <select id="cell-direction">
+                <option value="U">U</option>
+                <option value="D">D</option>
+                <option value="L">L</option>
+                <option value="R">R</option>
+              </select>
+            </label>
+          </section>
+
+          <details class="editor-card" open>
+            <summary>Evaluate</summary>
+            <p id="evaluate-output" class="editor-status info">Not evaluated yet.</p>
+          </details>
+
+          <details class="editor-card">
+            <summary>JSON tools</summary>
+            <textarea id="editor-json" rows="8"></textarea>
+            <div class="editor-actions">
+              <button type="button" id="import-json" class="control-button">Apply JSON text</button>
+              <input id="json-file" type="file" accept="application/json" />
+            </div>
+          </details>
+
+          <details class="editor-card autocomplete-controls">
+            <summary>Advanced autocomplete</summary>
+            <label>Min commands <input id="ac-min-commands" type="number" min="0" placeholder="optional" /></label>
+            <label>Max commands <input id="ac-max-commands" type="number" min="0" placeholder="optional" /></label>
+            <fieldset class="autocomplete-command-group" id="ac-target-group">
+              <legend>Target commands</legend>
+              <label><input type="checkbox" data-ac-target-command="forward" /> forward</label>
+              <label><input type="checkbox" data-ac-target-command="turn-left" /> turn-left</label>
+              <label><input type="checkbox" data-ac-target-command="turn-right" /> turn-right</label>
+              <label><input type="checkbox" data-ac-target-command="jump" /> jump</label>
+              <label><input type="checkbox" data-ac-target-command="light" /> light</label>
+            </fieldset>
+            <fieldset class="autocomplete-command-group" id="ac-preferred-group">
+              <legend>Preferred commands</legend>
+              <label><input type="checkbox" data-ac-preferred-command="forward" /> forward</label>
+              <label><input type="checkbox" data-ac-preferred-command="turn-left" /> turn-left</label>
+              <label><input type="checkbox" data-ac-preferred-command="turn-right" /> turn-right</label>
+              <label><input type="checkbox" data-ac-preferred-command="jump" /> jump</label>
+              <label><input type="checkbox" data-ac-preferred-command="light" /> light</label>
+            </fieldset>
+            <label>Usage bounds JSON
+              <textarea id="ac-usage-bounds" rows="3" placeholder='{"jump":{"max":2}}'></textarea>
+            </label>
+            <p id="ac-meta" class="editor-status info">No autocomplete run yet.</p>
+            <div id="ac-candidates" class="autocomplete-candidates"></div>
+          </details>
+        </aside>
+
+        <section class="editor-main">
+          <section class="editor-scene-wrap">
+            <canvas id="scene"></canvas>
+          </section>
+          <section class="editor-grid-panel">
+            <header>
+              <h2>2D Grid</h2>
+              <p id="active-tool-label" class="editor-hint">Tool: Select</p>
+            </header>
+            <div id="editor-grid" class="editor-grid" aria-label="Editable map grid"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="new-level-modal" class="new-level-modal">
+      <form method="dialog" id="new-level-form" class="new-level-form">
+        <h2>New level</h2>
+        <p class="new-level-description">Pick a map size. Your bot will spawn in the middle on a flat grid.</p>
+        <div class="new-level-grid-fields">
+          <label>Rows <input id="grid-rows" name="grid-rows" type="number" min="1" max="20" value="5" required /></label>
+          <label>Cols <input id="grid-cols" name="grid-cols" type="number" min="1" max="20" value="5" required /></label>
+        </div>
+        <menu>
+          <button type="button" id="cancel-new-level" class="control-button secondary">Cancel</button>
+          <button type="submit" id="confirm-new-level" class="control-button">Create</button>
+        </menu>
+      </form>
+    </dialog>
+
+
+    <dialog id="open-level-modal" class="new-level-modal">
+      <form method="dialog" id="open-level-form" class="new-level-form">
+        <h2>Open level</h2>
+        <div id="open-level-list" class="saved-level-list"></div>
+        <p id="open-level-empty" class="editor-hint">No saved levels yet.</p>
+        <label>Rename selected
+          <input id="open-level-rename" type="text" placeholder="Level name" />
+        </label>
+        <menu>
+          <button type="button" id="delete-saved-level" class="control-button secondary">Delete</button>
+          <button type="button" id="rename-saved-level" class="control-button secondary">Rename</button>
+          <button type="button" id="cancel-open-level" class="control-button secondary">Cancel</button>
+          <button type="submit" id="confirm-open-level" class="control-button">Open</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog id="save-level-modal" class="new-level-modal">
+      <form method="dialog" id="save-level-form" class="new-level-form">
+        <h2>Save level</h2>
+        <label>Level name
+          <input id="save-level-name" type="text" placeholder="tutorial-01" required />
+        </label>
+        <menu>
+          <button type="button" id="cancel-save-level" class="control-button secondary">Cancel</button>
+          <button type="button" id="save-level-as" class="control-button secondary">Save as new</button>
+          <button type="submit" id="confirm-save-level" class="control-button">Save</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog id="import-level-modal" class="new-level-modal">
+      <form method="dialog" id="import-level-form" class="new-level-form">
+        <h2>Import JSON</h2>
+        <p class="editor-hint">Import from a file or apply JSON from the sidebar text area.</p>
+        <menu>
+          <button type="button" id="cancel-import-level" class="control-button secondary">Cancel</button>
+          <button type="button" id="import-level-file" class="control-button secondary">Choose file</button>
+          <button type="submit" id="import-level-text" class="control-button">Import text</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script type="module" src="./editor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "unsolvable-height-gap",
+  "levelData": {
+    "map": [["1SR", "3L"]]
+  },
+  "expected": {
+    "solvable": false,
+    "reason": "no-solution"
+  }
+}

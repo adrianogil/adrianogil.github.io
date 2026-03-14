@@ -1,0 +1,10 @@
+{
+  "name": "edge-no-light-target",
+  "levelData": {
+    "map": [["1SR", "1"]]
+  },
+  "expected": {
+    "solvable": false,
+    "reason": "no-light-target"
+  }
+}

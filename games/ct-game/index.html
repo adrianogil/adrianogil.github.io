@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhostBot ThreeJS Prototype</title>
     <link rel="stylesheet" href="styles.css" />
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-        }
-      }
-    </script>
-  </head>
+</head>
   <body>
     <div class="start-screen" id="start-screen" role="dialog" aria-modal="true">
       <div class="start-card">
@@ -24,7 +16,6 @@
           Guide the bot across the grid, build a program, and light up each beacon.
         </p>
         <div class="player-status">
-          <p class="player-label" data-i18n="start.player.label">Player identity</p>
           <div class="player-row">
             <span id="current-player-name" data-i18n="start.player.none">No player selected</span>
             <button class="control-button" id="identify-player" type="button" data-i18n="start.player.identify">
@@ -59,29 +50,26 @@
           <button class="control-button secondary" id="about-button" type="button">
             <span data-i18n="start.actions.about">About</span>
           </button>
+          <a class="control-button secondary" href="editor.html">Level editor</a>
         </div>
       </div>
     </div>
 
     <div class="modal-overlay" id="player-overlay" role="dialog" aria-modal="true">
       <div class="modal-card">
-        <p class="start-eyebrow" data-i18n="playerOverlay.eyebrow">Player Identity</p>
         <h2 data-i18n="playerOverlay.title">Identify player</h2>
         <p class="modal-text" id="player-overlay-message" data-i18n="playerOverlay.message">
           Select an existing player or create a new profile.
         </p>
         <div class="player-list" id="player-list"></div>
         <form class="player-form" id="player-form">
-          <label>
-            <span data-i18n="playerOverlay.nameLabel">Player name</span>
-            <input
-              type="text"
-              id="player-name"
-              required
-              placeholder="e.g. Alex"
-              data-i18n-placeholder="playerOverlay.namePlaceholder"
-            />
-          </label>
+          <input
+            type="text"
+            id="player-name"
+            required
+            placeholder="e.g. Alex"
+            data-i18n-placeholder="playerOverlay.namePlaceholder"
+          />
           <button class="level-button" type="submit" data-i18n="playerOverlay.continue">Continue</button>
         </form>
         <button
@@ -171,9 +159,9 @@
           <h3 class="about-details-title" data-i18n="about.detailsTitle">Details</h3>
           <dl class="about-details-list">
             <dt data-i18n="about.versionLabel">Version</dt>
-            <dd>v0.1.0</dd>
+            <dd>v0.2.0</dd>
             <dt data-i18n="about.buildLabel">Build</dt>
-            <dd>2026-02-08</dd>
+            <dd>2026-03-14</dd>
           </dl>
         </div>
         <p class="modal-text about-line">
@@ -238,6 +226,7 @@
           <section class="program-panel">
             <div class="program-header">
               <h2 data-i18n="program.title">Program</h2>
+              <p class="program-counter" id="program-counter">Blocks: 0</p>
               <button class="program-toggle" id="program-toggle" type="button" aria-expanded="true">
                 <span data-i18n="program.hide">Hide</span>
               </button>
@@ -252,6 +241,6 @@
         <p class="toolbox-hint" data-i18n="toolbox.hint">Click or drag commands to build a program.</p>
       </section>
     </div>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

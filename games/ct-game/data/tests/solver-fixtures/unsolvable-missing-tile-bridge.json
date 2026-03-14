@@ -1,0 +1,10 @@
+{
+  "name": "unsolvable-missing-tile-bridge",
+  "levelData": {
+    "map": [["1SR", "", "1L"]]
+  },
+  "expected": {
+    "solvable": false,
+    "reason": "no-solution"
+  }
+}

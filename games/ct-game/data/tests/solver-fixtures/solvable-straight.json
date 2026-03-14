@@ -1,0 +1,10 @@
+{
+  "name": "solvable-straight",
+  "levelData": {
+    "map": [["1SR", "1L"]]
+  },
+  "expected": {
+    "solvable": true,
+    "minCommands": 2
+  }
+}

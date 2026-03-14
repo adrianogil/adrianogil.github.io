@@ -1,0 +1,10 @@
+{
+  "name": "solvable-two-lights",
+  "levelData": {
+    "map": [["1L", "1SR", "1L"]]
+  },
+  "expected": {
+    "solvable": true,
+    "minCommands": 7
+  }
+}
