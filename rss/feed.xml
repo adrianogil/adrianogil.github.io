@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GilLabs</title>
+    <link>https://adrianogil.github.io/</link>
+    <description>GilLabs posts</description>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://adrianogil.github.io/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Blog Workflow with Obsidian and Jekyll</title>
+      <link>https://adrianogil.github.io/posts/workflow-obsidian-jekyll.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/workflow-obsidian-jekyll.html</guid>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Jekyll is a static site generator that transforms Markdown files into a fully functional website. Everything is generated into plain HTML, w...</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Mon Flux de Travail de Blog avec Obsidian et Jekyll</title>
+      <link>https://adrianogil.github.io/fr/posts/workflow-obsidian-jekyll.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/workflow-obsidian-jekyll.html</guid>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Jekyll est un générateur de site statique qui transforme des fichiers Markdown en un site web pleinement fonctionnel. Tout est généré en HTM...</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Meu workflow com Obsidian and Jekyll</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/workflow-obsidian-jekyll.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/workflow-obsidian-jekyll.html</guid>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Jekyll é um gerador de site estático que transforma arquivos Markdown em um site totalmente funcional. Tudo é convertido para HTML puro, o q...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>First Steps with Git</title>
+      <link>https://adrianogil.github.io/posts/intro-git.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/intro-git.html</guid>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Hey there! I often find myself explaining Git from the ground up, so I decided to write this short introductory guide as a handy reference....</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Premiers pas avec Git</title>
+      <link>https://adrianogil.github.io/fr/posts/intro-git.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/intro-git.html</guid>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Salut ! Je me retrouve souvent à expliquer Git depuis le début, alors j'ai décidé d'écrire ce petit guide introductif comme référence pratiq...</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Primeiros Passos com Git</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/intro-git.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/intro-git.html</guid>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Olá! Frequentemente me vejo explicando Git do zero, então decidi escrever este pequeno guia introdutório para servir de referência. Este gui...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>My Roadmap for 2025</title>
+      <link>https://adrianogil.github.io/posts/2025-goals.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/2025-goals.html</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <description>Several years ago, I started this blog as an excuse to document my learning process in some areas and to serve as additional material for co...</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Mon Plan pour 2025</title>
+      <link>https://adrianogil.github.io/fr/posts/2025-goals.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/2025-goals.html</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <description>Il y a plusieurs années, j’ai lancé ce blog comme une excuse pour documenter mon processus d’apprentissage dans certains domaines et fournir...</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Meu Roadmap para 2025</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/2025-goals.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/2025-goals.html</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <description>Há vários anos, dei inicio a este blog como uma desculpa para documentar meu processo de aprendizado em algumas áreas e também como material...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>The divisibility rule of 3</title>
+      <link>https://adrianogil.github.io/posts/divisibility-of-3.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/divisibility-of-3.html</guid>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
+      <description>While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. Actually, the basic operations have so...</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>La règle de divisibilité par 3</title>
+      <link>https://adrianogil.github.io/fr/posts/divisibility-of-3.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/divisibility-of-3.html</guid>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
+      <description>En examinant les devoirs de ma fille, j'ai commencé à réfléchir un peu à la règle de divisibilité par 3. En fait, les opérations de base ont...</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Entendendo a Divisibilidade por 3</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/divisibility-of-3.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/divisibility-of-3.html</guid>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
+      <description>Revisar junto com a filha as matérias da escola é uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas operaçõe...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Unity 101: A simple Space Invaders without coding</title>
+      <link>https://adrianogil.github.io/posts/space-invaders.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/space-invaders.html</guid>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 GMT</pubDate>
+      <description>Build a simplified Space Invaders clone in Unity using visual behavior scripts, covering project setup, GameObjects, movement, collisions, and prefabs without writing code.</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Unity 101 : Un simple Space Invaders sans codage</title>
+      <link>https://adrianogil.github.io/fr/posts/space-invaders.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/space-invaders.html</guid>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 GMT</pubDate>
+      <description>Aujourd'hui, nous allons créer une version simplifiée de Space Invaders en utilisant Unity . Le programme n'est pas l'objet de ce tutoriel....</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Como fazer um Space Invaders simples na Unity sem programação</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/space-invaders.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/space-invaders.html</guid>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 GMT</pubDate>
+      <description>Olá Pessoal,</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>How to Install Theano, Blocks and Fuel</title>
+      <link>https://adrianogil.github.io/posts/install-block-fuel-theano.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/install-block-fuel-theano.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Installation notes for Theano, Blocks, and Fuel on Windows, OSX, and Ubuntu.</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Kuarup: a Global Game Jam 2016 game</title>
+      <link>https://adrianogil.github.io/posts/global-game-jam-2016.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/global-game-jam-2016.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>A few weeks ago, I had the privilege of participating in one of the most popular game jams ever: the Global Game Jam . I was lucky enough to...</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Installation de Theano, Fuel et Blocks</title>
+      <link>https://adrianogil.github.io/fr/posts/install-block-fuel-theano.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/install-block-fuel-theano.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Notes d'installation de Theano, Blocks et Fuel sous Windows, OSX et Ubuntu.</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Kuarup: ma submission de la Global Game Jam 2016</title>
+      <link>https://adrianogil.github.io/fr/posts/global-game-jam-2016.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/global-game-jam-2016.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Il y a quelques semaines, j'ai eu le privilège de participer à l'un des plus grands game jams jamais organisés: le Global Game Jam . J'ai eu...</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Instalando Blocks, Fuel e Theano</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/install-block-fuel-theano.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/install-block-fuel-theano.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Notas de instalação do Theano, Blocks e Fuel no Windows, OSX e Ubuntu.</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Kuarup: um jogo de puzzle de cores na Global Game Jam 2016</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/global-game-jam-2016.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/global-game-jam-2016.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Algumas semanas atrás participei em uma das mais conhecidas game jams: Global Game Jam . Foi um trabalho conjunto com um pessoal muito talen...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Hello World!</title>
+      <link>https://adrianogil.github.io/posts/hello-world.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/hello-world.html</guid>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+      <description>A first note introducing the blog, research interests, and development topics.</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Salut Monde!</title>
+      <link>https://adrianogil.github.io/fr/posts/hello-world.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/hello-world.html</guid>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Une première note pour présenter le blog, mes recherches et mes sujets de développement.</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Olá Mundo!</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/hello-world.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/hello-world.html</guid>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Uma primeira nota para apresentar o blog, meus interesses de pesquisa e desenvolvimento.</description>
+      <category>pt-BR</category>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>My Blog Workflow with Obsidian and Jekyll · GilLabs</title>
+  <link rel="stylesheet" href="../../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../../site.js?v=6" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <header class="content-header">
+    <h1>My Blog Workflow with Obsidian and Jekyll</h1>
+    <p class="meta">05 Feb 2025</p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/workflow-obsidian-jekyll.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/workflow-obsidian-jekyll.html">FR</a></div>
+  <p><a href="https://jekyllrb.com/">Jekyll</a> is a <strong>static site generator</strong> that transforms Markdown files into a fully functional website. Everything is generated into plain HTML, which makes it simple to deploy on platforms like <a href="https://docs.github.com/en/pages/quickstart"><strong>GitHub Pages</strong></a>.</p>
+<h2 id="writing-in-obsidian"><strong>Writing in Obsidian</strong></h2>
+<p>I use <a href="https://obsidian.md/">Obsidian</a> for writing because:</p>
+<ul>
+<li>It supports <strong>Markdown</strong>, making it easy to format posts.</li>
+<li>I can organize posts with <strong>tags and metadata</strong>.</li>
+<li>It keeps my writing centralized before publishing.</li>
+</ul>
+<p>Each blog post has metadata that determines if it’s ready for publication. Drafts are excluded from processing.</p>
+<h3 id="using-templates-in-obsidian">Using Templates in Obsidian</h3>
+<p>To standardize my blog posts, I use <strong>templates</strong> in Obsidian. Templates help maintain consistency across different posts and speed up the writing process. So any time I want to start a new post I first create a <a href="https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Planning%20-%20Template.md">planning note</a> with brainstorming ideas and references. Then I create a <a href="https://github.com/adrianogil/ObsidianVault/blob/main/Templates/GilLabs%20Post%20Text%20-%20Template.md?plain=1">post note</a> which contains the full text and metadata for each post. </p>
+<p>Using <a href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview</a>, an Obsidian plugin that allows me to <strong>query and display content dynamically</strong> based on metadata, I can track posts in different stages of completion, identify missing translations, and view related notes.</p>
+<h2 id="jekyll-multiple-languages-plugin"><strong>Jekyll-Multiple-Languages-Plugin</strong></h2>
+<p>The <code>jekyll-multiple-languages-plugin</code> helps me to structure my content in multiple languages by creating different versions of each post. Here’s how it works:</p>
+<ul>
+<li>
+<p>My blog supports <strong>English, Portuguese, and French</strong>, configured in <code>_config.yml</code>:</p>
+<p><code>languages:
+ - en
+ - pt
+ - fr
+default_lang: en</code></p>
+</li>
+<li>
+<p>Each language has its own directory inside <code>_i18n/</code>, for example:</p>
+<p><code>_i18n/en/_posts/2025-02-01-my-post.md
+_i18n/pt/_posts/2025-02-01-meu-post.md</code></p>
+</li>
+<li>
+<p>The plugin automatically generates language-specific URLs:</p>
+<p><code>https://adrianogil.github.io/blog/en/2025/02/my-post/
+https://adrianogil.github.io/blog/pt/2025/02/meu-post/</code></p>
+</li>
+<li>
+<p>Users can switch languages using a simple <strong>language selector</strong> in the blog UI.</p>
+</li>
+</ul>
+<h2 id="automating-the-blog-post-processing-with-python"><strong>Automating the Blog Post Processing with Python</strong></h2>
+<p>Manually copying Markdown files, managing assets, and handling metadata can be time-consuming. To ease my blogging process, I use a Python script that automates the following:</p>
+<ul>
+<li>Extracting blog posts from my <strong>Obsidian</strong> vault.</li>
+<li>Copying and processing images.</li>
+<li>Formatting metadata for <a href="https://jekyllrb.com/"><strong>Jekyll</strong></a>.</li>
+<li>Placing the final post in my blog’s <a href="https://docs.github.com/en/pages/quickstart"><strong>GitHub Pages</strong></a> repository.</li>
+</ul>
+<h4 id="fetching-notes"><strong>Fetching Notes</strong></h4>
+<p>First, it gathers notes marked with a specific tag (<code>GilLabs/posts/text</code>).</p>
+<div class="code-block"><div class="code-header"><span class="code-language">python</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-python">notes = get_notes_from_index(target_tags=[&quot;GilLabs/posts/text&quot;], as_obsidian_notes=True)
+notes = [note for note in notes if not note.metadata.get(&quot;draft&quot;, True)]
+</code></pre></div>
+<p>This ensures only <strong>published</strong> posts are processed.</p>
+<h4 id="generating-the-jekyll-blog-post-file"><strong>Generating the Jekyll Blog Post File</strong></h4>
+<p>Each post is formatted into Jekyll’s <code>_posts</code> structure with the correct <strong>date, language, and categories</strong>. Metadata such as <strong>title, layout, and categories</strong> are preserved.</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Markdown</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-Markdown">---
+categories: git
+date: '2025-02-01 16:41:00 '
+lang: en
+lang-ref: intro-git
+layout: post
+title: First Steps with Git
+updated: 2025-02-01T16:41
+---
+## Introduction
+Hey there! I often find myself explaining Git from the ground up,...
+</code></pre></div>
+<h3 id="4-deploying-the-blog"><strong>4. Deploying the Blog</strong></h3>
+<p>Once the script updates the html files in my Jekyll project, I simply:</p>
+<ol>
+<li><strong>Build the site</strong> with:</li>
+</ol>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">jekyll build
+</code></pre></div>
+<ol>
+<li><strong><a href="https://adrianogil.github.io/blog/2025/02/intro-git/">Push the changes</a> to GitHub Pages</strong> with:</li>
+</ol>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git add .
+git commit -m &quot;New blog post&quot;
+git push origin main
+</code></pre></div>
+<p>Within minutes, my blog is live!</p>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>

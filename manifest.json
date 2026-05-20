@@ -1,0 +1,371 @@
+{
+  "posts": [
+    {
+      "title": "How to Install Theano, Blocks and Fuel",
+      "slug": "install-block-fuel-theano",
+      "date": "2016-01-10 14:00:00 -0400",
+      "summary": "Installation notes for Theano, Blocks, and Fuel on Windows, OSX, and Ubuntu.",
+      "lang": "en",
+      "translation_key": "install-block-fuel-theano"
+    },
+    {
+      "title": "Kuarup: a Global Game Jam 2016 game",
+      "slug": "global-game-jam-2016",
+      "date": "2016-01-10 14:00:00 -0400",
+      "summary": "A few weeks ago, I had the privilege of participating in one of the most popular game jams ever: the Global Game Jam . I was lucky enough to...",
+      "lang": "en",
+      "translation_key": "ggj-2016"
+    },
+    {
+      "title": "Unity 101: A simple Space Invaders without coding",
+      "slug": "space-invaders",
+      "date": "2017-01-31 21:00:00 -0400",
+      "summary": "Build a simplified Space Invaders clone in Unity using visual behavior scripts, covering project setup, GameObjects, movement, collisions, and prefabs without writing code.",
+      "lang": "en",
+      "translation_key": "simple-space-invaders-unity"
+    },
+    {
+      "title": "The divisibility rule of 3",
+      "slug": "divisibility-of-3",
+      "date": "2022-08-26 10:00:00 -0400",
+      "summary": "While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. Actually, the basic operations have so...",
+      "lang": "en",
+      "translation_key": "divisibility-3"
+    },
+    {
+      "title": "My Roadmap for 2025",
+      "slug": "2025-goals",
+      "date": "2025-01-01",
+      "summary": "Several years ago, I started this blog as an excuse to document my learning process in some areas and to serve as additional material for co...",
+      "lang": "en",
+      "translation_key": "2025-goals"
+    },
+    {
+      "title": "First Steps with Git",
+      "slug": "intro-git",
+      "date": "2025-02-01",
+      "summary": "Hey there! I often find myself explaining Git from the ground up, so I decided to write this short introductory guide as a handy reference....",
+      "lang": "en",
+      "translation_key": "intro-git"
+    },
+    {
+      "title": "My Blog Workflow with Obsidian and Jekyll",
+      "slug": "workflow-obsidian-jekyll",
+      "date": "2025-02-05",
+      "summary": "Jekyll is a static site generator that transforms Markdown files into a fully functional website. Everything is generated into plain HTML, w...",
+      "lang": "en",
+      "translation_key": "workflow-obsidian-jekyll"
+    },
+    {
+      "title": "Hello World!",
+      "slug": "hello-world",
+      "date": "2016-01-01 09:02:47 -0400",
+      "summary": "A first note introducing the blog, research interests, and development topics.",
+      "lang": "en",
+      "translation_key": "hello-world"
+    },
+    {
+      "title": "Installation de Theano, Fuel et Blocks",
+      "slug": "install-block-fuel-theano",
+      "date": "2016-01-10 14:00:00 -0400",
+      "summary": "Notes d'installation de Theano, Blocks et Fuel sous Windows, OSX et Ubuntu.",
+      "lang": "fr",
+      "translation_key": "install-block-fuel-theano"
+    },
+    {
+      "title": "Kuarup: ma submission de la Global Game Jam 2016",
+      "slug": "global-game-jam-2016",
+      "date": "2016-01-10 14:00:00 -0400",
+      "summary": "Il y a quelques semaines, j'ai eu le privil\u00e8ge de participer \u00e0 l'un des plus grands game jams jamais organis\u00e9s: le Global Game Jam . J'ai eu...",
+      "lang": "fr",
+      "translation_key": "ggj-2016"
+    },
+    {
+      "title": "Unity 101 : Un simple Space Invaders sans codage",
+      "slug": "space-invaders",
+      "date": "2017-01-31 21:00:00 -0400",
+      "summary": "Aujourd'hui, nous allons cr\u00e9er une version simplifi\u00e9e de Space Invaders en utilisant Unity . Le programme n'est pas l'objet de ce tutoriel....",
+      "lang": "fr",
+      "translation_key": "simple-space-invaders-unity"
+    },
+    {
+      "title": "La r\u00e8gle de divisibilit\u00e9 par 3",
+      "slug": "divisibility-of-3",
+      "date": "2022-08-26 10:00:00 -0400",
+      "summary": "En examinant les devoirs de ma fille, j'ai commenc\u00e9 \u00e0 r\u00e9fl\u00e9chir un peu \u00e0 la r\u00e8gle de divisibilit\u00e9 par 3. En fait, les op\u00e9rations de base ont...",
+      "lang": "fr",
+      "translation_key": "divisibility-3"
+    },
+    {
+      "title": "Mon Plan pour 2025",
+      "slug": "2025-goals",
+      "date": "2025-01-01",
+      "summary": "Il y a plusieurs ann\u00e9es, j\u2019ai lanc\u00e9 ce blog comme une excuse pour documenter mon processus d\u2019apprentissage dans certains domaines et fournir...",
+      "lang": "fr",
+      "translation_key": "2025-goals"
+    },
+    {
+      "title": "Premiers pas avec Git",
+      "slug": "intro-git",
+      "date": "2025-02-01",
+      "summary": "Salut ! Je me retrouve souvent \u00e0 expliquer Git depuis le d\u00e9but, alors j'ai d\u00e9cid\u00e9 d'\u00e9crire ce petit guide introductif comme r\u00e9f\u00e9rence pratiq...",
+      "lang": "fr",
+      "translation_key": "intro-git"
+    },
+    {
+      "title": "Mon Flux de Travail de Blog avec Obsidian et Jekyll",
+      "slug": "workflow-obsidian-jekyll",
+      "date": "2025-02-05",
+      "summary": "Jekyll est un g\u00e9n\u00e9rateur de site statique qui transforme des fichiers Markdown en un site web pleinement fonctionnel. Tout est g\u00e9n\u00e9r\u00e9 en HTM...",
+      "lang": "fr",
+      "translation_key": "workflow-obsidian-jekyll"
+    },
+    {
+      "title": "Salut Monde!",
+      "slug": "hello-world",
+      "date": "2016-01-01 14:00:00 -0400",
+      "summary": "Une premi\u00e8re note pour pr\u00e9senter le blog, mes recherches et mes sujets de d\u00e9veloppement.",
+      "lang": "fr",
+      "translation_key": "hello-world"
+    },
+    {
+      "title": "Instalando Blocks, Fuel e Theano",
+      "slug": "install-block-fuel-theano",
+      "date": "2016-01-10 14:00:00 -0400",
+      "summary": "Notas de instala\u00e7\u00e3o do Theano, Blocks e Fuel no Windows, OSX e Ubuntu.",
+      "lang": "pt-BR",
+      "translation_key": "install-block-fuel-theano"
+    },
+    {
+      "title": "Kuarup: um jogo de puzzle de cores na Global Game Jam 2016",
+      "slug": "global-game-jam-2016",
+      "date": "2016-01-10 14:00:00 -0400",
+      "summary": "Algumas semanas atr\u00e1s participei em uma das mais conhecidas game jams: Global Game Jam . Foi um trabalho conjunto com um pessoal muito talen...",
+      "lang": "pt-BR",
+      "translation_key": "ggj-2016"
+    },
+    {
+      "title": "Como fazer um Space Invaders simples na Unity sem programa\u00e7\u00e3o",
+      "slug": "space-invaders",
+      "date": "2017-01-31 21:00:00 -0400",
+      "summary": "Ol\u00e1 Pessoal,",
+      "lang": "pt-BR",
+      "translation_key": "simple-space-invaders-unity"
+    },
+    {
+      "title": "Entendendo a Divisibilidade por 3",
+      "slug": "divisibility-of-3",
+      "date": "2022-08-26 10:00:00 -0400",
+      "summary": "Revisar junto com a filha as mat\u00e9rias da escola \u00e9 uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas opera\u00e7\u00f5e...",
+      "lang": "pt-BR",
+      "translation_key": "divisibility-3"
+    },
+    {
+      "title": "Meu Roadmap para 2025",
+      "slug": "2025-goals",
+      "date": "2025-01-01",
+      "summary": "H\u00e1 v\u00e1rios anos, dei inicio a este blog como uma desculpa para documentar meu processo de aprendizado em algumas \u00e1reas e tamb\u00e9m como material...",
+      "lang": "pt-BR",
+      "translation_key": "2025-goals"
+    },
+    {
+      "title": "Primeiros Passos com Git",
+      "slug": "intro-git",
+      "date": "2025-02-01",
+      "summary": "Ol\u00e1! Frequentemente me vejo explicando Git do zero, ent\u00e3o decidi escrever este pequeno guia introdut\u00f3rio para servir de refer\u00eancia. Este gui...",
+      "lang": "pt-BR",
+      "translation_key": "intro-git"
+    },
+    {
+      "title": "Meu workflow com Obsidian and Jekyll",
+      "slug": "workflow-obsidian-jekyll",
+      "date": "2025-02-05",
+      "summary": "Jekyll \u00e9 um gerador de site est\u00e1tico que transforma arquivos Markdown em um site totalmente funcional. Tudo \u00e9 convertido para HTML puro, o q...",
+      "lang": "pt-BR",
+      "translation_key": "workflow-obsidian-jekyll"
+    },
+    {
+      "title": "Ol\u00e1 Mundo!",
+      "slug": "hello-world",
+      "date": "2016-01-01 09:02:47 -0400",
+      "summary": "Uma primeira nota para apresentar o blog, meus interesses de pesquisa e desenvolvimento.",
+      "lang": "pt-BR",
+      "translation_key": "hello-world"
+    }
+  ],
+  "pages": [
+    {
+      "title": "About",
+      "slug": "about",
+      "date": "2016-01-01",
+      "summary": "This is my personal technical blog.",
+      "lang": "en",
+      "translation_key": "about"
+    },
+    {
+      "title": "CV",
+      "slug": "cv",
+      "date": "2026-05-20",
+      "summary": "Software engineering CV for Adriano Mendes Gil, covering fullstack, mobile, Unity, VR/AR, AI, computer vision, research, and teaching work.",
+      "lang": "en",
+      "translation_key": "cv"
+    },
+    {
+      "title": "Game Portfolio",
+      "slug": "game-portfolio",
+      "date": "2026-05-20",
+      "summary": "Games, VR projects, mobile titles, and game development tools I have worked on.",
+      "lang": "en",
+      "translation_key": "game-portfolio"
+    },
+    {
+      "title": "Now",
+      "slug": "now",
+      "date": "2026-05-20",
+      "summary": "Updated in May 2026",
+      "lang": "en",
+      "translation_key": "now"
+    },
+    {
+      "title": "Research",
+      "slug": "research",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil, grouped by year.",
+      "lang": "en",
+      "translation_key": "research"
+    },
+    {
+      "title": "Talks",
+      "slug": "talks",
+      "date": "2024-01-01",
+      "summary": "This is a list of public talks I've given. If you're interested in having me speak at your event, please get in touch .",
+      "lang": "en",
+      "translation_key": "talks"
+    },
+    {
+      "title": "Web Projects",
+      "slug": "web-projects",
+      "date": "2026-05-20",
+      "summary": "Browser-based experiments and apps hosted on GitHub Pages.",
+      "lang": "en",
+      "translation_key": "web-projects"
+    },
+    {
+      "title": "\u00c0 propos",
+      "slug": "about",
+      "date": "2016-01-01",
+      "summary": "Ceci est mon blog personnel.",
+      "lang": "fr",
+      "translation_key": "about"
+    },
+    {
+      "title": "CV",
+      "slug": "cv",
+      "date": "2026-05-20",
+      "summary": "CV d'ing\u00e9nierie logicielle d'Adriano Mendes Gil, couvrant le fullstack, le mobile, Unity, la VR/AR, l'IA, la vision par ordinateur, la recherche et l'enseignement.",
+      "lang": "fr",
+      "translation_key": "cv"
+    },
+    {
+      "title": "Portfolio de jeux",
+      "slug": "game-portfolio",
+      "date": "2026-05-20",
+      "summary": "Jeux, projets VR, titres mobiles et outils de d\u00e9veloppement de jeux auxquels j'ai contribu\u00e9.",
+      "lang": "fr",
+      "translation_key": "game-portfolio"
+    },
+    {
+      "title": "Now",
+      "slug": "now",
+      "date": "2026-05-20",
+      "summary": "Mis \u00e0 jour en mai 2026",
+      "lang": "fr",
+      "translation_key": "now"
+    },
+    {
+      "title": "Recherche",
+      "slug": "research",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil, regroup\u00e9es par ann\u00e9e.",
+      "lang": "fr",
+      "translation_key": "research"
+    },
+    {
+      "title": "Conf\u00e9rences",
+      "slug": "talks",
+      "date": "2024-01-01",
+      "summary": "Voici une liste de conf\u00e9rences publiques que j'ai donn\u00e9es. Si vous souhaitez m'inviter \u00e0 parler lors de votre \u00e9v\u00e9nement, veuillez me contact...",
+      "lang": "fr",
+      "translation_key": "talks"
+    },
+    {
+      "title": "Projets Web",
+      "slug": "web-projects",
+      "date": "2026-05-20",
+      "summary": "Experiences et applications web hebergees sur GitHub Pages.",
+      "lang": "fr",
+      "translation_key": "web-projects"
+    },
+    {
+      "title": "Sobre",
+      "slug": "about",
+      "date": "2016-01-01",
+      "summary": "Este \u00e9 meu blog pessoal sobre assuntos de tecnologia.",
+      "lang": "pt-BR",
+      "translation_key": "about"
+    },
+    {
+      "title": "CV",
+      "slug": "cv",
+      "date": "2026-05-20",
+      "summary": "Curr\u00edculo de engenharia de software de Adriano Mendes Gil, cobrindo trabalhos em fullstack, mobile, Unity, VR/AR, IA, vis\u00e3o computacional, pesquisa e ensino.",
+      "lang": "pt-BR",
+      "translation_key": "cv"
+    },
+    {
+      "title": "Portfolio de Jogos",
+      "slug": "game-portfolio",
+      "date": "2026-05-20",
+      "summary": "Jogos, projetos de VR, t\u00edtulos mobile e ferramentas de desenvolvimento de jogos em que trabalhei.",
+      "lang": "pt-BR",
+      "translation_key": "game-portfolio"
+    },
+    {
+      "title": "Now",
+      "slug": "now",
+      "date": "2026-05-20",
+      "summary": "Atualizado em maio de 2026",
+      "lang": "pt-BR",
+      "translation_key": "now"
+    },
+    {
+      "title": "Pesquisa",
+      "slug": "research",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil, agrupadas por ano.",
+      "lang": "pt-BR",
+      "translation_key": "research"
+    },
+    {
+      "title": "Apresenta\u00e7\u00f5es",
+      "slug": "talks",
+      "date": "2024-01-01",
+      "summary": "Esta \u00e9 uma lista de apresenta\u00e7\u00f5es que j\u00e1 fiz. Se voc\u00ea estiver interessado em me convidar para falar no seu evento, por favor entre em contat...",
+      "lang": "pt-BR",
+      "translation_key": "talks"
+    },
+    {
+      "title": "Projetos Web",
+      "slug": "web-projects",
+      "date": "2026-05-20",
+      "summary": "Experimentos e aplicativos web hospedados no GitHub Pages.",
+      "lang": "pt-BR",
+      "translation_key": "web-projects"
+    }
+  ],
+  "languages": [
+    "pt-BR",
+    "en",
+    "fr"
+  ]
+}

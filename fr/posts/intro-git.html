@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>Premiers pas avec Git · GilLabs</title>
+  <link rel="stylesheet" href="../../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../../site.js?v=6" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Langues :</p><nav class="language-switcher-nav" aria-label="Langues :"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><a class="language-switcher-item" href="/en/index.html">EN</a><span class="language-switcher-item active" aria-current="true">FR</span></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <header class="content-header">
+    <h1>Premiers pas avec Git</h1>
+    <p class="meta">01 Feb 2025</p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/intro-git.html">PT</a> <a href="/en/posts/intro-git.html">EN</a> <span class="active" aria-current="true">FR</span></div>
+  <h2 id="introduction">Introduction</h2>
+<p>Salut ! Je me retrouve souvent à expliquer Git depuis le début, alors j'ai décidé d'écrire ce petit guide introductif comme référence pratique. Ce guide vous aidera à comprendre les bases. À la fin de cet article, vous saurez comment configurer votre premier dépôt, effectuer votre premier commit et bien plus encore. C'est parti !</p>
+<p>Je vous recommande vivement d'avoir un dépôt local de test pour essayer chaque commande. Vous pourrez ainsi explorer librement votre dépôt et observer comment chaque commande modifie l'état actuel de vos fichiers et l'historique des commits.</p>
+<h2 id="creer-votre-premier-depot-git">Créer votre premier dépôt Git</h2>
+<p>Avant tout, configurons votre dépôt Git. C'est ici que l'historique de votre projet sera stocké.</p>
+<p>Pour créer un nouveau dépôt Git, ouvrez votre terminal, accédez au dossier de votre projet, puis exécutez :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git init
+</code></pre></div>
+<p>Cette commande initialise un tout nouveau dépôt Git dans votre dossier de projet. Simple, non ?</p>
+<p>Après l'exécution de <code>git init</code>, un dossier caché <code>.git</code> est créé. Ce dossier contient toutes les métadonnées et objets nécessaires à Git pour suivre et gérer l'historique de votre projet.</p>
+<h2 id="ajouter-des-fichiers-a-votre-depot">Ajouter des fichiers à votre dépôt</h2>
+<p>Ajoutons maintenant des fichiers à votre dépôt.</p>
+<p>Pensez à la zone de staging comme à un panier d'achat : vous y ajoutez des modifications avant de les valider (commit). Pour ajouter un fichier, utilisez :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git add &lt;nom_du_fichier&gt;
+</code></pre></div>
+<p>Remplacez <code>&lt;nom_du_fichier&gt;</code> par le nom de votre fichier. Celui-ci est maintenant en zone de staging, où vous pouvez vérifier et préparer les modifications avant de les valider.</p>
+<p>Si vous voulez ajouter toutes les modifications dans le dossier courant (y compris les suppressions et modifications), utilisez :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git add .
+</code></pre></div>
+<p>Pour voir les fichiers en attente de validation et ceux qui ont été modifiés, utilisez :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git status
+</code></pre></div>
+<p>Cette commande vous donne un résumé de l'état actuel de votre projet.</p>
+<h2 id="valider-vos-modifications">Valider vos modifications</h2>
+<p>Passons maintenant à la validation (commit) des modifications. Un commit est une capture instantanée de votre projet à un moment donné.</p>
+<p>Pour valider vos modifications avec un message, utilisez :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git commit -m &quot;Votre message de commit&quot;
+</code></pre></div>
+<p>Assurez-vous que votre message est clair et descriptif pour vous y retrouver plus tard.</p>
+<h2 id="visualiser-lhistorique-des-commits">Visualiser l'historique des commits</h2>
+<p>Voir l'historique des commits peut être très utile. Pour afficher votre historique des commits sous forme graphique, utilisez :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git log --graph --all --oneline
+</code></pre></div>
+<p>Cette commande permet de voir une représentation graphique de l'historique des commits, très utile pour comprendre l'évolution de votre projet.</p>
+<p><img alt="" src="/assets/images/2025-02-01-intro-git/git_log_example.webp" /></p>
+<h2 id="envoyer-des-modifications-vers-un-depot-distant">Envoyer des modifications vers un dépôt distant</h2>
+<p>Après avoir effectué des commits, vous voudrez peut-être partager votre travail ou le sauvegarder sur un dépôt distant comme GitHub.</p>
+<p>D'abord, ajoutez un dépôt distant. Par exemple, pour GitHub :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git remote add origin https://github.com/votreutilisateur/votre-repo.git
+</code></pre></div>
+<p>Puis, poussez vos modifications :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git push origin main
+</code></pre></div>
+<p>Cette commande envoie vos modifications vers la branche principale (<code>main</code>) du dépôt distant.</p>
+<h2 id="comprendre-la-logique-git">Comprendre la logique Git</h2>
+<p>Pour bien utiliser Git, il est important de comprendre ses concepts fondamentaux : le système de fichiers, la zone de staging et les commits.</p>
+<ol>
+<li>
+<p><strong>Répertoire de travail (Système de fichiers)</strong> : Lorsque vous modifiez des fichiers, vous travaillez directement dans le système de fichiers. Ces modifications ne sont pas encore suivies par Git.</p>
+</li>
+<li>
+<p><strong>Zone de staging</strong> : Une fois les modifications faites, vous les ajoutez à la <em>zone de staging</em> avec <code>git add</code>. La zone de staging agit comme un presse-papiers pour les changements que vous prévoyez d'inclure dans le prochain commit.</p>
+</li>
+<li>
+<p><strong>Le commit comme un nœud dans l'arbre</strong> : Une fois prêt, utilisez <code>git commit</code> pour enregistrer une capture instantanée des modifications. Chaque commit forme un <em>nœud</em> dans l'historique Git, connecté aux commits précédents. Une branche n'est qu'un pointeur vers une séquence de commits, et non un dossier séparé.</p>
+</li>
+</ol>
+<p>Une erreur courante est de considérer les branches comme des dossiers distincts, mais cette vision est trompeuse. Il est plus juste de voir Git comme un arbre de modifications où chaque commit est un nœud et les branches ne sont que des pointeurs. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Et voilà ! Vous avez fait vos premiers pas avec Git. Vous savez maintenant comment configurer un dépôt, ajouter des fichiers, valider des modifications, pousser vers un dépôt distant et comprendre la logique de Git.</p>
+<p>Là où Git est utilisé, il y a toujours de l'espoir. Avec Git, vous pouvez annuler des modifications, retrouver d'anciennes versions de votre code et collaborer facilement avec d'autres développeurs.</p>
+<h2 id="ressources-supplementaires">Ressources supplémentaires</h2>
+<p>Si vous souhaitez approfondir Git, consultez ces ressources :</p>
+<ul>
+<li><a href="https://git-scm.com/doc">Documentation officielle Git</a></li>
+<li><a href="https://guides.github.com/">Guides GitHub</a></li>
+<li><a href="https://jvns.ca/#git">Le blog de Julia Evans</a> – Des explications intuitives sur Git.    </li>
+<li>Outils pour visualiser l'historique des commits : <a href="https://www.sourcetreeapp.com/">Sourcetree</a> ou <a href="https://www.gitkraken.com/">GitKraken</a>.</li>
+</ul>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>First Steps with Git · GilLabs</title>
+  <link rel="stylesheet" href="../../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../../site.js?v=6" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <header class="content-header">
+    <h1>First Steps with Git</h1>
+    <p class="meta">01 Feb 2025</p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/intro-git.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/intro-git.html">FR</a></div>
+  <h2 id="introduction">Introduction</h2>
+<p>Hey there! I often find myself explaining Git from the ground up, so I decided to write this short introductory guide as a handy reference. This guide will walk you through the very basics. By the end of this post, you'll know how to set up your first repository, make your first commit, and more. Let's get started!</p>
+<p>I can't recommend enough having a playground local repository so you can test each command. You should be able to freely move around your repository noticing how each command changes the current state of your files and the commit history.</p>
+<h2 id="setting-up-your-first-git-repository">Setting Up Your First Git Repository</h2>
+<p>First things first, let's set up your Git repository. This is where your project's history will live.</p>
+<p>To create a new Git repository, open your terminal and navigate to your project's directory. Then, run:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git init
+</code></pre></div>
+<p>This command sets up a brand new Git repository in your project folder. Easy, right?</p>
+<p>After running <code>git init</code>, a hidden <code>.git</code> directory is created. This directory contains all the necessary metadata and objects that Git uses to track and manage your project's history. </p>
+<h2 id="adding-files-to-your-repository">Adding Files to Your Repository</h2>
+<p>Next, let's add some files to your repository.</p>
+<p>Think of the staging area like a shopping cart—you gather changes here before you check out (commit). To add a file, use:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git add &lt;file_name&gt;
+</code></pre></div>
+<p>Replace <code>&lt;file_name&gt;</code> with the name of your file. The <code>&lt;file_name&gt;</code> is now on staging area. The staging area lets you review and prepare changes before committing them.</p>
+<p>If you want to add all changes in the current folder (including deletions and modifications), you can use:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git add .
+</code></pre></div>
+<p>To see what's in your staging area and what's changed in your working directory, use:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git status
+</code></pre></div>
+<p>This command gives you a summary of the current state of your project.</p>
+<h2 id="committing-your-changes">Committing Your Changes</h2>
+<p>Now, let's commit your changes. A commit is like a snapshot of your project at a specific point in time.</p>
+<p>To commit your changes with a message, use:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git commit -m &quot;Your commit message&quot;
+</code></pre></div>
+<p>Make sure your message is clear and descriptive so you know what this commit is about later.</p>
+<h2 id="visualizing-your-commit-history">Visualizing Your Commit History</h2>
+<p>Seeing your commit history can be very helpful.</p>
+<p>To visualize your commit history, use:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git log --graph --all --oneline
+</code></pre></div>
+<p>This command shows a graphical representation of your commit history, which can be really useful for understanding how your project has evolved.</p>
+<p><img alt="" src="/assets/images/2025-02-01-intro-git/git_log_example.webp" /></p>
+<h2 id="pushing-changes-to-a-remote-repository">Pushing Changes to a Remote Repository</h2>
+<p>Once you've made some commits, you might want to share your work with others or back it up to a remote repository like GitHub.</p>
+<p>First, you need to add a remote repository. If you're using GitHub, it might look like this:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git remote add origin https://github.com/yourusername/your-repo.git
+</code></pre></div>
+<p>Then, push your changes:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">git push origin main
+</code></pre></div>
+<p>This command uploads your changes to the main branch of your remote repository.</p>
+<h2 id="understanding-the-git-mindset">Understanding the Git Mindset</h2>
+<p>To really make the most of Git, it helps to get familiar with how it works and the key parts of your project from Git’s perspective: the filesystem, the staging area, and commits. This workflow is all about how changes move through Git until they’re safely recorded in your project’s history.</p>
+<ol>
+<li>
+<p><strong>Working Directory (Filesystem)</strong>: When you modify files in your project, you're working directly in the filesystem. This is where you create, edit, and delete files. At this stage, these changes are not yet tracked by Git.</p>
+</li>
+<li>
+<p><strong>Staging Area</strong>: After making changes, you add the modified files to the <em>staging area</em> using the <code>git add</code> command. Think of the staging area as a clipboard for changes—it's where you prepare what will be included in your next snapshot. This step allows you to control exactly which changes are part of the next commit.</p>
+</li>
+<li>
+<p><strong>Commit as a Node in the Tree</strong>: When you're ready, you use <code>git commit</code> to take a snapshot of the staged changes. This snapshot acts like a <em>node</em> in Git's version history, forming a connected structure. Each commit points back to its parent, creating a sequence of changes rather than separate folders. A branch is simply a pointer to one of these sequences, not a container of its own. By focusing on how changes flow through the tree, you can navigate Git more effectively and understand its true power.</p>
+</li>
+</ol>
+<p>A common mistake when thinking about Git is to see branches as if they were folders, but this mindset can be misleading. Instead of focusing on individual branches as separate containers, it’s better to see Git as a tree of changes—where each commit is a node and branches are just pointers to different sequences of snapshots. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>And that's it! You've just taken your first steps with Git. You now know how to set up a repository, add files, commit changes, push to a remote repository, and understand the basics of how Git works. Keep practicing these commands, and soon you'll be a Git pro!</p>
+<p>Remember, where Git is used, there is always hope. With Git, you can rewind changes, recover past versions of your code, and even undo mistakes with ease. It allows multiple developers to work on the same project and it’s the best way to share code with others. </p>
+<h2 id="additional-resources">Additional Resources</h2>
+<p>If you want to dive deeper into Git, check out these resources:</p>
+<ul>
+<li><a href="https://git-scm.com/doc">Official Git Documentation</a></li>
+<li><a href="https://guides.github.com/">GitHub Guides</a></li>
+<li><a href="https://jvns.ca/#git">Julia Evans' blog</a> – I can’t recommend it enough! Intuitive explanations of Git commands and internals.</li>
+<li>Tools for visualizing your Git commit history, like <a href="https://www.sourcetreeapp.com/">Sourcetree</a> or <a href="https://www.gitkraken.com/">GitKraken</a>.</li>
+</ul>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>

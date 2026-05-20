@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>Entendendo a Divisibilidade por 3 · GilLabs</title>
+  <link rel="stylesheet" href="../../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../../site.js?v=6" defer></script>
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">Sobre</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de Jogos</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Pesquisa</a></li><li><a href="../pages/talks.html">Apresentações</a></li><li><a href="../pages/web-projects.html">Projetos Web</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Idiomas:</p><nav class="language-switcher-nav" aria-label="Idiomas:"><span class="language-switcher-item active" aria-current="true">PT</span><a class="language-switcher-item" href="/en/index.html">EN</a><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <header class="content-header">
+    <h1>Entendendo a Divisibilidade por 3</h1>
+    <p class="meta">26 Aug 2022</p>
+  </header>
+  <div class="language-code-links"><span class="active" aria-current="true">PT</span> <a href="/en/posts/divisibility-of-3.html">EN</a> <a href="/fr/posts/divisibility-of-3.html">FR</a></div>
+  <p>Revisar junto com a filha as matérias da escola é uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas operações básicas existem algumas propriedades bem curiosas:</p>
+<ol>
+<li>adição de qualquer número ao 9 preserva a soma de seus algarismos.</li>
+<li>qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três</li>
+</ol>
+<p>Nesse post vou analisar os motivos para essas propriedades existirem. </p>
+<h2 id="1-adicao-de-qualquer-numero-ao-9-preserva-a-soma-de-seus-algarismos">1) adição de qualquer número ao 9 preserva a soma de seus algarismos.</h2>
+<p>Considerando a operação </p>
+<p>\[A + 9 = B\] </p>
+<p>A soma dos dígitos de A será igual a soma dos dígitos de B.</p>
+<p>Veja alguns exemplos:</p>
+<p><em>Exemplo 1.1:</em> </p>
+<p>Na operação</p>
+<p>\[15 + 9 = 24\] </p>
+<p>a soma dos dígitos de \(15\) (\(1 + 5 = 6\)) será igual a soma dos dígitos do valor resultante \(24\) (\(2 + 4 = 6\))</p>
+<p><em>Exemplo 1.2:</em></p>
+<p>Na soma </p>
+<p>\[71 + 9 = 80\] </p>
+<p>da mesma forma teremos que \(7 + 1\) será igual a \(8 + 0\), ambos \(8\)</p>
+<h2 id="2-qualquer-numero-multiplicado-por-3-tem-por-resultado-um-numero-cuja-soma-dos-algarismos-tambem-e-um-multiplo-por-tres">2) qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três</h2>
+<p>Considerando a operação </p>
+<p>\[A * 3 = B\] </p>
+<p>implica assim que a soma dos dígitos de B será um múltiplo de 3.</p>
+<p><em>Exemplo 2.1:</em></p>
+<p>\[24*3 = 72\]</p>
+<p>Nessa multiplicação temos que a soma dos dígitos do resultado será \(7 + 2 = 9\), um múltiplo de \(3\)</p>
+<p><em>Exemplo 2.2:</em></p>
+<p>\[19*3 = 57\] </p>
+<p>então a soma dos dígitos de \(57\) será um multiplo de \(3\) (\(5 + 7 = 12\))</p>
+<h2 id="mas-por-que">Mas por quê?</h2>
+<p>Parando para analisar essas duas propriedades após todos esses anos, só agora entendi que propriedade 2 é decorrência da propriedade 1, ou seja, a operação de multiplicar um número por três esconde uma soma com 9.</p>
+<p>Como assim?</p>
+<p>Bem, a multiplicação é na verdade uma soma, certo?</p>
+<p>Então, \(3*4\) é a mesma coisa que \(3+3+3+3\), que por sua vez podemos remanejar como  \(9 + 3 = 12\). Assim se somarmos seus algarismos (\(1 + 2 = 3\)) teremos um múltiplo de \(3\).</p>
+<p>E podemos testar isso com outros exemplos, onde é possível remanejar uma multiplicação por \(3\) como uma soma com \(9\):</p>
+<p><em>Exemplo 3.1</em></p>
+<p>\[3*5 = 3+3+3+3+3 = 9+6 = 15.\] </p>
+<p>Assim percebemos que a soma do resultado dá um múltiplo de \(3 1+5 = 6\)</p>
+<p><em>Exemplo 3.2</em></p>
+<p>\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]</p>
+<p>Verificamos a propriedade 2, pois \(1 + 8 = 9\).</p>
+<h2 id="multiplicacao-por-3-entao-e-uma-soma-com-9">Multiplicação por 3 então é uma soma com 9</h2>
+<p>Ou seja, a multiplicação de 3 vezes um número maior que 3 significa somar 9 + 'alguma coisa'. Como essa 'alguma coisa' sempre é um múltiplo de 3 então o resultado de tudo isso vai manter a somatória dos dígitos e também será um múltiplo de 3.</p>
+<p>Louco né?</p>
+<p>Segue uma pseudo-prova:</p>
+<p>Assim considerando qualquer número \(x &gt; 3\) e um \(k = x - 3\), temos:</p>
+<p>\[3*x = 3*(k+3) = 3*k+9\]</p>
+<p>Como \(3*k\) é um múltiplo de \(3\) e dada a propriedade 1 então os algarismos de \(3 * k + 9\) também serão múltiplos de \(3\).</p>
+<h2 id="por-que-a-propriedade-1-acontece">Por que a propriedade 1 acontece?</h2>
+<p>Outro ponto a observar é que isso só acontece porque somar com \(9\) é a mesma coisa que somar \(10\) e subtrair \(1\) (\(10 - 1 = 9\)), que soma um ao dígito da dezena \((+1)\) e subtrai um do dígito da unidade \((-1)\), implicando que a somatória dos dígitos não é afetada ($ +1 - 1 = 0$).</p>
+<p>E também podemos generalizar dizendo que a propriedade 2 acontece com toda base de número</p>
+<p>\[3 * N + 1\]</p>
+<p>como por exemplo as bases decimal e hexadecimal. </p>
+<p>E o número que possui a propriedade 1 é sempre o número da base menos um: \(9\) para a base decimal e \(F\) para a base hexadecimal.</p>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>

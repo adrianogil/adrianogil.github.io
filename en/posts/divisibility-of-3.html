@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>The divisibility rule of 3 · GilLabs</title>
+  <link rel="stylesheet" href="../../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../../site.js?v=6" defer></script>
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <header class="content-header">
+    <h1>The divisibility rule of 3</h1>
+    <p class="meta">26 Aug 2022</p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/divisibility-of-3.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/divisibility-of-3.html">FR</a></div>
+  <p>While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3.  Actually, the basic operations have some interesting properties:</p>
+<ol>
+<li>the sum of any number to 9 preserve the sum of its digits</li>
+<li>any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3</li>
+</ol>
+<p>In this post, I'm going to analyze a little bit the reasons behind each of these properties.</p>
+<h2 id="1-the-sum-of-any-number-to-9-preserve-the-sum-of-its-digits">1) the sum of any number to 9 preserve the sum of its digits</h2>
+<p>Considering the operation below</p>
+<p>\[A + 9 = B\] </p>
+<p>The sum of digits of A will be equal to the sum of digits of B</p>
+<p>Take a look at some examples:</p>
+<p><em>Example 1.1:</em> </p>
+<p>\[15 + 9 = 24\] </p>
+<p>the sum of the digits of \(15\) will be equal to the sum of the digits of the resulting value \(24\) (\(2 + 4 = 6\))</p>
+<p><em>Example 1.2:</em></p>
+<p>\[71 + 9 = 80\] </p>
+<p>\(7 + 1\) is equal to \(8 + 0\), both \(8\)</p>
+<h2 id="2-any-number-multiplied-by-3-results-in-a-number-which-the-sum-of-its-digits-will-also-be-a-multiple-of-3">2) any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3</h2>
+<p>Considering the operation</p>
+<p>\[A * 3 = B\] </p>
+<p>this property implies that the sum of the digits of B will necessary be a multiple of \(3\). As we can see in the examples below:</p>
+<p><em>Example 2.1:</em></p>
+<p>\[24 * 3 = 72\]</p>
+<p>As we can notice the sum of the digits of \(72\) is \(7 + 2 = 9\), a multiple of 3</p>
+<p><em>Example 2.2:</em></p>
+<p>\[19*3 = 57\] </p>
+<p>the sum of digits of \(57\) is \(5 + 7 = 12\), also a multiple of 3</p>
+<h2 id="a-deep-dive-of-the-divisibility-rule-of-3">A deep dive of the divisibility rule of 3</h2>
+<p>In elementary school we learn the divisibility rule of 3 and accept that it happens without really understanding why.</p>
+<p>TIL that the property 2 is derived of property 1, i.e, when multiplying a number by \(3\) it also means a sum with \(9\).</p>
+<p>Wait, what?</p>
+<p>Well, the multiplication is actually a sequence of sum operations, right?</p>
+<p>So a simple operation like</p>
+<p>\[3 * 4 = 12\] </p>
+<p>can also be expressed as a sequence of sum</p>
+<p>\[3 + 3 + 3 + 3 = 12\] </p>
+<p>and can be rearranged to be a sum with \(9\)</p>
+<p>\[9 + 3 = 12\]</p>
+<p>Let me show other examples in which multiplication by 3 reveals to be a sum with \(9\)</p>
+<p><em>Example 3.1</em></p>
+<p>\[3*5 = 3+3+3+3+3 = 9+6 = 15.\] </p>
+<p><em>Example 3.2</em></p>
+<p>\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]</p>
+<h2 id="multiplying-by-3-means-a-sum-between-a-number-k-plus-9">Multiplying by 3 means a sum between a number k plus 9</h2>
+<p>Hence, we can conclude that the property 1 is the reason behind property 2. </p>
+<p>As the multiplication by \(3\) implies a sum between a number \(k\) plus \(9\), the property 1 garantees that the sum of the digits of \(k\) will be preserved and as \(k\) is a multiple of 3, the sum of the digits of the result will also be a multiple of 3.</p>
+<p>Totally Crazy, right?</p>
+<p>Below we can see a proof:</p>
+<p>Considering any real number \(x &gt; 3\) and a \(k = x - 3\): </p>
+<p>\[3*x = 3*(k+3) = 3*k+9\]</p>
+<p>As \(3 * k\) is a multiple of 3, by the rules of property 1, it's implied that the digits of \(3 * k + 9\) will also be multiple of \(3\).</p>
+<h2 id="whats-the-reason-behind-property-1">What's the reason behind property 1?</h2>
+<p>It's worth to note that it happens because to sum with \(9\) is the same thing to add \(10\) and to subtract \(1\) at same time, i.e., increasing one in second digit and decreasing one in first digit, what does not change the sum of digits ($ +1 - 1 = 0$).</p>
+<p>We can also generalize that the property 2 happens with all numeral system with the following number of digits:</p>
+<p>\[3 * N + 1\]</p>
+<p>for instance, decimal and hexadecimal numeral systems.</p>
+<p>And the number that follows the property 1 is always the maximum digit of the numeral system minus \(1\): so it is \(9\) for decimal numeral system and \(F\) for hexadecimal numbers.</p>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>
