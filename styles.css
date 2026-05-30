@@ -12,6 +12,14 @@
   --accent-soft: #d9f3f6;
   --warm: #e56b4f;
   --muted: #667085;
+  --code-bg: #f8fafc;
+  --code-header-bg: #eef3f8;
+  --code-border: rgba(16, 23, 34, 0.14);
+  --code-text: #1f2937;
+  --code-muted: #667085;
+  --code-line-number: #6f829c;
+  --code-line-hover: rgba(11, 122, 136, 0.08);
+  --code-copy-bg: #ffffff;
   --shadow: 0 0.15rem 0.65rem rgba(33, 41, 57, 0.08);
   --border: rgba(33, 41, 57, 0.12);
   --radius: 8px;
@@ -32,6 +40,14 @@
   --accent-soft: rgba(82, 199, 214, 0.16);
   --warm: #ff9a7a;
   --muted: #a6b0c0;
+  --code-bg: #0c111b;
+  --code-header-bg: #161d29;
+  --code-border: rgba(238, 242, 247, 0.15);
+  --code-text: #eef4ff;
+  --code-muted: #9aa9bd;
+  --code-line-number: #718198;
+  --code-line-hover: rgba(255, 154, 122, 0.1);
+  --code-copy-bg: #101722;
   --shadow: 0 0.25rem 0.9rem rgba(0, 0, 0, 0.28);
   --border: rgba(238, 242, 247, 0.13);
 }
@@ -637,6 +653,61 @@ a.language-switcher-item:focus {
   margin-bottom: 0;
 }
 
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.45rem 0 0.9rem;
+}
+
+.post-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.12rem 0.45rem;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.post-tag:hover,
+.post-tag:focus {
+  color: var(--accent-strong);
+  text-decoration: none;
+  border-color: currentColor;
+}
+
+.tag-list {
+  display: grid;
+  gap: 0.55rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4rem;
+}
+
+.tag-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tag-list a {
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.tag-list span {
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
 .meta {
   color: var(--muted);
   display: block;
@@ -655,6 +726,32 @@ a.language-switcher-item:focus {
 
 .content-header h1 {
   margin-top: 0;
+}
+
+.content-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin: -0.35rem 0 1rem;
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+}
+
+.content-breadcrumb a {
+  color: var(--accent);
+  font-weight: 650;
+}
+
+.content-breadcrumb a:hover,
+.content-breadcrumb a:focus {
+  color: var(--accent-strong);
+}
+
+.content-breadcrumb span[aria-current="page"] {
+  min-width: 0;
+  color: var(--muted);
 }
 
 .content img {
@@ -1339,89 +1436,160 @@ a.language-switcher-item:focus {
 }
 
 .code-block {
-  margin: 1.5rem 0;
-  border: 1px solid var(--border);
-  border-radius: 4px;
+  width: min(44rem, calc(100vw - 2rem));
+  margin: 1.75rem 0 1.75rem 50%;
+  transform: translateX(-50%);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius);
   overflow: hidden;
-  background: var(--surface-strong);
+  background: var(--code-bg);
+  box-shadow: 0 0.9rem 2.2rem rgba(16, 23, 34, 0.12);
 }
 
 .code-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.6rem 0.9rem;
-  background: rgba(148, 163, 184, 0.12);
-  border-bottom: 1px solid var(--border);
+  min-height: 2.5rem;
+  padding: 0.55rem 0.75rem 0.55rem 4.25rem;
+  background: var(--code-header-bg);
+  border-bottom: 1px solid var(--code-border);
   font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.code-header::before {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+  background: var(--warm);
+  box-shadow: 1.05rem 0 0 #e5b94f, 2.1rem 0 0 var(--accent);
 }
 
 .code-language {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .copy-button {
-  background: transparent;
-  border: 1px solid var(--border);
+  flex: 0 0 auto;
+  min-width: 4.2rem;
+  background: var(--code-copy-bg);
+  border: 1px solid var(--code-border);
   color: var(--text);
   border-radius: 4px;
-  padding: 0.2rem 0.75rem;
+  padding: 0.25rem 0.7rem;
   cursor: pointer;
   font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: border-color 0.16s ease, color 0.16s ease, background 0.16s ease;
 }
 
 .copy-button:hover,
+.copy-button:focus-visible,
 .copy-button.copied {
   border-color: var(--accent);
   color: var(--accent);
+  outline: none;
 }
 
 .code-block pre {
   margin: 0;
   padding: 1rem 0;
   overflow-x: auto;
-  background: transparent;
+  background: var(--code-bg);
+  color: var(--code-text);
+  scrollbar-color: var(--code-line-number) transparent;
+  scrollbar-width: thin;
+  tab-size: 2;
+}
+
+.code-block pre::-webkit-scrollbar {
+  height: 0.75rem;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+  background: var(--code-line-number);
+  border: 0.22rem solid var(--code-bg);
+  border-radius: 999px;
 }
 
 .code-block pre.shiki {
   background: transparent !important;
 }
 
-.code-block pre.shiki code {
+.code-block code {
   display: block;
   counter-reset: line;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.9rem;
   line-height: 1.6;
-  background: transparent !important;
+  background: transparent;
 }
 
 .code-block pre:not(.shiki) code {
-  display: block;
-  padding: 0 1rem;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 0.9rem;
+  color: var(--code-text);
 }
 
-.code-block pre.shiki .line {
+.code-block .line {
   display: block;
   padding: 0 1.25rem 0 3.25rem;
   position: relative;
   white-space: pre;
+  min-height: 1.6em;
 }
 
-.code-block pre.shiki .line::before {
+.code-block .line:hover {
+  background: var(--code-line-hover);
+}
+
+.code-block .line::before {
   counter-increment: line;
   content: counter(line);
   position: absolute;
   left: 1rem;
   width: 1.5rem;
   text-align: right;
-  color: var(--muted);
+  color: var(--code-line-number);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+@media (max-width: 38em) {
+  .code-block {
+    border-radius: 6px;
+  }
+
+  .code-header {
+    padding-left: 3.8rem;
+  }
+
+  .code-block code {
+    font-size: 0.82rem;
+  }
+
+  .code-block .line {
+    padding-left: 2.75rem;
+    padding-right: 1rem;
+  }
+
+  .code-block .line::before {
+    left: 0.75rem;
+    width: 1.25rem;
+  }
 }
 
 @media print {

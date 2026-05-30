@@ -27,7 +27,7 @@ copyButtons.forEach((button) => {
   button.addEventListener('click', async () => {
     const code = button.closest('.code-block')?.querySelector('code');
     if (!code) return;
-    const text = code.innerText.replace(/\n$/, '');
+    const text = code.innerText.replace(/\\n$/, '');
     try {
       await navigator.clipboard.writeText(text);
       button.textContent = 'Copied';

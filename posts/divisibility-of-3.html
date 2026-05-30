@@ -30,7 +30,7 @@ window.MathJax = {
       <p>GilLabs</p>
     </div>
     <nav class="sidebar-nav" aria-label="Main navigation">
-      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
@@ -63,68 +63,66 @@ window.MathJax = {
     </header>
     <main class="container content-shell" id="content">
       <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">The divisibility rule of 3</span></nav>
   <header class="content-header">
     <h1>The divisibility rule of 3</h1>
     <p class="meta">26 Aug 2022</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/math.html">#math</a><a class="post-tag" href="../tags/education.html">#education</a><a class="post-tag" href="../tags/tutorial.html">#tutorial</a></p>
   </header>
   <div class="language-code-links"><a href="/pt-BR/posts/divisibility-of-3.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/divisibility-of-3.html">FR</a></div>
-  <p>While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3.  Actually, the basic operations have some interesting properties:</p>
-<ol>
-<li>the sum of any number to 9 preserve the sum of its digits</li>
-<li>any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3</li>
-</ol>
-<p>In this post, I'm going to analyze a little bit the reasons behind each of these properties.</p>
-<h2 id="1-the-sum-of-any-number-to-9-preserve-the-sum-of-its-digits">1) the sum of any number to 9 preserve the sum of its digits</h2>
-<p>Considering the operation below</p>
-<p>\[A + 9 = B\] </p>
-<p>The sum of digits of A will be equal to the sum of digits of B</p>
-<p>Take a look at some examples:</p>
-<p><em>Example 1.1:</em> </p>
-<p>\[15 + 9 = 24\] </p>
-<p>the sum of the digits of \(15\) will be equal to the sum of the digits of the resulting value \(24\) (\(2 + 4 = 6\))</p>
-<p><em>Example 1.2:</em></p>
-<p>\[71 + 9 = 80\] </p>
-<p>\(7 + 1\) is equal to \(8 + 0\), both \(8\)</p>
-<h2 id="2-any-number-multiplied-by-3-results-in-a-number-which-the-sum-of-its-digits-will-also-be-a-multiple-of-3">2) any number multiplied by 3 results in a number which the sum of its digits will also be a multiple of 3</h2>
-<p>Considering the operation</p>
-<p>\[A * 3 = B\] </p>
-<p>this property implies that the sum of the digits of B will necessary be a multiple of \(3\). As we can see in the examples below:</p>
-<p><em>Example 2.1:</em></p>
-<p>\[24 * 3 = 72\]</p>
-<p>As we can notice the sum of the digits of \(72\) is \(7 + 2 = 9\), a multiple of 3</p>
-<p><em>Example 2.2:</em></p>
-<p>\[19*3 = 57\] </p>
-<p>the sum of digits of \(57\) is \(5 + 7 = 12\), also a multiple of 3</p>
-<h2 id="a-deep-dive-of-the-divisibility-rule-of-3">A deep dive of the divisibility rule of 3</h2>
-<p>In elementary school we learn the divisibility rule of 3 and accept that it happens without really understanding why.</p>
-<p>TIL that the property 2 is derived of property 1, i.e, when multiplying a number by \(3\) it also means a sum with \(9\).</p>
-<p>Wait, what?</p>
-<p>Well, the multiplication is actually a sequence of sum operations, right?</p>
-<p>So a simple operation like</p>
-<p>\[3 * 4 = 12\] </p>
-<p>can also be expressed as a sequence of sum</p>
-<p>\[3 + 3 + 3 + 3 = 12\] </p>
-<p>and can be rearranged to be a sum with \(9\)</p>
-<p>\[9 + 3 = 12\]</p>
-<p>Let me show other examples in which multiplication by 3 reveals to be a sum with \(9\)</p>
-<p><em>Example 3.1</em></p>
-<p>\[3*5 = 3+3+3+3+3 = 9+6 = 15.\] </p>
-<p><em>Example 3.2</em></p>
-<p>\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]</p>
-<h2 id="multiplying-by-3-means-a-sum-between-a-number-k-plus-9">Multiplying by 3 means a sum between a number k plus 9</h2>
-<p>Hence, we can conclude that the property 1 is the reason behind property 2. </p>
-<p>As the multiplication by \(3\) implies a sum between a number \(k\) plus \(9\), the property 1 garantees that the sum of the digits of \(k\) will be preserved and as \(k\) is a multiple of 3, the sum of the digits of the result will also be a multiple of 3.</p>
-<p>Totally Crazy, right?</p>
-<p>Below we can see a proof:</p>
-<p>Considering any real number \(x &gt; 3\) and a \(k = x - 3\): </p>
-<p>\[3*x = 3*(k+3) = 3*k+9\]</p>
-<p>As \(3 * k\) is a multiple of 3, by the rules of property 1, it's implied that the digits of \(3 * k + 9\) will also be multiple of \(3\).</p>
-<h2 id="whats-the-reason-behind-property-1">What's the reason behind property 1?</h2>
-<p>It's worth to note that it happens because to sum with \(9\) is the same thing to add \(10\) and to subtract \(1\) at same time, i.e., increasing one in second digit and decreasing one in first digit, what does not change the sum of digits ($ +1 - 1 = 0$).</p>
-<p>We can also generalize that the property 2 happens with all numeral system with the following number of digits:</p>
-<p>\[3 * N + 1\]</p>
-<p>for instance, decimal and hexadecimal numeral systems.</p>
-<p>And the number that follows the property 1 is always the maximum digit of the numeral system minus \(1\): so it is \(9\) for decimal numeral system and \(F\) for hexadecimal numbers.</p>
+  <p>While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. In elementary school we learn the rule, use it, and usually move on without asking why it works:</p>
+<blockquote>
+<p>a number is divisible by \(3\) when the sum of its digits is divisible by \(3\).</p>
+</blockquote>
+<p>For example, \(72\) is divisible by \(3\) because \(7 + 2 = 9\), and \(9\) is divisible by \(3\). The same happens with \(57\), since \(5 + 7 = 12\).</p>
+<p>But why does the sum of the digits tell us anything about the original number?</p>
+<h2 id="a-first-hint-adding-9">A first hint: adding 9</h2>
+<p>One useful hint is that adding \(9\) often keeps the digit sum unchanged:</p>
+<p>\[15 + 9 = 24\]</p>
+<p>The digit sum of \(15\) is \(1 + 5 = 6\), and the digit sum of \(24\) is \(2 + 4 = 6\).</p>
+<p>Another example:</p>
+<p>\[71 + 9 = 80\]</p>
+<p>Here, \(7 + 1 = 8\) and \(8 + 0 = 8\).</p>
+<p>It is tempting to say that adding \(9\) always preserves the sum of the digits, but that is not quite true:</p>
+<p>\[99 + 9 = 108\]</p>
+<p>The digit sum goes from \(9 + 9 = 18\) to \(1 + 0 + 8 = 9\).</p>
+<p>So the exact digit sum is not always preserved. What is preserved is the remainder after division by \(9\), and therefore also the remainder after division by \(3\).</p>
+<p>That is the real reason the divisibility rule works.</p>
+<h2 id="the-key-idea">The key idea</h2>
+<p>In decimal notation, each position is a power of \(10\):</p>
+<p>\[abc = 100a + 10b + c\]</p>
+<p>The important observation is that \(10\) leaves remainder \(1\) when divided by \(3\):</p>
+<p>\[10 \equiv 1 \pmod{3}\]</p>
+<p>Because of that, powers of \(10\) also leave remainder \(1\) when divided by \(3\):</p>
+<p>\[100 \equiv 1 \pmod{3}\]</p>
+<p>So we can replace each decimal place by \(1\) when we only care about divisibility by \(3\):</p>
+<p>\[100a + 10b + c \equiv a + b + c \pmod{3}\]</p>
+<p>In other words, a number and the sum of its digits have the same remainder when divided by \(3\).</p>
+<p>That is why the rule works:</p>
+<ul>
+<li>if the digit sum is divisible by \(3\), the original number is divisible by \(3\);</li>
+<li>if the digit sum is not divisible by \(3\), the original number is not divisible by \(3\).</li>
+</ul>
+<h2 id="checking-with-examples">Checking with examples</h2>
+<p>Take \(72\):</p>
+<p>\[72 \equiv 7 + 2 = 9 \equiv 0 \pmod{3}\]</p>
+<p>So \(72\) is divisible by \(3\).</p>
+<p>Take \(58\):</p>
+<p>\[58 \equiv 5 + 8 = 13 \equiv 1 \pmod{3}\]</p>
+<p>So \(58\) is not divisible by \(3\).</p>
+<h2 id="why-adding-9-felt-related">Why adding 9 felt related</h2>
+<p>The first intuition about adding \(9\) was still pointing in the right direction. Since \(9\) is divisible by \(3\), adding \(9\) cannot change whether a number is divisible by \(3\).</p>
+<p>For any integer \(n\):</p>
+<p>\[n + 9 \equiv n \pmod{3}\]</p>
+<p>So adding \(9\) may change the exact digit sum, especially when carries are involved, but it does not change the number's divisibility by \(3\).</p>
+<h2 id="generalizing-the-rule">Generalizing the rule</h2>
+<p>This digit-sum rule is not exclusive to decimal numbers. It works in any base \(b\) where:</p>
+<p>\[b \equiv 1 \pmod{3}\]</p>
+<p>That means bases of the form:</p>
+<p>\[b = 3N + 1\]</p>
+<p>Decimal works because \(10 = 3 \cdot 3 + 1\).</p>
+<p>Hexadecimal also works because \(16 = 3 \cdot 5 + 1\).</p>
+<p>The deeper pattern is not about the symbol \(9\) itself. It is about the base being one more than a multiple of \(3\), which makes every positional value behave like \(1\) when we only care about remainders modulo \(3\).</p>
 </article>
 
     </main>

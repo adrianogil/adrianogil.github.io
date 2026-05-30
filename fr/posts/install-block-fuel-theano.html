@@ -18,7 +18,7 @@
       <p>GilLabs</p>
     </div>
     <nav class="sidebar-nav" aria-label="Main navigation">
-      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Langues :</p><nav class="language-switcher-nav" aria-label="Langues :"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><a class="language-switcher-item" href="/en/index.html">EN</a><span class="language-switcher-item active" aria-current="true">FR</span></nav></div>
@@ -51,9 +51,11 @@
     </header>
     <main class="container content-shell" id="content">
       <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Installation de Theano, Fuel et Blocks</span></nav>
   <header class="content-header">
     <h1>Installation de Theano, Fuel et Blocks</h1>
     <p class="meta">10 Jan 2016</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/python.html">#python</a><a class="post-tag" href="../tags/machine-learning.html">#machine-learning</a><a class="post-tag" href="../tags/tutorial.html">#tutorial</a></p>
   </header>
   <div class="language-code-links"><a href="/pt-BR/posts/install-block-fuel-theano.html">PT</a> <a href="/en/posts/install-block-fuel-theano.html">EN</a> <span class="active" aria-current="true">FR</span></div>
   <p>Le prémière pas pour la codification avec Apprentissage Profunde (plus connu avec les mots anglaises, <a href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a>) est chercher une bonne interface que permis de implémenter le plus différents modèles neuronaux avec bonne performance.</p>
@@ -65,50 +67,32 @@ données, et en train de visualizer les resultats.</p>
 <h1 id="installation-dans-le-windows">Installation dans le Windows</h1>
 <p>J'ai trouvé quelques trucs dans <a href="https://www.reddit.com/r/MachineLearning/comments/3hkv2b/most_recent_way_to_install_theano_for_windows_10/">cet post reddit</a> et je les ai testé dans Windows 8,1 et Windows 10.</p>
 <p>Le premier pas est télécharger et installer la version Windows d'<a href="https://www.continuum.io/downloads">Anaconda</a>. Puis une simple assistant d'installation, il faut installer les bibliothèques necessaires à Theano en usant d'<code>Anaconda Prompt</code>.</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    conda install pip six nose numpy scipy graphviz
-    conda install mingw libpython
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    conda install pip six nose numpy scipy graphviz</span><span class="line">    conda install mingw libpython</span></code></pre></div>
 <p>Quelque bibliothèques pythons sont necessaires pour functions spécifiques Theano, comme dessiner les chartes de les noeud d'operations, et pour les frameworks Blocks et Fuel aussi.</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    pip install pydot2 progressbar2 picklable-itertools
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    pip install pydot2 progressbar2 picklable-itertools</span></code></pre></div>
 <p>Theano peut être installé au moyen du <code>pip</code>:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    pip install theano
-
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    pip install theano</span><span class="line"></span></code></pre></div>
 <p>C'est possible de télecharger Fuel directament de le repo github: https://github.com/mila-udem/blocks. Afin de l'installer, nous pouvons utiliser du python pour exécuter le script setuptools appelé <code>setup.py</code></p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    cd fuel
-    python setup.py install
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    cd fuel</span><span class="line">    python setup.py install</span></code></pre></div>
 <p><img alt="En testant Theano dans l'Anaconda" src="/assets/images/2016-01-10-installing/windows-anaconda-prompt.webp" /></p>
 <h1 id="installation-dans-losx">Installation dans l'OSX</h1>
 <p>Selon <a href="http://deeplearning.net/software/theano/install.html#mac-os">la page Theano de la installation mac</a> nous pouvons <a href="https://www.continuum.io/downloads">télécharger Anaconda</a> et puis installer Theano par moyen du <code>pip</code>:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    conda install pip six nose numpy scipy graphviz
-    pip install pydot2
-    pip install Theano
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    conda install pip six nose numpy scipy graphviz</span><span class="line">    pip install pydot2</span><span class="line">    pip install Theano</span></code></pre></div>
 <p>Puis télécharger Fuel dans <a href="https://github.com/mila-udem/fuel">la page Github</a>, il y a un script <code>setup.py</code> que permis de faire la installation:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    cd fuel
-    python setup.py install
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    cd fuel</span><span class="line">    python setup.py install</span></code></pre></div>
 <p>Lorsque Blocks est téléchargé <a href="https://github.com/mila-udem/blocks">de la page github</a>, c'est possible d'installer en usant du script <code>setup.py</code>:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    cd blocks
-    python setup.py install
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    cd blocks</span><span class="line">    python setup.py install</span></code></pre></div>
 <p><img alt="Theano dans le terminal Mac" src="/assets/images/2016-01-10-installing/mac-terminal.webp" /></p>
 <h1 id="installation-dans-lubuntu">Installation dans l'Ubuntu</h1>
 <p>Quelques pas d'installation sont publié dans le <a href="http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu">site du Theano</a>, alors je montre qu'il avais fonctioner dans le Ubuntu 14.10.</p>
 <p>Télécharger et installer toutes les requis des bibliothèques en utilisant du <code>apt-get</code>:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git gfortran libhdf5-dev graphviz</span></code></pre></div>
 <p>Alors Theano est installé en usant du <code>pip</code>:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    pip install Theano
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    pip install Theano</span></code></pre></div>
 <p>La bibliothèque Fuel est installé par moyen du pip directement du repo github:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    pip install git+git://github.com/mila-udem/fuel.git 
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    pip install git+git://github.com/mila-udem/fuel.git </span></code></pre></div>
 <p>La bibliothèque Blocks est installé en usant du <code>pip</code>:</p>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code class="language-bash">    pip install git+git://github.com/mila-udem/blocks.git
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">    pip install git+git://github.com/mila-udem/blocks.git</span></code></pre></div>
 <p><img alt="Theano dans l'Ubuntu" src="/assets/images/2016-01-10-installing/ubuntu-terminal.webp" /></p>
 <h1 id="installation-dune-ide-python">Installation d'une IDE Python</h1>
 <p>J'ai de excellentes experiences avec PyDev et Eclipse, alors je recommend la version plus lève: <code>LiClipse</code>. Autres optiones sont explorées dans le link: http://pedrokroger.net/choosing-best-python-ide/.</p>

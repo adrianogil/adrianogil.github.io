@@ -18,7 +18,7 @@
       <p>GilLabs</p>
     </div>
     <nav class="sidebar-nav" aria-label="Main navigation">
-      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Langues :</p><nav class="language-switcher-nav" aria-label="Langues :"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><a class="language-switcher-item" href="/en/index.html">EN</a><span class="language-switcher-item active" aria-current="true">FR</span></nav></div>
@@ -51,9 +51,11 @@
     </header>
     <main class="container content-shell" id="content">
       <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Premiers pas avec Git</span></nav>
   <header class="content-header">
     <h1>Premiers pas avec Git</h1>
     <p class="meta">01 Feb 2025</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/git.html">#git</a><a class="post-tag" href="../tags/tutorial.html">#tutorial</a><a class="post-tag" href="../tags/cli.html">#cli</a></p>
   </header>
   <div class="language-code-links"><a href="/pt-BR/posts/intro-git.html">PT</a> <a href="/en/posts/intro-git.html">EN</a> <span class="active" aria-current="true">FR</span></div>
   <h2 id="introduction">Introduction</h2>
@@ -62,43 +64,35 @@
 <h2 id="creer-votre-premier-depot-git">Créer votre premier dépôt Git</h2>
 <p>Avant tout, configurons votre dépôt Git. C'est ici que l'historique de votre projet sera stocké.</p>
 <p>Pour créer un nouveau dépôt Git, ouvrez votre terminal, accédez au dossier de votre projet, puis exécutez :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git init
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git init</span></code></pre></div>
 <p>Cette commande initialise un tout nouveau dépôt Git dans votre dossier de projet. Simple, non ?</p>
 <p>Après l'exécution de <code>git init</code>, un dossier caché <code>.git</code> est créé. Ce dossier contient toutes les métadonnées et objets nécessaires à Git pour suivre et gérer l'historique de votre projet.</p>
 <h2 id="ajouter-des-fichiers-a-votre-depot">Ajouter des fichiers à votre dépôt</h2>
 <p>Ajoutons maintenant des fichiers à votre dépôt.</p>
 <p>Pensez à la zone de staging comme à un panier d'achat : vous y ajoutez des modifications avant de les valider (commit). Pour ajouter un fichier, utilisez :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git add &lt;nom_du_fichier&gt;
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git add &lt;nom_du_fichier&gt;</span></code></pre></div>
 <p>Remplacez <code>&lt;nom_du_fichier&gt;</code> par le nom de votre fichier. Celui-ci est maintenant en zone de staging, où vous pouvez vérifier et préparer les modifications avant de les valider.</p>
 <p>Si vous voulez ajouter toutes les modifications dans le dossier courant (y compris les suppressions et modifications), utilisez :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git add .
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git add .</span></code></pre></div>
 <p>Pour voir les fichiers en attente de validation et ceux qui ont été modifiés, utilisez :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git status
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git status</span></code></pre></div>
 <p>Cette commande vous donne un résumé de l'état actuel de votre projet.</p>
 <h2 id="valider-vos-modifications">Valider vos modifications</h2>
 <p>Passons maintenant à la validation (commit) des modifications. Un commit est une capture instantanée de votre projet à un moment donné.</p>
 <p>Pour valider vos modifications avec un message, utilisez :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git commit -m &quot;Votre message de commit&quot;
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git commit -m &quot;Votre message de commit&quot;</span></code></pre></div>
 <p>Assurez-vous que votre message est clair et descriptif pour vous y retrouver plus tard.</p>
 <h2 id="visualiser-lhistorique-des-commits">Visualiser l'historique des commits</h2>
 <p>Voir l'historique des commits peut être très utile. Pour afficher votre historique des commits sous forme graphique, utilisez :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git log --graph --all --oneline
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git log --graph --all --oneline</span></code></pre></div>
 <p>Cette commande permet de voir une représentation graphique de l'historique des commits, très utile pour comprendre l'évolution de votre projet.</p>
 <p><img alt="" src="/assets/images/2025-02-01-intro-git/git_log_example.webp" /></p>
 <h2 id="envoyer-des-modifications-vers-un-depot-distant">Envoyer des modifications vers un dépôt distant</h2>
 <p>Après avoir effectué des commits, vous voudrez peut-être partager votre travail ou le sauvegarder sur un dépôt distant comme GitHub.</p>
 <p>D'abord, ajoutez un dépôt distant. Par exemple, pour GitHub :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git remote add origin https://github.com/votreutilisateur/votre-repo.git
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git remote add origin https://github.com/votreutilisateur/votre-repo.git</span></code></pre></div>
 <p>Puis, poussez vos modifications :</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button>Copy</button></div><pre><code>git push origin main
-</code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Plain text</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Plain text code">Copy</button></div><pre><code><span class="line">git push origin main</span></code></pre></div>
 <p>Cette commande envoie vos modifications vers la branche principale (<code>main</code>) du dépôt distant.</p>
 <h2 id="comprendre-la-logique-git">Comprendre la logique Git</h2>
 <p>Pour bien utiliser Git, il est important de comprendre ses concepts fondamentaux : le système de fichiers, la zone de staging et les commits.</p>

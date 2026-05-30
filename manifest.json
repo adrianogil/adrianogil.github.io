@@ -6,7 +6,12 @@
       "date": "2016-01-10 14:00:00 -0400",
       "summary": "Installation notes for Theano, Blocks, and Fuel on Windows, OSX, and Ubuntu.",
       "lang": "en",
-      "translation_key": "install-block-fuel-theano"
+      "translation_key": "install-block-fuel-theano",
+      "tags": [
+        "python",
+        "machine-learning",
+        "tutorial"
+      ]
     },
     {
       "title": "Kuarup: a Global Game Jam 2016 game",
@@ -14,7 +19,12 @@
       "date": "2016-01-10 14:00:00 -0400",
       "summary": "A few weeks ago, I had the privilege of participating in one of the most popular game jams ever: the Global Game Jam . I was lucky enough to...",
       "lang": "en",
-      "translation_key": "ggj-2016"
+      "translation_key": "ggj-2016",
+      "tags": [
+        "game-development",
+        "game-jam",
+        "unity"
+      ]
     },
     {
       "title": "Unity 101: A simple Space Invaders without coding",
@@ -22,15 +32,25 @@
       "date": "2017-01-31 21:00:00 -0400",
       "summary": "Build a simplified Space Invaders clone in Unity using visual behavior scripts, covering project setup, GameObjects, movement, collisions, and prefabs without writing code.",
       "lang": "en",
-      "translation_key": "simple-space-invaders-unity"
+      "translation_key": "simple-space-invaders-unity",
+      "tags": [
+        "unity",
+        "game-development",
+        "tutorial"
+      ]
     },
     {
       "title": "The divisibility rule of 3",
       "slug": "divisibility-of-3",
       "date": "2022-08-26 10:00:00 -0400",
-      "summary": "While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. Actually, the basic operations have so...",
+      "summary": "While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. In elementary school we learn the rule...",
       "lang": "en",
-      "translation_key": "divisibility-3"
+      "translation_key": "divisibility-3",
+      "tags": [
+        "math",
+        "education",
+        "tutorial"
+      ]
     },
     {
       "title": "My Roadmap for 2025",
@@ -38,7 +58,12 @@
       "date": "2025-01-01",
       "summary": "Several years ago, I started this blog as an excuse to document my learning process in some areas and to serve as additional material for co...",
       "lang": "en",
-      "translation_key": "2025-goals"
+      "translation_key": "2025-goals",
+      "tags": [
+        "personal",
+        "research",
+        "learning"
+      ]
     },
     {
       "title": "First Steps with Git",
@@ -46,7 +71,12 @@
       "date": "2025-02-01",
       "summary": "Hey there! I often find myself explaining Git from the ground up, so I decided to write this short introductory guide as a handy reference....",
       "lang": "en",
-      "translation_key": "intro-git"
+      "translation_key": "intro-git",
+      "tags": [
+        "git",
+        "tutorial",
+        "cli"
+      ]
     },
     {
       "title": "My Blog Workflow with Obsidian and Jekyll",
@@ -54,7 +84,24 @@
       "date": "2025-02-05",
       "summary": "Jekyll is a static site generator that transforms Markdown files into a fully functional website. Everything is generated into plain HTML, w...",
       "lang": "en",
-      "translation_key": "workflow-obsidian-jekyll"
+      "translation_key": "workflow-obsidian-jekyll",
+      "tags": [
+        "writing",
+        "obsidian",
+        "static-site"
+      ]
+    },
+    {
+      "title": "My favorite Git commands",
+      "slug": "favorite-git-commands",
+      "date": "2026-05-30",
+      "summary": "After reading a few posts like this one and this one , I decided to make my own version too. So, these are a few of my favorite Git commands...",
+      "lang": "en",
+      "translation_key": "favorite-git-commands",
+      "tags": [
+        "git",
+        "cli"
+      ]
     },
     {
       "title": "Hello World!",
@@ -62,7 +109,12 @@
       "date": "2016-01-01 09:02:47 -0400",
       "summary": "A first note introducing the blog, research interests, and development topics.",
       "lang": "en",
-      "translation_key": "hello-world"
+      "translation_key": "hello-world",
+      "tags": [
+        "blog",
+        "personal",
+        "research"
+      ]
     },
     {
       "title": "Installation de Theano, Fuel et Blocks",
@@ -70,7 +122,12 @@
       "date": "2016-01-10 14:00:00 -0400",
       "summary": "Notes d'installation de Theano, Blocks et Fuel sous Windows, OSX et Ubuntu.",
       "lang": "fr",
-      "translation_key": "install-block-fuel-theano"
+      "translation_key": "install-block-fuel-theano",
+      "tags": [
+        "python",
+        "machine-learning",
+        "tutorial"
+      ]
     },
     {
       "title": "Kuarup: ma submission de la Global Game Jam 2016",
@@ -78,7 +135,12 @@
       "date": "2016-01-10 14:00:00 -0400",
       "summary": "Il y a quelques semaines, j'ai eu le privil\u00e8ge de participer \u00e0 l'un des plus grands game jams jamais organis\u00e9s: le Global Game Jam . J'ai eu...",
       "lang": "fr",
-      "translation_key": "ggj-2016"
+      "translation_key": "ggj-2016",
+      "tags": [
+        "game-development",
+        "game-jam",
+        "unity"
+      ]
     },
     {
       "title": "Unity 101 : Un simple Space Invaders sans codage",
@@ -86,15 +148,25 @@
       "date": "2017-01-31 21:00:00 -0400",
       "summary": "Aujourd'hui, nous allons cr\u00e9er une version simplifi\u00e9e de Space Invaders en utilisant Unity . Le programme n'est pas l'objet de ce tutoriel....",
       "lang": "fr",
-      "translation_key": "simple-space-invaders-unity"
+      "translation_key": "simple-space-invaders-unity",
+      "tags": [
+        "unity",
+        "game-development",
+        "tutorial"
+      ]
     },
     {
       "title": "La r\u00e8gle de divisibilit\u00e9 par 3",
       "slug": "divisibility-of-3",
       "date": "2022-08-26 10:00:00 -0400",
-      "summary": "En examinant les devoirs de ma fille, j'ai commenc\u00e9 \u00e0 r\u00e9fl\u00e9chir un peu \u00e0 la r\u00e8gle de divisibilit\u00e9 par 3. En fait, les op\u00e9rations de base ont...",
+      "summary": "En examinant les devoirs de ma fille, j'ai commenc\u00e9 \u00e0 r\u00e9fl\u00e9chir un peu \u00e0 la r\u00e8gle de divisibilit\u00e9 par 3. \u00c0 l'\u00e9cole, nous apprenons la r\u00e8gle,...",
       "lang": "fr",
-      "translation_key": "divisibility-3"
+      "translation_key": "divisibility-3",
+      "tags": [
+        "math",
+        "education",
+        "tutorial"
+      ]
     },
     {
       "title": "Mon Plan pour 2025",
@@ -102,7 +174,12 @@
       "date": "2025-01-01",
       "summary": "Il y a plusieurs ann\u00e9es, j\u2019ai lanc\u00e9 ce blog comme une excuse pour documenter mon processus d\u2019apprentissage dans certains domaines et fournir...",
       "lang": "fr",
-      "translation_key": "2025-goals"
+      "translation_key": "2025-goals",
+      "tags": [
+        "personal",
+        "research",
+        "learning"
+      ]
     },
     {
       "title": "Premiers pas avec Git",
@@ -110,7 +187,12 @@
       "date": "2025-02-01",
       "summary": "Salut ! Je me retrouve souvent \u00e0 expliquer Git depuis le d\u00e9but, alors j'ai d\u00e9cid\u00e9 d'\u00e9crire ce petit guide introductif comme r\u00e9f\u00e9rence pratiq...",
       "lang": "fr",
-      "translation_key": "intro-git"
+      "translation_key": "intro-git",
+      "tags": [
+        "git",
+        "tutorial",
+        "cli"
+      ]
     },
     {
       "title": "Mon Flux de Travail de Blog avec Obsidian et Jekyll",
@@ -118,7 +200,24 @@
       "date": "2025-02-05",
       "summary": "Jekyll est un g\u00e9n\u00e9rateur de site statique qui transforme des fichiers Markdown en un site web pleinement fonctionnel. Tout est g\u00e9n\u00e9r\u00e9 en HTM...",
       "lang": "fr",
-      "translation_key": "workflow-obsidian-jekyll"
+      "translation_key": "workflow-obsidian-jekyll",
+      "tags": [
+        "writing",
+        "obsidian",
+        "static-site"
+      ]
+    },
+    {
+      "title": "Mes commandes Git preferees",
+      "slug": "favorite-git-commands",
+      "date": "2026-05-30",
+      "summary": "Apres avoir lu quelques articles comme celui-ci et celui-ci , j'ai decide de faire ma propre liste aussi. Voici donc une petite liste des ch...",
+      "lang": "fr",
+      "translation_key": "favorite-git-commands",
+      "tags": [
+        "git",
+        "cli"
+      ]
     },
     {
       "title": "Salut Monde!",
@@ -126,7 +225,12 @@
       "date": "2016-01-01 14:00:00 -0400",
       "summary": "Une premi\u00e8re note pour pr\u00e9senter le blog, mes recherches et mes sujets de d\u00e9veloppement.",
       "lang": "fr",
-      "translation_key": "hello-world"
+      "translation_key": "hello-world",
+      "tags": [
+        "blog",
+        "personal",
+        "research"
+      ]
     },
     {
       "title": "Instalando Blocks, Fuel e Theano",
@@ -134,7 +238,12 @@
       "date": "2016-01-10 14:00:00 -0400",
       "summary": "Notas de instala\u00e7\u00e3o do Theano, Blocks e Fuel no Windows, OSX e Ubuntu.",
       "lang": "pt-BR",
-      "translation_key": "install-block-fuel-theano"
+      "translation_key": "install-block-fuel-theano",
+      "tags": [
+        "python",
+        "machine-learning",
+        "tutorial"
+      ]
     },
     {
       "title": "Kuarup: um jogo de puzzle de cores na Global Game Jam 2016",
@@ -142,7 +251,12 @@
       "date": "2016-01-10 14:00:00 -0400",
       "summary": "Algumas semanas atr\u00e1s participei em uma das mais conhecidas game jams: Global Game Jam . Foi um trabalho conjunto com um pessoal muito talen...",
       "lang": "pt-BR",
-      "translation_key": "ggj-2016"
+      "translation_key": "ggj-2016",
+      "tags": [
+        "game-development",
+        "game-jam",
+        "unity"
+      ]
     },
     {
       "title": "Como fazer um Space Invaders simples na Unity sem programa\u00e7\u00e3o",
@@ -150,15 +264,25 @@
       "date": "2017-01-31 21:00:00 -0400",
       "summary": "Ol\u00e1 Pessoal,",
       "lang": "pt-BR",
-      "translation_key": "simple-space-invaders-unity"
+      "translation_key": "simple-space-invaders-unity",
+      "tags": [
+        "unity",
+        "game-development",
+        "tutorial"
+      ]
     },
     {
       "title": "Entendendo a Divisibilidade por 3",
       "slug": "divisibility-of-3",
       "date": "2022-08-26 10:00:00 -0400",
-      "summary": "Revisar junto com a filha as mat\u00e9rias da escola \u00e9 uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas opera\u00e7\u00f5e...",
+      "summary": "Enquanto revisava a li\u00e7\u00e3o de casa da minha filha, comecei a pensar um pouco sobre a regra de divisibilidade por 3. No ensino fundamental apr...",
       "lang": "pt-BR",
-      "translation_key": "divisibility-3"
+      "translation_key": "divisibility-3",
+      "tags": [
+        "math",
+        "education",
+        "tutorial"
+      ]
     },
     {
       "title": "Meu Roadmap para 2025",
@@ -166,7 +290,12 @@
       "date": "2025-01-01",
       "summary": "H\u00e1 v\u00e1rios anos, dei inicio a este blog como uma desculpa para documentar meu processo de aprendizado em algumas \u00e1reas e tamb\u00e9m como material...",
       "lang": "pt-BR",
-      "translation_key": "2025-goals"
+      "translation_key": "2025-goals",
+      "tags": [
+        "personal",
+        "research",
+        "learning"
+      ]
     },
     {
       "title": "Primeiros Passos com Git",
@@ -174,7 +303,12 @@
       "date": "2025-02-01",
       "summary": "Ol\u00e1! Frequentemente me vejo explicando Git do zero, ent\u00e3o decidi escrever este pequeno guia introdut\u00f3rio para servir de refer\u00eancia. Este gui...",
       "lang": "pt-BR",
-      "translation_key": "intro-git"
+      "translation_key": "intro-git",
+      "tags": [
+        "git",
+        "tutorial",
+        "cli"
+      ]
     },
     {
       "title": "Meu workflow com Obsidian and Jekyll",
@@ -182,7 +316,24 @@
       "date": "2025-02-05",
       "summary": "Jekyll \u00e9 um gerador de site est\u00e1tico que transforma arquivos Markdown em um site totalmente funcional. Tudo \u00e9 convertido para HTML puro, o q...",
       "lang": "pt-BR",
-      "translation_key": "workflow-obsidian-jekyll"
+      "translation_key": "workflow-obsidian-jekyll",
+      "tags": [
+        "writing",
+        "obsidian",
+        "static-site"
+      ]
+    },
+    {
+      "title": "Meus comandos Git favoritos",
+      "slug": "favorite-git-commands",
+      "date": "2026-05-30",
+      "summary": "Depois de ver alguns posts como esse e esse , decidi tamb\u00e9m fazer a minha vers\u00e3o. Ent\u00e3o, esta \u00e9 uma lista pequena das coisas de Git que eu a...",
+      "lang": "pt-BR",
+      "translation_key": "favorite-git-commands",
+      "tags": [
+        "git",
+        "cli"
+      ]
     },
     {
       "title": "Ol\u00e1 Mundo!",
@@ -190,7 +341,12 @@
       "date": "2016-01-01 09:02:47 -0400",
       "summary": "Uma primeira nota para apresentar o blog, meus interesses de pesquisa e desenvolvimento.",
       "lang": "pt-BR",
-      "translation_key": "hello-world"
+      "translation_key": "hello-world",
+      "tags": [
+        "blog",
+        "personal",
+        "research"
+      ]
     }
   ],
   "pages": [

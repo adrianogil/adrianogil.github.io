@@ -4,8 +4,32 @@
     <title>GilLabs</title>
     <link>https://adrianogil.github.io/</link>
     <description>GilLabs posts</description>
-    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://adrianogil.github.io/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My favorite Git commands</title>
+      <link>https://adrianogil.github.io/posts/favorite-git-commands.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/favorite-git-commands.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>After reading a few posts like this one and this one , I decided to make my own version too. So, these are a few of my favorite Git commands...</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Mes commandes Git preferees</title>
+      <link>https://adrianogil.github.io/fr/posts/favorite-git-commands.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/favorite-git-commands.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>Apres avoir lu quelques articles comme celui-ci et celui-ci , j'ai decide de faire ma propre liste aussi. Voici donc une petite liste des ch...</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Meus comandos Git favoritos</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/favorite-git-commands.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/favorite-git-commands.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>Depois de ver alguns posts como esse e esse , decidi também fazer a minha versão. Então, esta é uma lista pequena das coisas de Git que eu a...</description>
+      <category>pt-BR</category>
+    </item>
     <item>
       <title>My Blog Workflow with Obsidian and Jekyll</title>
       <link>https://adrianogil.github.io/posts/workflow-obsidian-jekyll.html</link>
@@ -83,7 +107,7 @@
       <link>https://adrianogil.github.io/posts/divisibility-of-3.html</link>
       <guid isPermaLink="true">https://adrianogil.github.io/posts/divisibility-of-3.html</guid>
       <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
-      <description>While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. Actually, the basic operations have so...</description>
+      <description>While reviewing my daughter's homework, I got to think a little bit about the divisibility rule of 3. In elementary school we learn the rule...</description>
       <category>en</category>
     </item>
     <item>
@@ -91,7 +115,7 @@
       <link>https://adrianogil.github.io/fr/posts/divisibility-of-3.html</link>
       <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/divisibility-of-3.html</guid>
       <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
-      <description>En examinant les devoirs de ma fille, j'ai commencé à réfléchir un peu à la règle de divisibilité par 3. En fait, les opérations de base ont...</description>
+      <description>En examinant les devoirs de ma fille, j'ai commencé à réfléchir un peu à la règle de divisibilité par 3. À l'école, nous apprenons la règle,...</description>
       <category>fr</category>
     </item>
     <item>
@@ -99,7 +123,7 @@
       <link>https://adrianogil.github.io/pt-BR/posts/divisibility-of-3.html</link>
       <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/divisibility-of-3.html</guid>
       <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
-      <description>Revisar junto com a filha as matérias da escola é uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas operaçõe...</description>
+      <description>Enquanto revisava a lição de casa da minha filha, comecei a pensar um pouco sobre a regra de divisibilidade por 3. No ensino fundamental apr...</description>
       <category>pt-BR</category>
     </item>
     <item>

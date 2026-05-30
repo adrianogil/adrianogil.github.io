@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>My favorite Git commands · GilLabs</title>
+  <link rel="stylesheet" href="../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../site.js?v=6" defer></script>
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">My favorite Git commands</span></nav>
+  <header class="content-header">
+    <h1>My favorite Git commands</h1>
+    <p class="meta">30 May 2026</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/git.html">#git</a><a class="post-tag" href="../tags/cli.html">#cli</a></p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/favorite-git-commands.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/favorite-git-commands.html">FR</a></div>
+  <p>After reading a few posts like <a href="https://medium.com/@thiagoqvalle/git-cookbook-52e2b301187e">this one</a> and <a href="https://jordanelver.co.uk/blog/2008/08/04/git-patching-flexibility/">this one</a>, I decided to make my own version too. So, these are a few of my favorite Git commands: </p>
+<h2 id="git-add-i"><code>git add -i</code></h2>
+<p>Lets you add files interactively to the staging area.</p>
+<p>I like this command a lot when I change several files at the same time and want to split the work into smaller commits. Instead of sending everything to a commit at once, I can review file by file and choose what goes in.</p>
+<h2 id="git-add-p"><code>git add -p</code></h2>
+<p>This one is similar to <code>git add -i</code>, but goes one level deeper: it lets you add specific parts of a file.</p>
+<p>It is very useful when the same file has two different changes. For example, you fixed a bug and also did a small refactor in the same file. With <code>git add -p</code>, you can put only the bug fix in the current commit and leave the refactor for another commit.</p>
+<h2 id="git-log-oneline-graph-all"><code>git log --oneline --graph --all</code></h2>
+<p>This is the classic command to visualize history as a graph:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">git log --oneline --graph --all</span></code></pre></div>
+<p>I use it a lot to quickly understand where I am, which branches exist, where a merge happened, and whether my branch diverged from another one.</p>
+<h2 id="git-rebase-i"><code>git rebase -i</code></h2>
+<p><code>git rebase -i</code> is one of the most useful commands for cleaning up a sequence of commits before opening a PR or before sharing a branch.</p>
+<p>With it, you can:</p>
+<ul>
+<li>reorder commits</li>
+<li>join small commits with <code>squash</code> or <code>fixup</code></li>
+<li>edit messages</li>
+<li>remove commits that no longer make sense</li>
+</ul>
+<p>Of course, it is also a command to use carefully, especially on branches that have already been shared. But on local branches, before publishing, it is excellent for turning a slightly messy sequence of work into a story that is easier to review.</p>
+<h2 id="git-push-origin-headbranch"><code>git push origin HEAD:&lt;branch&gt;</code></h2>
+<p>Pushes the current commit from your <code>HEAD</code> to a specific branch on <code>origin</code>.
+Very useful if your local branch does not have the same name as the remote branch, or if you want to publish exactly the current state without switching branches.</p>
+<h2 id="git-bisect"><code>git bisect</code></h2>
+<p><code>git bisect</code> is one of those commands that I find conceptually beautiful: it does a binary search through the history to discover which commit introduced a bug.</p>
+<p>The basic idea is to mark one commit as good and another as bad:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">git bisect start</span><span class="line">git bisect bad</span><span class="line">git bisect good &lt;good-commit&gt;</span></code></pre></div>
+<p>From there, Git jumps through the history and you tell it whether each tested point is good or bad. In the end, it points to the suspicious commit.</p>
+<p>The command becomes even more powerful when combined with <a href="https://medium.com/@thiagoqvalle/android-automated-bisecting-2f918e6830bb">automated tests</a>, because you can let Git test the commits for you.</p>
+<h2 id="git-reflog"><code>git reflog</code></h2>
+<p>The <code>reflog</code> often saves you after a "wrong reset", a "bad rebase", or some detached HEAD confusion.</p>
+<p>While <code>git log</code> shows the history of commits reachable from the current branch, <code>git reflog</code> shows where your <code>HEAD</code> has recently been.</p>
+<p>That means that when a commit "disappears", it often still appears in the reflog.</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">git reflog</span></code></pre></div>
+<p>After finding the lost hash, you can create a temporary branch or carefully go back to that point.</p>
+<h2 id="aliases-and-bash-functions">Aliases and bash functions</h2>
+<p>Creating shortcuts and utility functions is a good addition to your personal devX. Along those lines, I have a repo with commands I have been collecting over the last few years:</p>
+<p><a href="https://github.com/adrianogil/git-tools">https://github.com/adrianogil/git-tools</a></p>
+<p>One example is <code>gz</code>, a function that runs <code>git reset --hard</code> to a reference selected with <code>fzf</code>. Just be careful, because hard reset can delete uncommitted changes.</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">function ghard-reset-fz() {</span><span class="line">    if [ -n &quot;$1&quot; ]; then</span><span class="line">        echo &quot;Git hard reset to ref $1&quot;</span><span class="line">        git reset --hard &quot;$1&quot;</span><span class="line">        return $?</span><span class="line">    fi</span><span class="line"></span><span class="line">    # Build a nice list with:</span><span class="line">    # &lt;ref&gt; | &lt;short-hash&gt; | &lt;author&gt; | &lt;date&gt; | &lt;subject&gt;</span><span class="line">    local line ref</span><span class="line"></span><span class="line">    line=$(</span><span class="line">        git for-each-ref \</span><span class="line">            --sort=-committerdate \</span><span class="line">            --format='%(refname:short) | %(objectname:short) | %(authorname) | %(committerdate:short) | %(subject)' \</span><span class="line">            refs/heads refs/remotes \</span><span class="line">        | default-fuzzy-finder</span><span class="line">    ) || return 1  # user aborted</span><span class="line"></span><span class="line">    # Take only the first field (the ref name before the first '|')</span><span class="line">    ref=\((awk -F&#x27;|&#x27; &#x27;{gsub(/^ *| *\)/, &quot;&quot;, \(1); print\)1}' &lt;&lt;&lt; &quot;$line&quot;)</span><span class="line"></span><span class="line">    if [ -z &quot;$ref&quot; ]; then</span><span class="line">        echo &quot;No ref selected.&quot;</span><span class="line">        return 1</span><span class="line">    fi</span><span class="line"></span><span class="line">    echo &quot;Git hard reset to ref $ref&quot;</span><span class="line">    git reset --hard &quot;$ref&quot;</span><span class="line">}</span><span class="line">alias gz=&quot;ghard-reset-fz&quot;</span></code></pre></div>
+<p>You can copy aliases from other people, but writing your own teaches you much more. Start with 3 commands you use every day. Give them good names. Document them. Improve them over time. This process builds both better tools and better Git intuition.</p>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>

@@ -30,7 +30,7 @@ window.MathJax = {
       <p>GilLabs</p>
     </div>
     <nav class="sidebar-nav" aria-label="Main navigation">
-      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">Sobre</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de Jogos</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Pesquisa</a></li><li><a href="../pages/talks.html">Apresentações</a></li><li><a href="../pages/web-projects.html">Projetos Web</a></li></ul>
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">Sobre</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de Jogos</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Pesquisa</a></li><li><a href="../pages/talks.html">Apresentações</a></li><li><a href="../pages/web-projects.html">Projetos Web</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Idiomas:</p><nav class="language-switcher-nav" aria-label="Idiomas:"><span class="language-switcher-item active" aria-current="true">PT</span><a class="language-switcher-item" href="/en/index.html">EN</a><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
@@ -63,65 +63,66 @@ window.MathJax = {
     </header>
     <main class="container content-shell" id="content">
       <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Entendendo a Divisibilidade por 3</span></nav>
   <header class="content-header">
     <h1>Entendendo a Divisibilidade por 3</h1>
     <p class="meta">26 Aug 2022</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/math.html">#math</a><a class="post-tag" href="../tags/education.html">#education</a><a class="post-tag" href="../tags/tutorial.html">#tutorial</a></p>
   </header>
   <div class="language-code-links"><span class="active" aria-current="true">PT</span> <a href="/en/posts/divisibility-of-3.html">EN</a> <a href="/fr/posts/divisibility-of-3.html">FR</a></div>
-  <p>Revisar junto com a filha as matérias da escola é uma boa oportunidade para entender melhor alguns conceitos. Como por exemplo, nas operações básicas existem algumas propriedades bem curiosas:</p>
-<ol>
-<li>adição de qualquer número ao 9 preserva a soma de seus algarismos.</li>
-<li>qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três</li>
-</ol>
-<p>Nesse post vou analisar os motivos para essas propriedades existirem. </p>
-<h2 id="1-adicao-de-qualquer-numero-ao-9-preserva-a-soma-de-seus-algarismos">1) adição de qualquer número ao 9 preserva a soma de seus algarismos.</h2>
-<p>Considerando a operação </p>
-<p>\[A + 9 = B\] </p>
-<p>A soma dos dígitos de A será igual a soma dos dígitos de B.</p>
-<p>Veja alguns exemplos:</p>
-<p><em>Exemplo 1.1:</em> </p>
-<p>Na operação</p>
-<p>\[15 + 9 = 24\] </p>
-<p>a soma dos dígitos de \(15\) (\(1 + 5 = 6\)) será igual a soma dos dígitos do valor resultante \(24\) (\(2 + 4 = 6\))</p>
-<p><em>Exemplo 1.2:</em></p>
-<p>Na soma </p>
-<p>\[71 + 9 = 80\] </p>
-<p>da mesma forma teremos que \(7 + 1\) será igual a \(8 + 0\), ambos \(8\)</p>
-<h2 id="2-qualquer-numero-multiplicado-por-3-tem-por-resultado-um-numero-cuja-soma-dos-algarismos-tambem-e-um-multiplo-por-tres">2) qualquer número multiplicado por 3 tem por resultado um número cuja soma dos algarismos também é um múltiplo por três</h2>
-<p>Considerando a operação </p>
-<p>\[A * 3 = B\] </p>
-<p>implica assim que a soma dos dígitos de B será um múltiplo de 3.</p>
-<p><em>Exemplo 2.1:</em></p>
-<p>\[24*3 = 72\]</p>
-<p>Nessa multiplicação temos que a soma dos dígitos do resultado será \(7 + 2 = 9\), um múltiplo de \(3\)</p>
-<p><em>Exemplo 2.2:</em></p>
-<p>\[19*3 = 57\] </p>
-<p>então a soma dos dígitos de \(57\) será um multiplo de \(3\) (\(5 + 7 = 12\))</p>
-<h2 id="mas-por-que">Mas por quê?</h2>
-<p>Parando para analisar essas duas propriedades após todos esses anos, só agora entendi que propriedade 2 é decorrência da propriedade 1, ou seja, a operação de multiplicar um número por três esconde uma soma com 9.</p>
-<p>Como assim?</p>
-<p>Bem, a multiplicação é na verdade uma soma, certo?</p>
-<p>Então, \(3*4\) é a mesma coisa que \(3+3+3+3\), que por sua vez podemos remanejar como  \(9 + 3 = 12\). Assim se somarmos seus algarismos (\(1 + 2 = 3\)) teremos um múltiplo de \(3\).</p>
-<p>E podemos testar isso com outros exemplos, onde é possível remanejar uma multiplicação por \(3\) como uma soma com \(9\):</p>
-<p><em>Exemplo 3.1</em></p>
-<p>\[3*5 = 3+3+3+3+3 = 9+6 = 15.\] </p>
-<p>Assim percebemos que a soma do resultado dá um múltiplo de \(3 1+5 = 6\)</p>
-<p><em>Exemplo 3.2</em></p>
-<p>\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]</p>
-<p>Verificamos a propriedade 2, pois \(1 + 8 = 9\).</p>
-<h2 id="multiplicacao-por-3-entao-e-uma-soma-com-9">Multiplicação por 3 então é uma soma com 9</h2>
-<p>Ou seja, a multiplicação de 3 vezes um número maior que 3 significa somar 9 + 'alguma coisa'. Como essa 'alguma coisa' sempre é um múltiplo de 3 então o resultado de tudo isso vai manter a somatória dos dígitos e também será um múltiplo de 3.</p>
-<p>Louco né?</p>
-<p>Segue uma pseudo-prova:</p>
-<p>Assim considerando qualquer número \(x &gt; 3\) e um \(k = x - 3\), temos:</p>
-<p>\[3*x = 3*(k+3) = 3*k+9\]</p>
-<p>Como \(3*k\) é um múltiplo de \(3\) e dada a propriedade 1 então os algarismos de \(3 * k + 9\) também serão múltiplos de \(3\).</p>
-<h2 id="por-que-a-propriedade-1-acontece">Por que a propriedade 1 acontece?</h2>
-<p>Outro ponto a observar é que isso só acontece porque somar com \(9\) é a mesma coisa que somar \(10\) e subtrair \(1\) (\(10 - 1 = 9\)), que soma um ao dígito da dezena \((+1)\) e subtrai um do dígito da unidade \((-1)\), implicando que a somatória dos dígitos não é afetada ($ +1 - 1 = 0$).</p>
-<p>E também podemos generalizar dizendo que a propriedade 2 acontece com toda base de número</p>
-<p>\[3 * N + 1\]</p>
-<p>como por exemplo as bases decimal e hexadecimal. </p>
-<p>E o número que possui a propriedade 1 é sempre o número da base menos um: \(9\) para a base decimal e \(F\) para a base hexadecimal.</p>
+  <p>Enquanto revisava a lição de casa da minha filha, comecei a pensar um pouco sobre a regra de divisibilidade por 3. No ensino fundamental aprendemos a regra, usamos, e normalmente seguimos em frente sem perguntar por que ela funciona:</p>
+<blockquote>
+<p>um número é divisível por \(3\) quando a soma dos seus algarismos é divisível por \(3\).</p>
+</blockquote>
+<p>Por exemplo, \(72\) é divisível por \(3\) porque \(7 + 2 = 9\), e \(9\) é divisível por \(3\). O mesmo acontece com \(57\), já que \(5 + 7 = 12\).</p>
+<p>Mas por que a soma dos algarismos diz alguma coisa sobre o número original?</p>
+<h2 id="uma-primeira-pista-somar-9">Uma primeira pista: somar 9</h2>
+<p>Uma pista útil é que somar \(9\) muitas vezes mantém a soma dos algarismos inalterada:</p>
+<p>\[15 + 9 = 24\]</p>
+<p>A soma dos algarismos de \(15\) é \(1 + 5 = 6\), e a soma dos algarismos de \(24\) é \(2 + 4 = 6\).</p>
+<p>Outro exemplo:</p>
+<p>\[71 + 9 = 80\]</p>
+<p>Aqui, \(7 + 1 = 8\) e \(8 + 0 = 8\).</p>
+<p>É tentador dizer que somar \(9\) sempre preserva a soma dos algarismos, mas isso não é exatamente verdade:</p>
+<p>\[99 + 9 = 108\]</p>
+<p>A soma dos algarismos vai de \(9 + 9 = 18\) para \(1 + 0 + 8 = 9\).</p>
+<p>Então a soma exata dos algarismos nem sempre é preservada. O que é preservado é o resto da divisão por \(9\), e portanto também o resto da divisão por \(3\).</p>
+<p>Essa é a razão real por trás da regra de divisibilidade.</p>
+<h2 id="a-ideia-principal">A ideia principal</h2>
+<p>Na notação decimal, cada posição é uma potência de \(10\):</p>
+<p>\[abc = 100a + 10b + c\]</p>
+<p>A observação importante é que \(10\) deixa resto \(1\) quando dividido por \(3\):</p>
+<p>\[10 \equiv 1 \pmod{3}\]</p>
+<p>Por causa disso, as potências de \(10\) também deixam resto \(1\) quando divididas por \(3\):</p>
+<p>\[100 \equiv 1 \pmod{3}\]</p>
+<p>Então podemos trocar cada casa decimal por \(1\) quando nos importamos apenas com a divisibilidade por \(3\):</p>
+<p>\[100a + 10b + c \equiv a + b + c \pmod{3}\]</p>
+<p>Em outras palavras, um número e a soma dos seus algarismos têm o mesmo resto quando divididos por \(3\).</p>
+<p>É por isso que a regra funciona:</p>
+<ul>
+<li>se a soma dos algarismos é divisível por \(3\), o número original é divisível por \(3\);</li>
+<li>se a soma dos algarismos não é divisível por \(3\), o número original também não é divisível por \(3\).</li>
+</ul>
+<h2 id="testando-com-exemplos">Testando com exemplos</h2>
+<p>Pegue \(72\):</p>
+<p>\[72 \equiv 7 + 2 = 9 \equiv 0 \pmod{3}\]</p>
+<p>Então \(72\) é divisível por \(3\).</p>
+<p>Pegue \(58\):</p>
+<p>\[58 \equiv 5 + 8 = 13 \equiv 1 \pmod{3}\]</p>
+<p>Então \(58\) não é divisível por \(3\).</p>
+<h2 id="por-que-somar-9-parecia-relacionado">Por que somar 9 parecia relacionado</h2>
+<p>A primeira intuição sobre somar \(9\) ainda apontava para a direção certa. Como \(9\) é divisível por \(3\), somar \(9\) não pode mudar se um número é divisível por \(3\) ou não.</p>
+<p>Para qualquer inteiro \(n\):</p>
+<p>\[n + 9 \equiv n \pmod{3}\]</p>
+<p>Então somar \(9\) pode mudar a soma exata dos algarismos, especialmente quando aparece aquele "vai um", mas não muda a divisibilidade do número por \(3\).</p>
+<h2 id="generalizando-a-regra">Generalizando a regra</h2>
+<p>Essa regra da soma dos algarismos não é exclusiva dos números decimais. Ela funciona em qualquer base \(b\) onde:</p>
+<p>\[b \equiv 1 \pmod{3}\]</p>
+<p>Isso significa bases da forma:</p>
+<p>\[b = 3N + 1\]</p>
+<p>A base decimal funciona porque \(10 = 3 \cdot 3 + 1\).</p>
+<p>A base hexadecimal também funciona porque \(16 = 3 \cdot 5 + 1\).</p>
+<p>O padrão mais profundo não é sobre o símbolo \(9\) em si. É sobre a base ser um a mais que um múltiplo de \(3\), o que faz cada valor posicional se comportar como \(1\) quando nos importamos apenas com restos módulo \(3\).</p>
 </article>
 
     </main>

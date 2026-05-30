@@ -30,7 +30,7 @@ window.MathJax = {
       <p>GilLabs</p>
     </div>
     <nav class="sidebar-nav" aria-label="Main navigation">
-      <ul><li><a href="../blog/">Blog</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Langues :</p><nav class="language-switcher-nav" aria-label="Langues :"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><a class="language-switcher-item" href="/en/index.html">EN</a><span class="language-switcher-item active" aria-current="true">FR</span></nav></div>
@@ -63,57 +63,66 @@ window.MathJax = {
     </header>
     <main class="container content-shell" id="content">
       <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">La règle de divisibilité par 3</span></nav>
   <header class="content-header">
     <h1>La règle de divisibilité par 3</h1>
     <p class="meta">26 Aug 2022</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/math.html">#math</a><a class="post-tag" href="../tags/education.html">#education</a><a class="post-tag" href="../tags/tutorial.html">#tutorial</a></p>
   </header>
   <div class="language-code-links"><a href="/pt-BR/posts/divisibility-of-3.html">PT</a> <a href="/en/posts/divisibility-of-3.html">EN</a> <span class="active" aria-current="true">FR</span></div>
-  <p>En examinant les devoirs de ma fille, j'ai commencé à réfléchir un peu à la règle de divisibilité par 3. En fait, les opérations de base ont des propriétés intéressantes :</p>
-<ol>
-<li>La somme de n'importe quel nombre à 9 préserve la somme de ses chiffres.</li>
-<li>N'importe quel nombre multiplié par 3 donne un nombre dont la somme de ses chiffres sera également un multiple de 3.</li>
-</ol>
-<p>Dans ce post, je vais analyser les raisons derrière chacune de ces propriétés.</p>
-<h2 id="1-la-somme-de-nimporte-quel-nombre-a-9-preserve-la-somme-de-ses-chiffres">1) La somme de n'importe quel nombre à 9 préserve la somme de ses chiffres</h2>
-<p>En considérant l'opération ci-dessous :</p>
-<p>\[A + 9 = B\]</p>
-<p>La somme des chiffres de A sera égale à la somme des chiffres de B.</p>
-<p>Jetons un coup d'œil à quelques exemples :</p>
-<p><em>Exemple 1.1:</em></p>
+  <p>En examinant les devoirs de ma fille, j'ai commencé à réfléchir un peu à la règle de divisibilité par 3. À l'école, nous apprenons la règle, nous l'utilisons, puis nous passons généralement à autre chose sans vraiment demander pourquoi elle fonctionne :</p>
+<blockquote>
+<p>un nombre est divisible par \(3\) lorsque la somme de ses chiffres est divisible par \(3\).</p>
+</blockquote>
+<p>Par exemple, \(72\) est divisible par \(3\) parce que \(7 + 2 = 9\), et \(9\) est divisible par \(3\). La même chose arrive avec \(57\), puisque \(5 + 7 = 12\).</p>
+<p>Mais pourquoi la somme des chiffres nous dit-elle quelque chose sur le nombre de départ ?</p>
+<h2 id="un-premier-indice-ajouter-9">Un premier indice : ajouter 9</h2>
+<p>Un indice utile est qu'ajouter \(9\) garde souvent la somme des chiffres inchangée :</p>
 <p>\[15 + 9 = 24\]</p>
-<p>la somme des chiffres de \(15\) sera égale à la somme des chiffres de la valeur résultante \(24\) (\(2 + 4 = 6\))</p>
-<p><em>Exemple 1.2:</em></p>
+<p>La somme des chiffres de \(15\) est \(1 + 5 = 6\), et la somme des chiffres de \(24\) est \(2 + 4 = 6\).</p>
+<p>Un autre exemple :</p>
 <p>\[71 + 9 = 80\]</p>
-<p>\(7 + 1\) est égal à \(8 + 0\), tous les deux sont \(8\).</p>
-<h2 id="2-nimporte-quel-nombre-multiplie-par-3-donne-un-nombre-dont-la-somme-de-ses-chiffres-sera-egalement-un-multiple-de-3">2) N'importe quel nombre multiplié par 3 donne un nombre dont la somme de ses chiffres sera également un multiple de 3</h2>
-<p>En considérant l'opération :</p>
-<p>\[A * 3 = B\]</p>
-<p>Cette propriété implique que la somme des chiffres de B sera nécessairement un multiple de 3. Comme nous pouvons le voir dans les exemples ci-dessous :</p>
-<p><em>Exemple 2.1:</em></p>
-<p>\[24 * 3 = 72\]</p>
-<p>Comme nous pouvons le remarquer, la somme des chiffres de \(72\) est \(7 + 2 = 9\), un multiple de 3.</p>
-<p><em>Exemple 2.2:</em></p>
-<p>\[19 * 3 = 57\]</p>
-<p>La somme des chiffres de \(57\) est \(5 + 7 = 12\), également un multiple de 3.</p>
-<h2 id="une-plongee-profonde-dans-la-regle-de-divisibilite-par-3">Une plongée profonde dans la règle de divisibilité par 3</h2>
-<p>Au collège, nous apprenons la règle de divisibilité par 3 et nous acceptons qu'elle se produise sans vraiment comprendre pourquoi.</p>
-<p>Je viens de découvrir que la propriété 2 est dérivée de la propriété 1, c'est-à-dire que multiplier un nombre par 3, c'est aussi faire une somme avec 9.</p>
-<p>Comment est-ce possible?</p>
-<p>La multiplication est en réalité une séquence d'opérations d'addition, n'est-ce pas?</p>
-<p>Ainsi, une opération simple comme</p>
-<p>\[3 * 4 = 12\]</p>
-<p>peut également être exprimée comme une séquence d'additions:</p>
-<p>\[3 + 3 + 3 + 3 = 12\]</p>
-<p>Et peut être réarrangée pour devenir une somme avec \(9\):</p>
-<p>\[9 + 3 = 12\]</p>
-<p>Laissez-moi fournir des exemples supplémentaires pour montrer que la multiplication par 3 est équivalente à l'ajout d'un nombre à 9.</p>
-<p>Exemple 3.1</p>
-<p>\[3*5 = 3+3+3+3+3 = 9+6 = 15.\]</p>
-<p>Exemple 3.2</p>
-<p>\[3*6 = 3+3+3+3+3+3 = 9+9 = 18\]</p>
-<h2 id="multiplier-par-3-signifie-ajouter-un-nombre-k-plus-9">Multiplier par 3 signifie ajouter un nombre k plus 9</h2>
-<p>Par conséquent, nous pouvons conclure que la propriété 1 est à l'origine de la propriété 2. Lorsque l'on multiplie un nombre par \(3\), cela implique l'ajout du nombre à un multiple de \(9\). La propriété 1 garantit que la somme des chiffres du multiple de 3 sera préservée. Et étant donné que le multiple de 3 est lui-même un multiple de 3, la somme des chiffres du résultat sera également un multiple de 3.</p>
-<p>N'est-ce pas incroyable ?</p>
+<p>Ici, \(7 + 1 = 8\) et \(8 + 0 = 8\).</p>
+<p>Il est tentant de dire qu'ajouter \(9\) préserve toujours la somme des chiffres, mais ce n'est pas tout à fait vrai :</p>
+<p>\[99 + 9 = 108\]</p>
+<p>La somme des chiffres passe de \(9 + 9 = 18\) à \(1 + 0 + 8 = 9\).</p>
+<p>Donc la somme exacte des chiffres n'est pas toujours préservée. Ce qui est préservé, c'est le reste de la division par \(9\), et donc aussi le reste de la division par \(3\).</p>
+<p>C'est la vraie raison pour laquelle la règle de divisibilité fonctionne.</p>
+<h2 id="lidee-principale">L'idée principale</h2>
+<p>Dans la notation décimale, chaque position est une puissance de \(10\) :</p>
+<p>\[abc = 100a + 10b + c\]</p>
+<p>L'observation importante est que \(10\) laisse un reste de \(1\) lorsqu'il est divisé par \(3\) :</p>
+<p>\[10 \equiv 1 \pmod{3}\]</p>
+<p>À cause de cela, les puissances de \(10\) laissent elles aussi un reste de \(1\) lorsqu'elles sont divisées par \(3\) :</p>
+<p>\[100 \equiv 1 \pmod{3}\]</p>
+<p>Nous pouvons donc remplacer chaque position décimale par \(1\) lorsque nous nous intéressons seulement à la divisibilité par \(3\) :</p>
+<p>\[100a + 10b + c \equiv a + b + c \pmod{3}\]</p>
+<p>En d'autres termes, un nombre et la somme de ses chiffres ont le même reste lorsqu'ils sont divisés par \(3\).</p>
+<p>C'est pour cela que la règle fonctionne :</p>
+<ul>
+<li>si la somme des chiffres est divisible par \(3\), le nombre original est divisible par \(3\) ;</li>
+<li>si la somme des chiffres n'est pas divisible par \(3\), le nombre original ne l'est pas non plus.</li>
+</ul>
+<h2 id="verifier-avec-des-exemples">Vérifier avec des exemples</h2>
+<p>Prenons \(72\) :</p>
+<p>\[72 \equiv 7 + 2 = 9 \equiv 0 \pmod{3}\]</p>
+<p>Donc \(72\) est divisible par \(3\).</p>
+<p>Prenons \(58\) :</p>
+<p>\[58 \equiv 5 + 8 = 13 \equiv 1 \pmod{3}\]</p>
+<p>Donc \(58\) n'est pas divisible par \(3\).</p>
+<h2 id="pourquoi-ajouter-9-semblait-lie">Pourquoi ajouter 9 semblait lié</h2>
+<p>La première intuition sur l'addition de \(9\) pointait quand même dans la bonne direction. Comme \(9\) est divisible par \(3\), ajouter \(9\) ne peut pas changer le fait qu'un nombre soit divisible par \(3\) ou non.</p>
+<p>Pour tout entier \(n\) :</p>
+<p>\[n + 9 \equiv n \pmod{3}\]</p>
+<p>Donc ajouter \(9\) peut changer la somme exacte des chiffres, surtout lorsqu'il y a des retenues, mais cela ne change pas la divisibilité du nombre par \(3\).</p>
+<h2 id="generaliser-la-regle">Généraliser la règle</h2>
+<p>Cette règle de la somme des chiffres n'est pas exclusive aux nombres décimaux. Elle fonctionne dans toute base \(b\) où :</p>
+<p>\[b \equiv 1 \pmod{3}\]</p>
+<p>Cela signifie les bases de la forme :</p>
+<p>\[b = 3N + 1\]</p>
+<p>La base décimale fonctionne parce que \(10 = 3 \cdot 3 + 1\).</p>
+<p>La base hexadécimale fonctionne aussi parce que \(16 = 3 \cdot 5 + 1\).</p>
+<p>Le motif plus profond ne concerne pas le symbole \(9\) en lui-même. Il vient du fait que la base est égale à un multiple de \(3\) plus \(1\), ce qui fait que chaque valeur de position se comporte comme \(1\) lorsque nous nous intéressons seulement aux restes modulo \(3\).</p>
 </article>
 
     </main>
