@@ -99,7 +99,8 @@
       "lang": "en",
       "translation_key": "favorite-git-commands",
       "tags": [
-        "untitled"
+        "git",
+        "cli"
       ]
     },
     {
@@ -214,7 +215,8 @@
       "lang": "fr",
       "translation_key": "favorite-git-commands",
       "tags": [
-        "untitled"
+        "git",
+        "cli"
       ]
     },
     {
@@ -325,11 +327,12 @@
       "title": "Meus comandos Git favoritos",
       "slug": "favorite-git-commands",
       "date": "2026-05-30",
-      "summary": "Depois de ver alguns posts sobre commands git como esse e esse , decidi tamb\u00e9m fazer a minha vers\u00e3o. Ent\u00e3o, esta \u00e9 uma lista pequena das coi...",
+      "summary": "Depois de ver alguns posts sobre comandos git como esse e esse , decidi tamb\u00e9m fazer a minha vers\u00e3o. Ent\u00e3o, esta \u00e9 uma lista pequena das coi...",
       "lang": "pt-BR",
       "translation_key": "favorite-git-commands",
       "tags": [
-        "untitled"
+        "git",
+        "cli"
       ]
     },
     {
