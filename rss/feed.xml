@@ -4,8 +4,32 @@
     <title>GilLabs</title>
     <link>https://adrianogil.github.io/</link>
     <description>GilLabs posts</description>
-    <lastBuildDate>Sat, 30 May 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://adrianogil.github.io/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes from AWS Summit São Paulo 2026</title>
+      <link>https://adrianogil.github.io/posts/aws-summit-sao-paulo-2026.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/aws-summit-sao-paulo-2026.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Reflections from AWS Summit São Paulo 2026 on business impact, observability, AI agents, DynamoDB, and machine learning at the edge.</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Notes sur l’AWS Summit São Paulo 2026</title>
+      <link>https://adrianogil.github.io/fr/posts/aws-summit-sao-paulo-2026.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/aws-summit-sao-paulo-2026.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Réflexions sur l’impact métier, l’observabilité, les agents d’IA, DynamoDB et le machine learning à l’edge après l’AWS Summit São Paulo 2026.</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Notas do AWS Summit São Paulo 2026</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/aws-summit-sao-paulo-2026.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/aws-summit-sao-paulo-2026.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Reflexões sobre impacto nos negócios, observabilidade, agentes de IA, DynamoDB e machine learning na borda após o AWS Summit São Paulo 2026.</description>
+      <category>pt-BR</category>
+    </item>
     <item>
       <title>My favorite Git commands</title>
       <link>https://adrianogil.github.io/posts/favorite-git-commands.html</link>

@@ -104,6 +104,20 @@
       ]
     },
     {
+      "title": "Notes from AWS Summit S\u00e3o Paulo 2026",
+      "slug": "aws-summit-sao-paulo-2026",
+      "date": "2026-09-03",
+      "summary": "Reflections from AWS Summit S\u00e3o Paulo 2026 on business impact, observability, AI agents, DynamoDB, and machine learning at the edge.",
+      "lang": "en",
+      "translation_key": "aws-summit-sao-paulo-2026",
+      "tags": [
+        "aws",
+        "cloud",
+        "artificial-intelligence",
+        "observability"
+      ]
+    },
+    {
       "title": "Hello World!",
       "slug": "hello-world",
       "date": "2016-01-01 09:02:47 -0400",
@@ -220,6 +234,20 @@
       ]
     },
     {
+      "title": "Notes sur l\u2019AWS Summit S\u00e3o Paulo 2026",
+      "slug": "aws-summit-sao-paulo-2026",
+      "date": "2026-09-03",
+      "summary": "R\u00e9flexions sur l\u2019impact m\u00e9tier, l\u2019observabilit\u00e9, les agents d\u2019IA, DynamoDB et le machine learning \u00e0 l\u2019edge apr\u00e8s l\u2019AWS Summit S\u00e3o Paulo 2026.",
+      "lang": "fr",
+      "translation_key": "aws-summit-sao-paulo-2026",
+      "tags": [
+        "aws",
+        "cloud",
+        "artificial-intelligence",
+        "observability"
+      ]
+    },
+    {
       "title": "Salut Monde!",
       "slug": "hello-world",
       "date": "2016-01-01 14:00:00 -0400",
@@ -333,6 +361,20 @@
       "tags": [
         "git",
         "cli"
+      ]
+    },
+    {
+      "title": "Notas do AWS Summit S\u00e3o Paulo 2026",
+      "slug": "aws-summit-sao-paulo-2026",
+      "date": "2026-09-03",
+      "summary": "Reflex\u00f5es sobre impacto nos neg\u00f3cios, observabilidade, agentes de IA, DynamoDB e machine learning na borda ap\u00f3s o AWS Summit S\u00e3o Paulo 2026.",
+      "lang": "pt-BR",
+      "translation_key": "aws-summit-sao-paulo-2026",
+      "tags": [
+        "aws",
+        "cloud",
+        "artificial-intelligence",
+        "observability"
       ]
     },
     {
