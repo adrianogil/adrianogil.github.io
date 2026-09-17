@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>How I Organize My Obsidian Vault · GilLabs</title>
+  <link rel="canonical" href="https://adrianogil.github.io/posts/organize-obsidian-vault.html" />
+  <link rel="alternate" hreflang="en" href="https://adrianogil.github.io/posts/organize-obsidian-vault.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/posts/organize-obsidian-vault.html" />
+  <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/posts/organize-obsidian-vault.html" />
+  <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/posts/organize-obsidian-vault.html" />
+  <link rel="stylesheet" href="../styles.css?v=6" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../site.js?v=6" defer></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">How I Organize My Obsidian Vault</span></nav>
+  <header class="content-header">
+    <h1>How I Organize My Obsidian Vault</h1>
+    <p class="meta">16 Sep 2026</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/obsidian.html">#obsidian</a><a class="post-tag" href="../tags/personal.html">#personal</a><a class="post-tag" href="../tags/productivity.html">#productivity</a></p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/organize-obsidian-vault.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/organize-obsidian-vault.html">FR</a></div>
+  <p>I have been kind of addicted to taking notes ever since I started using computers heavily. I began with <a href="https://wiki.gnome.org/Apps/Tomboy">Tomboy</a>, moved to <a href="https://evernote.com/">Evernote</a>, and later wrote <code>.note</code> files in <a href="https://www.sublimetext.com/">Sublime Text</a> using the <a href="https://github.com/aziz/PlainNotes">PlainNotes plugin</a>. Today, I use <a href="https://obsidian.md/">Obsidian</a>.</p>
+<p>Each change of tool also changed how I thought about my notes. What began as a place to save isolated pieces of information gradually became a collection of Markdown repositories for different parts of my life: software development, research, games, language study, writing, and general reference material.</p>
+<p><a href="https://doi.org/10.1111/1467-8284.00096">The Extended Mind</a> offers one way to understand this progression: a dependable external system can become part of how we remember and think.</p>
+<p>This article tours that system as I actually use it. I will focus on the small set of conventions that connect notes, tasks, projects, and drafts. You can adapt those ideas without copying my directory tree or plugin setup.</p>
+<h2 id="markdown-is-the-foundation">Markdown Is the Foundation</h2>
+<p>Markdown gives me a durable base that works with text editors, command-line tools, Git, scripts, and coding agents. Obsidian provides the interface for navigating and editing the files, while the information remains usable outside the application.</p>
+<p>I use frontmatter fields to add structured information such as dates, tags, status, and links. Obsidian renders these fields as Properties at the top of the note, where they are pleasant to read and easy to edit. In the Markdown file, they remain YAML that scripts and other tools can process.</p>
+<p>After creating a note, I think about how I will locate it again. Tags provide broad categories, while a descriptive title that works well with fuzzy search gives the Quick Switcher useful words to match. I include the terms I am likely to remember months later.</p>
+<p>Research behind <a href="https://www.microsoft.com/en-us/research/publication/stuff-ive-seen-a-system-for-personal-information-retrieval-and-re-use/">Stuff I've Seen</a> found that time and people are valuable retrieval cues, which is why dates and links to people also matter in my notes.</p>
+<p>The note path provides one final retrieval clue by placing the file near related material. Those paths form the structure of my vault.</p>
+<h2 id="vault-structure">Vault Structure</h2>
+<p>A <a href="https://doi.org/10.1002/meet.2008.1450450214">study comparing folders and tags</a> found useful strengths in both, which fits my combination of directory paths and metadata.</p>
+<p>Two established approaches helped me think about the choices in my own structure. <a href="https://fortelabs.com/blog/para/">Tiago Forte's PARA method</a> organizes information by actionability into Projects, Areas, Resources, and Archives. <a href="https://stephango.com/vault">Steph Ango's bottom-up approach</a> keeps most notes in the root of a single vault and relies on links, backlinks, and the Quick Switcher for navigation, while a <code>categories</code> property generates overviews through Obsidian Bases.</p>
+<h3 id="my-structure">My Structure</h3>
+<p>I keep one Obsidian vault containing several topic-focused directories. Each top-level directory is also an independent Git repository:</p>
+<ul>
+<li><strong>Dev:</strong> software development, tools, technical studies, projects, and GilLabs;</li>
+<li><strong>GameNotes:</strong> games, game design, jams, and game-development references;</li>
+<li><strong>GeneralNotes:</strong> everyday subjects, articles, people, places, and general reference material;</li>
+<li><strong>Languages:</strong> language-learning material and notes for each language;</li>
+<li><strong>ResearchNotes:</strong> papers, research projects, experiments, and academic writing;</li>
+<li><strong>StudyingNotes:</strong> study material that spans subjects outside the other repositories;</li>
+<li><strong>WritingNotes:</strong> fiction, writing projects, characters, settings, and related research;</li>
+<li><strong>OpenClawNotes:</strong> notes and tasks connected to OpenClaw. I give OpenClaw this directory as its workspace, limiting the files it is expected to modify and reducing the blast radius if an automated action goes off the rails.</li>
+</ul>
+<p>This arrangement gives Obsidian access to the whole collection for search and linking, while each repository keeps its own Git history and project context.</p>
+<p>Inside each repository, I mix subject-based and chronological organization. Stable topics live in descriptive directories. Time-sensitive notes and tasks often use year, month, and ISO-week folders. GilLabs, for example, has a backlog, weekly task notes, BrainS notes for developing ideas, and language-specific article drafts.</p>
+<p>Links, metadata, search, and hub notes connect material across those directories. The main cost comes from maintaining several repositories and deciding when a subject deserves its own top-level space. I keep the boundaries that continue to make navigation and version history easier.</p>
+<h2 id="a-few-note-types-with-different-jobs">A Few Note Types with Different Jobs</h2>
+<ul>
+<li><strong>Resource and reference notes</strong> hold sources and background material until I am ready to use them in an article, project, or decision.</li>
+<li><strong>BrainS notes</strong>, my mnemonic for exploratory idea notes, collect possible titles, incomplete arguments, examples, questions, and competing outlines.</li>
+<li><strong>Task notes</strong> record status, priority, sources, subtasks, acceptance criteria, and a timeline of decisions and progress.</li>
+<li><strong>Draft notes</strong> contain reader-facing text and link back to their planning tasks. Separate language versions share metadata.</li>
+</ul>
+<h2 id="backlogs-daily-notes-and-timelines">Backlogs, Daily Notes, and Timelines</h2>
+<p>Task frontmatter stores status, priority, deadlines, and backlog links. Dataview uses those fields to generate current backlog tables.</p>
+<p>I published my <a href="https://gist.github.com/adrianogil/6083bc5f8341f3f0909f96c8eb685958">Dataview backlog template</a> as a gist, with views for progress and active, completed, and dropped tasks.</p>
+<p>Daily notes preserve chronological context, while task timelines record what happened to a specific piece of work. Links between them help me resume a project after an interruption.</p>
+<p><a href="https://doi.org/10.1207/s15516709cog2601_2">Memory for Goals</a> models how cues help us retrieve suspended goals.</p>
+<h2 id="templates">Templates</h2>
+<p>Templates give recurring notes predictable frontmatter and headings. Small scripts can place a note in the correct week, update metadata, build the blog, or check links. I wait for a pattern to repeat before automating it so the workflow has time to settle. Git records the resulting changes and makes larger automated edits reviewable, while backups and synchronization provide additional recovery options.</p>
+<h2 id="closing">Closing</h2>
+<p>When I reopen an old idea months later, I can usually understand where I stopped and what to do next without rebuilding its context from scratch.</p>
+<p>I plan to cover how I use Obsidian for language study and how notes become multilingual GilLabs posts in separate articles. Those workflows use the same foundation, but they solve narrower problems.</p>
+</article>
+
+    </main>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
+</body>
+</html>

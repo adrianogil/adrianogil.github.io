@@ -4,8 +4,32 @@
     <title>GilLabs</title>
     <link>https://adrianogil.github.io/</link>
     <description>GilLabs posts</description>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://adrianogil.github.io/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Organize My Obsidian Vault</title>
+      <link>https://adrianogil.github.io/posts/organize-obsidian-vault.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/posts/organize-obsidian-vault.html</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>A tour of the directories, metadata, note types, task backlogs, templates, and Git repositories behind my Obsidian vault.</description>
+      <category>en</category>
+    </item>
+    <item>
+      <title>Comment j'organise mon coffre Obsidian</title>
+      <link>https://adrianogil.github.io/fr/posts/organize-obsidian-vault.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/fr/posts/organize-obsidian-vault.html</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Une visite des dossiers, métadonnées, types de notes, backlogs, modèles et dépôts Git qui structurent mon coffre Obsidian.</description>
+      <category>fr</category>
+    </item>
+    <item>
+      <title>Como organizo meu cofre do Obsidian</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/organize-obsidian-vault.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/organize-obsidian-vault.html</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Um passeio pelos diretórios, metadados, tipos de nota, backlogs, templates e repositórios Git que formam meu cofre do Obsidian.</description>
+      <category>pt-BR</category>
+    </item>
     <item>
       <title>Notes from AWS Summit São Paulo 2026</title>
       <link>https://adrianogil.github.io/posts/aws-summit-sao-paulo-2026.html</link>

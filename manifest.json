@@ -118,6 +118,19 @@
       ]
     },
     {
+      "title": "How I Organize My Obsidian Vault",
+      "slug": "organize-obsidian-vault",
+      "date": "2026-09-16",
+      "summary": "A tour of the directories, metadata, note types, task backlogs, templates, and Git repositories behind my Obsidian vault.",
+      "lang": "en",
+      "translation_key": "how-i-organize-my-obsidian-vault",
+      "tags": [
+        "obsidian",
+        "personal",
+        "productivity"
+      ]
+    },
+    {
       "title": "Hello World!",
       "slug": "hello-world",
       "date": "2016-01-01 09:02:47 -0400",
@@ -248,6 +261,19 @@
       ]
     },
     {
+      "title": "Comment j'organise mon coffre Obsidian",
+      "slug": "organize-obsidian-vault",
+      "date": "2026-09-16",
+      "summary": "Une visite des dossiers, m\u00e9tadonn\u00e9es, types de notes, backlogs, mod\u00e8les et d\u00e9p\u00f4ts Git qui structurent mon coffre Obsidian.",
+      "lang": "fr",
+      "translation_key": "how-i-organize-my-obsidian-vault",
+      "tags": [
+        "obsidian",
+        "personal",
+        "productivity"
+      ]
+    },
+    {
       "title": "Salut Monde!",
       "slug": "hello-world",
       "date": "2016-01-01 14:00:00 -0400",
@@ -375,6 +401,19 @@
         "cloud",
         "artificial-intelligence",
         "observability"
+      ]
+    },
+    {
+      "title": "Como organizo meu cofre do Obsidian",
+      "slug": "organize-obsidian-vault",
+      "date": "2026-09-16",
+      "summary": "Um passeio pelos diret\u00f3rios, metadados, tipos de nota, backlogs, templates e reposit\u00f3rios Git que formam meu cofre do Obsidian.",
+      "lang": "pt-BR",
+      "translation_key": "how-i-organize-my-obsidian-vault",
+      "tags": [
+        "obsidian",
+        "personal",
+        "productivity"
       ]
     },
     {
