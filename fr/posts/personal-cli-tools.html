@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>Outils CLI personnels · GilLabs</title>
+  <link rel="canonical" href="https://adrianogil.github.io/fr/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="en" href="https://adrianogil.github.io/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/posts/personal-cli-tools.html" />
+  <link rel="stylesheet" href="../../styles.css?v=19" />
+  <link rel="alternate" type="application/rss+xml" title="Flux RSS de GilLabs en français" href="/fr/rss/feed.xml" />
+  <script src="../../site.js?v=19" defer></script>
+  
+</head>
+<body data-copy-label="Copier" data-copied-label="Copié" data-copy-failed-label="Échec de la copie">
+  <a class="skip-link" href="#content">Aller au contenu</a>
+  <button class="sidebar-toggle" type="button" aria-label="Ouvrir la navigation" aria-controls="sidebar" aria-expanded="false" data-open-label="Ouvrir la navigation" data-close-label="Fermer la navigation" data-sidebar-toggle></button>
+  <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-label="Navigation du site" aria-hidden="true" tabindex="-1">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Navigation principale">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Langues :</p><nav class="language-switcher-nav" aria-label="Langues :"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><a class="language-switcher-item" href="/en/index.html">EN</a><span class="language-switcher-item active" aria-current="true">FR</span></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Passer au thème clair" data-dark-label="Passer au thème sombre" aria-label="Passer au thème sombre">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <button class="sidebar-backdrop" type="button" aria-label="Fermer la navigation" aria-hidden="true" tabindex="-1" data-sidebar-close disabled></button>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="Accueil de GilLabs">GilLabs</a>
+          <small>notes, conférences et expériences</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <nav class="content-breadcrumb" aria-label="Fil d’Ariane"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Outils CLI personnels</span></nav>
+  <header class="content-header">
+    <h1>Outils CLI personnels</h1>
+    <p class="meta">17 Sep 2026</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/devx.html">#devx</a><a class="post-tag" href="../tags/cli.html">#cli</a><a class="post-tag" href="../tags/tooling.html">#tooling</a><a class="post-tag" href="../tags/workflow.html">#workflow</a></p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/personal-cli-tools.html">PT</a> <a href="/en/posts/personal-cli-tools.html">EN</a> <span class="active" aria-current="true">FR</span></div>
+  <p>De nombreuses routines en ligne de commande commencent par quelques commandes récupérées dans l'historique du terminal. Après avoir répété la même séquence suffisamment de fois, j'en fais un alias, une fonction shell ou une petite application. Ces outils personnels occupent une place importante dans mon expérience de développement, car ils reflètent ma façon de travailler.</p>
+<p>Le coût de création de ces petits utilitaires a changé. Un agent de programmation peut transformer la description d'une tâche répétitive en une première version fonctionnelle en quelques minutes. Je dois toujours expliquer le comportement attendu, examiner le code généré et tester les chemins dangereux, mais l'implémentation initiale est rarement l'obstacle qu'elle était auparavant. Des outils très spécifiques deviennent ainsi intéressants, même lorsque leur public se limite à une seule personne.</p>
+<p>La productivité des développeurs est largement abordée dans la littérature. Le <a href="https://www.microsoft.com/en-us/research/publication/the-space-of-developer-productivity-theres-more-to-it-than-you-think/">framework SPACE</a>, par exemple, la décrit selon plusieurs dimensions plutôt qu'à travers une seule métrique d'activité. Un <a href="https://arxiv.org/abs/2205.06352">framework pratique consacré à l'expérience développeur</a> étudie également les facteurs qui façonnent la manière dont le travail de développement est vécu. <a href="https://tuhat.helsinki.fi/ws/portalfiles/portal/23604202/icssp2012.pdf">L'expérience développeur, ou DevX</a>, décrit la façon dont les développeurs vivent les outils, les flux de travail et les systèmes qu'ils utilisent pour travailler.</p>
+<h2 id="ameliorer-votre-experience-en-ligne-de-commande-avec-fzf">Améliorer Votre Expérience en Ligne de Commande avec <code>fzf</code></h2>
+<p><a href="https://github.com/junegunn/fzf"><code>fzf</code></a> est un outil de recherche approximative interactif pour le terminal. Il reçoit une liste de lignes, ouvre un sélecteur et renvoie la ligne choisie. Il suffit de saisir quelques fragments pour filtrer progressivement les candidats, sans devoir se souvenir ou taper un nom exact.</p>
+<p>Le principe de base est simple :</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copier: bash">Copier</button></div><pre><code class="language-bash"><span class="line">selection=$(command-that-produces-options | fzf)</span><span class="line">command-that-uses &quot;$selection&quot;</span></code></pre></div>
+<p>Ce principe divise une application CLI en trois parties :</p>
+<ol>
+<li>Produire les options possibles.</li>
+<li>Permettre à l'utilisateur de rechercher et sélectionner une option.</li>
+<li>Exécuter une action avec la sélection.</li>
+</ol>
+<p>Le sélecteur peut proposer une invite descriptive, la sélection multiple, des raccourcis clavier et une fenêtre d'aperçu. La commande qui produit les options peut associer des chemins, des descriptions, des dates ou des métadonnées Git à chaque élément. L'action finale doit valider la valeur sélectionnée et traiter la touche Échap comme une annulation normale.</p>
+<p>Ce principe me permet de fournir rapidement des entrées à mes scripts CLI sans devoir mémoriser les valeurs valides ou la syntaxe exacte de chaque script. Il apporte aussi de la cohérence : une fois le fonctionnement d'une commande à sélection approximative appris, je comprends déjà une grande partie de la suivante.</p>
+<h2 id="exemples-tires-de-mes-propres-outils">Exemples Tirés de Mes Propres Outils</h2>
+<h3 id="config-fz"><a href="https://github.com/adrianogil/config-files/blob/main/bashrc.sh#L23-L31"><code>config-fz</code></a></h3>
+<p>À mesure que ma configuration shell grandissait, retenir le nom de toutes mes commandes personnalisées est devenu un problème en soi. J'ai commencé à annoter les commandes avec un nom et une brève description. <code>config-fz</code> rassemble ces annotations et les transmet à <code>fzf</code>, ce qui me permet de parcourir le catalogue par fonction et d'exécuter la commande sélectionnée.</p>
+<p>Les annotations rendent la collection auto-documentée. L'interface de recherche approximative me permet de profiter d'un utilitaire rarement utilisé sans devoir d'abord me souvenir de son nom exact. Une seule ligne de commentaire à côté de son implémentation suffit pour ajouter un nouvel outil au catalogue.</p>
+<h3 id="gflog"><a href="https://github.com/adrianogil/git-tools/blob/main/git_history.sh#L215-L220"><code>gflog</code></a></h3>
+<p>Ma commande <code>gflog</code> formate le reflog Git avec le hash du commit, sa position dans le reflog, sa date et son sujet. Git contient déjà ces informations ; cette application personnelle choisit la représentation compacte dont j'ai besoin pour examiner un état antérieur.</p>
+<h3 id="gz"><a href="https://github.com/adrianogil/git-tools/blob/main/git_config.sh#L207-L238"><code>gz</code></a></h3>
+<p><code>gz</code> applique le principe de sélection approximative aux branches et aux références distantes. La commande affiche chaque référence avec son hash, son auteur, sa date et son sujet, transmet la liste à <code>fzf</code>, puis réinitialise le dépôt vers la cible sélectionnée.</p>
+<h2 id="reperez-le-script-que-vous-etes-deja-en-train-dexecuter">Repérez le Script que Vous Êtes Déjà en train d'Exécuter</h2>
+<p>Soyez attentif aux moments où vous copiez les mêmes commandes, reconstituez les mêmes arguments, parcourez les mêmes répertoires ou suivez les mêmes instructions de récupération. Décrivez l'une de ces routines à un agent de programmation et demandez-lui une petite application CLI. Une fois qu'elle fonctionne, améliorez son interface avec une sélection approximative, des aperçus utiles, des invites claires, une annulation sûre et une confirmation lorsque l'enjeu le justifie.</p>
+<p>Les outils personnels les plus utiles commencent souvent par une séquence trop spécifique pour intéresser quelqu'un d'autre. C'est précisément pour cette raison qu'ils nous correspondent si bien. Sans script pour une procédure répétitive, vous êtes condamné à vous comporter comme tel : recevoir les mêmes entrées, suivre les mêmes étapes et produire sans cesse le même résultat.</p>
+</article>
+
+    </main>
+  </div>
+</body>
+</html>

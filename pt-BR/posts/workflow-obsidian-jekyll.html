@@ -10,24 +10,24 @@
   <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/posts/workflow-obsidian-jekyll.html" />
   <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/posts/workflow-obsidian-jekyll.html" />
   <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/posts/workflow-obsidian-jekyll.html" />
-  <link rel="stylesheet" href="../../styles.css?v=6" />
-  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
-  <script src="../../site.js?v=6" defer></script>
+  <link rel="stylesheet" href="../../styles.css?v=19" />
+  <link rel="alternate" type="application/rss+xml" title="Feed RSS de GilLabs em português" href="/pt-BR/rss/feed.xml" />
+  <script src="../../site.js?v=19" defer></script>
   
 </head>
-<body>
-  <a class="skip-link" href="#content">Skip to content</a>
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+<body data-copy-label="Copiar" data-copied-label="Copiado" data-copy-failed-label="Falha ao copiar">
+  <a class="skip-link" href="#content">Ir para o conteúdo</a>
+  <button class="sidebar-toggle" type="button" aria-label="Abrir navegação" aria-controls="sidebar" aria-expanded="false" data-open-label="Abrir navegação" data-close-label="Fechar navegação" data-sidebar-toggle></button>
+  <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-label="Navegação do site" aria-hidden="true" tabindex="-1">
     <div class="sidebar-item">
       <p>GilLabs</p>
     </div>
-    <nav class="sidebar-nav" aria-label="Main navigation">
+    <nav class="sidebar-nav" aria-label="Navegação principal">
       <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">Sobre</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de Jogos</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Pesquisa</a></li><li><a href="../pages/talks.html">Apresentações</a></li><li><a href="../pages/web-projects.html">Projetos Web</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Idiomas:</p><nav class="language-switcher-nav" aria-label="Idiomas:"><span class="language-switcher-item active" aria-current="true">PT</span><a class="language-switcher-item" href="/en/index.html">EN</a><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Mudar para o modo claro" data-dark-label="Mudar para o modo escuro" aria-label="Mudar para o modo escuro">
         <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="4" />
           <path d="M12 2v2" />
@@ -45,18 +45,19 @@
       </button>
     </div>
   </aside>
+  <button class="sidebar-backdrop" type="button" aria-label="Fechar navegação" aria-hidden="true" tabindex="-1" data-sidebar-close disabled></button>
   <div class="wrap">
     <header class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
-          <small>notes, talks, and experiments</small>
+          <a class="site-title" href="../index.html" aria-label="Página inicial de GilLabs">GilLabs</a>
+          <small>notas, apresentações e experimentos</small>
         </h3>
       </div>
     </header>
     <main class="container content-shell" id="content">
       <article class="content">
-  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Meu workflow com Obsidian and Jekyll</span></nav>
+  <nav class="content-breadcrumb" aria-label="Caminho de navegação"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Meu workflow com Obsidian and Jekyll</span></nav>
   <header class="content-header">
     <h1>Meu workflow com Obsidian and Jekyll</h1>
     <p class="meta">05 Feb 2025</p>
@@ -111,26 +112,25 @@ https://adrianogil.github.io/blog/pt/2025/02/meu-post/</code></p>
 </ul>
 <h4 id="extraindo-notas"><strong>Extraindo Notas</strong></h4>
 <p>O script primeiro busca notas marcadas com uma tag específica (<code>GilLabs/posts/text</code>).</p>
-<div class="code-block"><div class="code-header"><span class="code-language">python</span><button class="copy-button" type="button" data-copy-button aria-label="Copy python code">Copy</button></div><pre><code class="language-python"><span class="line">notes = get_notes_from_index(target_tags=[&quot;GilLabs/posts/text&quot;], as_obsidian_notes=True)</span><span class="line">notes = [note for note in notes if not note.metadata.get(&quot;draft&quot;, True)]</span></code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">python</span><button class="copy-button" type="button" data-copy-button aria-label="Copiar: python">Copiar</button></div><pre><code class="language-python"><span class="line">notes = get_notes_from_index(target_tags=[&quot;GilLabs/posts/text&quot;], as_obsidian_notes=True)</span><span class="line">notes = [note for note in notes if not note.metadata.get(&quot;draft&quot;, True)]</span></code></pre></div>
 <p>Isso garante que apenas os posts prontos para serem publicados sejam processados.</p>
 <h4 id="gerando-o-arquivo-do-blog-no-jekyll"><strong>Gerando o Arquivo do Blog no Jekyll</strong></h4>
 <p>Cada post é formatado na estrutura <code>_posts</code> do Jekyll com a <strong>data, idioma e categorias</strong> corretas. Metadados como <strong>título, layout e categorias</strong> são preservados.</p>
-<div class="code-block"><div class="code-header"><span class="code-language">Markdown</span><button class="copy-button" type="button" data-copy-button aria-label="Copy Markdown code">Copy</button></div><pre><code class="language-Markdown"><span class="line">---</span><span class="line">categories: git</span><span class="line">date: '2025-02-01 16:41:00 '</span><span class="line">lang: en</span><span class="line">lang-ref: intro-git</span><span class="line">layout: post</span><span class="line">title: Primeiros Passos com Git</span><span class="line">updated: 2025-02-01T16:41</span><span class="line">---</span><span class="line">## Introdução</span><span class="line">Olá! Muitas vezes me vejo explicando Git do zero,...</span></code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">Markdown</span><button class="copy-button" type="button" data-copy-button aria-label="Copiar: Markdown">Copiar</button></div><pre><code class="language-Markdown"><span class="line">---</span><span class="line">categories: git</span><span class="line">date: '2025-02-01 16:41:00 '</span><span class="line">lang: en</span><span class="line">lang-ref: intro-git</span><span class="line">layout: post</span><span class="line">title: Primeiros Passos com Git</span><span class="line">updated: 2025-02-01T16:41</span><span class="line">---</span><span class="line">## Introdução</span><span class="line">Olá! Muitas vezes me vejo explicando Git do zero,...</span></code></pre></div>
 <h3 id="4-publicando-o-blog"><strong>4. Publicando o Blog</strong></h3>
 <p>Depois que o script atualiza os arquivos HTML no meu projeto Jekyll, eu simplesmente:</p>
 <ol>
 <li><strong>Compilo o site</strong> com:</li>
 </ol>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">jekyll build</span></code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copiar: bash">Copiar</button></div><pre><code class="language-bash"><span class="line">jekyll build</span></code></pre></div>
 <ol>
 <li><strong><a href="https://adrianogil.github.io/blog/2025/02/intro-git/">Envio as mudanças</a> para o GitHub Pages</strong> com:</li>
 </ol>
-<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy bash code">Copy</button></div><pre><code class="language-bash"><span class="line">git add .</span><span class="line">git commit -m &quot;New blog post&quot;</span><span class="line">git push origin main</span></code></pre></div>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copiar: bash">Copiar</button></div><pre><code class="language-bash"><span class="line">git add .</span><span class="line">git commit -m &quot;New blog post&quot;</span><span class="line">git push origin main</span></code></pre></div>
 <p>Em poucos minutos, meu blog está no ar!</p>
 </article>
 
     </main>
   </div>
-  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
 </body>
 </html>

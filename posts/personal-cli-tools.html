@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fb" />
+  <title>Personal CLI Tools · GilLabs</title>
+  <link rel="canonical" href="https://adrianogil.github.io/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="en" href="https://adrianogil.github.io/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/posts/personal-cli-tools.html" />
+  <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/posts/personal-cli-tools.html" />
+  <link rel="stylesheet" href="../styles.css?v=19" />
+  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
+  <script src="../site.js?v=19" defer></script>
+  
+</head>
+<body data-copy-label="Copy" data-copied-label="Copied" data-copy-failed-label="Copy failed">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false" data-open-label="Open navigation" data-close-label="Close navigation" data-sidebar-toggle></button>
+  <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true" tabindex="-1">
+    <div class="sidebar-item">
+      <p>GilLabs</p>
+    </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">About</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Game Portfolio</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Research</a></li><li><a href="../pages/talks.html">Talks</a></li><li><a href="../pages/web-projects.html">Web Projects</a></li></ul>
+    </nav>
+    <div class="sidebar-item sidebar-controls">
+      <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
+      <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light mode" data-dark-label="Switch to dark mode" aria-label="Switch to dark mode">
+        <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.99 12.4A8.5 8.5 0 1 1 11.6 3.01 6.5 6.5 0 0 0 20.99 12.4Z" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+  <button class="sidebar-backdrop" type="button" aria-label="Close navigation" aria-hidden="true" tabindex="-1" data-sidebar-close disabled></button>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
+          <small>notes, talks, and experiments</small>
+        </h3>
+      </div>
+    </header>
+    <main class="container content-shell" id="content">
+      <article class="content">
+  <nav class="content-breadcrumb" aria-label="Breadcrumb"><a href="../blog/">Blog</a> <span aria-hidden="true">/</span> <span aria-current="page">Personal CLI Tools</span></nav>
+  <header class="content-header">
+    <h1>Personal CLI Tools</h1>
+    <p class="meta">17 Sep 2026</p>
+    <p class="post-tags" aria-label="Tags"><a class="post-tag" href="../tags/devx.html">#devx</a><a class="post-tag" href="../tags/cli.html">#cli</a><a class="post-tag" href="../tags/tooling.html">#tooling</a><a class="post-tag" href="../tags/workflow.html">#workflow</a></p>
+  </header>
+  <div class="language-code-links"><a href="/pt-BR/posts/personal-cli-tools.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/posts/personal-cli-tools.html">FR</a></div>
+  <p>Many command-line routines begin as a handful of commands copied from terminal history. After repeating the sequence enough times, I write an alias, a shell function, or a small application for it. These personal tools form an important part of my developer experience because they encode how I prefer to work.</p>
+<p>The cost of creating these small utilities has changed. A coding agent can turn a description of a repetitive task into a working first version in minutes. I still need to explain the behavior, inspect the generated code, and test the dangerous paths, but writing the initial implementation is rarely the obstacle it once was. This makes very specific tools worthwhile, even when their entire audience is one person.</p>
+<p>Developer productivity is widely discussed in the literature. For example, the <a href="https://www.microsoft.com/en-us/research/publication/the-space-of-developer-productivity-theres-more-to-it-than-you-think/">SPACE framework</a> describes it through several dimensions rather than a single activity metric. An <a href="https://arxiv.org/abs/2205.06352">actionable framework for developer experience</a> also examines the factors that shape how development work feels. <a href="https://tuhat.helsinki.fi/ws/portalfiles/portal/23604202/icssp2012.pdf">Developer experience, or DevX</a> describes how developers experience the tools, workflows, and systems they use to do their work.</p>
+<h2 id="improve-your-cli-experience-with-fzf">Improve Your CLI Experience with <code>fzf</code></h2>
+<p><a href="https://github.com/junegunn/fzf"><code>fzf</code></a> is a terminal fuzzy finder. It receives a list of lines, opens an interactive selector, and returns the chosen line. Typing a few fragments progressively filters the candidates, so I do not need to remember or type an exact name.</p>
+<p>The basic pattern is small:</p>
+<div class="code-block"><div class="code-header"><span class="code-language">bash</span><button class="copy-button" type="button" data-copy-button aria-label="Copy: bash">Copy</button></div><pre><code class="language-bash"><span class="line">selection=$(command-that-produces-options | fzf)</span><span class="line">command-that-uses &quot;$selection&quot;</span></code></pre></div>
+<p>This separates a CLI application into three parts:</p>
+<ol>
+<li>Produce the possible options.</li>
+<li>Let the user search and select one.</li>
+<li>Perform an action with the selection.</li>
+</ol>
+<p>The selector can include a descriptive prompt, multiple selection, key bindings, and a preview window. The producing command can attach paths, descriptions, dates, or Git metadata to each option. The final action should validate the selected value and treat Escape as a normal cancellation.</p>
+<p>This pattern lets me quickly provide input to my CLI scripts without having to remember the valid values or the exact syntax of each script. It also creates consistency: after learning how one fuzzy command behaves, I already understand much of the next one.</p>
+<h2 id="examples-from-my-own-tools">Examples from My Own Tools</h2>
+<h3 id="config-fz"><a href="https://github.com/adrianogil/config-files/blob/main/bashrc.sh#L23-L31"><code>config-fz</code></a></h3>
+<p>As my shell configuration grew, remembering the custom command names became its own problem. I started annotating commands with a name and short description. <code>config-fz</code> collects those annotations and feeds them to <code>fzf</code>, allowing me to search the catalog by purpose and execute the selected command.</p>
+<p>The annotations make the collection self-documenting. The fuzzy interface means I can benefit from a rarely used helper without first remembering its exact name. Adding a new tool to the catalog requires one comment beside its implementation.</p>
+<h3 id="gflog"><a href="https://github.com/adrianogil/git-tools/blob/main/git_history.sh#L215-L220"><code>gflog</code></a></h3>
+<p>My <code>gflog</code> command formats the Git reflog with the commit hash, reflog position, date, and subject. Git already contains this information; the personal application chooses the compact representation I want when investigating an earlier state.</p>
+<h3 id="gz"><a href="https://github.com/adrianogil/git-tools/blob/main/git_config.sh#L207-L238"><code>gz</code></a></h3>
+<p><code>gz</code> applies the fuzzy-selection pattern to branches and remote references. It shows each reference together with its hash, author, date, and subject, passes the list through <code>fzf</code>, and resets the repository to the chosen target.</p>
+<h2 id="look-for-the-script-you-are-already-performing">Look for the Script You Are Already Performing</h2>
+<p>Pay attention to moments when you copy the same commands, reconstruct the same arguments, browse the same directories, or follow the same recovery instructions. Describe one of those routines to a coding agent and ask for a small CLI application. Once it works, improve the interface with fuzzy selection, useful previews, clear prompts, safe cancellation, and confirmation where the stakes require it.</p>
+<p>The most useful personal tools often begin with a sequence too specific to interest anyone else. That is precisely why they fit so well. If you do not have a script for a repetitive procedure, you are condemned to act like one: receiving the same inputs, following the same steps, and producing the same output over and over.</p>
+</article>
+
+    </main>
+  </div>
+</body>
+</html>

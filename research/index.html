@@ -10,15 +10,15 @@
   <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/pages/research.html" />
   <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/pages/research.html" />
   <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/research/" />
-  <link rel="stylesheet" href="../styles.css?v=6" />
+  <link rel="stylesheet" href="../styles.css?v=19" />
   <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
-  <script src="../site.js?v=6" defer></script>
+  <script src="../site.js?v=19" defer></script>
   
 </head>
-<body>
+<body data-copy-label="Copy" data-copied-label="Copied" data-copy-failed-label="Copy failed">
   <a class="skip-link" href="#content">Skip to content</a>
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false" data-open-label="Open navigation" data-close-label="Close navigation" data-sidebar-toggle></button>
+  <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true" tabindex="-1">
     <div class="sidebar-item">
       <p>GilLabs</p>
     </div>
@@ -27,7 +27,7 @@
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light mode" data-dark-label="Switch to dark mode" aria-label="Switch to dark mode">
         <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="4" />
           <path d="M12 2v2" />
@@ -45,6 +45,7 @@
       </button>
     </div>
   </aside>
+  <button class="sidebar-backdrop" type="button" aria-label="Close navigation" aria-hidden="true" tabindex="-1" data-sidebar-close disabled></button>
   <div class="wrap">
     <header class="masthead">
       <div class="container">
@@ -63,8 +64,11 @@
     
   </header>
   <div class="language-code-links"><a href="/pt-BR/pages/research.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/pages/research.html">FR</a></div>
-  <section class="research-page" aria-labelledby="research-publications">
-  <p class="research-intro">Selected publications and research artifacts from my work in games, VR/AR, human-computer interaction, computer vision, image processing, and educational technology.</p>
+  <section class="research-page" aria-label="Research">
+  <header class="research-header">
+    <p class="research-intro">Selected publications and research artifacts from my work in:</p>
+    <nav class="research-topics" aria-label="Research areas"><span class="active" aria-current="page">All</span><a href="/pages/research-games.html">Games</a><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a><a href="/pages/research-computer-vision.html">Computer vision</a><a href="/pages/research-computer-graphics.html">Computer graphics</a><a href="/pages/research-image-processing.html">Image processing</a><a href="/pages/research-educational-technology.html">Educational technology</a></nav>
+  </header>
   <div class="research-actions" aria-label="Research profile links">
     <a href="https://scholar.google.com.br/citations?user=n6RoXpAAAAAJ">Google Scholar</a>
   </div>
@@ -73,13 +77,13 @@
     <h2 id="research-2024">2024</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">SBGames</div>
         <div class="publication-body">
-          <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:5nxA0vEk-isC">Extracting Learning Analytics from Lightbot GameplaySessions</a></h3>
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-games.html">Games</a><a href="/pages/research-image-processing.html">Image processing</a><a href="/pages/research-educational-technology.html">Educational technology</a></div>
+          <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:5nxA0vEk-isC">Extracting Learning Analytics from Lightbot Gameplay Sessions</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, T. Figueira, and J. F. M. Netto</p>
           <p class="publication-venue"><em>Simpósio Brasileiro de Jogos e Entretenimento Digital (SBGames)</em>, 2024</p>
           <p class="publication-tldr">Uses Lightbot gameplay sessions as a source of learning analytics, connecting game interactions with evidence about computational thinking and player progress.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:5nxA0vEk-isC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:5nxA0vEk-isC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -89,13 +93,13 @@
     <h2 id="research-2022">2022</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">HCI</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:hqOjcs7Dif8C">Youkai: A cross-platform framework for testing VR/AR apps</a></h3>
           <p class="publication-authors">T. Figueira and <strong>Adriano Gil</strong></p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2022</p>
           <p class="publication-tldr">Presents a framework for making VR/AR application tests more repeatable across platforms, reducing friction around immersive app validation.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:hqOjcs7Dif8C">Scholar</a><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:8k81kl-MbHgC">Related</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:hqOjcs7Dif8C">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -105,13 +109,13 @@
     <h2 id="research-2021">2021</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">Patent</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:_FxGoFyzp5QC">Method for controlling animation&#x27;s process running on electronic devices</a></h3>
           <p class="publication-authors">T. D. E. A. Miyagawa, A. A. B. Lourenço, and <strong>Adriano Gil</strong></p>
           <p class="publication-venue"><em>US Patent 11,093,117</em>, 2021</p>
           <p class="publication-tldr">Describes a device-side method for controlling animation processes, extending the research thread around graphics and interactive systems.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:_FxGoFyzp5QC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:_FxGoFyzp5QC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -121,57 +125,57 @@
     <h2 id="research-2020">2020</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">VR Test</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:UebtZRa9Y70C">Automated test of VR applications</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, T. Figueira, E. Ribeiro, A. Costa, and P. Quiroga</p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2020</p>
           <p class="publication-tldr">Explores automated validation for VR applications, focusing on practical testability in systems where interaction, rendering, and device behavior meet.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:UebtZRa9Y70C">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:UebtZRa9Y70C">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">Mobile VR</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:roLk4NBRz8UC">Video player architecture for virtual reality on mobile devices</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, A. R. Costa Jr., A. C. Cunha, T. S. Figueira, and A. A. Silva</p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2020</p>
           <p class="publication-tldr">Defines a mobile VR video player architecture aimed at making immersive media playback more structured and maintainable on constrained devices.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:roLk4NBRz8UC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:roLk4NBRz8UC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">Shader</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-computer-graphics.html">Computer graphics</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Se3iqnhoufwC">A Shader-Based Architecture for Virtual Reality Applications on Mobile Devices</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong> and T. S. Figueira</p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2020</p>
           <p class="publication-tldr">Investigates shader-centered architecture decisions for mobile VR applications, balancing rendering flexibility with mobile performance needs.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Se3iqnhoufwC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Se3iqnhoufwC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">Themes</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:LkGwnXOMwfcC">Automatic contrast evaluation for Android themes</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, J. Postal, A. Ferreira, D. Gonçalves, B. H. Bianco, and M. R. Gadelha</p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2020</p>
           <p class="publication-tldr">Automates contrast checks for Android themes, turning accessibility-sensitive visual review into a repeatable validation workflow.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:LkGwnXOMwfcC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:LkGwnXOMwfcC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">SIBGRAPI</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:0EnyYjriUFMC">An Automatic Contrast Validation Approach for Smartphone Themes</a></h3>
           <p class="publication-authors">A. Khurshid, <strong>Adriano Gil</strong>, F. A. S. Guimarães, M. Gadelha, and E. Fernandes</p>
           <p class="publication-venue"><em>Conference on Graphics, Patterns and Images (SIBGRAPI)</em>, 2020</p>
           <p class="publication-tldr">Extends the theme-validation work with an approach focused on automatically detecting contrast issues in smartphone visual themes.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:0EnyYjriUFMC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:0EnyYjriUFMC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -181,46 +185,46 @@
     <h2 id="research-2019">2019</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">SIBGRAPI</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-computer-vision.html">Computer vision</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:eQOLeE2rZwMC">Visual assessment of equirectangular images for virtual reality applications in Unity</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, A. Khurshid, J. Postal, and T. Figueira</p>
           <p class="publication-venue"><em>Conference on Graphics, Patterns and Images (SIBGRAPI)</em>, 2019</p>
           <p class="publication-tldr">Builds a Unity-centered workflow for assessing equirectangular image quality in VR applications, with attention to visual inspection and production use.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:eQOLeE2rZwMC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:eQOLeE2rZwMC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">HCI</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:WF5omc3nYNoC">Themes validation tool</a></h3>
           <p class="publication-authors">E. Fernandes, R. Correia, <strong>Adriano Gil</strong>, J. Postal, and M. R. Gadelha</p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2019</p>
           <p class="publication-tldr">Introduces tooling for validating visual themes, especially where interface consistency and accessibility checks need to be automated.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:WF5omc3nYNoC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:WF5omc3nYNoC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">Unity</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:YsMSGLbcyi4C">Equirectangular image quality assessment tool integrated into the Unity editor</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong> and T. S. Figueira</p>
           <p class="publication-venue"><em>International Conference on Human-Computer Interaction</em>, 2019</p>
           <p class="publication-tldr">Integrates image quality assessment into the Unity editor, bringing research inspection closer to the practical workflow of VR content creation.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:YsMSGLbcyi4C">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:YsMSGLbcyi4C">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">AR</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-human-computer-interaction.html">Human-computer interaction</a><a href="/pages/research-computer-graphics.html">Computer graphics</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:ufrVoPGSRksC">Manipulação de Malhas 3D em uma aplicação de Realidade Aumentada utilizando o framework SXR</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, A. Costa, and J. Figueira</p>
           <p class="publication-venue"><em>Simpósio de Realidade Virtual e Aumentada (SVR)</em>, 2019</p>
           <p class="publication-tldr">Studies 3D mesh manipulation in an augmented reality application, using SXR as the framework for immersive interaction experiments.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:ufrVoPGSRksC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:ufrVoPGSRksC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -230,13 +234,13 @@
     <h2 id="research-2018">2018</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">Unity</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-vr-ar.html">VR/AR</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:W7OEmFMy1HYC">Ferramenta de Avaliação de Qualidade de Imagens Equiretangulares Integrada no Editor Unity</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, E. Silva, and T. S. Figueira</p>
           <p class="publication-venue"><em>ENCOSIS</em>, 2018</p>
           <p class="publication-tldr">An earlier version of the Unity editor tooling for evaluating equirectangular images, tying VR content quality to daily development practice.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:W7OEmFMy1HYC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:W7OEmFMy1HYC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -246,13 +250,13 @@
     <h2 id="research-2015">2015</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">Game AI</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-games.html">Games</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:IjCSPb-OGe4C">Agentes Evolutivos com Personalidade para o Jogo de Dominó de 4 pontas</a></h3>
           <p class="publication-authors">C. A. M. da Silva Filho, <strong>Adriano Gil</strong>, and J. M. da Silva Junior</p>
           <p class="publication-venue"><em>I Congresso Amazônico de Computação e Sistemas Inteligentes</em>, 2015</p>
           <p class="publication-tldr">Applies evolutionary agents and personality modeling to a four-ended domino game, connecting game AI with behavior variation.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:IjCSPb-OGe4C">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:IjCSPb-OGe4C">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -262,35 +266,35 @@
     <h2 id="research-2014">2014</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">ICPR</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-computer-vision.html">Computer vision</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:UeHWp8X0CEIC">Handwritten digit recognition using SVM binary classifiers and unbalanced decision trees</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, C. F. F. Costa Filho, and M. G. F. Costa</p>
           <p class="publication-venue"><em>International Conference Image Analysis and Recognition</em>, 2014</p>
           <p class="publication-tldr">Combines binary SVM classifiers with unbalanced decision trees for handwritten digit recognition, focusing on classifier structure and hit rate.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:UeHWp8X0CEIC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:UeHWp8X0CEIC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">Game AI</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-games.html">Games</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Tyk-4Ss8FVUC">Unity3D-based neuro-evolutive architecture to simulate player</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong>, P. R. de Barros Mendonça, and B. G. de Melo Monteiro</p>
           <p class="publication-venue"><em>XIII Brazilian Symposium on Computer Games and Digital Entertainment</em>, 2014</p>
           <p class="publication-tldr">Uses Unity3D as the base for neuro-evolution experiments that simulate player behavior, an early thread in my game AI work.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Tyk-4Ss8FVUC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Tyk-4Ss8FVUC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
 
       <article class="publication-item">
-        <div class="publication-marker">Thesis</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-computer-vision.html">Computer vision</a><a href="/pages/research-image-processing.html">Image processing</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Y0pCki6q_DkC">Reconhecimento de dígitos manuscritos: busca de um classificador com máxima taxa de acerto</a></h3>
           <p class="publication-authors"><strong>Adriano Gil</strong></p>
           <p class="publication-venue"><em>Universidade Federal do Amazonas</em>, 2014</p>
           <p class="publication-tldr">Master&#x27;s dissertation on handwritten digit recognition, classifier search, and maximum recognition accuracy.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Y0pCki6q_DkC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:Y0pCki6q_DkC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -300,13 +304,13 @@
     <h2 id="research-2013">2013</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">Education</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-games.html">Games</a><a href="/pages/research-educational-technology.html">Educational technology</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:u5HHmVD_uO8C">Ensino de Física com abordagem CTS através de jogos educativos</a></h3>
           <p class="publication-authors">A. X. Gil, <strong>Adriano Gil</strong>, and J. B. Kalhil</p>
           <p class="publication-venue"><em>Latin-American Journal of Physics Education</em>, 2013</p>
           <p class="publication-tldr">Connects physics education, science-technology-society framing, and educational games as a strategy for classroom learning.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:u5HHmVD_uO8C">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:u5HHmVD_uO8C">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -316,13 +320,13 @@
     <h2 id="research-2011">2011</h2>
     <div class="publication-list">
       <article class="publication-item">
-        <div class="publication-marker">Education</div>
         <div class="publication-body">
+          <div class="publication-tags" aria-label="Research areas"><a href="/pages/research-educational-technology.html">Educational technology</a></div>
           <h3><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:9yKSN-GCB0IC">Upgrading the Training of Undergraduate Students by Addressing Market Demands</a></h3>
           <p class="publication-authors">C. F. F. Costa Filho, O. B. Maia, M. G. F. Costa, V. F. Lucena Junior, R. E. V. S. Rosa, and <strong>Adriano Gil</strong></p>
           <p class="publication-venue"><em>IASTED International Conference Technology for Education</em>, 2011</p>
           <p class="publication-tldr">Looks at undergraduate training through the lens of market demands, connecting curriculum and practical technology education.</p>
-          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:9yKSN-GCB0IC">Scholar</a></div>
+          <div class="publication-links"><a href="https://scholar.google.com.br/citations?view_op=view_citation&amp;hl=en&amp;user=n6RoXpAAAAAJ&amp;citation_for_view=n6RoXpAAAAAJ:9yKSN-GCB0IC">View on Scholar <span aria-hidden="true">↗</span></a></div>
         </div>
       </article>
     </div>
@@ -332,6 +336,5 @@
 
     </main>
   </div>
-  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
 </body>
 </html>

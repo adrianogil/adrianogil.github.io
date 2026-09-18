@@ -131,6 +131,20 @@
       ]
     },
     {
+      "title": "Personal CLI Tools",
+      "slug": "personal-cli-tools",
+      "date": "2026-09-17",
+      "summary": "How personal CLI tools, fuzzy selection with fzf, and coding agents can reduce friction and improve developer experience.",
+      "lang": "en",
+      "translation_key": "personal-devx-cli-tools",
+      "tags": [
+        "devx",
+        "cli",
+        "tooling",
+        "workflow"
+      ]
+    },
+    {
       "title": "Hello World!",
       "slug": "hello-world",
       "date": "2016-01-01 09:02:47 -0400",
@@ -271,6 +285,20 @@
         "obsidian",
         "personal",
         "productivity"
+      ]
+    },
+    {
+      "title": "Outils CLI personnels",
+      "slug": "personal-cli-tools",
+      "date": "2026-09-17",
+      "summary": "Comment les outils CLI personnels, la s\u00e9lection approximative avec fzf et les agents de programmation peuvent r\u00e9duire les frictions et am\u00e9liorer l'exp\u00e9rience d\u00e9veloppeur.",
+      "lang": "fr",
+      "translation_key": "personal-devx-cli-tools",
+      "tags": [
+        "devx",
+        "cli",
+        "tooling",
+        "workflow"
       ]
     },
     {
@@ -417,6 +445,20 @@
       ]
     },
     {
+      "title": "Ferramentas CLI pessoais",
+      "slug": "personal-cli-tools",
+      "date": "2026-09-17",
+      "summary": "Como ferramentas CLI pessoais, sele\u00e7\u00e3o fuzzy com fzf e agentes de programa\u00e7\u00e3o podem reduzir atritos e melhorar a experi\u00eancia de desenvolvimento.",
+      "lang": "pt-BR",
+      "translation_key": "personal-devx-cli-tools",
+      "tags": [
+        "devx",
+        "cli",
+        "tooling",
+        "workflow"
+      ]
+    },
+    {
       "title": "Ol\u00e1 Mundo!",
       "slug": "hello-world",
       "date": "2016-01-01 09:02:47 -0400",
@@ -464,6 +506,62 @@
       "translation_key": "now"
     },
     {
+      "title": "Research: Computer graphics",
+      "slug": "research-computer-graphics",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged Computer graphics.",
+      "lang": "en",
+      "translation_key": "research-computer-graphics"
+    },
+    {
+      "title": "Research: Computer vision",
+      "slug": "research-computer-vision",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged Computer vision.",
+      "lang": "en",
+      "translation_key": "research-computer-vision"
+    },
+    {
+      "title": "Research: Educational technology",
+      "slug": "research-educational-technology",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged Educational technology.",
+      "lang": "en",
+      "translation_key": "research-educational-technology"
+    },
+    {
+      "title": "Research: Games",
+      "slug": "research-games",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged Games.",
+      "lang": "en",
+      "translation_key": "research-games"
+    },
+    {
+      "title": "Research: Human-computer interaction",
+      "slug": "research-human-computer-interaction",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged Human-computer interaction.",
+      "lang": "en",
+      "translation_key": "research-human-computer-interaction"
+    },
+    {
+      "title": "Research: Image processing",
+      "slug": "research-image-processing",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged Image processing.",
+      "lang": "en",
+      "translation_key": "research-image-processing"
+    },
+    {
+      "title": "Research: VR/AR",
+      "slug": "research-vr-ar",
+      "date": "2026-05-20",
+      "summary": "Research publications by Adriano Gil tagged VR/AR.",
+      "lang": "en",
+      "translation_key": "research-vr-ar"
+    },
+    {
       "title": "Research",
       "slug": "research",
       "date": "2026-05-20",
@@ -475,7 +573,7 @@
       "title": "Talks",
       "slug": "talks",
       "date": "2024-01-01",
-      "summary": "This is a list of public talks I've given. If you're interested in having me speak at your event, please get in touch .",
+      "summary": "Talks by Adriano Gil about testing, graphics, game AI, and computer vision.",
       "lang": "en",
       "translation_key": "talks"
     },
@@ -520,6 +618,62 @@
       "translation_key": "now"
     },
     {
+      "title": "Recherche : Infographie",
+      "slug": "research-computer-graphics",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous Infographie.",
+      "lang": "fr",
+      "translation_key": "research-computer-graphics"
+    },
+    {
+      "title": "Recherche : Vision par ordinateur",
+      "slug": "research-computer-vision",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous Vision par ordinateur.",
+      "lang": "fr",
+      "translation_key": "research-computer-vision"
+    },
+    {
+      "title": "Recherche : Technologies \u00e9ducatives",
+      "slug": "research-educational-technology",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous Technologies \u00e9ducatives.",
+      "lang": "fr",
+      "translation_key": "research-educational-technology"
+    },
+    {
+      "title": "Recherche : Jeux",
+      "slug": "research-games",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous Jeux.",
+      "lang": "fr",
+      "translation_key": "research-games"
+    },
+    {
+      "title": "Recherche : Interaction humain-machine",
+      "slug": "research-human-computer-interaction",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous Interaction humain-machine.",
+      "lang": "fr",
+      "translation_key": "research-human-computer-interaction"
+    },
+    {
+      "title": "Recherche : Traitement d\u2019images",
+      "slug": "research-image-processing",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous Traitement d\u2019images.",
+      "lang": "fr",
+      "translation_key": "research-image-processing"
+    },
+    {
+      "title": "Recherche : VR/AR",
+      "slug": "research-vr-ar",
+      "date": "2026-05-20",
+      "summary": "Publications de recherche d'Adriano Gil class\u00e9es sous VR/AR.",
+      "lang": "fr",
+      "translation_key": "research-vr-ar"
+    },
+    {
       "title": "Recherche",
       "slug": "research",
       "date": "2026-05-20",
@@ -531,7 +685,7 @@
       "title": "Conf\u00e9rences",
       "slug": "talks",
       "date": "2024-01-01",
-      "summary": "Voici une liste de conf\u00e9rences publiques que j'ai donn\u00e9es. Si vous souhaitez m'inviter \u00e0 parler lors de votre \u00e9v\u00e9nement, veuillez me contact...",
+      "summary": "Conf\u00e9rences d'Adriano Gil sur les tests, l'infographie, l'IA pour les jeux et la vision par ordinateur.",
       "lang": "fr",
       "translation_key": "talks"
     },
@@ -576,6 +730,62 @@
       "translation_key": "now"
     },
     {
+      "title": "Pesquisa: Computa\u00e7\u00e3o gr\u00e1fica",
+      "slug": "research-computer-graphics",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como Computa\u00e7\u00e3o gr\u00e1fica.",
+      "lang": "pt-BR",
+      "translation_key": "research-computer-graphics"
+    },
+    {
+      "title": "Pesquisa: Vis\u00e3o computacional",
+      "slug": "research-computer-vision",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como Vis\u00e3o computacional.",
+      "lang": "pt-BR",
+      "translation_key": "research-computer-vision"
+    },
+    {
+      "title": "Pesquisa: Tecnologia educacional",
+      "slug": "research-educational-technology",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como Tecnologia educacional.",
+      "lang": "pt-BR",
+      "translation_key": "research-educational-technology"
+    },
+    {
+      "title": "Pesquisa: Jogos",
+      "slug": "research-games",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como Jogos.",
+      "lang": "pt-BR",
+      "translation_key": "research-games"
+    },
+    {
+      "title": "Pesquisa: Intera\u00e7\u00e3o humano-computador",
+      "slug": "research-human-computer-interaction",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como Intera\u00e7\u00e3o humano-computador.",
+      "lang": "pt-BR",
+      "translation_key": "research-human-computer-interaction"
+    },
+    {
+      "title": "Pesquisa: Processamento de imagens",
+      "slug": "research-image-processing",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como Processamento de imagens.",
+      "lang": "pt-BR",
+      "translation_key": "research-image-processing"
+    },
+    {
+      "title": "Pesquisa: VR/AR",
+      "slug": "research-vr-ar",
+      "date": "2026-05-20",
+      "summary": "Publica\u00e7\u00f5es de pesquisa de Adriano Gil marcadas como VR/AR.",
+      "lang": "pt-BR",
+      "translation_key": "research-vr-ar"
+    },
+    {
       "title": "Pesquisa",
       "slug": "research",
       "date": "2026-05-20",
@@ -587,7 +797,7 @@
       "title": "Apresenta\u00e7\u00f5es",
       "slug": "talks",
       "date": "2024-01-01",
-      "summary": "Esta \u00e9 uma lista de apresenta\u00e7\u00f5es que j\u00e1 fiz. Se voc\u00ea estiver interessado em me convidar para falar no seu evento, por favor entre em contat...",
+      "summary": "Palestras e apresenta\u00e7\u00f5es de Adriano Gil sobre testes, gr\u00e1ficos, IA para jogos e vis\u00e3o computacional.",
       "lang": "pt-BR",
       "translation_key": "talks"
     },

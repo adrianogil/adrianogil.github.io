@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feed RSS de GilLabs em português</title>
+    <link>https://adrianogil.github.io/</link>
+    <description>Publicações de GilLabs em português</description>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://adrianogil.github.io/pt-BR/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ferramentas CLI pessoais</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/personal-cli-tools.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/personal-cli-tools.html</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Como ferramentas CLI pessoais, seleção fuzzy com fzf e agentes de programação podem reduzir atritos e melhorar a experiência de desenvolvimento.</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Como organizo meu cofre do Obsidian</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/organize-obsidian-vault.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/organize-obsidian-vault.html</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Um passeio pelos diretórios, metadados, tipos de nota, backlogs, templates e repositórios Git que formam meu cofre do Obsidian.</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Notas do AWS Summit São Paulo 2026</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/aws-summit-sao-paulo-2026.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/aws-summit-sao-paulo-2026.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Reflexões sobre impacto nos negócios, observabilidade, agentes de IA, DynamoDB e machine learning na borda após o AWS Summit São Paulo 2026.</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Meus comandos Git favoritos</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/favorite-git-commands.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/favorite-git-commands.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description>Depois de ver alguns posts sobre comandos git como esse e esse , decidi também fazer a minha versão. Então, esta é uma lista pequena das coi...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Meu workflow com Obsidian and Jekyll</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/workflow-obsidian-jekyll.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/workflow-obsidian-jekyll.html</guid>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Jekyll é um gerador de site estático que transforma arquivos Markdown em um site totalmente funcional. Tudo é convertido para HTML puro, o q...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Primeiros Passos com Git</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/intro-git.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/intro-git.html</guid>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+      <description>Olá! Frequentemente me vejo explicando Git do zero, então decidi escrever este pequeno guia introdutório para servir de referência. Este gui...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Meu Roadmap para 2025</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/2025-goals.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/2025-goals.html</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <description>Há vários anos, dei inicio a este blog como uma desculpa para documentar meu processo de aprendizado em algumas áreas e também como material...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Entendendo a Divisibilidade por 3</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/divisibility-of-3.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/divisibility-of-3.html</guid>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 GMT</pubDate>
+      <description>Enquanto revisava a lição de casa da minha filha, comecei a pensar um pouco sobre a regra de divisibilidade por 3. No ensino fundamental apr...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Como fazer um Space Invaders simples na Unity sem programação</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/space-invaders.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/space-invaders.html</guid>
+      <pubDate>Tue, 31 Jan 2017 00:00:00 GMT</pubDate>
+      <description>Olá Pessoal,</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Instalando Blocks, Fuel e Theano</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/install-block-fuel-theano.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/install-block-fuel-theano.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Notas de instalação do Theano, Blocks e Fuel no Windows, OSX e Ubuntu.</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Kuarup: um jogo de puzzle de cores na Global Game Jam 2016</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/global-game-jam-2016.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/global-game-jam-2016.html</guid>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Algumas semanas atrás participei em uma das mais conhecidas game jams: Global Game Jam . Foi um trabalho conjunto com um pessoal muito talen...</description>
+      <category>pt-BR</category>
+    </item>
+    <item>
+      <title>Olá Mundo!</title>
+      <link>https://adrianogil.github.io/pt-BR/posts/hello-world.html</link>
+      <guid isPermaLink="true">https://adrianogil.github.io/pt-BR/posts/hello-world.html</guid>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+      <description>Uma primeira nota para apresentar o blog, meus interesses de pesquisa e desenvolvimento.</description>
+      <category>pt-BR</category>
+    </item>
+  </channel>
+</rss>

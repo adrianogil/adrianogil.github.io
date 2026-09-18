@@ -10,24 +10,24 @@
   <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/pages/game-portfolio.html" />
   <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/pages/game-portfolio.html" />
   <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/pages/game-portfolio.html" />
-  <link rel="stylesheet" href="../../styles.css?v=6" />
-  <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
-  <script src="../../site.js?v=6" defer></script>
+  <link rel="stylesheet" href="../../styles.css?v=19" />
+  <link rel="alternate" type="application/rss+xml" title="Flux RSS de GilLabs en français" href="/fr/rss/feed.xml" />
+  <script src="../../site.js?v=19" defer></script>
   
 </head>
-<body>
-  <a class="skip-link" href="#content">Skip to content</a>
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+<body data-copy-label="Copier" data-copied-label="Copié" data-copy-failed-label="Échec de la copie">
+  <a class="skip-link" href="#content">Aller au contenu</a>
+  <button class="sidebar-toggle" type="button" aria-label="Ouvrir la navigation" aria-controls="sidebar" aria-expanded="false" data-open-label="Ouvrir la navigation" data-close-label="Fermer la navigation" data-sidebar-toggle></button>
+  <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-label="Navigation du site" aria-hidden="true" tabindex="-1">
     <div class="sidebar-item">
       <p>GilLabs</p>
     </div>
-    <nav class="sidebar-nav" aria-label="Main navigation">
+    <nav class="sidebar-nav" aria-label="Navigation principale">
       <ul><li><a href="../blog/">Blog</a></li><li><a href="../tags/">Tags</a></li><li><a href="../pages/about.html">À propos</a></li><li><a href="../pages/cv.html">CV</a></li><li><a href="../pages/game-portfolio.html">Portfolio de jeux</a></li><li><a href="../pages/now.html">Now</a></li><li><a href="../pages/research.html">Recherche</a></li><li><a href="../pages/talks.html">Conférences</a></li><li><a href="../pages/web-projects.html">Projets Web</a></li></ul>
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Langues :</p><nav class="language-switcher-nav" aria-label="Langues :"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><a class="language-switcher-item" href="/en/index.html">EN</a><span class="language-switcher-item active" aria-current="true">FR</span></nav></div>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Passer au thème clair" data-dark-label="Passer au thème sombre" aria-label="Passer au thème sombre">
         <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="4" />
           <path d="M12 2v2" />
@@ -45,12 +45,13 @@
       </button>
     </div>
   </aside>
+  <button class="sidebar-backdrop" type="button" aria-label="Fermer la navigation" aria-hidden="true" tabindex="-1" data-sidebar-close disabled></button>
   <div class="wrap">
     <header class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a class="site-title" href="../index.html" aria-label="GilLabs home">GilLabs</a>
-          <small>notes, talks, and experiments</small>
+          <a class="site-title" href="../index.html" aria-label="Accueil de GilLabs">GilLabs</a>
+          <small>notes, conférences et expériences</small>
         </h3>
       </div>
     </header>
@@ -68,7 +69,7 @@
   <div class="portfolio-grid">
     <article class="portfolio-item">
       <h2>LiveOps Project: Popup Tool <span>2022</span></h2>
-      <img src="/assets/gameportfolio/Popup_Zooba.webp" alt="LiveOps popup tool shown in Zooba">
+      <img src="/assets/gameportfolio/Popup_Zooba.webp" srcset="/assets/gameportfolio/Popup_Zooba-320.webp 320w, /assets/gameportfolio/Popup_Zooba-640.webp 640w, /assets/gameportfolio/Popup_Zooba.webp 726w" sizes="(max-width: 38rem) calc(100vw - 4rem), 26rem" width="726" height="436" loading="eager" fetchpriority="high" decoding="async" alt="LiveOps popup tool shown in Zooba">
       <p>A LiveOps/Monetization tool project to show dynamically popups in Wildlife Studios games. Whenever a product manager wanted to deploy a new offer in game, it would only update remotely the popup html.</p>
       <p><strong>My role:</strong> I implemented an Unity3D SDK that allowed games to show dynamic popups. This SDK was incorporated in games such as Zooba, War Machines, Sniper3D.</p>
       <p><strong>Platforms:</strong> Android, iOS</p>
@@ -77,7 +78,7 @@
 
     <article class="portfolio-item">
       <h2>Kuarup <span>2017</span></h2>
-      <img src="/assets/gameportfolio/kuarup.webp" alt="Kuarup game screenshot">
+      <img src="/assets/gameportfolio/kuarup.webp" srcset="/assets/gameportfolio/kuarup-320.webp 320w, /assets/gameportfolio/kuarup.webp 404w" sizes="(max-width: 38rem) calc(100vw - 4rem), 26rem" width="404" height="248" loading="lazy" decoding="async" alt="Kuarup game screenshot">
       <p><strong>URL:</strong> <a href="https://play.google.com/store/apps/details?id=com.pxlsquadgames.kuarup">Google Play</a></p>
       <p>An Unity3D mobile match-3-like puzzle Game for GGJ16.</p>
       <p><strong>My role:</strong> Worked in main gameplay features, UI, PCG algorithms and dotween-based animations. <a href="http://adrianogil.github.io/blog/2016/01/global-game-jam-2016/">See more</a>.</p>
@@ -87,7 +88,7 @@
 
     <article class="portfolio-item">
       <h2>VR Gallery <span>2017</span></h2>
-      <img src="/assets/gameportfolio/vrgallery2.webp" alt="VR Gallery app screenshot">
+      <img src="/assets/gameportfolio/vrgallery2.webp" srcset="/assets/gameportfolio/vrgallery2-320.webp 320w, /assets/gameportfolio/vrgallery2.webp 617w" sizes="(max-width: 38rem) calc(100vw - 4rem), 26rem" width="617" height="344" loading="lazy" decoding="async" alt="VR Gallery app screenshot">
       <p><strong>URL:</strong> <a href="https://www.oculus.com/experiences/gear-vr/1113617725394318/">Oculus Store</a></p>
       <p>A GearVR application to view images and watch video. It supports 2D and 3D video, 3D spatial sound, subtitles, and photo galleries.</p>
       <p><strong>My role:</strong> I worked in different tasks like UI, shaders, performance analysis and debugging.</p>
@@ -97,7 +98,7 @@
 
     <article class="portfolio-item">
       <h2>Rio360 <span>2016</span></h2>
-      <img src="/assets/gameportfolio/rio_360.webp" alt="Rio360 app screenshot">
+      <img src="/assets/gameportfolio/rio_360.webp" srcset="/assets/gameportfolio/rio_360-320.webp 320w, /assets/gameportfolio/rio_360.webp 323w" sizes="(max-width: 38rem) calc(100vw - 4rem), 26rem" width="323" height="249" loading="lazy" decoding="async" alt="Rio360 app screenshot">
       <p><strong>URL:</strong> <a href="https://www.oculus.com/experiences/gear-vr/1105507662843899/">Oculus Store</a></p>
       <p>A GearVR application to watch 360 videos and navigate through a low-poly depiction of Rio de Janeiro's landmarks.</p>
       <p><strong>My role:</strong> Worked with gaze implementation, algorithms to allow a smooth user locomotion, editor tools and shader programming.</p>
@@ -107,7 +108,7 @@
 
     <article class="portfolio-item">
       <h2>The Battles Untold <span>2015</span></h2>
-      <img src="/assets/gameportfolio/TheBattlesUntold.webp" alt="The Battles Untold game screenshot">
+      <img src="/assets/gameportfolio/TheBattlesUntold.webp" srcset="/assets/gameportfolio/TheBattlesUntold-320.webp 320w, /assets/gameportfolio/TheBattlesUntold.webp 347w" sizes="(max-width: 38rem) calc(100vw - 4rem), 26rem" width="347" height="266" loading="lazy" decoding="async" alt="The Battles Untold game screenshot">
       <p><strong>URL:</strong> <a href="https://matchola.itch.io/battlesuntold">itch.io</a></p>
       <p>A local multiplayer brawler in which the main characters are from famous public domain work, as Dracula and Merlin for instance.</p>
       <p><strong>My role:</strong> I worked on AI implementation: bots movement and general behaviors and strategies.</p>
@@ -117,7 +118,7 @@
 
     <article class="portfolio-item">
       <h2>Woody Endless Summer <span>2014</span></h2>
-      <div class="video-container"><iframe src="https://www.youtube.com/embed/OWez0jlGOjU" title="Woody Endless Summer video" allowfullscreen></iframe></div>
+      <div class="video-container"><button class="video-facade" type="button" data-youtube-id="OWez0jlGOjU" data-video-title="Woody Endless Summer video" aria-label="Play Woody Endless Summer video"><img src="https://i.ytimg.com/vi/OWez0jlGOjU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button></div>
       <p>A time-based sidescroller infinite runner implemented in Unity3D targeting mobile platforms.</p>
       <p><strong>My role:</strong> My contributions to this project were developing a chunk-based procedural generation algorithm, difficulty-level curves, a few gameplay mechanics, UI implementation and performance improvements.</p>
       <p><strong>Platforms:</strong> Android, iOS, WindowsPhone</p>
@@ -126,7 +127,7 @@
 
     <article class="portfolio-item">
       <h2>Soccer Button <span>2013</span></h2>
-      <div class="video-container"><iframe src="https://www.youtube.com/embed/YjHnDKFOgbQ" title="Soccer Button video" allowfullscreen></iframe></div>
+      <div class="video-container"><button class="video-facade" type="button" data-youtube-id="YjHnDKFOgbQ" data-video-title="Soccer Button video" aria-label="Play Soccer Button video"><img src="https://i.ytimg.com/vi/YjHnDKFOgbQ/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button></div>
       <p><strong>URL:</strong> <a href="https://play.google.com/store/apps/details?id=br.org.sidia.futebol">Google Play</a></p>
       <p>A turn-based multiplayer Android game implemented in Unity 4.3.</p>
       <p><strong>My role:</strong> I was the tech lead of this project, responsible for architecture and software components definition, implementation of state machine-based gameplay, networking components and several Android plugins for integration with Samsung APIs.</p>
@@ -136,7 +137,7 @@
 
     <article class="portfolio-item">
       <h2>QDominoes <span>2012</span></h2>
-      <img src="/assets/gameportfolio/qdominoes.webp" alt="QDominoes game screenshot">
+      <img src="/assets/gameportfolio/qdominoes.webp" srcset="/assets/gameportfolio/qdominoes-320.webp 320w, /assets/gameportfolio/qdominoes.webp 640w" sizes="(max-width: 38rem) calc(100vw - 4rem), 26rem" width="640" height="360" loading="lazy" decoding="async" alt="QDominoes game screenshot">
       <p><strong>URL:</strong> <a href="https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/100-qdominoes">CETELI portfolio</a></p>
       <p>A Dominoes game for Symbian/Meego platforms using Qt.</p>
       <p><strong>My role:</strong> I worked with main gameplay features, UI, debugging, and implemented some AI bots.</p>
@@ -146,7 +147,7 @@
 
     <article class="portfolio-item">
       <h2>Cyber Eddy <span>2012</span></h2>
-      <img src="/assets/gameportfolio/cyber_eddy.webp" alt="Cyber Eddy game screenshot">
+      <img src="/assets/gameportfolio/cyber_eddy.webp" width="199" height="141" loading="lazy" decoding="async" alt="Cyber Eddy game screenshot">
       <p><strong>URL:</strong> <a href="https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/98-cybereddy">CETELI portfolio</a></p>
       <p>A cocos2d asteroid-like game.</p>
       <p><strong>My role:</strong> I worked with gameplay features, UI and debugging.</p>
@@ -156,7 +157,7 @@
 
     <article class="portfolio-item">
       <h2>Saci Jump <span>2012</span></h2>
-      <img src="/assets/gameportfolio/sacijump.webp" alt="Saci Jump game screenshot">
+      <img src="/assets/gameportfolio/sacijump.webp" width="230" height="230" loading="lazy" decoding="async" alt="Saci Jump game screenshot">
       <p><strong>URL:</strong> <a href="https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/94-sacijump">CETELI portfolio</a></p>
       <p>A Qt DoodleJump-like game that features Saci, a famous character from Brazilian folklore.</p>
       <p><strong>My role:</strong> I worked with gameplay features, UI and debugging.</p>
@@ -166,7 +167,7 @@
 
     <article class="portfolio-item">
       <h2>Eddy <span>2011</span></h2>
-      <div class="video-container"><iframe src="https://www.youtube.com/embed/PXZ6mPQu8DY" title="Eddy video" allowfullscreen></iframe></div>
+      <div class="video-container"><button class="video-facade" type="button" data-youtube-id="PXZ6mPQu8DY" data-video-title="Eddy video" aria-label="Play Eddy video"><img src="https://i.ytimg.com/vi/PXZ6mPQu8DY/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button></div>
       <p><strong>URL:</strong> <a href="https://www.ceteli.ufam.edu.br/index.php/portfolio/produtos/apps-dispositivos-moveis/31-portfolio/produtos/aplicativosdispositivosmoveis/103-eddy">CETELI portfolio</a></p>
       <p>An educational puzzle Qt game that addressed the importance of selective waste collection.</p>
       <p><strong>My role:</strong> I worked with Box2D implementations for Qt.</p>
@@ -179,6 +180,5 @@
 
     </main>
   </div>
-  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
 </body>
 </html>

@@ -10,15 +10,15 @@
   <link rel="alternate" hreflang="pt-BR" href="https://adrianogil.github.io/pt-BR/pages/talks.html" />
   <link rel="alternate" hreflang="fr" href="https://adrianogil.github.io/fr/pages/talks.html" />
   <link rel="alternate" hreflang="x-default" href="https://adrianogil.github.io/pages/talks.html" />
-  <link rel="stylesheet" href="../styles.css?v=6" />
+  <link rel="stylesheet" href="../styles.css?v=19" />
   <link rel="alternate" type="application/rss+xml" title="GilLabs RSS feed" href="/rss/feed.xml" />
-  <script src="../site.js?v=6" defer></script>
+  <script src="../site.js?v=19" defer></script>
   
 </head>
-<body>
+<body data-copy-label="Copy" data-copied-label="Copied" data-copy-failed-label="Copy failed">
   <a class="skip-link" href="#content">Skip to content</a>
-  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" aria-label="Toggle navigation" />
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false" data-open-label="Open navigation" data-close-label="Close navigation" data-sidebar-toggle></button>
+  <aside class="sidebar" id="sidebar" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true" tabindex="-1">
     <div class="sidebar-item">
       <p>GilLabs</p>
     </div>
@@ -27,7 +27,7 @@
     </nav>
     <div class="sidebar-item sidebar-controls">
       <div class="language-switcher"><p>Languages:</p><nav class="language-switcher-nav" aria-label="Languages:"><a class="language-switcher-item" href="/pt-BR/index.html">PT</a><span class="language-switcher-item active" aria-current="true">EN</span><a class="language-switcher-item" href="/fr/index.html">FR</a></nav></div>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+      <button class="theme-toggle" type="button" data-theme-toggle data-light-label="Switch to light mode" data-dark-label="Switch to dark mode" aria-label="Switch to dark mode">
         <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="4" />
           <path d="M12 2v2" />
@@ -45,6 +45,7 @@
       </button>
     </div>
   </aside>
+  <button class="sidebar-backdrop" type="button" aria-label="Close navigation" aria-hidden="true" tabindex="-1" data-sidebar-close disabled></button>
   <div class="wrap">
     <header class="masthead">
       <div class="container">
@@ -63,40 +64,26 @@
     
   </header>
   <div class="language-code-links"><a href="/pt-BR/pages/talks.html">PT</a> <span class="active" aria-current="true">EN</span> <a href="/fr/pages/talks.html">FR</a></div>
-  <p>This is a list of public talks I've given.
-If you're interested in having me speak at your event, please <a href="#contact">get in touch</a>.</p>
-<h2 id="2024">2024</h2>
-<h3 id="uea-learn-gather">UEA - Learn &amp; Gather</h3>
-<p>Introdução à Automação de Testes com Jest
-- <a href="https://adrianogil.github.io/slides/2024/Learn_gather_2024_Introducao_Automacao_de_Testes_com_Jest.pdf">Slides</a>
-- <a href="https://github.com/adrianogil/learngather2024-intro-jest">Code</a></p>
-<h2 id="2020">2020</h2>
-<h3 id="sibgrapi-2020">SIBGRAPI 2020</h3>
-<p>Automatic Contrast Evaluation for Android Themes
-- <a href="https://adrianogil.github.io/slides/2020/SIBGRAPI2020_Android_Themes.pdf">Slides</a>
-- <a href="https://sol.sbc.org.br/index.php/sibgrapi_estendido/article/view/13015">Paper</a></p>
-<h2 id="2018">2018</h2>
-<h3 id="1a-feira-do-polo-digital-de-manaus">1ª Feira do Polo Digital de Manaus</h3>
-<p>Matemática em Gráficos: A Mágica da Geração Procedural
-- <a href="https://pt.slideshare.net/slideshow/matemtica-em-grficos-a-mgica-da-gerao-procedural-124473027/124473027">Slides</a></p>
-<h2 id="2015">2015</h2>
-<h3 id="jornada-academica-e-tecnologica-no-uninorte">Jornada Acadêmica e Tecnológica no UNINORTE</h3>
-<p>Panorama da Inteligência Artificial Aplicada a Jogos
-- <a href="https://pt.slideshare.net/slideshow/panorama-da-inteligncia-artificial-aplicada-a-jogos/50067531">Slides</a></p>
-<h3 id="fucapi-exteel">FUCAPI - EXTEEL</h3>
-<p>Detecção de Pedestres
-- <a href="https://adrianogil.github.io/slides/2015/EXTEEL_2015_Pedestrian_v1_0_20150526.pdf">Slides</a></p>
-<h2 id="contact">Contact</h2>
-<p>Adriano Gil (@sandmangil)</p>
-<ul>
-<li><strong>E-mail:</strong> <code>adrianogil.san</code> followed by <code>@gmail.com</code></li>
-<li><strong>Twitter:</strong> <a href="https://twitter.com/sandmangil">@sandmangil</a></li>
-<li><strong>GitHub:</strong> <a href="https://github.com/adrianogil">github.com/adrianogil</a></li>
-</ul>
+  <section class="talks-page" aria-label="Talks">
+  <header class="talks-intro">
+    <div><p class="talks-kicker">Ideas shared live</p><p class="talks-lead">A selection of talks about software engineering, computer graphics, artificial intelligence, and computer vision.</p></div>
+    <a class="talks-invite" href="#contact"><span>Organizing an event?</span><strong>Let's talk</strong><span aria-hidden="true">↓</span></a>
+  </header>
+  <div class="talks-stats" aria-label="Talks summary"><p><strong>05</strong><span>talks</span></p><p><strong>2015—2024</strong><span>archive</span></p><p><strong>05</strong><span>events</span></p></div>
+  <div class="talks-timeline">
+    <section class="talk-year" aria-labelledby="talks-2024"><h2 id="talks-2024">2024</h2><div class="talk-list"><article class="talk-card"><header><p class="talk-venue">UEA · Learn &amp; Gather</p><span>01</span></header><h3>Introdução à Automação de Testes com Jest</h3><p class="talk-topic">Software testing · JavaScript</p><div class="talk-links"><a href="https://adrianogil.github.io/slides/2024/Learn_gather_2024_Introducao_Automacao_de_Testes_com_Jest.pdf">Slides <span aria-hidden="true">↗</span></a><a href="https://github.com/adrianogil/learngather2024-intro-jest">Code <span aria-hidden="true">↗</span></a></div></article></div></section>
+    <section class="talk-year" aria-labelledby="talks-2020"><h2 id="talks-2020">2020</h2><div class="talk-list"><article class="talk-card"><header><p class="talk-venue">SIBGRAPI 2020</p><span>02</span></header><h3>Automatic Contrast Evaluation for Android Themes</h3><p class="talk-topic">Accessibility · Image processing</p><div class="talk-links"><a href="https://adrianogil.github.io/slides/2020/SIBGRAPI2020_Android_Themes.pdf">Slides <span aria-hidden="true">↗</span></a><a href="https://sol.sbc.org.br/index.php/sibgrapi_estendido/article/view/13015">Paper <span aria-hidden="true">↗</span></a></div></article></div></section>
+    <section class="talk-year" aria-labelledby="talks-2018"><h2 id="talks-2018">2018</h2><div class="talk-list"><article class="talk-card"><header><p class="talk-venue">1ª Feira do Polo Digital de Manaus</p><span>03</span></header><h3>Matemática em Gráficos: A Mágica da Geração Procedural</h3><p class="talk-topic">Computer graphics · Procedural generation</p><div class="talk-links"><a href="https://pt.slideshare.net/slideshow/matemtica-em-grficos-a-mgica-da-gerao-procedural-124473027/124473027">Slides <span aria-hidden="true">↗</span></a></div></article></div></section>
+    <section class="talk-year" aria-labelledby="talks-2015"><h2 id="talks-2015">2015</h2><div class="talk-list talk-list-paired"><article class="talk-card"><header><p class="talk-venue">Jornada Acadêmica e Tecnológica · UNINORTE</p><span>04</span></header><h3>Panorama da Inteligência Artificial Aplicada a Jogos</h3><p class="talk-topic">Artificial intelligence · Games</p><div class="talk-links"><a href="https://pt.slideshare.net/slideshow/panorama-da-inteligncia-artificial-aplicada-a-jogos/50067531">Slides <span aria-hidden="true">↗</span></a></div></article><article class="talk-card"><header><p class="talk-venue">FUCAPI · EXTEEL</p><span>05</span></header><h3>Detecção de Pedestres</h3><p class="talk-topic">Computer vision · Object detection</p><div class="talk-links"><a href="https://adrianogil.github.io/slides/2015/EXTEEL_2015_Pedestrian_v1_0_20150526.pdf">Slides <span aria-hidden="true">↗</span></a></div></article></div></section>
+  </div>
+  <section class="talks-contact" id="contact" aria-labelledby="talks-contact-title">
+    <div><p class="talks-kicker">Invitations and collaborations</p><h2 id="talks-contact-title">Have a conversation in mind?</h2><p>I'm available for talks, panels, and meetups about software, games, and applied research.</p></div>
+    <div class="talks-contact-links"><span><small>Email</small><code>adrianogil.san + @gmail.com</code></span><a href="https://twitter.com/sandmangil"><small>Twitter</small>@sandmangil <span aria-hidden="true">↗</span></a><a href="https://github.com/adrianogil"><small>GitHub</small>adrianogil <span aria-hidden="true">↗</span></a></div>
+  </section>
+</section>
 </article>
 
     </main>
   </div>
-  <label for="sidebar-checkbox" class="sidebar-toggle" aria-label="Toggle navigation"></label>
 </body>
 </html>
